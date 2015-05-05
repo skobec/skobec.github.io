@@ -335,17 +335,20 @@ a,button {
     top: 20px;
 }
 .carousel-inner>.item>a>img, .carousel-inner>.item>img,.carousel-inner>.item.active, .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right,.carousel-inner {
-    height: 470px;
+    /*height: 470px;*/
 }
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .carousel-inner>.item.active, .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right, .carousel-inner {
     margin: 0 auto;
-    width: 100%;
+    /*width: 100%;*/
 }
 @media (max-width: 1024px) {
 
     .carousel-caption {
         padding: 0;
-        top: 10%;
+        top: 4%;
+    }
+    .title_ban_1 {
+        font-size: 24px;
     }
 }
 @media (max-width: 900px) {
@@ -357,7 +360,7 @@ a,button {
     }
     .carousel-caption {
         padding: 0;
-        top: 20%;
+        top: 7%;
 
     }
     .title_ban_1 {
