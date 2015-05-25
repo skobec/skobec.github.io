@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Happy day</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+    <link href="css/selectivity-full.css" rel="stylesheet">
+</head>
+<body>
+<div class="backgound_people">
+    <div class="header">
+        <div class="pred_blur">
+            <div class="blur_bl"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="#" class="logo"><img src="img/logo2.png" alt="">My Happy day</a>
+                </div>
+                <div class="col-xs-8 header_inp">
+                    <span class="glyphicon glyphicon-search"></span>
+                    <input type="text" class="form-control inputs_header" placeholder="поиск" aria-describedby="basic-addon1">
+                    <select class="selectpicker inputs_header">
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Минск</option>
+                    </select>
+                    <button class="btn btn_blue">Найти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+           <div class="col-630px">
+               <div class="col-xs-12 gray_bl">
+                   <div class="col-xs-9">
+                       <span>Организовали свой счастливый праздник:</span>
+                   </div>
+                   <div class="col-xs-3 no-pad">
+                       <div class="numbers_rand">
+                       <span id="rand"></span><span>0000</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-xs-12 text-center">
+                   <a href="#" class="btn orange_btn">Организовать мой праздник</a>
+               </div>
+               <div class="col-xs-12 razmaz_bl">
+                   <div class="pred_blur">
+                       <div class="blur_bl"></div>
+                   </div>
+                   <div class="row">
+                       <div class="col-xs-12 inputs_one">
+                           <select class="selectpicker inputs_header hap_day">
+                               <option disabled selected>Что за праздник?</option>
+                               <option>День рождение</option>
+                               <option>Свадьба</option>
+                               <option>Выпускной</option>
+                           </select>
+                           <select class="selectpicker inputs_header city_day">
+                               <option disabled selected>город</option>
+                               <option>Москва</option>
+                               <option>Санкт-Петербург</option>
+                               <option>Минск</option>
+                           </select>
+                               <input type="text" class="form-control datapicker" value="Дата проведения" id="dp1">
+                       </div>
+                       <div class="col-xs-12 inputs_two">
+                           <div class="row">
+                               <div class="col-xs-6">
+                                   <span class="title_sel">Специальности</span>
+                                   <span id="tags-input" class="selectivity-input"></span>
+                               </div>
+
+                               <div class="col-xs-6">
+                                   <span class="title_sel">Бюджет,<span>руб.</span></span>
+                                   <div>
+                                       <input class="form-control ot-do" placeholder="От"><hr><input class="form-control ot-do" placeholder="до">
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-xs-12 text-center">
+                           <a href="#" class="btn orange_btn orange__btn_two">Организовать </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+<div class="slider_bl">
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h2 class="comment_title">Отзывы</h2>
+            </div>
+        </div>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+               <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="col-xs-4 comments_bl">
+                        <p class="comment_txt">
+                            <span class="cowich cowich_left">&#171</span>
+                            Искала тамаду себе на свадьбу
+                            в Москве. Нашла, выбрала,
+                            договорилась, оплатила работу.
+                            Всё успешно, всем довольно.
+                            <span class="cowich">&#187</span>
+                        </p>
+                        <span class="name_comment">Ирина Лещенко</span>
+                        <span class="data_comment">5 апреля 2014</span>
+                    </div>
+                    <div class="col-xs-4 comments_bl">
+                        <p class="comment_txt">
+                            <span class="cowich cowich_left">&#171</span>
+                            Работаю в агенстве. Срочно
+                            понадобился толковый
+                            балалаечник. Спасибо happyday!
+                            Удалось найти быстро и недорого.
+                            <span class="cowich">&#187</span>
+                        </p>
+                        <span class="name_comment">Поля Артёмова</span>
+                        <span class="data_comment">5 апреля 2014</span>
+                    </div>
+                    <div class="col-xs-4 comments_bl">
+                        <p class="comment_txt">
+                            <span class="cowich cowich_left">&#171</span>
+                            Полностью организовала свою
+                            свадьбу через happyday.
+                            Надо сказать, это очень сильно
+                            сэкономило моё время.
+                            <span class="cowich">&#187</span>
+                        </p>
+                        <span class="name_comment">Петров Иван</span>
+                        <span class="data_comment">5 апреля 2014</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-xs-4 comments_bl">
+                        <p class="comment_txt">
+                            <span class="cowich cowich_left">&#171</span>
+                            Искала тамаду себе на свадьбу
+                            в Москве. Нашла, выбрала,
+                            договорилась, оплатила работу.
+                            Всё успешно, всем довольно.
+                            <span class="cowich">&#187</span>
+                        </p>
+                        <span class="name_comment">Ирина Лещенко</span>
+                        <span class="data_comment">5 апреля 2014</span>
+                    </div>
+                    <div class="col-xs-4 comments_bl">
+                        <p class="comment_txt">
+                            <span class="cowich cowich_left">&#171</span>
+                            Работаю в агенстве. Срочно
+                            понадобился толковый
+                            балалаечник. Спасибо happyday!
+                            Удалось найти быстро и недорого.
+                            <span class="cowich">&#187</span>
+                        </p>
+                        <span class="name_comment">Поля Артёмова</span>
+                        <span class="data_comment">5 апреля 2014</span>
+                    </div>
+                    <div class="col-xs-4 comments_bl">
+                        <p class="comment_txt">
+                            <span class="cowich cowich_left">&#171</span>
+                            Полностью организовала свою
+                            свадьбу через happyday.
+                            Надо сказать, это очень сильно
+                            сэкономило моё время.
+                            <span class="cowich">&#187</span>
+                        </p>
+                        <span class="name_comment">Петров Иван</span>
+                        <span class="data_comment">5 апреля 2014</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left_arrow carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right_arrow carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/main_script.js"></script>
+<script src="js/selectivity-full.js"></script>
+<script>
+</script>
+</body>
+</html>
