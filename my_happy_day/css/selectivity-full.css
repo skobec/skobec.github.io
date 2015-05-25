@@ -103,6 +103,7 @@
   min-height: -webkit-calc(2em + 4px);
   min-height: calc(2em + 4px);
   overflow: auto;
+    z-index: 0;
 
 }
 
@@ -115,8 +116,8 @@
 .selectivity-multiple-input,
 input[type='text'].selectivity-multiple-input {
   background-color: transparent;
-  border: none;
-  float: left;
+  /*border: none;*/
+  /*float: left;*/
   height: -webkit-calc(2em + 4px);
   height: calc(2em + 4px);
   max-width: 100%;

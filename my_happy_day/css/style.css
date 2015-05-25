@@ -492,6 +492,9 @@ body,
 .blur_bl {
     -webkit-filter: blur(8px);
     filter: blur(8px);
+    -moz-filter: blur(1px);
+    -ms-filter: blur(1px);
+    -o-filter: blur(1px);
     left: 0;
     top: 0;
     width: 100%;
@@ -712,6 +715,9 @@ body,
     width: 118px;
     text-align: center;
     font-style: italic;
+    z-index: 11;
+    background-color: #ffffff;
+
 }
 .input_pole {
     width: 95%!important;

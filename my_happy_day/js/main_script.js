@@ -1,9 +1,11 @@
-var max = 10000;
-var rand = Math.floor( ( Math.random() * max ) + 1.00 );
-document.getElementById( 'rand' ).innerText = rand;
-if (top.location != location) {
-    top.location.href = document.location.href ;
-}
+$(document).ready(function(){
+    var max = 10000;
+    var rand = Math.floor( ( Math.random() * max ) + 1.00 );
+    document.getElementById( 'rand' ).innerText = rand;
+    if (top.location != location) {
+        top.location.href = document.location.href ;
+    };
+
 $(function(){
     window.prettyPrint && prettyPrint();
     $('#dp1').datepicker({
@@ -28,7 +30,7 @@ $(function(){
         $('#dpd2')[0].focus();
     }).data('datepicker');
 });
-$(document).ready(function() {
+
     $('#tags-input').selectivity({
         items: ['Музыкальный бэнд', 'Тамада', 'Фотограф', 'Певец'],
         multiple: true,
