@@ -466,6 +466,7 @@ body,
     font-size: 32px;
     color: #ffffff!important;
     text-decoration: none!important;
+    margin-left: -8px;
 }
 .logo img {
     margin-right: 5px;
@@ -473,7 +474,7 @@ body,
 }
 .header {
     position: relative;
-    padding: 15px 0;
+    padding: 14px 0;
 }
 .header .glyphicon {
     color: #ffffff;
@@ -507,7 +508,7 @@ body,
 .inputs_header {
     vertical-align: middle;
     width: 176px!important;
-    margin-right: 10px;
+    margin-right: 7px;
     height: 35px!important;
     display: inline-block;
 }
@@ -518,14 +519,14 @@ body,
 .gray_bl {
     background-color: rgba(8, 8, 8, 0.54);
     color: #ffffff;
-    margin-top: 27px;
+    margin-top: 26px;
     margin-bottom: 24px;
     font-size: 24px;
     border-radius: 5px;
-    padding: 4px 0 7px;
+    padding: 3px 0;
 }
 .orange_btn {
-    padding: 9px 30px 11px;
+    padding: 7px 34px 9px;
     border:2px solid #ba1f10;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -544,7 +545,7 @@ body,
 }
 .orange__btn_two {
     margin-top: 20px;
-    padding: 9px 45px 11px;
+    padding: 8px 46px 8px;
     border:1px solid #d86960;
     border-top: 1px solid #febfba;
     border-bottom: 1px solid #b31509;
@@ -575,7 +576,7 @@ body,
     border-radius: 5px;
     color: #ffffff;
     font-size: 16px;
-    padding: 5px 30px;
+    padding: 5px 31px;
     border: solid #066fa0 1px;
     border-top: 1px solid #aee5fe;
     text-decoration: none;
@@ -600,7 +601,7 @@ body,
     position: relative;
     border: 1px solid #806466;
     border-radius: 5px;
-    padding: 27px 20px;
+    padding: 25px 15px;
 }
 .razmaz_bl .blur_bl {
     background: url("../img/background_people.jpg")no-repeat -369px -274px;
@@ -624,6 +625,7 @@ body,
     margin-left: -15px;
 }
 .comment_txt {
+    line-height: 21px;
     font-size: 16px;
     color: #555555;
 }
@@ -638,7 +640,7 @@ body,
     display: block;
 }
 .comments_bl {
-    padding-right: 22px;
+    padding-right: 25px;
 }
 .left_arrow {
     background: url("../img/arrow_slider.png")no-repeat 0 0;
@@ -663,29 +665,73 @@ body,
     margin-bottom: 50px;
 }
 .no-pad {
-    padding: 0  ;
+    padding-left: 0;
+    padding-right: 0;
 }
-.numbers_rand {
-    padding: 0;
-    background: url("../img/cifr.png")left repeat-x;
-    margin-left: -8px;
-    width: 160px;
+/*.numbers_rand {*/
+    /*padding: 0;*/
+    /*background: url("../img/cifr.png")left repeat-x;*/
+    /*margin-left: -8px;*/
+    /*width: 160px;*/
+    /*overflow: hidden;*/
+/*}*/
+/*.numbers_rand span {*/
+    /*letter-spacing: 14px;*/
+    /*font-size: 24px;*/
+    /*color: #595959;*/
+/*}*/
+/*#rand {*/
+    /*padding-left: 5px;*/
+/*}*/
+#counter{
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 3px;
     overflow: hidden;
+    width: 150px;
+    position: relative;
+    height: 32px;
 }
-.numbers_rand span {
-    letter-spacing: 14px;
-    font-size: 24px;
+.add_number {
+    float: right;
+    text-align: center;
     color: #595959;
+    height: 32px;
+    width: 23px;
+    background: url("../img/cifr.png")no-repeat;
+    margin-left: 2px;
+
 }
-#rand {
-    padding-left: 5px;
+.cnumber:first-child {
+    margin-left: 0;
+}
+.cnumber{
+    margin-left: 2px;
+    float: left;
+    text-align: center;
+    color: #595959;
+    height: 32px;
+    width: 23px;
+    background: url("../img/cifr.png")no-repeat;
+    /*margin-left:5px;*/
+    /*float: left;*/
+    /*color:#222;*/
+    /*height: 80px;*/
+    /*width:50px;*/
+    /*font-size: 70px;*/
+    /*background:  linear-gradient(to bottom,rgb(255,255,255), rgb(200,200,200));*/
+    /*border-radius:10px;*/
+    /*text-align:center;*/
+    /*border: 1px solid #000;*/
+    /*border-bottom: 7px solid #000;*/
+    /*box-shadow:0 15px 30px #FFF;*/
 }
 .hap_day {
     display: inline-block;
-    width: 210px!important;
+    width: 224px!important;
 }
 .city_day {
-    width: 182px;
+    width: 186px!important;
     display: inline-block;
 }
 .datapicker {
@@ -694,6 +740,7 @@ body,
     font-style: italic;
     display: inline-block;
     width: 163px;
+    margin-left: 5px;
 }
 .inputs_one .inputs_header {
     margin-right: 3px;
@@ -708,11 +755,11 @@ body,
     border-top: 1px solid #7b7b7b;
 }
 .inputs_two {
-    margin-top: 20px;
+    margin-top: 14px;
 }
 .ot-do {
     display: inline-block;
-    width: 118px;
+    width: 130px;
     text-align: center;
     font-style: italic;
     z-index: 11;
@@ -720,20 +767,24 @@ body,
 
 }
 .input_pole {
-    width: 95%!important;
-    margin-top: 26px;
+    width: 97%!important;
+    margin-top: 34px;
     position: absolute;
     top: 0;
     left: 14px;
     background-color: white!important;
     height: 34px!important;
 }
+.bydget {
+    margin-top: 8px;
+}
 .selectivity-dropdown {
-    top: 57px!important;
+    top: 70px!important;
+    width: 302px!important;
 }
 .selectivity-multiple-input-container {
     background: rgba(238, 238, 238, 0)!important;
-    margin-top: 55px;
+    margin-top: 66px;
     width: 530px;
 }
 .title_sel {

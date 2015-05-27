@@ -1,10 +1,25 @@
-$(document).ready(function(){
-    var max = 10000;
-    var rand = Math.floor( ( Math.random() * max ) + 1.00 );
-    document.getElementById( 'rand' ).innerText = rand;
-    if (top.location != location) {
-        top.location.href = document.location.href ;
-    };
+$(document).ready(function() {
+    var min = 600,
+        max = 10000;
+    var el = document.getElementById("counter");
+
+    function rand() {
+        el.innerHTML = "<span class='add_number'>0</span><span class='add_number'>0</span>";
+        var num = getRandNum(min, max).toString();
+        for (var i = num.length - 1; i >= 0; i--) {
+            var e = document.createElement("span");
+            e.className = "cnumber";
+            e.innerHTML = num[i];
+            el.appendChild(e);
+        }
+    }
+    rand();
+
+    function getRandNum(min, max, check) {
+        if (!check) return Math.round(Math.random() * (max - min) + min);
+        else return Math.random() * (max - min) + min;
+    }
+
 
 $(function(){
     window.prettyPrint && prettyPrint();
