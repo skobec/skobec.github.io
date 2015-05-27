@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    var min = 600,
-        max = 10000;
+    var min = 100,
+        max = 100000;
     var el = document.getElementById("counter");
 
     function rand() {

@@ -48,18 +48,18 @@
       <file leaf-file-name="selectivity-full.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/selectivity-full.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="73260" max-vertical-offset="79815">
-              <caret line="4317" column="55" selection-start-line="4317" selection-start-column="55" selection-end-line="4317" selection-end-column="55" />
+            <state vertical-scroll-proportion="-7.37931" vertical-offset="73192" max-vertical-offset="79815">
+              <caret line="4318" column="67" selection-start-line="4318" selection-start-column="67" selection-end-line="4318" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main_script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main_script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.05821918" vertical-offset="0" max-vertical-offset="1020">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -75,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36346865" vertical-offset="10462" max-vertical-offset="13855">
+            <state vertical-scroll-proportion="-6.793103" vertical-offset="10462" max-vertical-offset="13855">
               <caret line="627" column="22" selection-start-line="627" selection-start-column="22" selection-end-line="627" selection-end-column="22" />
               <folding />
             </state>
@@ -92,11 +92,11 @@
       <list>
         <option value="$PROJECT_DIR$/css/bootstrap-select.css" />
         <option value="$PROJECT_DIR$/js/bootstrap-select.js" />
-        <option value="$PROJECT_DIR$/js/selectivity-full.js" />
         <option value="$PROJECT_DIR$/css/selectivity-full.css" />
-        <option value="$PROJECT_DIR$/js/main_script.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/js/selectivity-full.js" />
+        <option value="$PROJECT_DIR$/js/main_script.js" />
       </list>
     </option>
   </component>
@@ -453,26 +453,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/selectivity-full.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="73260" max-vertical-offset="79815">
-          <caret line="4317" column="55" selection-start-line="4317" selection-start-column="55" selection-end-line="4317" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/selectivity-full.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1744" max-vertical-offset="3910">
           <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main_script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -487,8 +471,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36346865" vertical-offset="10462" max-vertical-offset="13855">
+        <state vertical-scroll-proportion="-6.793103" vertical-offset="10462" max-vertical-offset="13855">
           <caret line="627" column="22" selection-start-line="627" selection-start-column="22" selection-end-line="627" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/selectivity-full.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.37931" vertical-offset="73192" max-vertical-offset="79815">
+          <caret line="4318" column="67" selection-start-line="4318" selection-start-column="67" selection-end-line="4318" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05821918" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
         </state>
       </provider>
