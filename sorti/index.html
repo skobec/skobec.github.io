@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text-center">Сортировка целых чисел</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id = "nums" class="centr_bl">
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-12 btn_bl">
+            <button class="btn btn-default" id="vz">По возрастинию</button>
+            <button class="btn btn-default" id="yb">По убыванию</button>
+        </div>
+    </div>
+</div>
+<script>
+    var numbers = [6,5,11,10,3,2,1,0];
+    var speed = 1000;
+    var out = document.getElementById("nums");
+    var par = "toHight";
+    var timeout;
+    show(numbers,out);
+    document.getElementById("vz").addEventListener("click",function(){
+        par = "toHight";
+        handler();
+    },false);
+    document.getElementById("yb").addEventListener("click",function(){
+        par = "toLow";
+        handler();
+    },false);
+    function handler(){
+        var n = sort(numbers,par);
+        if(n == -1){
+            show(numbers,out);
+            return;
+        }
+        show(numbers,out,n);
+        clearTimeout(timeout);
+        timeout = setTimeout(handler,speed);
+    }
+    function sort(arr,param){
+        switch(param){
+            case "toLow":
+                for(var i = 0; i < arr.length-1; i++){
+                    if(arr[i] < arr[i+1]){
+                        var tmp = arr[i];
+                        arr[i] = arr[i+1];
+                        arr[i+1] = tmp;
+                        return i;
+                    }
+                }
+                break;
+            case "toHigh":default:
+            for(var i = 0; i < arr.length-1; i++){
+                if(arr[i] > arr[i+1]){
+                    var tmp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = tmp;
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+
+    function show(numbers,out,paintN){
+        out.innerHTML = "";
+        for(var i = numbers.length -1; i >= 0; i--)
+            if(i == paintN)
+                out.innerHTML += "<span class = 'select_number num'>"+numbers[i]+"</span>";
+            else
+                out.innerHTML += "<span class = 'num'>"+numbers[i]+"</span>";
+    }
+</script>
+</body>
+</html>
