@@ -1,0 +1,1308 @@
+{
+    "room": [
+		{
+            "name": "Общая читалка",
+            "address": "Карла Марла, 1",
+            "books": [61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,77,77,78,79,80]
+        },
+		{
+            "name": "Общая читалка",
+            "address": "Карла Марла, 1",
+            "books": [51,52,53,54,55,56,57,58,59,60]
+        },
+        {
+            "name": "Читалка 1 дома",
+            "address": "Маркса, 23",
+            "books": [1,2,3,4,5,6,7,8,9,10,46,47,48,49,50]
+        },
+        {
+            "name": "Читалка 7 дома",
+            "address": "Гоголя, 110",
+            "books": [11,12,13,14,15,16,17,18,19,20,81,82,83,84,85,86,87,88,89,90,91,92,93,94]
+        },
+		{
+            "name": "Читалка 3 дома",
+            "address": "Гоголя, 110",
+            "books": [21,22,23,24,25,26,27,28,29,30]
+        },
+		{
+            "name": "Читалка 5 дома",
+            "address": "Гоголя, 110",
+            "books": [31,32,33,34,35,36,37,38,39,40,41,42,43,44,45]
+        }
+    ],
+    "books": [
+		{ "id": 1, "name": "Code Complete (2nd edition) by Steve McConnell" },
+		{ "id": 2, "name": "The Pragmatic Programmer" },
+		{ "id": 3, "name": "Structure and Interpretation of Computer Programs" },
+		{ "id": 4, "name": "The C Programming Language by Kernighan and Ritchie" },
+		{ "id": 5, "name": "Introduction to Algorithms by Cormen, Leiserson, Rivest & Stein" },
+		{ "id": 6, "name": "Design Patterns by the Gang of Four" },
+		{ "id": 7, "name": "Refactoring: Improving the Design of Existing Code" },
+		{ "id": 8, "name": "The Mythical Man Month" },
+		{ "id": 9, "name": "The Art of Computer Programming by Donald Knuth" },
+		{ "id": 10, "name": "Compilers: Principles, Techniques and Tools by Alfred V. Aho, Ravi Sethi and Jeffrey D. Ullman" },
+		{ "id": 11, "name": "Gödel, Escher, Bach by Douglas Hofstadter" },
+		{ "id": 12, "name": "Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin" },
+		{ "id": 13, "name": "Effective C++" },
+		{ "id": 14, "name": "More Effective C++" },
+		{ "id": 15, "name": "CODE by Charles Petzold" },
+		{ "id": 16, "name": "Programming Pearls by Jon Bentley" },
+		{ "id": 17, "name": "Working Effectively with Legacy Code by Michael C. Feathers" },
+		{ "id": 18, "name": "Peopleware by Demarco and Lister" },
+		{ "id": 19, "name": "Coders at Work by Peter Seibel" },
+		{ "id": 20, "name": "Surely You're Joking, Mr. Feynman!" },
+		{ "id": 21, "name": "Effective Java 2nd edition" },
+		{ "id": 22, "name": "Patterns of Enterprise Application Architecture by Martin Fowler" },
+		{ "id": 23, "name": "The Little Schemer" },
+		{ "id": 24, "name": "The Seasoned Schemer" },
+		{ "id": 25, "name": "Why's (Poignant) Guide to Ruby" },
+		{ "id": 26, "name": "The Inmates Are Running The Asylum: Why High Tech Products Drive Us Crazy and How to Restore the Sanity" },
+		{ "id": 27, "name": "The Art of Unix Programming" },
+		{ "id": 28, "name": "Test-Driven Development: By Example by Kent Beck" },
+		{ "id": 29, "name": "Practices of an Agile Developer" },
+		{ "id": 30, "name": "Don't Make Me Think" },
+		{ "id": 31, "name": "Agile Software Development, Principles, Patterns, and Practices by Robert C. Martin" },
+		{ "id": 32, "name": "Domain Driven Designs by Eric Evans" },
+		{ "id": 33, "name": "The Design of Everyday Things by Donald Norman" },
+		{ "id": 34, "name": "Modern C++ Design by Andrei Alexandrescu" },
+		{ "id": 35, "name": "Best Software Writing I by Joel Spolsky" },
+		{ "id": 36, "name": "The Practice of Programming by Kernighan and Pike" },
+		{ "id": 37, "name": "Pragmatic Thinking and Learning: Refactor Your Wetware by Andy Hunt" },
+		{ "id": 38, "name": "Software Estimation: Demystifying the Black Art by Steve McConnel" },
+		{ "id": 39, "name": "The Passionate Programmer (My Job Went To India) by Chad Fowler" },
+		{ "id": 40, "name": "Hackers: Heroes of the Computer Revolution" },
+		{ "id": 41, "name": "Algorithms + Data Structures = Programs" },
+		{ "id": 42, "name": "Writing Solid Code" },
+		{ "id": 43, "name": "JavaScript - The Good Parts" },
+		{ "id": 44, "name": "Getting Real by 37 Signals" },
+		{ "id": 45, "name": "Foundations of Programming by Karl Seguin" },
+		{ "id": 46, "name": "Computer Graphics: Principles and Practice in C (2nd Edition)" },
+		{ "id": 47, "name": "Thinking in Java by Bruce Eckel" },
+		{ "id": 48, "name": "The Elements of Computing Systems" },
+		{ "id": 49, "name": "Refactoring to Patterns by Joshua Kerievsky" },
+		{ "id": 50, "name": "Modern Operating Systems by Andrew S. Tanenbaum" },
+		{ "id": 51, "name": "The Annotated Turing" },
+		{ "id": 52, "name": "Things That Make Us Smart by Donald Norman" },
+		{ "id": 53, "name": "The Timeless Way of Building by Christopher Alexander" },
+		{ "id": 54, "name": "The Deadline: A Novel About Project Management by Tom DeMarco" },
+		{ "id": 55, "name": "The C++ Programming Language (3rd edition) by Stroustrup" },
+		{ "id": 56, "name": "Patterns of Enterprise Application Architecture" },
+		{ "id": 57, "name": "Computer Systems - A Programmer's Perspective" },
+		{ "id": 58, "name": "Agile Principles, Patterns, and Practices in C# by Robert C. Martin" },
+		{ "id": 59, "name": "Growing Object-Oriented Software, Guided by Tests" },
+		{ "id": 60, "name": "Framework Design Guidelines by Brad Abrams" },
+		{ "id": 61, "name": "Object Thinking by Dr. David West" },
+		{ "id": 62, "name": "Advanced Programming in the UNIX Environment by W. Richard Stevens" },
+		{ "id": 63, "name": "Hackers and Painters: Big Ideas from the Computer Age" },
+		{ "id": 64, "name": "The Soul of a New Machine by Tracy Kidder" },
+		{ "id": 65, "name": "CLR via C# by Jeffrey Richter" },
+		{ "id": 66, "name": "The Timeless Way of Building by Christopher Alexander" },
+		{ "id": 67, "name": "Design Patterns in C# by Steve Metsker" },
+		{ "id": 68, "name": "Alice in Wonderland by Lewis Carol" },
+		{ "id": 69, "name": "Zen and the Art of Motorcycle Maintenance by Robert M. Pirsig" },
+		{ "id": 70, "name": "About Face - The Essentials of Interaction Design" },
+		{ "id": 71, "name": "Here Comes Everybody: The Power of Organizing Without Organizations by Clay Shirky" },
+		{ "id": 72, "name": "The Tao of Programming" },
+		{ "id": 73, "name": "Computational Beauty of Nature" },
+		{ "id": 74, "name": "Writing Solid Code by Steve Maguire" },
+		{ "id": 75, "name": "Philip and Alex's Guide to Web Publishing" },
+		{ "id": 76, "name": "Object-Oriented Analysis and Design with Applications by Grady Booch" },
+		{ "id": 77, "name": "Effective Java by Joshua Bloch" },
+		{ "id": 78, "name": "Computability by N. J. Cutland" },
+		{ "id": 79, "name": "Masterminds of Programming" },
+		{ "id": 80, "name": "The Tao Te Ching" },
+		{ "id": 81, "name": "The Productive Programmer" },
+		{ "id": 82, "name": "The Art of Deception by Kevin Mitnick" },
+		{ "id": 83, "name": "The Career Programmer: Guerilla Tactics for an Imperfect World by Christopher Duncan" },
+		{ "id": 84, "name": "Paradigms of Artificial Intelligence Programming: Case studies in Common Lisp" },
+		{ "id": 85, "name": "Masters of Doom" },
+		{ "id": 86, "name": "Pragmatic Unit Testing in C# with NUnit by Andy Hunt and Dave Thomas with Matt Hargett" },
+		{ "id": 87, "name": "How To Solve It by George Polya" },
+		{ "id": 88, "name": "The Alchemist by Paulo Coelho" },
+		{ "id": 89, "name": "Smalltalk-80: The Language and its Implementation" },
+		{ "id": 90, "name": "Writing Secure Code (2nd Edition) by Michael Howard" },
+		{ "id": 91, "name": "Introduction to Functional Programming by Philip Wadler and Richard Bird" },
+		{ "id": 92, "name": "No Bugs! by David Thielen" },
+		{ "id": 93, "name": "Rework by Jason Freid and DHH" },
+		{ "id": 94, "name": "JUnit in Action", "taken_by": null }
+    ],
+    "students": [
+		{
+			"id": 100,
+			"name": "Gabe Newell",
+			"history": [
+				{
+					"book_id": 73,
+					"since": 1312416000000,
+					"till": 1314835200000,
+					"return_time": null
+				},
+				{
+					"book_id": 11,
+					"since": 1304640000000,
+					"till": 1305244800000,
+					"return_time": null
+				},
+				{
+					"book_id": 86,
+					"since": 1330560000000,
+					"till": 1331164800000,
+					"return_time": 1330992000000
+				},
+				{
+					"book_id": 30,
+					"since": 1283904000000,
+					"till": 1285718400000,
+					"return_time": 1285632000000
+				},
+				{
+					"book_id": 55,
+					"since": 1392768000000,
+					"till": 1393977600000,
+					"return_time": 1393718400000
+				}
+			]
+		},
+		{
+			"id": 101,
+			"name": "Michael Abrash",
+			"history": [
+				{
+					"book_id": 29,
+					"since": 1423872000000,
+					"till": 1426291200000,
+					"return_time": 1425945600000
+				},
+				{
+					"book_id": 78,
+					"since": 1429056000000,
+					"till": 1430870400000,
+					"return_time": null
+				},
+				{
+					"book_id": 84,
+					"since": 1346112000000,
+					"till": 1347321600000,
+					"return_time": null
+				},
+				{
+					"book_id": 18,
+					"since": 1397952000000,
+					"till": 1398556800000,
+					"return_time": 1398297600000
+				},
+				{
+					"book_id": 32,
+					"since": 1309824000000,
+					"till": 1311033600000,
+					"return_time": 1311206400000
+				},
+				{
+					"book_id": 81,
+					"since": 1333152000000,
+					"till": 1333756800000,
+					"return_time": 1333929600000
+				},
+				{
+					"book_id": 42,
+					"since": 1294272000000,
+					"till": 1296691200000,
+					"return_time": null
+				},
+				{
+					"book_id": 25,
+					"since": 1315008000000,
+					"till": 1317427200000,
+					"return_time": null
+				},
+				{
+					"book_id": 73,
+					"since": 1423872000000,
+					"till": 1425081600000,
+					"return_time": 1424736000000
+				},
+				{
+					"book_id": 25,
+					"since": 1423872000000,
+					"till": 1426291200000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 102,
+			"name": "Danielle Bunten Berry",
+			"history": [
+				{
+					"book_id": 37,
+					"since": 1338336000000,
+					"till": 1340150400000,
+					"return_time": null
+				},
+				{
+					"book_id": 61,
+					"since": 1327968000000,
+					"till": 1329782400000,
+					"return_time": 1329868800000
+				},
+				{
+					"book_id": 63,
+					"since": 1426464000000,
+					"till": 1428278400000,
+					"return_time": null
+				},
+				{
+					"book_id": 6,
+					"since": 1348704000000,
+					"till": 1350518400000,
+					"return_time": null
+				},
+				{
+					"book_id": 51,
+					"since": 1400544000000,
+					"till": 1402963200000,
+					"return_time": null
+				},
+				{
+					"book_id": 3,
+					"since": 1353888000000,
+					"till": 1355097600000,
+					"return_time": 1355270400000
+				},
+				{
+					"book_id": 97,
+					"since": 1356480000000,
+					"till": 1358899200000,
+					"return_time": null
+				},
+				{
+					"book_id": 75,
+					"since": 1390176000000,
+					"till": 1392595200000,
+					"return_time": 1392768000000
+				}
+			]
+		},
+		{
+			"id": 103,
+			"name": "David Braben",
+			"history": [
+				{
+					"book_id": 88,
+					"since": 1429056000000,
+					"till": 1431475200000,
+					"return_time": 1431216000000
+				},
+				{
+					"book_id": 38,
+					"since": 1421280000000,
+					"till": 1423094400000,
+					"return_time": 1422835200000
+				},
+				{
+					"book_id": 9,
+					"since": 1351296000000,
+					"till": 1353110400000,
+					"return_time": 1353283200000
+				},
+				{
+					"book_id": 73,
+					"since": 1410912000000,
+					"till": 1412121600000,
+					"return_time": 1412208000000
+				}
+			]
+		},
+		{
+			"id": 104,
+			"name": "Bill Budge",
+			"history": [
+				{
+					"book_id": 30,
+					"since": 1379808000000,
+					"till": 1381622400000,
+					"return_time": 1381363200000
+				},
+				{
+					"book_id": 31,
+					"since": 1273536000000,
+					"till": 1274140800000,
+					"return_time": 1274313600000
+				},
+				{
+					"book_id": 19,
+					"since": 1418688000000,
+					"till": 1421107200000,
+					"return_time": null
+				},
+				{
+					"book_id": 9,
+					"since": 1390176000000,
+					"till": 1391385600000,
+					"return_time": 1391472000000
+				},
+				{
+					"book_id": 67,
+					"since": 1322784000000,
+					"till": 1323993600000,
+					"return_time": null
+				},
+				{
+					"book_id": 18,
+					"since": 1372032000000,
+					"till": 1373846400000,
+					"return_time": null
+				},
+				{
+					"book_id": 79,
+					"since": 1379808000000,
+					"till": 1380412800000,
+					"return_time": 1380585600000
+				},
+				{
+					"book_id": 93,
+					"since": 1338336000000,
+					"till": 1339545600000,
+					"return_time": 1339718400000
+				},
+				{
+					"book_id": 27,
+					"since": 1322784000000,
+					"till": 1324598400000,
+					"return_time": 1324684800000
+				},
+				{
+					"book_id": 84,
+					"since": 1421280000000,
+					"till": 1421884800000,
+					"return_time": 1421625600000
+				}
+			]
+		},
+		{
+			"id": 105,
+			"name": "John D. Carmack",
+			"history": [
+				{
+					"book_id": 31,
+					"since": 1312416000000,
+					"till": 1313020800000,
+					"return_time": 1313107200000
+				}
+			]
+		},
+		{
+			"id": 106,
+			"name": "Don Daglow",
+			"history": [
+				{
+					"book_id": 16,
+					"since": 1327968000000,
+					"till": 1329782400000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 107,
+			"name": "Richard Garriott",
+			"history": [
+				{
+					"book_id": 56,
+					"since": 1356480000000,
+					"till": 1358294400000,
+					"return_time": null
+				},
+				{
+					"book_id": 25,
+					"since": 1343520000000,
+					"till": 1344729600000,
+					"return_time": 1344470400000
+				},
+				{
+					"book_id": 3,
+					"since": 1338336000000,
+					"till": 1340755200000,
+					"return_time": 1340496000000
+				},
+				{
+					"book_id": 48,
+					"since": 1294272000000,
+					"till": 1296086400000,
+					"return_time": null
+				},
+				{
+					"book_id": 86,
+					"since": 1351296000000,
+					"till": 1353715200000,
+					"return_time": 1353369600000
+				}
+			]
+		},
+		{
+			"id": 108,
+			"name": "Nasir Gebelli",
+			"history": [
+				{
+					"book_id": 70,
+					"since": 1379808000000,
+					"till": 1380412800000,
+					"return_time": null
+				},
+				{
+					"book_id": 28,
+					"since": 1387584000000,
+					"till": 1389398400000,
+					"return_time": 1389571200000
+				},
+				{
+					"book_id": 57,
+					"since": 1333152000000,
+					"till": 1335571200000,
+					"return_time": 1335398400000
+				},
+				{
+					"book_id": 53,
+					"since": 1390176000000,
+					"till": 1391990400000,
+					"return_time": 1392076800000
+				}
+			]
+		},
+		{
+			"id": 109,
+			"name": "Rebecca Heineman",
+			"history": [
+				{
+					"book_id": 72,
+					"since": 1421280000000,
+					"till": 1422489600000,
+					"return_time": 1422403200000
+				},
+				{
+					"book_id": 53,
+					"since": 1289088000000,
+					"till": 1291507200000,
+					"return_time": null
+				},
+				{
+					"book_id": 3,
+					"since": 1377216000000,
+					"till": 1378425600000,
+					"return_time": 1378598400000
+				},
+				{
+					"book_id": 51,
+					"since": 1387584000000,
+					"till": 1390003200000,
+					"return_time": 1390089600000
+				},
+				{
+					"book_id": 8,
+					"since": 1299456000000,
+					"till": 1300060800000,
+					"return_time": 1299974400000
+				},
+				{
+					"book_id": 51,
+					"since": 1416096000000,
+					"till": 1417910400000,
+					"return_time": 1418083200000
+				},
+				{
+					"book_id": 75,
+					"since": 1366848000000,
+					"till": 1367452800000,
+					"return_time": null
+				},
+				{
+					"book_id": 56,
+					"since": 1413504000000,
+					"till": 1415318400000,
+					"return_time": 1414972800000
+				},
+				{
+					"book_id": 31,
+					"since": 1429056000000,
+					"till": 1430870400000,
+					"return_time": null
+				},
+				{
+					"book_id": 80,
+					"since": 1315008000000,
+					"till": 1316217600000,
+					"return_time": 1316131200000
+				}
+			]
+		},
+		{
+			"id": 110,
+			"name": "Wesley Huntress",
+			"history": [
+				{
+					"book_id": 15,
+					"since": 1377216000000,
+					"till": 1378425600000,
+					"return_time": null
+				},
+				{
+					"book_id": 54,
+					"since": 1410912000000,
+					"till": 1412121600000,
+					"return_time": 1411948800000
+				},
+				{
+					"book_id": 29,
+					"since": 1400544000000,
+					"till": 1402358400000,
+					"return_time": null
+				},
+				{
+					"book_id": 16,
+					"since": 1286496000000,
+					"till": 1288915200000,
+					"return_time": 1288742400000
+				},
+				{
+					"book_id": 86,
+					"since": 1361664000000,
+					"till": 1362873600000,
+					"return_time": 1362960000000
+				},
+				{
+					"book_id": 28,
+					"since": 1270944000000,
+					"till": 1272153600000,
+					"return_time": 1272067200000
+				},
+				{
+					"book_id": 94,
+					"since": 1395360000000,
+					"till": 1397779200000,
+					"return_time": 1397433600000
+				},
+				{
+					"book_id": 57,
+					"since": 1356480000000,
+					"till": 1358899200000,
+					"return_time": 1358985600000
+				},
+				{
+					"book_id": 13,
+					"since": 1379808000000,
+					"till": 1380412800000,
+					"return_time": null
+				},
+				{
+					"book_id": 81,
+					"since": 1426464000000,
+					"till": 1428278400000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 111,
+			"name": "André LaMothe",
+			"history": [
+				{
+					"book_id": 21,
+					"since": 1330560000000,
+					"till": 1332374400000,
+					"return_time": null
+				},
+				{
+					"book_id": 14,
+					"since": 1405728000000,
+					"till": 1407542400000,
+					"return_time": null
+				},
+				{
+					"book_id": 8,
+					"since": 1429056000000,
+					"till": 1430870400000,
+					"return_time": null
+				},
+				{
+					"book_id": 23,
+					"since": 1291680000000,
+					"till": 1293494400000,
+					"return_time": 1293148800000
+				},
+				{
+					"book_id": 49,
+					"since": 1423872000000,
+					"till": 1424476800000,
+					"return_time": 1424390400000
+				},
+				{
+					"book_id": 80,
+					"since": 1359072000000,
+					"till": 1360281600000,
+					"return_time": 1360454400000
+				},
+				{
+					"book_id": 81,
+					"since": 1413504000000,
+					"till": 1414108800000,
+					"return_time": 1414195200000
+				},
+				{
+					"book_id": 64,
+					"since": 1317600000000,
+					"till": 1319414400000,
+					"return_time": 1319155200000
+				}
+			]
+		},
+		{
+			"id": 112,
+			"name": "Al Lowe",
+			"history": [
+				{
+					"book_id": 32,
+					"since": 1325376000000,
+					"till": 1327190400000,
+					"return_time": 1327104000000
+				},
+				{
+					"book_id": 44,
+					"since": 1278720000000,
+					"till": 1279324800000,
+					"return_time": 1279411200000
+				},
+				{
+					"book_id": 6,
+					"since": 1320192000000,
+					"till": 1320796800000,
+					"return_time": 1320710400000
+				},
+				{
+					"book_id": 46,
+					"since": 1283904000000,
+					"till": 1286323200000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 113,
+			"name": "Jordan Mechner",
+			"history": [
+				{
+					"book_id": 96,
+					"since": 1273536000000,
+					"till": 1274745600000,
+					"return_time": 1274572800000
+				},
+				{
+					"book_id": 58,
+					"since": 1426464000000,
+					"till": 1427068800000,
+					"return_time": 1427241600000
+				},
+				{
+					"book_id": 6,
+					"since": 1286496000000,
+					"till": 1288915200000,
+					"return_time": 1288656000000
+				},
+				{
+					"book_id": 44,
+					"since": 1374624000000,
+					"till": 1375833600000,
+					"return_time": 1375574400000
+				},
+				{
+					"book_id": 32,
+					"since": 1278720000000,
+					"till": 1279324800000,
+					"return_time": 1279065600000
+				},
+				{
+					"book_id": 54,
+					"since": 1346112000000,
+					"till": 1346716800000,
+					"return_time": 1346889600000
+				}
+			]
+		},
+		{
+			"id": 114,
+			"name": "Sid Meier",
+			"history": [
+				{
+					"book_id": 50,
+					"since": 1273536000000,
+					"till": 1275955200000,
+					"return_time": null
+				},
+				{
+					"book_id": 23,
+					"since": 1416096000000,
+					"till": 1417910400000,
+					"return_time": null
+				},
+				{
+					"book_id": 44,
+					"since": 1343520000000,
+					"till": 1344729600000,
+					"return_time": 1344470400000
+				},
+				{
+					"book_id": 36,
+					"since": 1374624000000,
+					"till": 1377043200000,
+					"return_time": 1376870400000
+				},
+				{
+					"book_id": 92,
+					"since": 1397952000000,
+					"till": 1398556800000,
+					"return_time": 1398384000000
+				},
+				{
+					"book_id": 63,
+					"since": 1315008000000,
+					"till": 1315612800000,
+					"return_time": null
+				},
+				{
+					"book_id": 33,
+					"since": 1286496000000,
+					"till": 1287100800000,
+					"return_time": 1286841600000
+				},
+				{
+					"book_id": 10,
+					"since": 1320192000000,
+					"till": 1322006400000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 115,
+			"name": "Alan Miller",
+			"history": [
+				{
+					"book_id": 79,
+					"since": 1335744000000,
+					"till": 1336348800000,
+					"return_time": null
+				},
+				{
+					"book_id": 75,
+					"since": 1372032000000,
+					"till": 1374451200000,
+					"return_time": null
+				},
+				{
+					"book_id": 33,
+					"since": 1289088000000,
+					"till": 1291507200000,
+					"return_time": null
+				},
+				{
+					"book_id": 31,
+					"since": 1340928000000,
+					"till": 1341532800000,
+					"return_time": null
+				},
+				{
+					"book_id": 16,
+					"since": 1382400000000,
+					"till": 1384214400000,
+					"return_time": null
+				},
+				{
+					"book_id": 49,
+					"since": 1291680000000,
+					"till": 1292889600000,
+					"return_time": 1293062400000
+				},
+				{
+					"book_id": 15,
+					"since": 1294272000000,
+					"till": 1294876800000,
+					"return_time": 1295049600000
+				}
+			]
+		},
+		{
+			"id": 116,
+			"name": "Jeff Minter",
+			"history": [
+				{
+					"book_id": 28,
+					"since": 1418688000000,
+					"till": 1420502400000,
+					"return_time": 1420156800000
+				},
+				{
+					"book_id": 15,
+					"since": 1299456000000,
+					"till": 1301270400000,
+					"return_time": 1300924800000
+				},
+				{
+					"book_id": 84,
+					"since": 1276128000000,
+					"till": 1277337600000,
+					"return_time": 1277251200000
+				},
+				{
+					"book_id": 3,
+					"since": 1302048000000,
+					"till": 1302652800000,
+					"return_time": null
+				},
+				{
+					"book_id": 48,
+					"since": 1294272000000,
+					"till": 1295481600000,
+					"return_time": 1295136000000
+				}
+			]
+		},
+		{
+			"id": 117,
+			"name": "David Mullich",
+			"history": [
+				{
+					"book_id": 42,
+					"since": 1377216000000,
+					"till": 1379635200000,
+					"return_time": 1379808000000
+				},
+				{
+					"book_id": 55,
+					"since": 1325376000000,
+					"till": 1327795200000,
+					"return_time": 1327536000000
+				},
+				{
+					"book_id": 76,
+					"since": 1317600000000,
+					"till": 1320019200000,
+					"return_time": null
+				},
+				{
+					"book_id": 12,
+					"since": 1348704000000,
+					"till": 1351123200000,
+					"return_time": 1351296000000
+				},
+				{
+					"book_id": 41,
+					"since": 1299456000000,
+					"till": 1300665600000,
+					"return_time": 1300838400000
+				},
+				{
+					"book_id": 49,
+					"since": 1387584000000,
+					"till": 1389398400000,
+					"return_time": 1389571200000
+				},
+				{
+					"book_id": 83,
+					"since": 1296864000000,
+					"till": 1298678400000,
+					"return_time": null
+				},
+				{
+					"book_id": 75,
+					"since": 1340928000000,
+					"till": 1342742400000,
+					"return_time": 1342396800000
+				},
+				{
+					"book_id": 97,
+					"since": 1392768000000,
+					"till": 1393372800000,
+					"return_time": 1393459200000
+				},
+				{
+					"book_id": 93,
+					"since": 1423872000000,
+					"till": 1425686400000,
+					"return_time": 1425859200000
+				}
+			]
+		},
+		{
+			"id": 118,
+			"name": "Yuji Naka",
+			"history": [
+				{
+					"book_id": 9,
+					"since": 1346112000000,
+					"till": 1346716800000,
+					"return_time": null
+				},
+				{
+					"book_id": 92,
+					"since": 1382400000000,
+					"till": 1383004800000,
+					"return_time": 1383091200000
+				}
+			]
+		},
+		{
+			"id": 119,
+			"name": "Markus Persson",
+			"history": [
+				{
+					"book_id": 54,
+					"since": 1335744000000,
+					"till": 1336953600000,
+					"return_time": null
+				},
+				{
+					"book_id": 30,
+					"since": 1283904000000,
+					"till": 1286323200000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 120,
+			"name": "Steve Polge",
+			"history": [
+				{
+					"book_id": 16,
+					"since": 1343520000000,
+					"till": 1344124800000,
+					"return_time": 1343779200000
+				},
+				{
+					"book_id": 4,
+					"since": 1283904000000,
+					"till": 1285113600000,
+					"return_time": 1284940800000
+				},
+				{
+					"book_id": 24,
+					"since": 1377216000000,
+					"till": 1379030400000,
+					"return_time": null
+				},
+				{
+					"book_id": 73,
+					"since": 1278720000000,
+					"till": 1281139200000,
+					"return_time": null
+				},
+				{
+					"book_id": 89,
+					"since": 1348704000000,
+					"till": 1349308800000,
+					"return_time": 1349395200000
+				},
+				{
+					"book_id": 25,
+					"since": 1372032000000,
+					"till": 1373241600000,
+					"return_time": null
+				},
+				{
+					"book_id": 6,
+					"since": 1340928000000,
+					"till": 1341532800000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 121,
+			"name": "Frédérick Raynal",
+			"history": [
+				{
+					"book_id": 30,
+					"since": 1413504000000,
+					"till": 1415923200000,
+					"return_time": 1416096000000
+				},
+				{
+					"book_id": 77,
+					"since": 1384992000000,
+					"till": 1387411200000,
+					"return_time": 1387065600000
+				},
+				{
+					"book_id": 77,
+					"since": 1273536000000,
+					"till": 1275350400000,
+					"return_time": 1275523200000
+				}
+			]
+		},
+		{
+			"id": 122,
+			"name": "John Romero",
+			"history": [
+				{
+					"book_id": 27,
+					"since": 1372032000000,
+					"till": 1373846400000,
+					"return_time": 1373760000000
+				},
+				{
+					"book_id": 64,
+					"since": 1346112000000,
+					"till": 1346716800000,
+					"return_time": 1346889600000
+				},
+				{
+					"book_id": 25,
+					"since": 1374624000000,
+					"till": 1377043200000,
+					"return_time": 1376697600000
+				}
+			]
+		},
+		{
+			"id": 123,
+			"name": "Jim Sachs",
+			"history": [
+				{
+					"book_id": 24,
+					"since": 1286496000000,
+					"till": 1287100800000,
+					"return_time": 1287187200000
+				}
+			]
+		},
+		{
+			"id": 124,
+			"name": "Chris Sawyer",
+			"history": [
+				{
+					"book_id": 79,
+					"since": 1416096000000,
+					"till": 1417910400000,
+					"return_time": 1418083200000
+				}
+			]
+		},
+		{
+			"id": 125,
+			"name": "Ken Silverman",
+			"history": [
+				{
+					"book_id": 88,
+					"since": 1353888000000,
+					"till": 1356307200000,
+					"return_time": null
+				},
+				{
+					"book_id": 15,
+					"since": 1372032000000,
+					"till": 1373241600000,
+					"return_time": 1373328000000
+				},
+				{
+					"book_id": 41,
+					"since": 1392768000000,
+					"till": 1393977600000,
+					"return_time": 1393804800000
+				},
+				{
+					"book_id": 2,
+					"since": 1423872000000,
+					"till": 1425081600000,
+					"return_time": null
+				},
+				{
+					"book_id": 53,
+					"since": 1429056000000,
+					"till": 1430870400000,
+					"return_time": 1431043200000
+				},
+				{
+					"book_id": 83,
+					"since": 1366848000000,
+					"till": 1368057600000,
+					"return_time": 1368230400000
+				},
+				{
+					"book_id": 59,
+					"since": 1322784000000,
+					"till": 1325203200000,
+					"return_time": 1324857600000
+				},
+				{
+					"book_id": 88,
+					"since": 1379808000000,
+					"till": 1381017600000,
+					"return_time": null
+				},
+				{
+					"book_id": 84,
+					"since": 1283904000000,
+					"till": 1285718400000,
+					"return_time": 1285372800000
+				},
+				{
+					"book_id": 90,
+					"since": 1359072000000,
+					"till": 1360281600000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 126,
+			"name": "Tim Sweeney",
+			"history": [
+				{
+					"book_id": 90,
+					"since": 1405728000000,
+					"till": 1406937600000,
+					"return_time": 1407110400000
+				},
+				{
+					"book_id": 27,
+					"since": 1423872000000,
+					"till": 1426291200000,
+					"return_time": 1426377600000
+				},
+				{
+					"book_id": 60,
+					"since": 1346112000000,
+					"till": 1347321600000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 127,
+			"name": "Anne Westfall",
+			"history": [
+				{
+					"book_id": 10,
+					"since": 1327968000000,
+					"till": 1329177600000,
+					"return_time": 1329350400000
+				},
+				{
+					"book_id": 27,
+					"since": 1423872000000,
+					"till": 1426291200000,
+					"return_time": 1426464000000
+				},
+				{
+					"book_id": 64,
+					"since": 1382400000000,
+					"till": 1384214400000,
+					"return_time": 1383955200000
+				},
+				{
+					"book_id": 54,
+					"since": 1356480000000,
+					"till": 1358294400000,
+					"return_time": 1358380800000
+				},
+				{
+					"book_id": 10,
+					"since": 1403136000000,
+					"till": 1404950400000,
+					"return_time": 1404691200000
+				},
+				{
+					"book_id": 4,
+					"since": 1366848000000,
+					"till": 1369267200000,
+					"return_time": 1369440000000
+				},
+				{
+					"book_id": 9,
+					"since": 1374624000000,
+					"till": 1377043200000,
+					"return_time": 1377129600000
+				},
+				{
+					"book_id": 31,
+					"since": 1408320000000,
+					"till": 1410134400000,
+					"return_time": 1410307200000
+				},
+				{
+					"book_id": 15,
+					"since": 1278720000000,
+					"till": 1279929600000,
+					"return_time": 1280016000000
+				},
+				{
+					"book_id": 84,
+					"since": 1405728000000,
+					"till": 1407542400000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 128,
+			"name": "Will Wright",
+			"history": [
+				{
+					"book_id": 26,
+					"since": 1408320000000,
+					"till": 1409529600000,
+					"return_time": 1409702400000
+				},
+				{
+					"book_id": 86,
+					"since": 1302048000000,
+					"till": 1304467200000,
+					"return_time": null
+				},
+				{
+					"book_id": 37,
+					"since": 1369440000000,
+					"till": 1371859200000,
+					"return_time": 1372032000000
+				},
+				{
+					"book_id": 72,
+					"since": 1374624000000,
+					"till": 1376438400000,
+					"return_time": null
+				}
+			]
+		},
+		{
+			"id": 129,
+			"name": "Corrinne Yu",
+			"history": [
+				{
+					"book_id": 65,
+					"since": 1302048000000,
+					"till": 1304467200000,
+					"return_time": 1304640000000
+				},
+				{
+					"book_id": 69,
+					"since": 1283904000000,
+					"till": 1284508800000,
+					"return_time": 1284249600000
+				},
+				{
+					"book_id": 74,
+					"since": 1286496000000,
+					"till": 1288310400000,
+					"return_time": 1288483200000
+				},
+				{
+					"book_id": 24,
+					"since": 1418688000000,
+					"till": 1419897600000,
+					"return_time": 1419984000000
+				}
+			]
+		}
+	]
+}
