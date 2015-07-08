@@ -4,35 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Smart</title>
-
-    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <!--<link rel="stylesheet" type="text/css" href="css/sidebar/normalize.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="css/sidebar/demo.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="css/sidebar/icons.css">-->
-    <link rel="stylesheet" type="text/css" href="css/sidebar/component.css">
-    <!--<script type="text/javascript" async="" src="js/sidebar/ga.js"></script>-->
-    <!--<script src="js/sidebar/modernizr.custom.js"></script>-->
-    <style type="text/css"></style>
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-7243260-2']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-    <![endif]-->
 </head>
 <body>
 <div id="st-container" class="st-container st-effect-5">
-   <div class="nav_scroll st-effect-13 st-menu" style="  overflow: hidden;
-  width: 270px;">
+   <div class="nav_scroll st-effect-13 st-menu" style="  overflow: hidden;  width: 270px;">
        <nav class="st-menu st-effect-13 text-center" id="menu-13" style="overflow-y: scroll;">
            <div class="bl_nav_menu">
                <a href="#" class="ava_left_menu">
@@ -73,11 +51,12 @@
                   <div class="blur_nav">
                   </div>
                    <div class="blur_link">
-                       <div class="col-xs-4" id="st-trigger-effects">
+                       <div class="col-xs-4 search_bl" id="st-trigger-effects">
                            <button data-effect="st-effect-13" class="smart_btn">Smart</button>
-                           <a href="#" class="search_ico">Поиск</a>
+                           <!--<a href="#" class="search_ico">Поиск</a>-->
+                           <input type="search" class="search_ico" placeholder="Поиск">
                        </div>
-                       <div class="col-xs-4 text-center">
+                       <div class="col-xs-4 task_bl text-center">
                            <a href="#" class="task_ico">Мои задачи </a>
                        </div>
                        <div class="col-xs-4 ">
@@ -96,7 +75,7 @@
                                    <span class="data_txt">Сегодня <span class="number_month">25</span> <span class="month">июня</span></span>
                                </div>
                        </div>
-                       <div class="row notes_bl">
+                       <a href="#" class="row notes_bl">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/call.svg">
                                <span class="metka_title">Позвонить Константину по поводу контракта</span>
@@ -106,8 +85,8 @@
                            <div class="col-xs-2 text-right">
                                <span class="name_pis">Осинцев В.П.</span>
                            </div>
-                       </div>
-                       <div class="row notes_bl">
+                       </a>
+                       <a href="#" class="row notes_bl">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/call.svg">
                                <span class="metka_title">Позвонить Константину по поводу контракта</span>
@@ -117,7 +96,7 @@
                            <div class="col-xs-2 text-right">
                                <span class="name_pis">Куриков</span>
                            </div>
-                       </div>
+                       </a>
                        <div class="row notes_bl">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/meet.svg">
@@ -238,7 +217,6 @@
                                <span class="name_pis">Куриков</span>
                            </div>
                        </div>
-
                        <div class="row notes_bl">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/meet.svg">
@@ -267,17 +245,26 @@
                    </div>
                </div>
             </div>
-
-        </div><!-- /st-content -->
-    </div><!-- /st-pusher -->
-</div><!-- /st-container -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        </div>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<script src="js/sidebar/classie.js"></script>
-<script src="js/sidebar/sidebarEffects.js"></script>
-<!-- For the demo ad only -->
-<!--<script src="http://tympanus.net/codrops/adpacks/demoad.js"></script>-->
+<script src="js/script.js"></script>
+<!--<script>-->
+    <!--$(document).ready(function () {-->
+        <!--$('.search_ico').click(function (e) {-->
+            <!--$(this).addClass('active');-->
+<!--//            $('.cont_notes').toggle();-->
+<!--//            e.stopPropagation();-->
+        <!--});-->
+        <!--$('body').click(function () {-->
+            <!--var link = $('.search_ico');-->
+            <!--if (link.hasClass('active')) {-->
+                <!--link.click();-->
+            <!--}-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->
 </body>
 </html>
