@@ -7,6 +7,8 @@
     <title>Smart</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/mod/jquery-ui.min.css">-->
+    <!--<link rel="stylesheet" href="css/mod/jquery.jspanel.css">-->
 </head>
 <body>
 <div id="st-container" class="st-container st-effect-5">
@@ -65,17 +67,97 @@
                        </div>
                    </div>
                </div>
+               <div class="accord">
+                   <div class="col-xs-12">
+                       <div class="btn-group" data-toggle="buttons">
+                           <label class="btn btn-primary active">
+                               <input type="radio" name="options" id="option1" autocomplete="off" checked>Мои клиенты
+                           </label>
+                           <label class="btn btn-primary">
+                               <input type="radio" name="options" id="option2" autocomplete="off">Все клиенты
+                           </label>
+                       </div>
+                       <div class="dropdown">
+                           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width: 273px">
+                               Вид задачи
+                               <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                               <li><a href="#">Action</a></li>
+                               <li><a href="#">Another action</a></li>
+                               <li><a href="#">Something else here</a></li>
+                               <li><a href="#">Separated link</a></li>
+                           </ul>
+                       </div>
+                       <div class="dropdown">
+                           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width: 225px">
+                               Вид клиента
+                               <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                               <li><a href="#">Action</a></li>
+                               <li><a href="#">Another action</a></li>
+                               <li><a href="#">Something else here</a></li>
+                               <li><a href="#">Separated link</a></li>
+                           </ul>
+                       </div>
+                       <div class="dropdown">
+                           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                               Тип клиента
+                               <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                               <li><a href="#">Action</a></li>
+                               <li><a href="#">Another action</a></li>
+                               <li><a href="#">Something else here</a></li>
+                               <li><a href="#">Separated link</a></li>
+                           </ul>
+                       </div>
+                       <a href="#" class="filters_ico"></a>
+                   </div>
+               </div>
            </div>
             <div class="content">
                 <a href="#" class="btn_plus"></a>
                <div class="container">
+                   <!--<div class="container-content modal_content">-->
+                       <!--<div class="row">-->
+                           <!--<div class="col-xs-2 text-left">-->
+                               <!--<a href="#" class="modal_smart_ico"></a>-->
+                           <!--</div>-->
+                           <!--<div class="col-xs-8">-->
+                               <!--<h3>Обработка информации от компании "Motul"</h3>-->
+                           <!--</div>-->
+                           <!--<div class="col-xs-2 text-right">-->
+                               <!--<a href="#" class="setting_modal_ico"></a>-->
+                           <!--</div>-->
+                       <!--</div>-->
+                       <!--<div class="row">-->
+                           <!--<div class="col-xs-6 text-left">-->
+                               <!--<span>Создана 29 ноября 2014</span>-->
+                           <!--</div>-->
+                           <!--<div class="col-xs-6 text-right">-->
+                               <!--время-->
+                           <!--</div>-->
+                       <!--</div>-->
+                       <!--<div class="row reds_row">-->
+                           <!--<div class="col-xs-6 text-left">-->
+                               <!--<p>Задача не выполнена, 15 марта 2015</p>-->
+                           <!--</div>-->
+                           <!--<div class="col-xs-6 text-right">-->
+                               <!--<ul>-->
+                                   <!--<li>Причина</li>-->
+                               <!--</ul>-->
+                           <!--</div>-->
+                       <!--</div>-->
+                   <!--</div>-->
                    <div class="container-content cont_notes">
                        <div class="row">
                                <div class="data_bl">
                                    <span class="data_txt">Сегодня <span class="number_month">25</span> <span class="month">июня</span></span>
                                </div>
                        </div>
-                       <a href="#" class="row notes_bl">
+                       <a id="btn2" href="#" class="row notes_bl">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/call.svg">
                                <span class="metka_title">Позвонить Константину по поводу контракта</span>
@@ -86,7 +168,7 @@
                                <span class="name_pis">Осинцев В.П.</span>
                            </div>
                        </a>
-                       <a href="#" class="row notes_bl">
+                       <a id="btn5" href="#" class="row notes_bl">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/call.svg">
                                <span class="metka_title">Позвонить Константину по поводу контракта</span>
@@ -251,20 +333,73 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/mod/jquery.min.js"></script>
+<script src="js/mod/jquery-ui.min.js"></script>
+<script src="js/mod/jquery.jspanel.js"></script>
+
 <!--<script>-->
-    <!--$(document).ready(function () {-->
-        <!--$('.search_ico').click(function (e) {-->
-            <!--$(this).addClass('active');-->
-<!--//            $('.cont_notes').toggle();-->
-<!--//            e.stopPropagation();-->
+    <!--$('#btn1').click(function (e) {-->
+        <!--e.preventDefault();-->
+        <!--$.jsPanel();-->
+    <!--});-->
+    <!--$('#btn2').click(function (e) {-->
+        <!--e.preventDefault();-->
+        <!--$.jsPanel({-->
+            <!--selector: "#container-1",-->
+            <!--position: "center",-->
+            <!--theme: "success",-->
+            <!--title: "Another jsPanel"-->
         <!--});-->
-        <!--$('body').click(function () {-->
-            <!--var link = $('.search_ico');-->
-            <!--if (link.hasClass('active')) {-->
-                <!--link.click();-->
+    <!--});-->
+    <!--$('#btn3').click(function (e) {-->
+        <!--e.preventDefault();-->
+        <!--$.jsPanel({-->
+
+            <!--size: {width: 800, height: 500},-->
+            <!--position: 'center',-->
+            <!--theme: 'medium'-->
+        <!--});-->
+    <!--});-->
+    <!--$('#btn4').click(function (e) {-->
+        <!--e.preventDefault();-->
+        <!--var panel1 = $.jsPanel({-->
+            <!--title: "jsPanel Title",-->
+            <!--size: {width: 400, height: 200},-->
+            <!--position: "center",-->
+            <!--theme: "success"-->
+        <!--});-->
+        <!--window.setTimeout(function () {-->
+            <!--// call .title() on the variable representing the jsPanel (delayed in order to see the title change)-->
+            <!--panel1.title('jsPanel <small>a jquery plugin</small>');-->
+        <!--}, 3000);-->
+    <!--});-->
+    <!--$('#btn5').click(function (e) {-->
+        <!--e.preventDefault();-->
+        <!--var mypanel = $.jsPanel({-->
+            <!--title: "Заголовок",-->
+            <!--position: "center",-->
+            <!--theme: "autumnbrown",-->
+            <!--size: {width: 800, height: 600}-->
+        <!--});-->
+        <!--mypanel.content.append("<img src='img/test.jpg'>");-->
+        <!--mypanel.on('jspanelstatechange', function () {-->
+            <!--mypanel.content.append("<p style='text-align:center;padding:0 10px;'><i>jsPanel</i>.status changed to: " + mypanel.status + "</p> ");-->
+        <!--});-->
+    <!--});-->
+    <!--$('#btn6').click(function (e) {-->
+        <!--e.preventDefault();-->
+        <!--var mypanel2 = $.jsPanel({-->
+            <!--position: "center",-->
+            <!--theme: "autumnred"-->
+        <!--});-->
+        <!--mypanel2.on('jspanelstatechange', function () {-->
+            <!--if (mypanel2.status === "maximized" || mypanel2.status === "normalized") {-->
+                <!--mypanel2.content.append("<p style='text-align:center;padding:0 10px;'><i>jsPanel</i>.status changed to: " + mypanel2.status + "</p>");-->
             <!--}-->
         <!--});-->
     <!--});-->
 <!--</script>-->
+
+
 </body>
 </html>

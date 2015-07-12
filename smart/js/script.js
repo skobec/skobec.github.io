@@ -118,4 +118,20 @@ var SidebarMenuEffects = (function() {
 
 	init();
 
+$('.search_ico').click(function(){
+	$(this).addClass('active_search');
+	$('.accord').show(500);
+	$('.header-navbar').addClass('header-navbar_focus');
+	$('.cont_notes').animate({ opacity: "0" }, 100);
+	$('.cont_notes').hide(10);
+	$('.header').addClass('header_no');
+});
+	$('.content').click(function(){
+		$('.search_ico').removeClass('active_search');
+		$('.accord').hide(500);
+		$('.header-navbar').removeClass('header-navbar_focus');
+		$('.cont_notes').animate({ opacity: "1" }, 400);
+		$('.cont_notes').show(200);
+		$('.header').removeClass('header_no');
+	});
 })();
