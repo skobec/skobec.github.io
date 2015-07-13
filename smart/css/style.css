@@ -311,6 +311,7 @@ body,
 .st-content {
     overflow-y: scroll;
     background: #f2f2f2;
+    width: 102%;
 }
 
 .st-content,
@@ -359,7 +360,7 @@ body,
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 101!important;
     visibility: hidden;
     width: 300px;
     height: 100%;
@@ -908,19 +909,23 @@ body,
     background-color: rgba(0, 102, 235, 0.7);
     height: 80px;
     padding-top: 25px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 .header-navbar_focus {
     background-color: rgba(255, 255, 255, 1);
 }
 .header-navbar_focus .smart_btn {
-    background: url("../img/svg/menu-blue.svg")no-repeat 0 3px;
+    background: url("../img/svg/menu-blue.svg")no-repeat 0 5px;
     color: rgba(0, 102, 235, 0.7);
 }
 .header-navbar_focus .smart_btn:hover {
     background: url("../img/svg/menu-blue-hover.svg")no-repeat 0 3px;
 }
 .smart_btn {
-    background: url("../img/svg/menu-white.svg")no-repeat 0 3px;
+    background: url("../img/svg/menu-white.svg")no-repeat 0 5px;
+    font-size: 16px;
     padding-left: 35px;
     border: 0;
     text-transform: uppercase;
@@ -933,7 +938,7 @@ body,
     /*background-size: 100px 100px;*/
 }
 .smart_btn:hover {
-    background: url("../img/svg/menu-white-hover.svg")no-repeat 0 3px;
+    background: url("../img/svg/menu-white-hover.svg")no-repeat 0 5px;
     color: #000000;
     transition: 0.3s;
     -moz-transition: 0.3s;
@@ -950,19 +955,34 @@ body,
     background: url("../img/svg/search-active.svg")no-repeat -1px 7px;
 }
 .task_ico {
-    background: url("../img/svg/dropdown.svg")no-repeat 100% 65%;
-    padding-right: 20px;
+    /*background: url("../img/svg/dropdown.svg")no-repeat 100% 65%;*/
+    /*padding-right: 20px;*/
+    /*color: #ffffff;*/
+    /*font-size: 18px;*/
+    background: url("../img/svg/dropdown.svg")no-repeat 90% 53%;
     color: #ffffff;
     font-size: 18px;
+    padding: 10px 36px 10px 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none!important;
 
+}
+.task_ico:hover {
+    color: #ffffff;
+    background-color: #2f71c4;
 }
 .header-navbar_focus .ava_top {
     color: #000000;
 }
 .ava_top {
-    margin-top: -5px;
+    /*margin-top: -5px;*/
+    margin-top: 2px;
     float: right;
     color: #ffffff;
+    /*background: url("../img/svg/se")no-repeat 100% 65%;*/
+    padding-right: 20px;
 }
 .ava_top img {
     height: 34px;
@@ -1095,6 +1115,7 @@ body,
     padding: 16px 5px;
     margin-top: -1px;
     display: inherit;
+    cursor: pointer;
 }
 .data_txt {
     font-family: Conv_AvenirNextCyr-Demi, sans-serif;
@@ -1144,7 +1165,7 @@ body,
     border-radius: 15px;
     -webkit-box-shadow: inset 0 0 0;
     box-shadow: inset 0 0 0;
-    border: 1px solid #d0d7dc;
+    /*border: 1px solid #d0d7dc;*/
 }
 .no-pad {
     padding: 0;
@@ -1158,10 +1179,10 @@ body,
     background-color: #6fd160;
 }
 .progress-2 {
-    background-color: #d0d7dc;
+    background-color: #79868f;
 }
 .progress-1 {
-    background-color: #ffffff;
+    background-color: #e5e5e5;
 }
 .up_progres {
     float: left;
@@ -1183,9 +1204,12 @@ body,
     background: url("../img/svg/plus.svg")no-repeat;
     height: 40px;
     width: 40px;
-    position: absolute;
+    /*position: absolute;*/
+    /*left: 5%;*/
+    /*top: 5%;*/
+    position: fixed;
     left: 5%;
-    top: 5%;
+    bottom: 40%;
 }
 .btn_plus:hover{
     background: url("../img/svg/plus-hover.svg")no-repeat;
@@ -1325,6 +1349,9 @@ body,
     padding: 20px 0;
     border-top: 1px solid #e6e6e6;
     box-shadow: 0 3px 2px -2px rgba(128, 128, 128, 0.63);
+    margin-top: 80px;
+    position: fixed;
+    z-index: 1;
 }
 .accord_show {
     display: block;
@@ -1367,4 +1394,37 @@ body,
     float: right;
     height: 40px;
     width: 40px;
+}
+.st-menu-open:after {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.modal-header {
+    background: transparent;
+    min-height: 36px;
+    padding: 0;
+}
+.modal-header .close {
+    margin-top: -2px;
+    color: #ffffff;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: AvenirNextCyr-Regular, sans-serif;
+}
+.modal-content {
+    position: relative;
+     background-color: transparent;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+     -webkit-box-shadow: 0 0 0 rgba(0,0,0,.5);
+     box-shadow: 0 0 0 rgba(0,0,0,.5);
 }

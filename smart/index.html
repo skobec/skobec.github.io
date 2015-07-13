@@ -62,7 +62,7 @@
                            <a href="#" class="task_ico">Мои задачи </a>
                        </div>
                        <div class="col-xs-4 ">
-                           <a href="#" class="ava_top"><img src="img/ava-big.png"><span>Ярослав Самойлов</span></a>
+                           <a href="#" class="ava_top"><span>Ярослав</span></a>
                            <a href="#" class="menu_br"></a>
                        </div>
                    </div>
@@ -157,7 +157,7 @@
                                    <span class="data_txt">Сегодня <span class="number_month">25</span> <span class="month">июня</span></span>
                                </div>
                        </div>
-                       <a id="btn2" href="#" class="row notes_bl">
+                       <div class="row notes_bl" data-toggle="modal" data-target="#myModal">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/call.svg">
                                <span class="metka_title">Позвонить Константину по поводу контракта</span>
@@ -167,8 +167,8 @@
                            <div class="col-xs-2 text-right">
                                <span class="name_pis">Осинцев В.П.</span>
                            </div>
-                       </a>
-                       <a id="btn5" href="#" class="row notes_bl">
+                       </div>
+                       <div class="row notes_bl" data-toggle="modal" data-target="#myModal">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/call.svg">
                                <span class="metka_title">Позвонить Константину по поводу контракта</span>
@@ -178,7 +178,7 @@
                            <div class="col-xs-2 text-right">
                                <span class="name_pis">Куриков</span>
                            </div>
-                       </a>
+                       </div>
                        <div class="row notes_bl">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/meet.svg">
@@ -186,14 +186,13 @@
                                <span class="date_creat">Создан <span>20 июня 2015</span></span>
                            </div>
                            <div class="col-xs-4 text-right">
-                               <a href="img/doc-1.png" class="link_doc_img"><img src="img/doc-1.png" alt=""></a>
-                               <a href="img/doc-2.png" class="link_doc_img"><img src="img/doc-2.png" alt=""></a>
+
                            </div>
                            <div class="col-xs-2 text-right">
                                <span class="name_pis">Куриков</span>
                            </div>
                        </div>
-                       <div class="row notes_bl">
+                       <div href="#" class="row notes_bl" data-toggle="modal" data-target="#myModal">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/task.svg">
                                <span class="metka_title">Отправить документы по кредиту</span>
@@ -204,7 +203,7 @@
                                <span class="name_pis">Куриков</span>
                            </div>
                        </div>
-                       <div class="row notes_bl">
+                       <div class="row notes_bl" data-toggle="modal" data-target="#myModal">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/deal.svg">
                                <span class="metka_title">Отправить документы по кредиту</span>
@@ -244,7 +243,7 @@
                                <span class="data_txt">Сегодня <span class="number_month">25</span> <span class="month">июня</span></span>
                            </div>
                        </div>
-                       <div class="row notes_bl">
+                       <div href="#" class="row notes_bl">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/call.svg">
                                <span class="metka_title">Позвонить Константину по поводу контракта</span>
@@ -255,7 +254,7 @@
                                <span class="name_pis">Осинцев В.П.</span>
                            </div>
                        </div>
-                       <div class="row notes_bl">
+                       <div href="#" class="row notes_bl" data-toggle="modal" data-target="#myModal">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/call.svg">
                                <span class="metka_title">Позвонить Константину по поводу контракта</span>
@@ -266,7 +265,7 @@
                                <span class="name_pis">Куриков</span>
                            </div>
                        </div>
-                       <div class="row notes_bl">
+                       <div class="row notes_bl" data-toggle="modal" data-target="#myModal">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/deal.svg">
                                <span class="metka_title">Отправить документы по кредиту</span>
@@ -299,7 +298,7 @@
                                <span class="name_pis">Куриков</span>
                            </div>
                        </div>
-                       <div class="row notes_bl">
+                       <div class="row notes_bl" data-toggle="modal" data-target="#myModal">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/meet.svg">
                                <span class="metka_title">Встреча с представителем</span>
@@ -313,7 +312,7 @@
                                <span class="name_pis">Куриков</span>
                            </div>
                        </div>
-                       <div class="row notes_bl">
+                       <div class="row notes_bl" data-toggle="modal" data-target="#myModal">
                            <div class="col-xs-6">
                                <img class="ico_notes" src="img/svg/task.svg">
                                <span class="metka_title">Отправить документы по кредиту</span>
@@ -330,6 +329,22 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width: 800px;border: 0;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="img/svg/close.svg" style="  margin-top: -3px;
+  margin-right: 10px;"></span>Закрыть</button>
+            </div>
+            <div class="modal-body" style="padding: 0">
+                <img src="img/test.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
