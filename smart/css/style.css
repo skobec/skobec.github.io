@@ -310,8 +310,11 @@ body,
 
 .st-content {
     overflow-y: scroll;
-    background: #f2f2f2;
+    /*background: #f2f2f2;*/
+    background: #f2f2f2 url("../img/background_1.png")no-repeat top center;
+    background-size: 100% 300px;
     width: 102%;
+
 }
 
 .st-content,
@@ -879,20 +882,20 @@ body,
 }
 /*sidebar*/
 .header {
-    background: url("../img/background_1.png")no-repeat top center;
-    height: 300px;
+    /*background: url("../img/background_1.png")no-repeat top center;*/
+    /*height: 300px;*/
     background-size: cover;
 }
 .header_no {
-    background: none;
-    height: 200px;
+    background: #f2f2f2;
+    /*height: 200px;*/
 }
 .blur_nav {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     /*bottom: 0px;*/
-    left: 0px;
+    left: 0;
     z-index: 99;
     /*background-position: center -70px;*/
     /*-webkit-filter: blur(10px);*/
@@ -946,13 +949,13 @@ body,
     -webkit-transition: 0.3s;
 }
 .search_ico {
-    background: url("../img/svg/search.svg")no-repeat 0 7px;
+    background: url("../img/svg/search.svg")no-repeat 10px 7px;
     color: #ffffff;
     padding: 3px 0 2px 27px;
     margin-left: 40px;
 }
 .search_ico:hover {
-    background: url("../img/svg/search-active.svg")no-repeat -1px 7px;
+    background: url("../img/svg/search.svg")no-repeat 10px 7px;
 }
 .task_ico {
     /*background: url("../img/svg/dropdown.svg")no-repeat 100% 65%;*/
@@ -1116,6 +1119,17 @@ body,
     margin-top: -1px;
     display: inherit;
     cursor: pointer;
+    transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+.notes_bl:hover {
+    background-color: #f3f3f3;
+    transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
 }
 .data_txt {
     font-family: Conv_AvenirNextCyr-Demi, sans-serif;
@@ -1144,15 +1158,25 @@ body,
 .name_pis {
     font-family: AvenirNextCyr-Regular,sans-serif;
     font-size: 14px;
-    color: #4a87ff;
+    color: #3e3e40;
     margin-top: 7px;
     float: right;
+    max-width: 114px;
+    background: #F3F4F5 url("../img/svg/case.svg")no-repeat 8px 50%;
+    padding: 5px 8px 5px 22px;
+    height: 32px;
+    border: 1px solid #dce0e7;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    overflow: hidden;
 }
 .link_doc_img {
     margin: 0 5px;
 }
 .cont_notes:first-child {
-    margin-top: -220px;
+    /*margin-top: -220px;*/
+    margin-top: 80px;
 }
 .cont_notes:first-child .data_txt {
     color: #ffffff;
@@ -1238,7 +1262,7 @@ body,
 /* Поле ввода строки поиска */
 .search_ico[type=search] {
     border: solid 1px transparent;
-    padding: 9px 10px 9px 32px;
+    padding: 9px 10px 9px 40px;
     width: 95px;
     color: #ffffff;
     -webkit-border-radius: 0;
@@ -1394,6 +1418,7 @@ body,
     float: right;
     height: 40px;
     width: 40px;
+    border: 0;
 }
 .st-menu-open:after {
     content: "";
@@ -1416,6 +1441,7 @@ body,
     font-size: 14px;
     font-weight: 400;
     font-family: AvenirNextCyr-Regular, sans-serif;
+    padding: 5px;
 }
 .modal-content {
     position: relative;
@@ -1427,4 +1453,49 @@ body,
     outline: 0;
      -webkit-box-shadow: 0 0 0 rgba(0,0,0,.5);
      box-shadow: 0 0 0 rgba(0,0,0,.5);
+}
+.minimize_block {
+    background-color: #262626;
+    position: absolute;
+    right: 20px;
+    bottom: 21px;
+    z-index: 99;
+    height: 41px;
+    width: 331px;
+    padding: 7px 15px;
+    display: none;
+}
+.btn_minibar {
+    background-color: transparent;
+    border: 0;
+}
+.txt_minibar {
+    float: left;
+    text-align: left;
+    color: #aaaaaa;
+    font-size: 14px;
+    font-family: AvenirNextCyr-Regular, sans-serif;
+    margin-top: 3px;
+}
+.bl_plus {
+    display: none;
+    width: 410px;
+    height: 400px;
+    position: absolute;
+    right: 12px;
+    top: 75px;
+    background-color: #ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 0 11px 1px rgba(27, 27, 27, 0.25);
+}
+.bl_plus:before {
+    content: "";
+    border-bottom: 5px solid white;
+    border-right: 5px solid rgba(124, 65, 65, 0);
+    border-left: 5px solid rgba(255, 0, 0, 0.02);
+    top: -5px;
+    right: 13px;
+    position: absolute;
 }

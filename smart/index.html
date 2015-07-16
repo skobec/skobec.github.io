@@ -113,7 +113,22 @@
                                <li><a href="#">Separated link</a></li>
                            </ul>
                        </div>
-                       <a href="#" class="filters_ico"></a>
+                       <button class="filters_ico"></button>
+                       <div class="bl_plus">
+                           <div class="dropdown">
+                               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="  width: 382px;
+  margin-top: 15px;">
+                                   Вид клиента
+                                   <span class="caret"></span>
+                               </button>
+                               <ul class="dropdown-menu" aria-labelledby="dropdownMenu6">
+                                   <li><a href="#">Action</a></li>
+                                   <li><a href="#">Another action</a></li>
+                                   <li><a href="#">Something else here</a></li>
+                                   <li><a href="#">Separated link</a></li>
+                               </ul>
+                           </div>
+                       </div>
                    </div>
                </div>
            </div>
@@ -165,7 +180,7 @@
                            </div>
                            <div class="col-xs-4"></div>
                            <div class="col-xs-2 text-right">
-                               <span class="name_pis">Осинцев В.П.</span>
+                               <span class="name_pis">Софтвижн</span>
                            </div>
                        </div>
                        <div class="row notes_bl" data-toggle="modal" data-target="#myModal">
@@ -176,7 +191,7 @@
                            </div>
                            <div class="col-xs-4"></div>
                            <div class="col-xs-2 text-right">
-                               <span class="name_pis">Куриков</span>
+                               <span class="name_pis">Волгоцемаш</span>
                            </div>
                        </div>
                        <div class="row notes_bl">
@@ -189,7 +204,7 @@
 
                            </div>
                            <div class="col-xs-2 text-right">
-                               <span class="name_pis">Куриков</span>
+                               <span class="name_pis">Волгоцемаш</span>
                            </div>
                        </div>
                        <div href="#" class="row notes_bl" data-toggle="modal" data-target="#myModal">
@@ -251,7 +266,7 @@
                            </div>
                            <div class="col-xs-4"></div>
                            <div class="col-xs-2 text-right">
-                               <span class="name_pis">Осинцев В.П.</span>
+                               <span class="name_pis">Волгоцемаш</span>
                            </div>
                        </div>
                        <div href="#" class="row notes_bl" data-toggle="modal" data-target="#myModal">
@@ -262,7 +277,7 @@
                            </div>
                            <div class="col-xs-4"></div>
                            <div class="col-xs-2 text-right">
-                               <span class="name_pis">Куриков</span>
+                               <span class="name_pis">Софтвижн</span>
                            </div>
                        </div>
                        <div class="row notes_bl" data-toggle="modal" data-target="#myModal">
@@ -327,6 +342,12 @@
                </div>
             </div>
         </div>
+        <!--minimize block-->
+        <div class="minimize_block text-right">
+            <span class="txt_minibar">Обработка информации от...</span>
+            <button class="btn_minibar maximize_ico" data-toggle="modal" data-target="#myModal"><img src="img/svg/max.svg"></button>
+            <button class="btn_minibar close_ico"><img src="img/svg/close-mini.svg"></button>
+        </div>
     </div>
 </div>
 
@@ -337,6 +358,8 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="img/svg/close.svg" style="  margin-top: -3px;
   margin-right: 10px;"></span>Закрыть</button>
+                <button type="button" class="close minimize_btn" data-dismiss="modal" aria-label="Close" style="margin-right: 10px;"><span aria-hidden="true"><img src="img/svg/minimize.svg" style="  margin-top: -3px;
+  margin-right: 10px;"></span>Свернуть</button>
             </div>
             <div class="modal-body" style="padding: 0">
                 <img src="img/test.jpg">
@@ -344,6 +367,8 @@
         </div>
     </div>
 </div>
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

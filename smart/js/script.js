@@ -123,13 +123,22 @@ $('.search_ico').click(function(){
 	$('.accord').show(500);
 	$('.header-navbar').addClass('header-navbar_focus');
 	$('.cont_notes ,.btn_plus').animate({ opacity: "0" }, 100).hide(10);
-	$('.header').addClass('header_no');
+	$('.st-content').addClass('header_no');
 });
 	$('.content').click(function(){
 		$('.search_ico').removeClass('active_search');
 		$('.accord').hide(500);
 		$('.header-navbar').removeClass('header-navbar_focus');
 		$('.cont_notes ,.btn_plus').animate({ opacity: "1" }, 400).show(200);
-		$('.header').removeClass('header_no');
+		$('.st-content').removeClass('header_no');
 	});
 })();
+$('.minimize_btn').click(function(){
+	$('.minimize_block').show(200);
+});
+$('.close_ico ,.maximize_ico').click(function(){
+	$('.minimize_block').hide(200);
+});
+$('.filters_ico').click(function(){
+	$('.bl_plus').toggle('display')
+});
