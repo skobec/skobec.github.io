@@ -1,0 +1,71 @@
+<% set_title 'Внутренние отделочные работы и устройство крыльца в торговом помещении магазина «Оптика» по адресу: г. Тамбов, бульвар Энтузиастов, д. 41, кв. 81' %>
+<% set_body_class 'photo_object_page' %>
+<content>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 left_nav">
+                <nav>
+                    <ul class="">
+                        <li class="active"><%= link_to 'Фото объектов', page_object_path %>
+                            <ul class="">
+                                <li>
+                                    <%= link_to 'Реконструкция котельной по адресу: г. Тамбов, ул. Бастионная, 23', page_photo_object_cotel_path %>
+                                </li>
+                                <li class="active">
+                                    <%= link_to 'Внутренние отделочные работы и устройство крыльца в торговом помещении магазина
+                                «Оптика» по адресу: г. Тамбов, бульвар Энтузиастов, д. 41, кв. 81', page_photo_object_optica_path %>
+                                </li>
+                                <li>
+                                    <%= link_to 'Устройство парапета чаши фонтана "Сочи"
+                                    по адресу: г.Тамбов, Кронштадская площадь', page_photo_object_sochi_path %>
+                                </li>
+                                <li>
+                                    <%= link_to 'Общестроительные работы на объекте:
+                                    "Распределительная трансформаторная подстанция 0,4 кВ
+                                    с двумя трансформаторами мощностью 1000 кВа"', page_photo_object_transformer_path %>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-xs-9 content_bl">
+                <div class="row">
+                    <div class="col-xs-12 title_object_page">
+                        <p>Внутренние отделочные работы и устройство крыльца в торговом помещении магазина «Оптика»
+                            по адресу: г. Тамбов, бульвар Энтузиастов, д. 41, кв. 81</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 kateg_photo_txt">
+                        <p>После выполнения работ</p>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="row">
+                            <div class="col-xs-4 tech_bl_new">
+                                <%= link_to image_path('img_object.jpg'), class: 'example-image-link', data: { lightbox:"example-set1"} do %>
+                                    <%= image_tag 'img_object.jpg', class: 'example-image' %>
+                                    <% end %>
+                            </div>
+                            <div class="col-xs-4 tech_bl_new">
+                                <%= link_to image_path('img_object.jpg'), class: 'example-image-link', data: { lightbox:"example-set1"} do %>
+                                    <%= image_tag 'img_object.jpg', class: 'example-image' %>
+                                    <% end %>
+                            </div>
+                            <div class="col-xs-4 tech_bl_new">
+                                <%= link_to image_path('img_object.jpg'), class: 'example-image-link', data: { lightbox:"example-set1"} do %>
+                                    <%= image_tag 'img_object.jpg', class: 'example-image' %>
+                                    <% end %>
+                            </div>
+                            <div class="col-xs-4 tech_bl_new">
+                                <%= link_to image_path('img_object.jpg'), class: 'example-image-link', data: { lightbox:"example-set1"} do %>
+                                    <%= image_tag 'img_object.jpg', class: 'example-image' %>
+                                    <% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</content>

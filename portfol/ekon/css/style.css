@@ -1,0 +1,506 @@
+body,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    min-width: 970px;
+}
+body {
+    background-color: #244680;
+}
+a,button {
+    outline: none!important;
+}
+.lead {
+    font-size: 16px;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+.page-header .lead {
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 1000px;
+    max-width: none !important;
+}
+
+.container .navbar-header,
+.container .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.navbar-header {
+    float: left;
+}
+
+.navbar-collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+    visibility: visible !important;
+}
+
+.navbar-toggle {
+    display: none;
+}
+.navbar-collapse {
+    border-top: 0;
+}
+
+.navbar-brand {
+    margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+.navbar-nav > li {
+    float: left;
+}
+.navbar-nav > li > a {
+    padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+    float: right;
+}
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-width: 0 1px 1px;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff !important;
+    background-color: #428bca !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #999 !important;
+    background-color: transparent !important;
+}
+
+/* Undo form expansion */
+.navbar-form {
+    float: left;
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Copy-pasted from forms.less since we mixin the .form-inline styles. */
+.navbar-form .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.navbar-form .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.navbar-form .form-control-static {
+    display: inline-block;
+}
+
+.navbar-form .input-group {
+    display: inline-table;
+    vertical-align: middle;
+}
+
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn,
+.navbar-form .input-group .form-control {
+    width: auto;
+}
+
+.navbar-form .input-group > .form-control {
+    width: 100%;
+}
+
+.navbar-form .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.navbar-form .radio,
+.navbar-form .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.navbar-form .radio label,
+.navbar-form .checkbox label {
+    padding-left: 0;
+}
+
+.navbar-form .radio input[type="radio"],
+.navbar-form .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+}
+
+.navbar-form .has-feedback .form-control-feedback {
+    top: 0;
+}
+
+.header {
+    background: url("../img/palma.jpg")no-repeat right top;
+    padding: 20px 0 30px;
+}
+.header_contact {
+    text-align: right;
+    padding-top: 35px;
+}
+.header_phone p {
+    color: #203f76;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.header_phone p span {
+    font-size: 26px;
+}
+.header_adres p {
+    color: #64a753;
+    font-size: 18px;
+}
+.nav_menu {
+    padding-bottom: 15px;
+}
+.navigation .nav {
+    background: url("../img/nav_left.jpg")left no-repeat, url("../img/nav_right.jpg")no-repeat right, url("../img/nav_pattern.jpg");
+    max-height: 58px;
+    height: 58px;
+    padding: 6px 8px 6px 25px;
+}
+.navigation .nav li a {
+    color: #ffffff;
+    font-size: 16px;
+}
+.navigation .nav li:hover a, .navigation .nav li a:focus {
+    background-color: #244680;
+}
+.carousel-inner .item img {
+    width: 100%;
+    border-radius: 5px;
+}
+.main {
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin: 35px auto;
+    padding-bottom: 100px;
+}
+.slider .carousel-indicators li img {
+    width: 100%;
+    height: 100%;
+    float: left;
+    opacity: 0.4;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.slider .carousel-indicators {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    bottom: 0;
+}
+.slider .carousel-indicators li {
+    display: inline-block;
+    width: 75px;
+    height: 64px;
+    background-color: #000 \9;
+    background-color: rgba(0,0,0,1);
+    border: 2px solid #fff;
+    border-radius: 3px;
+    margin: 0 12px;
+}
+.slider .carousel-indicators li.active {
+    margin: 0 12px;
+    width: 75px;
+    height: 64px;
+    border: 2px solid #fff;
+}
+.slider .carousel-indicators li.active img{
+    opacity: 1;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.discount_arrow_bl {
+    background:  url("../img/discount_arrow.jpg")no-repeat right, url("../img/discount_pattern.jpg")bottom;
+    height: 72px;
+    max-height: 72px;
+    text-align: center;
+    padding: 9px;
+}
+.discount_arrow_bl p {
+    font-size: 38px;
+    color: #ffffff;
+}
+.discount_arrow_info {
+    background: url("../img/brown_pattern.jpg")repeat-x;
+    height: 72px;
+    max-height: 72px;
+}
+.discount_arrow_info p {
+    font-size: 25px;
+    color: #ffffff;
+}
+.discount_button {
+    text-align: center;
+}
+.discount_button button {
+    /*background-color: #494949;*/
+    border-radius: 22px;
+    font-size: 22px;
+    margin-top: 8px;
+    /*border-top: 1px solid #414141;*/
+    /*border-bottom: 1px solid #404040;*/
+    /*border-left: 1px solid #414141;*/
+    /*border-right: 1px solid #414141;*/
+    padding: 11px 15px;
+    outline: none!important;
+    color: #e9e9e9;
+    border: solid 1px #474747;
+    background: #656565;
+    background: -webkit-gradient(linear, left top, left bottom, from(#656565), to(#474747));
+    background: -moz-linear-gradient(top, #656565, #474747);
+    background: -ms-linear-gradient(top, #656565, #474747);
+    background-image: -o-linear-gradient(top,#656565, #474747);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#656565', endColorstr='#474747');
+}
+.discount_button button:hover {
+    border: solid 1px #555;
+}
+.content_bl {
+    margin-top: 25px;
+}
+.request_tour {
+    background-color: #bfd9e8;
+    text-align: center;
+    padding: 20px 0;
+}
+.request_tour p {
+    font-size: 22px;
+    color: #245f9f;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.blur_btn {
+    -moz-box-shadow: inset 0px 0px 0px 1px #54a3f7;
+    -webkit-box-shadow: inset 0px 0px 0px 1px #54a3f7;
+    box-shadow: inset 0px 0px 0px 1px #54a3f7;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+    background: -moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: -webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: -o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: -ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7', GradientType=0);
+    background-color: #007dc1;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #165898;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-style: italic;
+    padding: 10px 12px;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #154682;
+    top: -1px;
+    position: relative;
+}
+.blur_btn:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+    background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+    background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+    background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+    background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+    background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+    background-color:#0061a7;
+}
+.blur_btn:active {
+    position:relative;
+    top:0;
+}
+.left_nav {
+    margin-top: 15px;
+}
+.left_nav ul li a {
+    background: #eeeeee url("../img/arrow_naw.jpg")no-repeat 13px;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    padding-left: 30px;
+    color: #434141;
+    font-size: 12px;
+    font-weight: bold;
+}
+.left_nav ul li a:hover, .left_nav ul li.active a {
+    background: #67a1d0;
+    color: #ffffff;
+}
+.right_content h1 {
+    margin: 0 0 15px;
+    font-size: 32px;
+}
+.directs {
+    margin-bottom: 55px;
+}
+.direction {
+    background-color: #eeeeee;
+    float: left;
+    padding: 7px 7px 25px;
+    border-radius: 5px;
+    text-decoration: none!important;
+    border-bottom: 3px solid #478ec7;
+    text-align: center;
+}
+.direction:hover .direction_name {
+    background-color: #74c8fc;
+}
+.direction_name {
+    background-color: #67a1d0;
+    border-radius: 4px;
+}
+.direction_name p {
+    font-size: 22px;
+    color: #ffffff;
+}
+.direction_img img {
+    border-radius: 4px;
+}
+.direction_info p {
+    color: #424242;
+    margin-top: 5px;
+}
+.direction:after {
+    content: "";
+    background: url("../img/arrow_circle.jpg")no-repeat;
+    height: 47px;
+    width: 47px;
+    bottom: -29px;
+    left: 42%;
+    position: absolute;
+}
+.predinfo_content {
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    padding: 30px 30px 15px;
+}
+.info_content {
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    padding: 15px;
+}
+.banners img {
+    width: 100%;
+}
+.banners .actions img, .banners .banner img{
+    margin-top: 15px;
+}
+.tour_bl {
+    background-color: #71afd7;
+    text-align: center;
+    padding: 0 15px 25px;
+    border-radius: 2px;
+    float: left;
+    margin-top: 25px;
+}
+.tour_bl:hover {
+    text-decoration: none!important;
+    background-color: #5f85d9;
+}
+.tour_bl img {
+    width: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+}
+.tour_bl p {
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 0 0;
+}
+.adres_bl {
+    border: 2px solid #5495cb;
+    border-radius: 3px;
+    padding: 0;
+    margin: 15px 0;
+}
+.adres_bl .title {
+    text-align: center;
+    background-color: #67a1d0;
+}
+.adres_bl .title p {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 8px;
+}
+.adres_bl .contact_bl {
+    padding: 25px;
+}
+.adres_bl .contact_bl p {
+    margin: 0;
+    font-weight: bold;
+}
+.adres_bl .contact_bl p span {
+    font-weight: 300;
+}
+.maps {
+    padding: 0 25px 40px;
+}
+.footer {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #173b79));
+    background: -moz-linear-gradient(top, #007dc1 5%, #173b79 100%);
+    background: -webkit-linear-gradient(top, #007dc1 5%, #173b79 100%);
+    background: -o-linear-gradient(top, #007dc1 5%, #173b79 100%);
+    background: -ms-linear-gradient(top, #007dc1 5%, #173b79 100%);
+    background: linear-gradient(to bottom, #007dc1 5%, #173b79 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#173b79', GradientType=0);
+    background-color: #007dc1;
+    padding: 15px 35px;
+    margin-bottom: 30px;
+}
+.footer p {
+    color: #ffffff;
+    margin: 0;
+}

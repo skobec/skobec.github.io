@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arino</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery.formstyler.css" rel="stylesheet" />
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+<body>
+<div class="header_background">
+    <div class="container">
+        <div class="row header">
+            <div class="col-xs-7">
+                <a href="#" class="logo"><img src="img/arino_logo_gray.png" alt=""></a>
+            </div>
+            <div class="col-xs-5 btn_header">
+                <div class="col-xs-3 sign_btn">
+                    <a href="#" data-toggle="modal" data-target="#myModal"><span class="sign_ico"></span><p>Войти</p></a>
+                </div>
+                <div class="col-xs-4 reg_link">
+                    <a href="#">Регистрация</a>
+                </div>
+                <div class="col-xs-4 col-xs-offset-1 ads_btn">
+                    <a href="#">Подать объявление</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="search_block">
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control loop_search" placeholder="Поиск по объявлениям...">
+                    </div>
+                    <div class="col-xs-4">
+                        <select id="select-stat" placeholder="выберите" tabindex="-1" class="marker_search">
+                            <option value="">Выберите город</option>
+                            <option data-classn="KZ" value="KZ">Казань</option>
+                            <option data-classn="MSK" value="MSK">Москва</option>
+                            <option data-classn="KAL" value="KAL">Калининград</option>
+                            <option data-classn="CHEL" value="CHEL">Челябинск</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-2 search_btn">
+                        <a href="#">Найти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 banner_top">
+            <a href="#"><img src="img/banner_top.jpg" alt=""></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 ways">
+            <ul class="">
+                <li><a href="#">Главная</a></li>
+                <li><span>Личный кабинет</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-12 lease_bl">
+                <div class="col-xs-8 place_an_add_title">
+                    <h2 class="place_an_add_title__txt">Подать обьявления</h2>
+                </div>
+                <div class="col-xs-2 show_on_map_link">
+                </div>
+                <div class="col-xs-2">
+                    <button class="btn btn-default setting_btn"><span class="setting_ico"></span>Настройки</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8 left_bl">
+            <div class="col-xs-12 advertisement">
+                <div class="col-xs-12">
+                    <div class="alert alert-success conformity_bl" role="alert">
+                        <p>Перед добавлением на сайт каждое объявление проверяется на <a href="#"> соответствие правилам</a></p>
+                    </div>
+                </div>
+                <div class="data_info_bl">
+                    <div class="col-xs-12 name_bl">
+                        <p>Ваше имя: </p>
+                        <span contenteditable="false">Гера</span>
+                        <a href="#">изменить имя</a>
+                    </div>
+                    <div class="col-xs-12 mail_bl">
+                        <p>Электронная почта:</p>
+                        <span contenteditable="false">newpandora@bk.ru</span>
+                        <a href="#">изменить email</a>
+                    </div>
+                    <div class="col-xs-12 select_input_data number_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Телефон:</p>
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control" aria-label="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data city_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Город:</p>
+                            </div>
+                            <div class="col-xs-5">
+                                    <select class="width-auto">
+                                        <option selected disabled>Город</option>
+                                        <option>Казань</option>
+                                        <option>Москва</option>
+                                        <option>Челябинск</option>
+                                        <option>Чапаевск</option>
+                                        <option>Бузулк</option>
+                                    </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data category_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Категория:</p>
+                            </div>
+                            <div class="col-xs-5">
+                                <select class="width-auto">
+                                    <option selected disabled>Категории</option>
+                                    <option>Казань</option>
+                                    <option>Москва</option>
+                                    <option>Челябинск</option>
+                                    <option>Чапаевск</option>
+                                    <option>Бузулк</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data col_com_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Кол-во комнат:</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="width-auto">
+                                    <option selected disabled></option>
+                                    <option>Казань</option>
+                                    <option>Москва</option>
+                                    <option>Челябинск</option>
+                                    <option>Чапаевск</option>
+                                    <option>Бузулк</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data arenda_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Срок аренды:</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="width-auto">
+                                    <option selected disabled></option>
+                                    <option>Казань</option>
+                                    <option>Москва</option>
+                                    <option>Челябинск</option>
+                                    <option>Чапаевск</option>
+                                    <option>Бузулк</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data metro_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Метро:</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="width-auto">
+                                    <option selected disabled></option>
+                                    <option>Казань</option>
+                                    <option>Москва</option>
+                                    <option>Челябинск</option>
+                                    <option>Чапаевск</option>
+                                    <option>Бузулк</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data arenda_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Аренда:</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="width-auto">
+                                    <option selected disabled>От</option>
+                                    <option>Казань</option>
+                                    <option>Москва</option>
+                                    <option>Челябинск</option>
+                                    <option>Чапаевск</option>
+                                    <option>Бузулк</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-4 select_input_data">
+                                <select class="width-auto">
+                                    <option selected disabled>До</option>
+                                    <option>Казань</option>
+                                    <option>Москва</option>
+                                    <option>Челябинск</option>
+                                    <option>Чапаевск</option>
+                                    <option>Бузулк</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data ad_type_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Тип объявления:</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="width-auto">
+                                    <option selected disabled></option>
+                                    <option>Казань</option>
+                                    <option>Москва</option>
+                                    <option>Челябинск</option>
+                                    <option>Чапаевск</option>
+                                    <option>Бузулк</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data floor_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Этаж:</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="width-auto">
+                                    <option selected disabled></option>
+                                    <option>7</option>
+                                    <option>1</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data floor_house_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Этажей в доме:</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="width-auto">
+                                    <option selected disabled></option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data area_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Район:</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="width-auto">
+                                    <option selected disabled></option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 select_input_data street_bl">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <p>Улица, дом:</p>
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control" aria-label="...">
+                            </div>
+                            <div class="col-xs-4 descrip_street">
+                                <p>Впишите дом вручную, или воспользуйтесь интерактивной картой</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-offset-3 col-xs-9 maps_bl">
+                                <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=p587-eLm1Sh0-IjWPqt6jHv6NuYQljdO&height=450&"></script>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="row there_bl">
+                            <div class="col-xs-12">
+                                <h2 class="there_bl__title">Выделите объкты что есть дома:</h2>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="there_bl__checkbox" data-toggle="buttons">
+                                    <label class="btn active">
+                                        <input type="checkbox" autocomplete="off" checked><img src="img/there_ico_1.png" alt=""><span>Кондиционер</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="checkbox" autocomplete="off" checked><img src="img/there_ico_2.png" alt=""><span>Стиральная машина</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="checkbox" autocomplete="off" checked><img src="img/there_ico_3.png" alt=""><span>Холодильник</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="checkbox" autocomplete="off" checked><img src="img/there_ico_4.png" alt=""><span>Микроволновка</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="checkbox" autocomplete="off" checked><img src="img/there_ico_5.png" alt=""><span>TV</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="checkbox" autocomplete="off" checked><img src="img/there_ico_6.png" alt=""><span>Интернет</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="checkbox" autocomplete="off" checked><img src="img/there_ico_7.png" alt=""><span>Лифт</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="checkbox" autocomplete="off" checked><img src="img/there_ico_8.png" alt=""><span>Можно курить</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="checkbox" autocomplete="off" checked><img src="img/there_ico_9.png" alt=""><span>Животные</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 select_input_data price_bl">
+                                <div class="row">
+                                    <div class="col-xs-1">
+                                        <p>Цена:</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <select class="width-auto">
+                                            <option selected disabled>от</option>
+                                            <option>Казань</option>
+                                            <option>Москва</option>
+                                            <option>Челябинск</option>
+                                            <option>Чапаевск</option>
+                                            <option>Бузулк</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 select_input_data price_bl">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <p>Фотографии:</p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="mask-wrapper">
+                                            <input id="my_file" class="custom-file-input" type="file" name="my_file" accept=".jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-5 view_btn extend_btn">
+                <button class="btn btn-default">Подать объявление</button>
+            </div>
+        </div>
+        <div class="col-xs-4 right_bl">
+            <div class="col-xs-12 advertisement">
+                <ul class="nav">
+                    <li>
+                        <a href="#" class="link_vip">Поднять объяаление</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link_alloc">Выделить объявление</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link_pick_up">VIP</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 right_bl_banner">
+                <a href="#"><img src="img/banner_right_bl.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="row">-->
+    <!--<div class="col-xs-4">-->
+    <!--<a href="#"><img src="img/arino_logo.png" alt=""></a>-->
+    <!--</div>-->
+    <!--<div class="col-xs-offset-4 col-xs-4">-->
+    <!--<div class="we_chose">-->
+    <!--<p>Нас уже выбрали:</p>-->
+    <!--</div>-->
+    <!--<div class="chose_number">-->
+    <!--<p>864 256</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<div class="col-xs-12">-->
+    <!--<div class="search_block">-->
+    <!--<div class="col-xs-6">-->
+    <!--<input type="text" class="form-control loop_search" placeholder="Поиск по объявлениям...">-->
+    <!--</div>-->
+    <!--<div class="col-xs-4">-->
+    <!--<input type="text" class="form-control marker_search" placeholder="Поиск по городу">-->
+    <!--</div>-->
+    <!--<div class="col-xs-2 search_btn">-->
+    <!--<a href="#">Найти</a>-->
+    <!--<div class="boat"></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<div class="col-xs-3 full_trans_link">-->
+    <!--<a href="#">Перейти на полную версию сайта<span class="arrow_trans_ico"></span></a>-->
+    <!--</div>-->
+    <!--</div>-->
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <ul class="nav nav-pills">
+                    <li><a href="#">Полезная информация</a></li>
+                    <li><a href="#">Пользовательское соглашение </a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Разместить предложение</a></li>
+                    <li><a href="#">Служба поддержки</a></li>
+                    <li><a href="#">Отзывы о нас</a></li>
+                    <li><a href="#">Реклама на сайте</a></li>
+                </ul>
+                <div class="author">
+                    <p>© 2014 Арино.ру</p>
+                </div>
+            </div>
+            <div class="col-xs-4 imperium">
+                <a href="#">Создание сайтов - <img src="img/logo_im.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog enter_sit">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                <h4 class="modal-title" id="myModalLabel">Войти в систему</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control mail_txt" placeholder="Ваш email">
+                <input id="pass" class="form-control" type="password" alt="" placeholder="Пароль" />
+                <input onchange="if ($('#pass').get(0).type=='password') $('#pass').get(0).type='text'; else $('#pass').get(0).type='password';" name="fff" type="checkbox" value="false" class="oko" id="checkbox-id">
+                <label for="checkbox-id"></label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Войти в систему</button>
+                <div class="hint">
+                    <a href="#">Забыли пароль?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.formstyler.js"></script>
+
+<script>
+    (function($) {
+        $(function() {
+            $('input, select').styler({
+                selectSearch: true
+            });
+        });
+    })(jQuery);
+</script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

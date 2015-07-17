@@ -1,0 +1,54 @@
+<% set_title 'Фото объектов' %>
+<content>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 left_nav">
+                <nav>
+                    <ul class="">
+                        <li><%= link_to 'О компании', root_path %>
+                        <li class="active"><%= link_to 'Фото объектов', page_object_path %>
+                        <li><%= link_to 'Парк техники', page_technolog_park_path %>
+                        <li><%= link_to 'Онлайн заявки', page_online_applic_path %>
+                        <li><%= link_to 'Сро', page_sro_path %>
+                        <li><%= link_to 'Справочная информация', page_help_transport_path %>
+                        <li><%= link_to 'Контакты', page_contact_path %>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-xs-9 content_bl">
+                <div class="row">
+                    <div class="col-xs-4 tech_bl">
+                        <%= link_to page_photo_object_cotel_path, class: 'example-image-link', data: { title: "Реконструкция котельной по адресу:  г. Тамбов,ул. Бастионная, 23" } do %>
+                            <%= image_tag 'img_object.jpg', class: 'example-image' %>
+                            <p>Реконструкция котельной
+                                по адресу:  г. Тамбов,
+                                ул. Бастионная, 23</p>
+                            <% end %>
+                    </div>
+                    <div class="col-xs-4 tech_bl">
+                        <%= link_to page_photo_object_optica_path, class: 'example-image-link', data: {title: "Внутренние отделочные работы и устройство крыльца" } do %>
+                            <%= image_tag 'img_object.jpg', class: 'example-image' %>
+                            <p>Внутренние отделочные работы и устройство крыльца</p>
+                            <% end %>
+                    </div>
+                    <div class="col-xs-4 tech_bl">
+                        <%= link_to page_photo_object_sochi_path, class: 'example-image-link', data: {title: "Реконструкция котельной по адресу:  г. Тамбов,ул. Бастионная, 23" } do %>
+                            <%= image_tag 'img_object.jpg', class: 'example-image' %>
+                            <p>Реконструкция котельной
+                                по адресу:  г. Тамбов,
+                                ул. Бастионная, 23</p>
+                            <% end %>
+                    </div>
+                    <div class="col-xs-4 tech_bl">
+                       <%= link_to page_photo_object_transformer_path, class: 'example-image-link', data: {title: "Реконструкция котельной по адресу:  г. Тамбов,ул. Бастионная, 23" } do %>
+                            <%= image_tag 'img_object.jpg', class: 'example-image' %>
+                            <p>Реконструкция котельной
+                                по адресу:  г. Тамбов,
+                                ул. Бастионная, 23</p>
+                            <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</content>

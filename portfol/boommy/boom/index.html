@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bloommy</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrapValidator.css"/>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="row header__top">
+            <div class="col-xs-3">
+                <div class="header__top__back_link">
+                    <a href="#" class="back_link"><span class="glyphicon glyphicon-arrow-left"></span><span class="back_link__text">Назад</span></a>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="header__top__logo">
+                    <a href="#" class="logo__link">
+                        <img src="img/logo_header.png" alt="" class="logo__img">
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="header__top__user">
+                    <a href="#" class="user__link">
+                        <span class="user__icon" style="background-image: url(img/face.jpg)"></span>
+                        <span class="user__name">Александра</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 header__bottom">
+                <h1 class="header__bottom__title"><strong>добавление</strong> новой вещи</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container container__white">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-12 what_sale">
+                <h1 class="what_sale__title">Что продаешь?</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="col-xs-4 what_sale__category_bl">
+                <p>Категория</p>
+                <div class="btn-group">
+                    <!--<button type="button" class="btn btn-danger" data-toggle="dropdown" >Action</button>-->
+                    <button type="button" class="btn  btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Выберите категорию
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>Блузы и футболки
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Свитеры</a></li>
+                                <li><a href="#">Свитеры</a></li>
+                                <li><a href="#">Свитеры</a></li>
+                                <li><a href="#">Свитеры</a></li>
+                            </ul>
+                        </li>
+                        <li>Платья
+                            <ul class="dropdown-menu">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </li>
+                        <li>Брюки
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Длинные</a></li>
+                                <li><a href="#">Спортивные</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <p>Бренд</p>
+                <div class="col-xs-12 input-group color_select__txt_input what_sale__brend">
+                    <input type="text" class="form-control" placeholder="No Name" data-toggle="popover" data-content="Если твоего бренда нет в списке оставь поле пустым">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container container__white">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-12 photo_load">
+                <h1 class="photo_load__title">Загрузи фото</h1>
+                <a href="#" class="photo_load__link">Несколько простых правил, которые ты должна знать</a>
+                <hr>
+            </div>
+            <div class="col-xs-12">
+                <div class="load_photo_bl">
+                    <img class="load_photo_bl__image" src="img/photo.jpg" alt="">
+                    <div class="load_photo_bl__btn">
+                        <a href="#" class="glyphicon glyphicon-star"></a>
+                        <a href="#" class="glyphicon glyphicon-pencil"></a>
+                        <a href="#" class="glyphicon glyphicon-trash"></a>
+                    </div>
+                </div>
+                <div class="load_photo_bl">
+                    <img class="load_photo_bl__image" src="img/photo.jpg" alt="">
+                    <div class="load_photo_bl__btn">
+                        <a href="#" class="glyphicon glyphicon-star"></a>
+                        <a href="#" class="glyphicon glyphicon-pencil"></a>
+                        <a href="#" class="glyphicon glyphicon-trash"></a>
+                    </div>
+                </div>
+                <div class="load_photo_bl load_photo_bl__add">
+                    <p class="load_photo_bl__text">Добавь фото</p>
+                    <div class="load_photo_bl__btn_load_img_bl">
+                    <button type="button" class="btn btn-default load_photo_bl__button">загрузить</button>
+                        <div class="col-xs-12 load_photo_bl__btn_load_img_bl__examples_bl container__white">
+                            <div class="col-xs-12 photo_load">
+                                <h1 class="photo_load__title">Примеры правильных фото :)</h1>
+                            </div>
+                            <div class="col-xs-4">
+                                <img src="img/examples_1.png" alt="">
+                                <p class="examples_bl__txt">Платье, вид спереди</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <img src="img/examples_2.png" alt="">
+                                <p class="examples_bl__txt">Платье, вид сзади</p>
+                            </div>
+                            <div class="col-xs-4">
+                                <img src="img/examples_3.png" alt="">
+                                <p class="examples_bl__txt">Платье, вид спереди</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="load_photo_bl load_photo_bl_none">
+                </div>
+                <div class="load_photo_bl load_photo_bl_none">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container container__white">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-12 what_sale">
+                <h1 class="what_sale__title">Заполни информацию о вещи</h1>
+                <hr>
+            </div>
+            <div class="col-xs-12 color_select_bl">
+                <p class="color_select_bl__txt">Основной цвет, не больше двух *</p>
+                <div class="color_select" data-toggle="buttons">
+                    <label class="btn color_select__color_1 active">
+                        <input type="checkbox" autocomplete="off" checked>
+                    </label>
+                    <label class="btn color_select__color_2">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_3">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_4">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_5">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_6">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_7">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_8">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_9">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_10">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_11">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_12">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_13">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_14">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_15">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                    <label class="btn color_select__color_16" data-toggle="tooltip" data-placement="right" title="" data-original-title="Выбери основной цвет вещи.
+Если вещь разноцветная - выбери
+цвет микс.
+
+Кашемир, хлопок или лён?
+Многим важен материал, особенно при покупке одежды. Советуем указать в точности, как на бирке.">
+                        <input type="checkbox" autocomplete="off">
+                    </label>
+                </div>
+                <p class="color_select__material_title">Материал</p>
+                <div class="col-xs-4 input-group color_select__txt_input">
+                    <input type="text" class="form-control" placeholder="В точности как на бирке">
+                </div>
+                <hr>
+                <div class="size_bl">
+                    <p class="size_bl__title">Размер *</p>
+                    <div class="size_bl__select_btn" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="checkbox" autocomplete="off" checked>XXS
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="checkbox" autocomplete="off">XS
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="checkbox" autocomplete="off">S
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="checkbox" autocomplete="off">M
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="checkbox" autocomplete="off">L
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="checkbox" autocomplete="off">XS
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="checkbox" autocomplete="off">XXL
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="checkbox" autocomplete="off">XXXL
+                        </label>
+                        <a href="#" class="size_bl__select_btn__link">Таблицы размеров</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="size_bl">
+                    <p class="size_bl__title">Состояние *</p>
+                    <div class="size_bl__select_btn" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked>Новая
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="options" id="option2" autocomplete="off">Хорошая (б/у)
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="options" id="option3" autocomplete="off">Отличная (б/у)
+                        </label>
+                    </div>
+                </div>
+                    <h1 class="what_sale__title">Опиши особенности своими словами</h1>
+                <div class="col-xs-8 input-group color_select__txt_input features_txt_input">
+                    <textarea name="comment" class="form-control" placeholder="Достоинства? А может быть недостатки?" data-toggle="popover" data-content="Опиши свою вещь сказочно. Почему продаешь? Чем вещь хороша? Похвали как следует – вдохнови покупателей! Описание должно быть длиннее 3,
+но не более 500 символов"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container container__white fill_out_info">
+    <div class="row">
+        <div class="col-xs-8">
+            <div class="col-xs-12 what_sale">
+                <h1 class="what_sale__title">Заполни информацию о вещи</h1>
+                <hr>
+            </div>
+            <div class="col-xs-12 valid_bl">
+                <p class="color_select_bl__txt">Купила за *</p>
+                <form  method="post" class="number_post form-horizontal">
+                    <div class="form-group color_select__txt_input ">
+                        <div class="col-xs-3">
+                            <input class="form-control" type="text" name="number" />
+                        </div>
+                        <div class="col-xs-9 valid_bl__txt">
+                            <p class="valid_bl__txt__opis"> За сколько ты приобрела эту вещь?<br>
+                            Покупатель заметит разницу в ценах и с радостью купит вещь у тебя.</p>
+                        </div>
+                    </div>
+                </form>
+                <p class="color_select_bl__txt">Хочу продать за *</p>
+                <form  method="post" class="number_post form-horizontal">
+                    <div class="form-group color_select__txt_input ">
+                        <div class="col-xs-3">
+                            <input class="form-control" type="text" name="number" />
+                        </div>
+                        <div class="col-xs-9 valid_bl__txt">
+                            <p class="valid_bl__txt__opis">Лучше всего продаются вещи со скидкой<br>
+                                50-60% от первоначальной цены</p>
+                        </div>
+                    </div>
+                </form>
+                <hr>
+            </div>
+            <div class="col-xs-5 radio_and_check_bl">
+                <p class="color_select_bl__txt">Наличие *</p>
+                <!--radiobutton begin-->
+               <div class="row">
+                   <div class="col-xs-6">
+                       <p class="radio_bx"><label class="my-custom-label">
+                           <input name="test" type="radio"/>
+                           <span></span>
+                       </label>В наличии</p>
+                   </div>
+                   <div class="col-xs-6">
+                       <p class="radio_bx"><label class="my-custom-label">
+                           <input name="test" type="radio" rel="div-1"/>
+                           <span></span>
+                       </label>Под заказ</p>
+                   </div>
+                   <div id="div-1" class="what_sale__category_bl">
+                      <p>Сколько ждать?</p>
+                       <div class="btn-group">
+                           <!--<button type="button" class="btn btn-danger" data-toggle="dropdown" >Action</button>-->
+                           <button type="button" class="btn  btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">1
+                               <span class="caret"></span>
+                               <span class="sr-only">Toggle Dropdown</span>
+                           </button>
+                           <ul class="dropdown-menu" role="menu">
+                               <li><a href="#">1</a></li>
+                               <li><a href="#">2</a></li>
+                           </ul>
+                       </div>
+                       <p>дней</p>
+                   </div>
+               </div>
+                <!--radiobutton end-->
+            </div>
+            <div class="col-xs-7 radio_and_check_bl">
+                <p class="color_select_bl__txt">Доставка *</p>
+                <!--checkbox begin-->
+                <input type="checkbox" id="check" />
+                <label for="check"><span></span>Личная встреча</label>
+                <input type="checkbox" id="check2" />
+                <label for="check2"><span></span>Почта России</label>
+                <input type="checkbox" id="check3" />
+                <label for="check3"><span></span>Курьер</label>
+                <!--checkbox end-->
+            </div>
+        </div>
+        <div class="col-xs-4 min_price_bl">
+            <div class="col-xs-12 what_sale">
+                <h1 class="what_sale__title">Минимальная цена</h1>
+                <hr>
+            </div>
+            <div class="col-xs-12 valid_bl">
+                <p class="color_select_bl__txt">Минимальная цена</p>
+                <form  method="post" class="number_post form-horizontal">
+                    <div class="form-group color_select__txt_input ">
+                        <div class="col-xs-7">
+                            <input class="form-control" type="text" name="number" />
+                        </div>
+                        <div class="col-xs-12 valid_bl__txt">
+                            <p class="valid_bl__txt__opis">Укажи минимальную цену, за которую готова продать вещь.
+                                В этом случае через некоторое время
+                                мы снизим цену вещи до этого уровня и отправим уведомление покупателям о скидке.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container earnings_bl">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-12">
+                <p class="earnings_bl__title">Ты заработаешь:</p>
+            </div>
+            <div class="col-xs-3">
+                <span class="earnings_bl__price">1 791 <span class="rubl"></span>Р</span>
+            </div>
+            <div class="col-xs-9 earnings_bl__descrip">
+                <p>Цена продажи минус комиссия Boommy равная 10%</p>
+                <p>В случае продажи по минимальной цене твой заработок составит – 1 431 a</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 sell_btn_bl">
+            <button class="btn btn-success sell_btn_bl__sell_btn">Продать вещь</button>
+        </div>
+    </div>
+</div>
+<div class="before_footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2 before_footer__block">
+                <h2 class="before_footer__title">О компании</h2>
+                <hr>
+                <ul class="nav">
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-5 before_footer__block">
+                <h2 class="before_footer__title">Как это работает</h2>
+                <hr>
+                <ul class="nav">
+                    <li><a href="#">Как купить?</a></li>
+                    <li><a href="#">Как продать?</a></li>
+                    <li><a href="#">Что можно размещать</a></li>
+                </ul>
+                <ul class="nav">
+                    <li><a href="#">Что нельзя размещать</a></li>
+                    <li><a href="#">Требования к фото</a></li>
+                    <li><a href="#">Безопасная сделка</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3 before_footer__block">
+                <h2 class="before_footer__title">Каталог</h2>
+                <hr>
+                <ul class="nav">
+                    <li><a href="#">Новинки</a></li>
+                    <li><a href="#">Одежда</a></li>
+                    <li><a href="#">Обувь</a></li>
+                </ul>
+                <ul class="nav">
+                    <li><a href="#">Сумки</a></li>
+                    <li><a href="#">Аксесуары</a></li>
+                    <li><a href="#">Детская одежда</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-2 before_footer__block">
+                <h2 class="before_footer__title">Партнеры</h2>
+                <hr>
+                <ul class="nav">
+                    <li><a href="#"><img src="img/mode_glam.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/village.png" alt=""></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+<div class="footer_bl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 footer_bl__logo">
+                <p class="footer_bl__logo__txt"><img src="img/logo_footer.png" alt="">© 2014 Boommy Fashion</p>
+            </div>
+            <div class="col-xs-7 footer_bl__agreement_bl">
+                <p class="footer_bl__agreement_bl__txt">Если вы используете Boommy, вы принимаете условия <a href="#">Пользовательского соглашения</a></p>
+            </div>
+            <div class="col-xs-2 footer_bl__number_contact">
+                <p class="footer_bl__number_contact__number">8 800 555 8224</p>
+                <p class="footer_bl__number_contact__condition">с 11 до 19 часов по Москве</p>
+            </div>
+        </div>
+        <input type="checkbox" class="myClass" value="yes" id="answer" name="answer" data-color="green" />
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrapValidator.js"></script>
+<script src="js/selection_box.js"></script>
+
+</body>
+</html>

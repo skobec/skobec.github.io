@@ -1,0 +1,42 @@
+<% set_title 'Онлайн заявки' %>
+<% set_body_class 'online_applic' %>
+<content>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 left_nav">
+                <nav>
+                    <ul class="">
+                        <li><%= link_to 'О компании', root_path %>
+                        <li><%= link_to 'Фото объектов', page_object_path %>
+                        <li><%= link_to 'Парк техники', page_technolog_park_path %>
+                        <li class="active"><%= link_to 'Онлайн заявки', page_online_applic_path %>
+                        <li><%= link_to 'Сро', page_sro_path %>
+                        <li><%= link_to 'Справочная информация', page_help_transport_path %>
+                        <li><%= link_to 'Контакты', page_contact_path %>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-xs-9 content_bl">
+                <p>С помощью этого раздела Вы можете вызвать нашего специалиста, который произведет необходимые
+                    замеры, выслушает    Ваши пожелания, сделает свои
+                    предложения, если таковые потребуются и в течении 1-2 дней представит сметный расчет.</p>
+                <div class="row">
+                    <div class="col-xs-5 feedback_bl">
+                        <div class="feed_input">
+                            <p>Имя</p>
+                            <input type="text" class="form-control">
+                            <p>Контакт</p>
+                            <input type="text" class="form-control">
+                            <p>Место выполнения работ</p>
+                            <input type="text" class="form-control" placeholder="область, район, город и т.д.">
+                            <p>Описание работ</p>
+                            <textarea type="text" class="form-control"></textarea>
+                            <button type="submit" class="btn btn-default">Отправить заказ</button>
+                            <span class="comment_feed">Все поля обязательны для заполнения!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</content>

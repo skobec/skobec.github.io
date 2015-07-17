@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arino</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init () {
+
+            var myMap = new ymaps.Map("map", {
+                center: [55.79419702, 49.11323088],
+                zoom: 15,
+                controls: ['zoomControl','geolocationControl']
+            });
+
+            var myGeoObjects = [];
+
+            myGeoObjects[0] = new ymaps.Placemark([55.79064285, 49.11685723],{
+                clusterCaption: 'Заголовок'
+                //balloonContentBody: 'Текст в балуне',
+            },{
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                iconImageHref: 'img/marker_maps.png',
+                // Размеры метки.
+                iconImageSize: [33, 49],
+                // Смещение левого верхнего угла иконки относительно
+                // её «ножки» (точки привязки).
+                iconImageOffset: [-3, -42]
+            });
+
+            myGeoObjects[1] = new ymaps.Placemark([55.78730597, 49.11548394],{
+                clusterCaption: 'Заголовок'
+                //balloonContentBody: 'Текст в балуне',
+            },{
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                iconImageHref: 'img/marker_maps.png',
+                // Размеры метки.
+                iconImageSize: [33, 49],
+                // Смещение левого верхнего угла иконки относительно
+                // её «ножки» (точки привязки).
+                iconImageOffset: [-23, -42]
+            });
+
+            myGeoObjects[2] = new ymaps.Placemark([55.78528678, 49.12286538],{
+                clusterCaption: 'Заголовок'
+                //balloonContentBody: 'Текст в балуне',
+            },{
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                iconImageHref: 'img/marker_maps.png',
+                // Размеры метки.
+                iconImageSize: [33, 49],
+                // Смещение левого верхнего угла иконки относительно
+                // её «ножки» (точки привязки).
+                iconImageOffset: [-16, -42]
+            });
+
+            var clusterIcons=[{
+                href:'img/marker_maps.png',
+                size:[31,40],
+                offset:[0,0]
+            }];
+
+            var clusterer = new ymaps.Clusterer({
+                clusterDisableClickZoom: false,
+                clusterOpenBalloonOnClick: false,
+                // Устанавливаем стандартный макет балуна кластера "Карусель".
+                clusterBalloonContentLayout: 'cluster#balloonCarousel',
+                // Устанавливаем собственный макет.
+                //clusterBalloonItemContentLayout: customItemContentLayout,
+                // Устанавливаем режим открытия балуна.
+                // В данном примере балун никогда не будет открываться в режиме панели.
+                clusterBalloonPanelMaxMapArea: 0,
+                // Устанавливаем размеры макета контента балуна (в пикселях).
+                clusterBalloonContentLayoutWidth: 300,
+                clusterBalloonContentLayoutHeight: 200,
+                // Устанавливаем максимальное количество элементов в нижней панели на одной странице
+                clusterBalloonPagerSize: 5
+                // Настройка внешего вида нижней панели.
+                // Режим marker рекомендуется использовать с небольшим количеством элементов.
+                // clusterBalloonPagerType: 'marker',
+                // Можно отключить зацикливание списка при навигации при помощи боковых стрелок.
+                // clusterBalloonCycling: false,
+                // Можно отключить отображение меню навигации.
+                // clusterBalloonPagerVisible: false
+            });
+
+            clusterer.add(myGeoObjects);
+            myMap.geoObjects.add(clusterer);
+            // Сравним положение, вычисленное по ip пользователя и
+            // положение, вычисленное средствами браузера.
+            geolocation.get({
+                provider: 'yandex',
+                mapStateAutoApply: true
+            }).then(function (result) {
+                // Красным цветом пометим положение, вычисленное через ip.
+                result.geoObjects.options.set('preset', 'islands#redCircleIcon');
+                result.geoObjects.get(0).properties.set({
+                    balloonContentBody: 'Мое местоположение'
+                });
+                myMap.geoObjects.add(result.geoObjects);
+            });
+
+            geolocation.get({
+                provider: 'browser',
+                mapStateAutoApply: true
+            }).then(function (result) {
+                // Синим цветом пометим положение, полученное через браузер.
+                // Если браузер не поддерживает эту функциональность, метка не будет добавлена на карту.
+                result.geoObjects.options.set('preset', 'islands#blueCircleIcon');
+                myMap.geoObjects.add(result.geoObjects);
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="header_background">
+    <div class="container">
+        <div class="row header">
+            <div class="col-xs-7">
+                <a href="#" class="logo"><img src="img/arino_logo_gray.png" alt=""></a>
+            </div>
+            <div class="col-xs-5 btn_header">
+                <div class="col-xs-3 sign_btn">
+                    <a href="#" data-toggle="modal" data-target="#myModal"><span class="sign_ico"></span><p>Войти</p></a>
+                </div>
+                <div class="col-xs-4 reg_link">
+                    <a href="#">Регистрация</a>
+                </div>
+                <div class="col-xs-4 col-xs-offset-1 ads_btn">
+                    <a href="#">Подать объявление</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="search_block">
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control loop_search" placeholder="Поиск по объявлениям...">
+                    </div>
+                    <div class="col-xs-4">
+                        <select id="select-stat" placeholder="выберите" tabindex="-1" class="marker_search">
+                            <option value="">Выберите город</option>
+                            <option data-classn="KZ" value="KZ">Казань</option>
+                            <option data-classn="MSK" value="MSK">Москва</option>
+                            <option data-classn="KAL" value="KAL">Калининград</option>
+                            <option data-classn="CHEL" value="CHEL">Челябинск</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-2 search_btn">
+                        <a href="#">Найти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-xs-12 block_select">
+                    <div class="col-xs-12 sel_bl">
+                        <div class="select_top">
+                            <select class="house_sel">
+                                <option selected disabled>Квартиры</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+                        <div class="select_top">
+                            <select class="width-auto">
+                                <option selected disabled>Кол-во комнат</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+                        <div class="select_top">
+                            <select class="width-auto">
+                                <option selected disabled>Срок аренды</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+                        <div class="select_top">
+                            <select class="width-auto">
+                                <option selected disabled>Метро</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+                        <div class="select_top">
+                            <select class="width-auto">
+                                <option selected disabled>Арендная плата от</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 sel_bl">
+                        <div class="select_top">
+                            <select class="width-auto">
+                                <option selected disabled>Сдам</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+                        <div class="select_top">
+                            <select class="width-auto">
+                                <option selected disabled>Этажей в доме</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+                        <div class="select_top">
+                            <select class="width-auto">
+                                <option selected disabled>Этаж</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+                        <div class="select_top">
+                            <select class="width-auto">
+                                <option selected disabled>Район</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+                        <div class="select_top">
+                            <select class="width-auto">
+                                <option selected disabled>Арендная плата от</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 banner_top">
+            <a href="#"><img src="img/banner_top.jpg" alt=""></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 ways">
+            <ul class="">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Объявления</a></li>
+                <li><a href="#">Недвижимость</a></li>
+                <li><span>Аренда квартир</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-12 lease_bl">
+                <div class="col-xs-8">
+                    <div class="lease_btn" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="radio" name="options" id="option2" autocomplete="off">Долгосрочная аренда квартир
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="options" id="option3" autocomplete="off">Дома посуточно, почасово
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-2 show_on_map_link">
+                    <a href="#">Показать на карте</a>
+                </div>
+                <div class="col-xs-2">
+                    <select class="width-auto">
+                        <option selected disabled>Агентства</option>
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                        <option>Пункт 3</option>
+                        <option>Пункт 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8 left_bl">
+            <div id="map" style="width: 100%; height: 1000px"></div>
+            <div class="col-xs-12 yandex_direct_bl">
+                <img src="img/direct.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xs-4 right_bl">
+            <div class="col-xs-12 advertisement favorite_advert">
+                <div class="col-xs-12 adres_title">
+                    <p>Кирова улица, д. 25</p>
+                </div>
+                <div class="col-xs-12 adres_amplication">
+                    <p>Россия, Казань, Приволжский р-н <span class="metro">м. Горки</span></p>
+                </div>
+                <div class="col-xs-12">
+                    <div class="photo">
+                        <img src="img/img_house.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-12 description">
+                        <p>3-к квартира, 69 м², 2/9 эт.</p>
+                    </div>
+                    <div class="col-xs-12 there">
+                        <img src="img/conditional_ico.png" alt="">
+                        <img src="img/washing_ico.png" alt="">
+                        <img src="img/refrid_ico.png" alt="">
+                        <img src="img/microwave_ico.png" alt="">
+                        <img src="img/tv_ico.png" alt="">
+                        <img src="img/wi-fi_ico.png" alt="">
+                    </div>
+                    <div class="col-xs-6 price">
+                        <p>25 000</p>
+                        <span>руб/месяц</span>
+                    </div>
+                    <div class="col-xs-6 view_btn">
+                        <button class="btn btn-default" type="button">Посмотреть</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 advertisement favorite_advert">
+                <div class="col-xs-12 adres_title">
+                    <p>Кирова улица, д. 25</p>
+                </div>
+                <div class="col-xs-12 adres_amplication">
+                    <p>Россия, Казань, Приволжский р-н <span class="metro">м. Горки</span></p>
+                </div>
+                <div class="col-xs-12">
+                    <div class="photo">
+                        <img src="img/img_house.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-12 description">
+                        <p>3-к квартира, 69 м², 2/9 эт.</p>
+                    </div>
+                    <div class="col-xs-12 there">
+                        <img src="img/conditional_ico.png" alt="">
+                        <img src="img/washing_ico.png" alt="">
+                        <img src="img/refrid_ico.png" alt="">
+                        <img src="img/microwave_ico.png" alt="">
+                        <img src="img/tv_ico.png" alt="">
+                        <img src="img/wi-fi_ico.png" alt="">
+                    </div>
+                    <div class="col-xs-6 price">
+                        <p>25 000</p>
+                        <span>руб/месяц</span>
+                    </div>
+                    <div class="col-xs-6 view_btn">
+                        <button class="btn btn-default" type="button">Посмотреть</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 right_bl_banner">
+                <a href="#"><img src="img/banner_right_bl.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <ul class="nav nav-pills">
+                    <li><a href="#">Полезная информация</a></li>
+                    <li><a href="#">Пользовательское соглашение </a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Разместить предложение</a></li>
+                    <li><a href="#">Служба поддержки</a></li>
+                    <li><a href="#">Отзывы о нас</a></li>
+                    <li><a href="#">Реклама на сайте</a></li>
+                </ul>
+                <div class="author">
+                    <p>© 2014 Арино.ру</p>
+                </div>
+            </div>
+            <div class="col-xs-4 imperium">
+                <a href="#">Создание сайтов - <img src="img/logo_im.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog enter_sit">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                <h4 class="modal-title" id="myModalLabel">Войти в систему</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control mail_txt" placeholder="Ваш email">
+                <input id="pass" class="form-control" type="password" alt="" placeholder="Пароль" />
+                <input onchange="if ($('#pass').get(0).type=='password') $('#pass').get(0).type='text'; else $('#pass').get(0).type='password';" name="fff" type="checkbox" value="false" class="oko" id="checkbox-id">
+                <label for="checkbox-id"></label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Войти в систему</button>
+                <div class="hint">
+                    <a href="#">Забыли пароль?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.formstyler.js"></script>
+<script>
+    (function($) {
+        $(function() {
+            $('input, select').styler({
+                selectSearch: true
+            });
+        });
+    })(jQuery);
+</script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arino</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="home">
+    <div class="header_plane">
+    <div class="container">
+        <div class="row header">
+            <div class="col-xs-5 col-xs-offset-7">
+                <div class="col-xs-3 sign_btn">
+                    <a href="#" data-toggle="modal" data-target="#myModal"><span class="sign_ico"></span><p>Войти</p></a>
+                </div>
+                <div class="col-xs-4 reg_link">
+                    <a href="#">Регистрация</a>
+                </div>
+                <div class="col-xs-4 col-xs-offset-1 ads_btn">
+                    <a href="#">Подать объявление</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container home_searh_bl">
+        <div class="row">
+                <div class="col-xs-4">
+                    <a href="#" class="logo"><img src="img/arino_logo.png" alt=""></a>
+                </div>
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="we_chose">
+                    <p>Нас уже выбрали:</p>
+                    </div>
+                    <div class="chose_number">
+                    <p>864 256</p>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="search_block">
+                <div class="col-xs-6">
+                        <input type="text" class="form-control loop_search" placeholder="Поиск по объявлениям...">
+                </div>
+                    <div class="col-xs-4">
+                        <select id="select-stat" placeholder="выберите" tabindex="-1" class="marker_search">
+                            <option value="">Выберите город</option>
+                            <option data-classn="KZ" value="KZ">Казань</option>
+                            <option data-classn="MSK" value="MSK">Москва</option>
+                            <option data-classn="KAL" value="KAL">Калининград</option>
+                            <option data-classn="CHEL" value="CHEL">Челябинск</option>
+                        </select>
+                    </div>
+                <div class="col-xs-2 search_btn">
+                    <a href="#">Найти</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 full_trans_link">
+                <a href="advert.html">Перейти на полную версию сайта<span class="arrow_trans_ico"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer footer_home">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <ul class="nav nav-pills">
+                        <li><a href="#">Полезная информация</a></li>
+                        <li><a href="#">Пользовательское соглашение </a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#">Разместить предложение</a></li>
+                        <li><a href="#">Служба поддержки</a></li>
+                        <li><a href="#">Отзывы о нас</a></li>
+                        <li><a href="#">Реклама на сайте</a></li>
+                    </ul>
+                    <div class="author">
+                    <p>© 2014 Арино.ру</p>
+                    </div>
+                </div>
+                <div class="col-xs-4 imperium">
+                    <a href="#">Создание сайтов - <img src="img/logo_im.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog enter_sit">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                <h4 class="modal-title" id="myModalLabel">Войти в систему</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control mail_txt" placeholder="Ваш email">
+                <input id="pass" class="form-control" type="password" alt="" placeholder="Пароль" />
+                <input onchange="if ($('#pass').get(0).type=='password') $('#pass').get(0).type='text'; else $('#pass').get(0).type='password';" name="fff" type="checkbox" value="false" class="oko" id="checkbox-id">
+                <label for="checkbox-id"></label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Войти в систему</button>
+                <div class="hint">
+                    <a href="#">Забыли пароль?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.formstyler.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    (function($) {
+        $(function() {
+            $('input, select').styler({
+                selectSearch: true
+            });
+        });
+    })(jQuery);
+</script>
+<script>
+    $('#select-stat').on('change', function(){
+        var classN = $(this).find('option:selected').attr('data-classn');
+        $('.home').removeAttr('class').addClass("home " + classN);
+    });
+</script>
+</body>
+</html>

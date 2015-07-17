@@ -1,0 +1,292 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic);
+h1,h2,h3 {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+a, p {
+    font-family: 'PT Sans', sans-serif;
+}
+.cont_header {
+    padding-bottom: 20px;
+}
+.cont_header .row .col-xs-10 .row .col-xs-6:nth-child(1) p {
+    font-weight: 700;
+    font-size: 15px;
+}
+.gray_band {
+    background-color: #f6f6f6;
+}
+.background_city {
+    background: url("../img/background_city.jpg") no-repeat center;
+    background-size: cover;
+}
+.background_city .container .row .col-xs-7 {
+    padding: 4px 14px 26px 40px;
+    border: 4px solid white;
+    color: white;
+}
+.background_city .container .row .col-xs-12 {
+    text-align: center;
+}
+.background_city .container .row {
+    margin-top: 5%;
+}
+.background_city .container .row h2 {
+    font-size: 40px;
+    margin-top: 6px;
+}
+.background_city .container .row p {
+    margin: 0 0 6px;
+}
+.background_tables {
+    background: url("../img/background_tables.jpg") no-repeat center;
+    background-size: cover;
+}
+.background_tables .container .row .col-xs-12 {
+    text-align: center;
+}
+.background_tables .container .row:nth-child(2) .col-xs-4 p:nth-child(1),
+.background_tables .container .row:nth-child(3) .col-xs-4 p:nth-child(1) {
+    color: #3baff1;
+    font-size: 60px;
+    font-weight: 700;
+}
+.background_tables .container .row:nth-child(2) .col-xs-4 p:nth-child(1) img,
+.background_tables .container .row:nth-child(3) .col-xs-4 p:nth-child(1) img{
+    margin-top: -13px;
+    margin-left: 10px;
+}
+.background_infograf {
+    background: url("../img/background_infograf.jpg")no-repeat center;
+    background-size: cover;
+}
+.background_blue {
+    background-color: #e8f4ff;
+}
+.background_blue .container .row {
+    text-align: center;
+}
+.background_footer {
+    background: url("../img/footer_background.jpg")no-repeat center;
+    background-size: cover;
+}
+.circle {
+    border: 4px solid #647186;
+    border-radius: 50%;
+    height: 147px;
+    width: 147px;
+    padding: 16%;
+    text-align: center;
+    margin: 0 auto;
+}
+.gray_band .container .row {
+    color: #b6b6b6;
+}
+.gray_band .container .row .col-xs-6:nth-child(2){
+    text-align: right;
+}
+.cont_header .row .col-xs-10 .row .col-xs-6:nth-child(2) {
+   text-align: right;
+}
+.cont_rost .row .col-xs-12 {
+    text-align: center;
+}
+.cont_rost .row .col-xs-12 h1 span {
+    color: #cf4234;
+    text-transform: uppercase;
+}
+.cont_rost .row:nth-child(2) .col-xs-4 {
+    text-align: center;
+    color: #646464;
+}
+.cont_rost .row:nth-child(2) .col-xs-4 p {
+    padding: 0px 50px 0;
+}
+.cont_rost .row:nth-child(3) .col-xs-6{
+    background: url("../img/vector_background.jpg")no-repeat right, #f6f6f6;
+    color: #646464;
+    padding: 16px 28px 8px 37px;
+    text-align: center;
+    margin-top: 60px;
+}
+.cont_rost .row:nth-child(3) .col-xs-6 p:nth-child(2) {
+    font-weight: 700;
+    color: #49566a;
+}.cont_rost .row:nth-child(4) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+ }
+.romb_line_one {
+    padding-top: 7px;
+}
+.romb_line_one hr {
+    width: 86px;
+    display: inline-block;
+}
+.romb_line_one img {
+    display: inline-block;
+    margin: -30px 14px 0px;
+}
+/*------------------------------------*\
+	НАВИГАЦИЯ
+\*------------------------------------*/
+#nav{
+    float:left;
+    width:100%;
+    list-style:none;
+    font-weight:bold;
+    margin-bottom:10px;
+    position: absolute;
+    z-index: 7;
+    /*font-size: 20px;*/
+}
+#nav li{
+    float:left;
+    margin-right:10px;
+    position:relative;
+    display:block;
+}
+#nav li:nth-child(1) ul {
+    width: 490px;
+}
+/*#nav li:nth-child(1) a:hover {*/
+    /*border-radius: 4px 4px 0 0;;*/
+/*}*/
+#nav li a{
+    display:block;
+    color:#fff;
+    background: #4c95d3;
+    text-decoration:none;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.75); /* Тень текста, чтобы приподнять его на немного */
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    font-size: 13px;
+    padding: 10px;
+}
+#nav li a:hover{
+    color:#fff;
+    background: #4c95d3;
+    background: rgba(76, 149, 211, 0.75);
+    text-decoration:none;
+    background-color: black;
+}
+
+/*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+#nav ul{
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+    opacity:0; /* Устнавливаем начальное состояние прозрачности */
+    -webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+    background-color: #4c95d3;
+    padding: 5px 5px 5px 5px;
+}
+#nav ul li{
+    padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    /*float:none;*/
+}
+#nav ul a{
+    white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+    display:block;
+}
+#nav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+    left:0; /* Приносим его обратно на экран, когда нужно */
+    opacity:1; /* Делаем непрозрачным */
+}
+#nav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+    background: #4c95d3;
+    background: rgba(76, 149, 211, 0.75); /* Выглядит полупрозрачным */
+    text-decoration:none;
+
+}
+#nav li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+    text-decoration:none;
+    -webkit-transition:-webkit-transform 0.075s linear;
+}
+#nav li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+    background: #3f7fb5;
+    background: rgba(63, 127, 181, 0.75); /* Будет полупрозрачным */
+    text-decoration:none;
+    -moz-transform:scale(1.05);
+    -webkit-transform:scale(1.05);
+}
+
+.red_btn {
+    text-align: center;
+    padding: 0.9em 1.1em;
+    padding-left: 1.1em;
+    color: #ffffff;
+    display: inline-block;
+    background: #cf4234;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: .9em;
+    text-decoration: none;
+    border-bottom: 0.4em solid #781c1c;
+    position: relative;
+}
+.red_btn:hover, .red_btn:focus {
+    background: #e34b3a;
+    color: #eff5fe;
+    text-decoration: none;
+}
+.red_btn:before, .red_btn:after {
+    display: inline-block;
+    font-family: entypo;
+    position: absolute;
+}
+.red_btn:active {
+    -moz-transform: scale(0.92);
+    -ms-transform: scale(0.92);
+    -webkit-transform: scale(0.92);
+    transform: scale(0.92);
+}
+.red_btn:hover, .red_btn:focus {
+    box-shadow: 0 0 0 4px rgba(211, 33, 30, 0.85);
+}
+.blue_btn {
+    text-align: center;
+    padding: 0.9em 1.1em;
+    padding-left: 1.1em;
+    color: #ffffff;
+    display: inline-block;
+    background: #3baff1;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: .9em;
+    text-decoration: none;
+    border-bottom: 0.4em solid #2163a2;
+    position: relative;
+}
+.blue_btn:hover, .blue_btn:focus {
+    background: #3397ca;
+    color: #eff5fe;
+    text-decoration: none;
+}
+.blue_btn:before, .blue_btn:after {
+    display: inline-block;
+    font-family: entypo;
+    position: absolute;
+}
+.blue_btn:active {
+    -moz-transform: scale(0.92);
+    -ms-transform: scale(0.92);
+    -webkit-transform: scale(0.92);
+    transform: scale(0.92);
+}
+.blue_btn:hover, .blue_btn:focus {
+    box-shadow: 0 0 0 4px rgba(108, 212, 255, 0.85);
+}
+

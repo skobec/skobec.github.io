@@ -1,0 +1,60 @@
+<% set_title 'Парк техники' %>
+<content>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 left_nav">
+                <nav>
+                    <ul class="">
+                        <li><%= link_to 'О компании', root_path %>
+                        <li><%= link_to 'Фото объектов', page_object_path %>
+                        <li class="active"><%= link_to 'Парк техники', page_technolog_park_path %>
+                        <li><%= link_to 'Онлайн заявки', page_online_applic_path %>
+                        <li><%= link_to 'Сро', page_sro_path %>
+                        <li><%= link_to 'Справочная информация', page_help_transport_path %>
+                        <li><%= link_to 'Контакты', page_contact_path %>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-xs-9 content_bl">
+                <div class="row">
+                    <div class="col-xs-4 tech_bl">
+                        <%= link_to image_path('tech_1.jpg'), class: 'example-image-link', data: { lightbox:"example-set", title:"Экскаватор гусеничный Hitachi zx200-3"} do %>
+                            <%= image_tag 'tech_1.jpg', class: 'example-image' %>
+                            <p>Экскаватор гусеничный Hitachi zx200-3</p>
+                            <% end %>
+                    </div>
+                    <div class="col-xs-4 tech_bl">
+                        <%= link_to image_path('tech_2.jpg'), class: 'example-image-link', data: { lightbox:"example-set", title:"Экскаватор гусеничный ЭО-4124"} do %>
+                            <%= image_tag 'tech_2.jpg', class: 'example-image' %>
+                            <p>Экскаватор гусеничный ЭО-4124</p>
+                            <% end %>
+                    </div>
+                    <div class="col-xs-4 tech_bl">
+                        <%= link_to image_path('tech_3.jpg'), class: 'example-image-link', data: { lightbox:"example-set", title:"Экскаватор погрузчик Cat 428E"} do %>
+                            <%= image_tag 'tech_3.jpg', class: 'example-image' %>
+                            <p>Экскаватор погрузчик Cat 428E</p>
+                            <% end %>
+                    </div>
+                    <div class="col-xs-4 tech_bl">
+                         <%= link_to image_path('tech_4.jpg'), class: 'example-image-link', data: { lightbox:"example-set", title:"Манипулятор на базе Камаз 65117 г/п 9т. длина кузова 6.7м"} do %>
+                            <%= image_tag 'tech_4.jpg', class: 'example-image' %>
+                            <p>Манипулятор на базе <br>Камаз 65117 <br>г/п 9т. длина кузова 6.7м.</p>
+                            <% end %>
+                    </div>
+                    <div class="col-xs-4 tech_bl">
+                        <%= link_to image_path('tech_5.jpg'), class: 'example-image-link', data: { lightbox:"example-set", title:"Самосвалы Камаз 55111"} do %>
+                            <%= image_tag 'tech_5.jpg', class: 'example-image' %>
+                            <p>Самосвалы Камаз 55111</p>
+                            <% end %>
+                    </div>
+                    <div class="col-xs-4 tech_bl">
+                        <%= link_to image_path('tech_6.jpg'), class: 'example-image-link', data: { lightbox:"example-set", title:"Бульдозер Б10М"} do %>
+                            <%= image_tag 'tech_6.jpg', class: 'example-image' %>
+                            <p>Бульдозер Б10М</p>
+                            <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</content>
