@@ -53,7 +53,9 @@ body,html,
 .navbar-fixed-bottom {
     min-width: 1190px;
 }
-
+a:hover {
+    text-decoration: none;
+}
 /* Don't let the lead text change font-size. */
 .lead {
     font-size: 16px;
@@ -914,7 +916,7 @@ body,
     padding-top: 25px;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 .header-navbar_focus {
     background-color: rgba(255, 255, 255, 1);
@@ -924,7 +926,7 @@ body,
     color: rgba(0, 102, 235, 0.7);
 }
 .header-navbar_focus .smart_btn:hover {
-    background: url("../img/svg/menu-blue-hover.svg")no-repeat 0 3px;
+    background: url("../img/svg/menu-blue-hover.svg")no-repeat 0 5px;
 }
 .smart_btn {
     background: url("../img/svg/menu-white.svg")no-repeat 0 5px;
@@ -979,13 +981,19 @@ body,
 .header-navbar_focus .ava_top {
     color: #000000;
 }
+.header-navbar_focus .ava_top:hover {
+    color: #b4d4ff;
+}
 .ava_top {
     /*margin-top: -5px;*/
     margin-top: 2px;
     float: right;
-    color: #ffffff;
+    color: #b4d4ff;
     /*background: url("../img/svg/se")no-repeat 100% 65%;*/
     padding-right: 20px;
+}
+.ava_top:hover {
+    color: #ffffff;
 }
 .ava_top img {
     height: 34px;
@@ -1004,7 +1012,7 @@ body,
     width: 19px;
     display: block;
     float: right;
-    margin-right: 15px;
+    margin-right: 30px;
     margin-top: 2px;
 }
 .bl_nav_menu {
@@ -1086,7 +1094,7 @@ body,
     -o-transition: 0.3s;
     -webkit-transition: 0.3s;
 }
-.bl_nav_menu ul li.active a:after,.bl_nav_menu ul li a:hover:after {
+.bl_nav_menu ul li.active a:after {
     content: "";
     background: url("../img/svg/active-section.svg")no-repeat 0 48%;
     position: absolute;
@@ -1144,7 +1152,8 @@ body,
     font-family: Conv_AvenirNextCyr-Medium,sans-serif;
     color: #b9b9b9;
     font-size: 12px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
+    letter-spacing: 0.6px;
 }
 .metka_title {
     font-size: 14px;
@@ -1162,7 +1171,6 @@ body,
     margin-top: 7px;
     float: right;
     max-width: 114px;
-    background: #F3F4F5 url("../img/svg/case.svg")no-repeat 8px 50%;
     padding: 5px 8px 5px 22px;
     height: 32px;
     border: 1px solid #dce0e7;
@@ -1170,6 +1178,13 @@ body,
     -moz-border-radius: 1px;
     border-radius: 1px;
     overflow: hidden;
+    background-color: #F3F4F5;
+}
+.firma_ico {
+    background: #F3F4F5 url("../img/svg/case.svg")no-repeat 8px 50%;
+}
+.ip_ico {
+    background: #F3F4F5 url("../img/svg/IP.svg")no-repeat 6px 50%;
 }
 .link_doc_img {
     margin: 0 5px;

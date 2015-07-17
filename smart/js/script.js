@@ -120,14 +120,14 @@ var SidebarMenuEffects = (function() {
 
 $('.search_ico').click(function(){
 	$(this).addClass('active_search');
-	$('.accord').show(500);
+	$('.accord').slideDown(300);
 	$('.header-navbar').addClass('header-navbar_focus');
 	$('.cont_notes ,.btn_plus').animate({ opacity: "0" }, 100).hide(10);
 	$('.st-content').addClass('header_no');
 });
 	$('.content').click(function(){
 		$('.search_ico').removeClass('active_search');
-		$('.accord').hide(500);
+		$('.accord').slideUp(300);
 		$('.header-navbar').removeClass('header-navbar_focus');
 		$('.cont_notes ,.btn_plus').animate({ opacity: "1" }, 400).show(200);
 		$('.st-content').removeClass('header_no');
@@ -140,5 +140,5 @@ $('.close_ico ,.maximize_ico').click(function(){
 	$('.minimize_block').hide(200);
 });
 $('.filters_ico').click(function(){
-	$('.bl_plus').toggle('display')
+	$('.bl_plus').toggle('')
 });
