@@ -7,8 +7,6 @@
     <title>Smart</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <!--<link rel="stylesheet" href="css/mod/jquery-ui.min.css">-->
-    <!--<link rel="stylesheet" href="css/mod/jquery.jspanel.css">-->
 </head>
 <body>
 <div id="st-container" class="st-container st-effect-5">
@@ -115,19 +113,67 @@
                        </div>
                        <button class="filters_ico"></button>
                        <div class="bl_plus">
-                           <div class="dropdown">
-                               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="  width: 382px;
-  margin-top: 15px;">
-                                   Вид клиента
-                                   <span class="caret"></span>
-                               </button>
-                               <ul class="dropdown-menu" aria-labelledby="dropdownMenu6">
-                                   <li><a href="#">Action</a></li>
-                                   <li><a href="#">Another action</a></li>
-                                   <li><a href="#">Something else here</a></li>
-                                   <li><a href="#">Separated link</a></li>
-                               </ul>
-                           </div>
+                               <div class="dropdown" style="margin-bottom: 10px">
+                                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="  width: 382px;  margin-top: 15px;">
+                                       Вид клиента
+                                       <span class="caret"></span>
+                                   </button>
+                                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu6">
+                                       <li><a href="#">Action</a></li>
+                                       <li><a href="#">Another action</a></li>
+                                       <li><a href="#">Something else here</a></li>
+                                       <li><a href="#">Separated link</a></li>
+                                   </ul>
+                               </div>
+                               <div class="col-xs-12">
+                                   <div class="btn-group btn_gr_1" data-toggle="buttons" style="margin-bottom: 10px">
+                                       <label class="btn btn-primary active">
+                                           <input type="radio" name="options" id="option3" autocomplete="off" checked>Физ.лица
+                                       </label>
+                                       <label class="btn btn-primary">
+                                           <input type="radio" name="options" id="option4" autocomplete="off">Юр.лица
+                                       </label>
+                                       <label class="btn btn-primary">
+                                           <input type="radio" name="options" id="option5" autocomplete="off">Корпорации
+                                       </label>
+                                   </div>
+                               </div>
+                               <div class="col-xs-12 btn-group btn_gr_2" data-toggle="buttons">
+                                   <label class="btn btn-primary active">
+                                       <input type="radio" name="options" id="option6" autocomplete="off" checked>Мои клиенты
+                                   </label>
+                                   <label class="btn btn-primary">
+                                       <input type="radio" name="options" id="option7" autocomplete="off">Все клиенты
+                                   </label>
+                               </div>
+                                <div class="col-xs-12">
+                                    <div class="range_slider">
+                                    <p>
+                                        <label for="amount"></label>
+                                        <input type="text" id="amount" class="amounts" style="border:0;  font-weight:bold;float: left">
+                                        <input type="text" id="amount2" class="amounts" style="border:0;  font-weight:bold;float: right;text-align: right">
+                                    </p>
+                                    <div id="slider-range"></div>
+                                    </div>
+                                </div>
+                               <div class="dropdown" style="margin-bottom: 10px">
+                                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="  width: 382px;  margin-top: 15px;">
+                                       Валюты
+                                       <span class="caret"></span>
+                                   </button>
+                                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu6">
+                                       <li><a href="#">Action</a></li>
+                                       <li><a href="#">Another action</a></li>
+                                       <li><a href="#">Something else here</a></li>
+                                       <li><a href="#">Separated link</a></li>
+                                   </ul>
+                               </div>
+                                <div class="col-xs-12">
+                                    <input class="calendar_inp" placeholder="sadsd" value="16.10.13" style="margin-bottom: 10px">
+                                </div>
+                               <div class="col-xs-12">
+                                   <button class="btn btn-primary" style="width: 100%;background-color: rgb(255, 92, 50);color: #ffffff;height: 50px;">Применить фильтры</button>
+                               </div>
                        </div>
                    </div>
                </div>
@@ -135,37 +181,6 @@
             <div class="content">
                 <a href="#" class="btn_plus"></a>
                <div class="container">
-                   <!--<div class="container-content modal_content">-->
-                       <!--<div class="row">-->
-                           <!--<div class="col-xs-2 text-left">-->
-                               <!--<a href="#" class="modal_smart_ico"></a>-->
-                           <!--</div>-->
-                           <!--<div class="col-xs-8">-->
-                               <!--<h3>Обработка информации от компании "Motul"</h3>-->
-                           <!--</div>-->
-                           <!--<div class="col-xs-2 text-right">-->
-                               <!--<a href="#" class="setting_modal_ico"></a>-->
-                           <!--</div>-->
-                       <!--</div>-->
-                       <!--<div class="row">-->
-                           <!--<div class="col-xs-6 text-left">-->
-                               <!--<span>Создана 29 ноября 2014</span>-->
-                           <!--</div>-->
-                           <!--<div class="col-xs-6 text-right">-->
-                               <!--время-->
-                           <!--</div>-->
-                       <!--</div>-->
-                       <!--<div class="row reds_row">-->
-                           <!--<div class="col-xs-6 text-left">-->
-                               <!--<p>Задача не выполнена, 15 марта 2015</p>-->
-                           <!--</div>-->
-                           <!--<div class="col-xs-6 text-right">-->
-                               <!--<ul>-->
-                                   <!--<li>Причина</li>-->
-                               <!--</ul>-->
-                           <!--</div>-->
-                       <!--</div>-->
-                   <!--</div>-->
                    <div class="container-content cont_notes">
                        <div class="row">
                                <div class="data_bl">
@@ -369,77 +384,10 @@
 </div>
 
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
-<script src="js/mod/jquery.min.js"></script>
-<script src="js/mod/jquery-ui.min.js"></script>
-<script src="js/mod/jquery.jspanel.js"></script>
-
-<!--<script>-->
-    <!--$('#btn1').click(function (e) {-->
-        <!--e.preventDefault();-->
-        <!--$.jsPanel();-->
-    <!--});-->
-    <!--$('#btn2').click(function (e) {-->
-        <!--e.preventDefault();-->
-        <!--$.jsPanel({-->
-            <!--selector: "#container-1",-->
-            <!--position: "center",-->
-            <!--theme: "success",-->
-            <!--title: "Another jsPanel"-->
-        <!--});-->
-    <!--});-->
-    <!--$('#btn3').click(function (e) {-->
-        <!--e.preventDefault();-->
-        <!--$.jsPanel({-->
-
-            <!--size: {width: 800, height: 500},-->
-            <!--position: 'center',-->
-            <!--theme: 'medium'-->
-        <!--});-->
-    <!--});-->
-    <!--$('#btn4').click(function (e) {-->
-        <!--e.preventDefault();-->
-        <!--var panel1 = $.jsPanel({-->
-            <!--title: "jsPanel Title",-->
-            <!--size: {width: 400, height: 200},-->
-            <!--position: "center",-->
-            <!--theme: "success"-->
-        <!--});-->
-        <!--window.setTimeout(function () {-->
-            <!--// call .title() on the variable representing the jsPanel (delayed in order to see the title change)-->
-            <!--panel1.title('jsPanel <small>a jquery plugin</small>');-->
-        <!--}, 3000);-->
-    <!--});-->
-    <!--$('#btn5').click(function (e) {-->
-        <!--e.preventDefault();-->
-        <!--var mypanel = $.jsPanel({-->
-            <!--title: "Заголовок",-->
-            <!--position: "center",-->
-            <!--theme: "autumnbrown",-->
-            <!--size: {width: 800, height: 600}-->
-        <!--});-->
-        <!--mypanel.content.append("<img src='img/test.jpg'>");-->
-        <!--mypanel.on('jspanelstatechange', function () {-->
-            <!--mypanel.content.append("<p style='text-align:center;padding:0 10px;'><i>jsPanel</i>.status changed to: " + mypanel.status + "</p> ");-->
-        <!--});-->
-    <!--});-->
-    <!--$('#btn6').click(function (e) {-->
-        <!--e.preventDefault();-->
-        <!--var mypanel2 = $.jsPanel({-->
-            <!--position: "center",-->
-            <!--theme: "autumnred"-->
-        <!--});-->
-        <!--mypanel2.on('jspanelstatechange', function () {-->
-            <!--if (mypanel2.status === "maximized" || mypanel2.status === "normalized") {-->
-                <!--mypanel2.content.append("<p style='text-align:center;padding:0 10px;'><i>jsPanel</i>.status changed to: " + mypanel2.status + "</p>");-->
-            <!--}-->
-        <!--});-->
-    <!--});-->
-<!--</script>-->
-
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 </body>
 </html>

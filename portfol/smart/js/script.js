@@ -140,5 +140,77 @@ $('.close_ico ,.maximize_ico').click(function(){
 	$('.minimize_block').hide(200);
 });
 $('.filters_ico').click(function(){
-	$('.bl_plus').toggle('')
+	$('.bl_plus').slideToggle('')
+});
+
+
+$(function() {
+
+	function findNearest(includeLeft, includeRight, value, values) {
+		var nearest = null;
+		var diff = null;
+		for (var i = 0; i < values.length; i++) {
+			if ((includeLeft && values[i] <= value) || (includeRight && values[i] >= value)) {
+				var newDiff = Math.abs(value - values[i]);
+				if (diff == null || newDiff < diff) {
+					nearest = values[i];
+					diff = newDiff;
+				}
+			}
+		}
+		return nearest;
+	};
+
+	function fFireChanging(valueLeft, valueRight){
+		console.log('valueLeft: ' + valueLeft);
+		console.log('valueRight: ' + valueRight);
+	};
+
+	$(document).ready(function() {
+		console.log('filter-script start');
+
+		var values = [0, 50, 100, 115, 135, 145, 185, 210, 240, 265, 285, 315, 375, 395, 415, 425, 455, 500,600,700,800,900,1000,1100,1200,1300,1400,2000,3000,4000,4500, 5000];
+		var iInitValueLeft = 100;
+		var iInitValueRight = 5000;
+
+		var slider = $( "#slider-range" ).slider({
+			range: true,
+			min: 100,
+			max: 5000,
+			values: [200, 3000],
+			slide: function( event, ui ) {
+				var includeLeft = event.keyCode != $.ui.keyCode.RIGHT;
+				var includeRight = event.keyCode != $.ui.keyCode.LEFT;
+				var value = findNearest(includeLeft, includeRight, ui.value, values);
+				if (ui.value == ui.values[0]) {
+					slider.slider('values', 0, value);
+					ui.values[ 0 ] = value;
+				}
+				else {
+					ui.values[ 1 ] = value;
+					slider.slider('values', 1, value);
+				}
+				$( "#amount" ).val( "от $" + ui.values[ 0 ]);
+				$( "#amount2").val("до $" + ui.values[ 1 ]);
+
+			},
+			change: function(event, ui) {
+				var includeLeft = event.keyCode != $.ui.keyCode.RIGHT;
+				var includeRight = event.keyCode != $.ui.keyCode.LEFT;
+				var value = findNearest(includeLeft, includeRight, ui.value, values);
+				if (ui.value == ui.values[0] && value != iInitValueLeft) {
+					iInitValueLeft = value;
+					fFireChanging(iInitValueLeft, iInitValueRight)
+				} else if (ui.value == ui.values[1] && value != iInitValueRight) {
+					iInitValueRight = value;
+					fFireChanging(iInitValueLeft, iInitValueRight)
+				};
+			}
+		});
+
+		slider.slider();
+
+		$( "#amount" ).val( "от $" + $( "#slider-range" ).slider( "values", 0) );
+		$("#amount2").val("до $" + $( "#slider-range" ).slider( "values", 1 ));
+	});
 });
