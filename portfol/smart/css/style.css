@@ -2381,3 +2381,76 @@ button.ui-button::-moz-focus-inner {
 .range_slider {
     margin: 10px 0 8px;
 }
+.client_page .st-content {
+    background: #f2f2f2;
+}
+.client_page .container-content {
+    width: 880px;
+}
+.client_page .cont_notes:first-child {
+    margin-top: 130px;
+}
+.client_page .btn_plus {
+    top: 20%;
+    bottom: auto;
+}
+.table>thead>tr>th {
+    border-bottom: 0;
+    background-color: #e7e8ed;
+    font-family: Conv_AvenirNextCyr-Medium, sans-serif;
+    color: #88888f;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: normal;
+}
+.table tbody {
+    background-color: white;
+}
+.table tbody tr td,table tbody tr th {
+    position: relative;
+    border-top: 0!important;
+    font-family: AvenirNextCyr-Regular, sans-serif;
+    color: rgba(0, 102, 235, 0.7);
+    font-weight: normal;
+    padding: 15px 0px 15px 12px;
+}
+tbody td:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e3e6e8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+tbody td:last-child:after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: #e3e6e8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+tbody th:first-child:after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: #e3e6e8;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.table tbody th:first-child,.table thead th:first-child {
+    padding: 15px 0 15px 20px;
+}
+.table>thead>tr>th {
+    padding: 15px 12px;
+}
+.table .inn_colum {
+    color: #88888f;
+}
+.table .glyphicon {
+    color: #6bcaa9;
+    font-size: 11px;
+}
