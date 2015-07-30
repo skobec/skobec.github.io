@@ -1,0 +1,126 @@
+body {
+    background-color: #e0ebc1;
+}
+.container {
+    background-color: #ffffff;
+    padding: 0 50px;
+}
+span {
+    color: #482521;
+}
+.block_link {
+    border: 1px solid #e0e0e0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px 15px 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+.icon_flor {
+    background-image: url("../img/flor_ico.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-bottom: -10px;
+}
+
+.flor-ico_1 {
+    width: 38px;
+    height: 35px;
+    background-position: -5px -5px;
+}
+
+.flor-ico_2 {
+    width: 38px;
+    height: 35px;
+    background-position: -5px -50px;
+}
+
+.flor-ico_3 {
+    width: 38px;
+    height: 35px;
+    background-position: -53px -5px;
+}
+
+.flor-ico_4 {
+    width: 38px;
+    height: 35px;
+    background-position: -53px -50px;
+}
+.popover {
+    max-width: 300px;
+    background-color: #eeeeee;
+}
+.popover.top>.arrow:after,.popover.bottom>.arrow:after {
+    border-bottom-color: #eeeeee;
+    border-top-color: #eeeeee;
+}
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.panel-group .panel+.panel {
+    margin-top: -1px;
+}
+.block_link_mob a {
+    display: block;
+    padding: 5px 15px 15px;
+    text-decoration: none;
+}
+.block_link_mob a span {
+    border-bottom: 1px dashed #5c7528;
+    color: #5c7528;
+}
+.block_link_mob a .icon_flor {
+    margin-right: 15px;
+}
+.block_link_mob .panel-heading {
+    padding: 0;
+}
+.block_link_mob a:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: none;
+    border-top: none;
+    border-bottom: 4px dashed #6d6d6d;
+    border-bottom: 4px solid #6d6d6d;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.block_link_mob a.collapsed:after {
+    border-top: 4px dashed #6d6d6d;
+    border-top: 4px solid #6d6d6d;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: none;
+    border-bottom: none;
+}
+.block_link_mob .panel-collapse {
+    position: relative;
+}
+.block_link_mob .panel-collapse:after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 52px;
+    width: 0;
+    height: 0;
+    border-bottom: 4px dashed #6d6d6d;
+    border-bottom: 8px solid rgb(255, 255, 255);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+@media (max-width: 956px) {
+    .block_link {
+        text-align: left;
+    }
+}
+@media (max-width: 500px) {
+    .container {
+        padding: 0;
+    }
+}
