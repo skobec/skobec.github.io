@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+</head>
+<body>
+<nav class="circular-menu" id="menu">
+
+    <div class="circle">
+        <a href="#" class="fa fa-home fa-2x"></a>
+        <a href="" class="fa fa-facebook fa-2x"></a>
+        <a href="" class="fa fa-twitter fa-2x"></a>
+        <a href="" class="fa fa-linkedin fa-2x"></a>
+        <a href="" class="fa fa-github fa-2x"></a>
+        <a href="" class="fa fa-rss fa-2x"></a>
+        <a href="" class="fa fa-pinterest fa-2x"></a>
+        <a href="" class="fa fa-asterisk fa-2x"></a>
+    </div>
+
+    <!--<a href="" class="menu-button fa fa-bars fa-2x"></a>-->
+
+</nav>
+<p class="popup_bl">Подсказка</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+    var items = document.querySelectorAll('.circle a');
+
+    for(var i = 0, l = items.length; i < l; i++) {
+        items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+
+        items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+    }
+
+//    document.querySelector('.menu-button').onclick = function(e) {
+////        e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
+//    };
+    (function(){
+        var link = document.querySelector('html');
+        var popup = document.getElementById('menu');
+        link.addEventListener('mousedown', function(e){
+            $('#menu').animate({ opacity: 'show'});
+            $('.popup_bl').animate({ opacity: 'hide'});
+            e.preventDefault();
+            document.querySelector('.circle').classList.toggle('open');
+//            $('#on-check').click();
+//            e.preventDefault();
+//            $('#menu').toggle();
+            popup.style.left = e.pageX - 120 + 'px';
+            popup.style.top = e.pageY - 120 + 'px';
+
+        });
+        link.addEventListener('mouseup', function(e){
+//            if ($('.circle a').hover())
+//            {
+//            alert("sdfsdf")
+//            }
+//            else
+                e.preventDefault();
+            document.querySelector('.circle').classList.toggle('open');
+            $('#menu').animate({ opacity: 'hide'});
+            $('.circle a').hover(function(){
+                $('.popup_bl').animate({ opacity: 'show'});
+            });
+//            $('#menu').hide('fast');
+//            $('#menu').toggle('display');
+//            $('#on-check').click();
+        });
+//		link.addEventListener('mouseup', function(e){
+//			e.preventDefault();
+//			$('#on-check').click();
+//			$('#menu').toggle('display');
+//			popup.style.left = e.pageX - 75 + 'px';
+//			popup.style.top = e.pageY - 75 + 'px';
+//
+//		});
+    })();
+</script>
+<script>
+//(function(){
+//var link = document.querySelector('html');
+//var popup = document.getElementById('menu');
+//link.addEventListener('mousedown', function(e){
+//$('#on-check').click();
+//e.preventDefault();
+//$('#menu').toggle();
+//popup.style.left = e.pageX - 75 + 'px';
+//popup.style.top = e.pageY - 75 + 'px';
+//
+//});
+//link.addEventListener('mouseup', function(e){
+//$('#menu').toggle('display');
+//$('#on-check').click();
+//});
+////		link.addEventListener('mouseup', function(e){
+////			e.preventDefault();
+////			$('#on-check').click();
+////			$('#menu').toggle('display');
+////			popup.style.left = e.pageX - 75 + 'px';
+////			popup.style.top = e.pageY - 75 + 'px';
+////
+////		});
+//})();
+</script>
+</body>
+</html>
