@@ -343,6 +343,7 @@ p,span {
     color: #383838!important;
     font-size: 47px!important;
     width: 50%;
+    border: 0;
 }
 .name_progress {
     font-size: 22px;
