@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><?= Constant::VAR_ROOT_TITLE ?></title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link href="/css/common.css" rel="stylesheet">
+        <link href="/css/jelect.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <!-- Jquery -->
+        <script src="/js/jquery-latest.js"></script>
+
+
+        <!-- <script src="http://code.highcharts.com/maps/highmaps.js"></script> -->
+
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/highcharts-3d.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+        <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+        <!--
+            <script src="http://code.highcharts.com/mapdata/countries/ru/custom/ru-all-disputed.js"></script>
+            <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+        -->
+        <script src="http://code.highcharts.com/maps/modules/data.js"></script>
+        <script src="http://code.highcharts.com/maps/modules/drilldown.js"></script>
+        <!-- <script src="http://code.highcharts.com/mapdata/countries/ru/ru-all.js"></script> -->
+        <script src="/mapdata/countries/?mapkey=/ru/ru-all.js"></script>
+
+        <script src="/js/common.js"></script>
+        <script src="/js/other.js"></script>
+        <script src="/js/widgets.js"></script>
+        <script src="/js/jquery.form.js"></script>
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+                <script src="/js/jquery.autocomplete.js"></script>
+        <!-- Custom-UI -->
+        <link href="/custom-ui/custom-ui.css" media="screen" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="/custom-ui/custom-ui.js?v=3"></script>
+        <!-- FormStyler -->
+<!--        <script src="/form-styler/jquery.formstyler.js?v=1_4_1"></script>-->
+        <!--        <link href="/form-styler/jquery.formstyler.css?v=1_4_1" media="screen" rel="stylesheet" type="text/css" />-->
+        <!-- Assets -->
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css" media="screen" />
+        <!-- Paginator -->
+        <script src="/paginator/paginator3000.js"></script>
+        <link href="/paginator/paginator3000.css" media="screen" rel="stylesheet" type="text/css" />
+        <!-- Mirkon -->
+        <script type="text/javascript" src="/mikron/mikron.js"></script>
+        <!-- Validator -->
+        <link href="/validation/css/validationEngine.jquery.css" media="screen" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="/validation/js/jquery.validationEngine.js"></script>
+        <script type="text/javascript" src="/validation/js/jquery.validationEngine-ru.js"></script>
+        <!-- Select2 -->
+        <script src="/select2/select2.min.js"></script>
+        <script src="/select2/select2_locale_ru.js"></script>
+        <link rel="stylesheet" href="/select2/select2.css" />
+        <script src="/js/chart_control.js"></script>
+        <!-- Style -->
+        <link rel="stylesheet" href="/css/style.php?v=1">
+        <script>
+            $(function () {
+                try {
+                    $('.popup-form').draggable({
+                        handle: '.popup-form-toolbox',
+                        containment: '#shadow',
+                        scroll: false
+                    });
+                    // вкладки
+                    $('.nav-tabs a').click(function (e) {
+                        e.preventDefault();
+                        $(this).tab('show');
+                    });
+                    // кастомизация инпутов
+//                    $('input[type=checkbox], input[type=radio], select, input[type=file], input[type=text], input[type=password], input[type=submit], textarea').not('.select2').styler({
+//                        selectVisibleOptions: 20,
+//                    });
+                    // выбор даты
+                    if ($.fn.datepicker != undefined) {
+                        $('.datepicker2').datepicker({
+                            format: 'dd-mm-yyyy',
+                            language: 'ru',
+                            autoclose: true,
+                            weekStart: 1
+                        }).on('changeDate', function (e) {
+                            $(this).datepicker('hide');
+                        });
+                    }
+                } catch (e) {
+                    alert(e);
+                }
+            });
+        </script>
+        <script src="/js/lib/jquery.jelect.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.8/js/swiper.min.js"></script>
+        <?= $this->headLink() ?>
+        <?= $this->headScript() ?>
+    </head>
+    <body class="is-dashboard">
+        <header class="header">
+
+            <div class="intro__logo js-logo">
+                <nav class="header-action header-action_page_main" data-container="menu">
+                    <ul class="header-action-list">
+                        <li class="header-action-item">
+                            <div class="header-action-link">
+                                <span class="icon icon-menu js-icon-menu"></span>
+                            </div>
+                        </li>
+                        <li class="header-action-item">
+                            <div class="header-action-link">
+                                <span class="icon icon-search js-search-button"></span>
+                            </div>
+                        </li>
+                        <li class="header-action-item">
+                            <div class="header-action-link">
+                                <span class="icon icon-voice-search js-voice-search"></span>
+                            </div>
+                        </li>
+                        <li class="header-action-item">
+                            <div class="header-action-link" title="Переключение рабочих столов" data-action="switcher">
+                                <span class="icon icon-dashboard js-icon-dashboard"></span>
+                            </div>
+                        </li>
+                        <li class="header-action-item">
+                            <div class="header-action-link">
+                                <a href="<?= $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'feedback'), null, true); ?>"><span class="icon icon-help js-icon-help"></span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/" class="logo">
+                    <img class="logo__image" src="/img/logo.png" alt="МинПромТорг России">
+
+                    <h1 class="logo__name">
+                        МинПромТорг России
+                    </h1>
+
+                    <div class="logo__text">
+                        Открытый бюджет Министерства
+                        <br>
+                        промышленности и торговли
+                    </div>
+                </a>
+
+                <div class="intro__logo-links js-logo-links">
+                    <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'personal', 'id' => 80), null, true); ?>" class="intro__logo-link">Вход</a>
+                    <a href="javascript:void(0)" class="intro__logo-link intro__logo-link_underline">Версия для
+                        слабовидящих</a>
+                </div>
+            </div>
+
+            <div class="intro__search">
+                <div class="screen-menu__close js-screen-menu-close"></div>
+                <form class="intro__form">
+                    <input type="text" class="intro__form-field" id="search_field">
+                    <button type="submit" class="intro__form-submit" id="search-button">Найти</button>
+                </form>
+
+                <div class="intro__search-result hidden_block">
+                    <span class="intro__search-result-title">Нашлось 3 совпадения:</span>
+                    <ul>
+                        <li>
+                            <a href="javasript:void(0)" class="intro__search-result-link">
+                                Какая доля средств бюджета МПТ выделена в этом году на НИОКР в сфере фармацевтики?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javasript:void(0)" class="intro__search-result-link">
+                                Какая доля средств бюджета МПТ выделена в этом году для развития производства отечественных лекарств?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javasript:void(0)" class="intro__search-result-link">
+                                Какая доля средств бюджета МПТ выделена в этом году для развития производства отечественного медицинского оборудования?
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="intro__search-voice js-voice">
+                <div class="screen-menu__close js-screen-menu-close"></div>
+
+                <div class="intro__voice">
+                    <img src="/img/voice.gif">
+                    <div class="intro__voice-text">
+                        <span class="intro__voice-title">Мы правильно распознали <br> ваш запрос?</span>
+                        <span class="intro__voice-query"> Какая доля средств бюджета МПТ выделена <br> в этом году на развитие</span>
+                    </div>
+                </div>
+
+                <div class="intro__search-result intro__search-result_voice">
+                    <span class="intro__search-result-title">Нашлось 3 совпадения:</span>
+                    <ul>
+                        <li>
+                            <a href="javasript:void(0)" class="intro__search-result-link">
+                                Какая доля средств бюджета МПТ выделена в этом году на НИОКР в сфере фармацевтики?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javasript:void(0)" class="intro__search-result-link">
+                                Какая доля средств бюджета МПТ выделена в этом году для развития производства отечественных лекарств?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javasript:void(0)" class="intro__search-result-link">
+                                Какая доля средств бюджета МПТ выделена в этом году для развития производства отечественного медицинского оборудования?
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="page js-page">
+            <div style="float: right;">
+                <? //= Plugin_Menu::draw('mpt-menu') ?>
+            </div>
+            <div class="page-inner">
+                <div class="screen-menu js-screen-menu">
+                    <div class="screen-menu__content">
+
+                        <div class="screen-menu__close js-screen-menu-close"></div>
+                        <div class="list-menu js-list-menu">
+                            <div class="list-menu__topic js-list-menu-topic">
+                                <div class="list-menu__item">
+                                    <a href="/" class="list-menu__link js-list-menu-link" data-action="main">Главная</a>
+                                </div>
+
+                                <div class="list-menu__item" data-action="budget">
+                                    <a href="#" class="list-menu__link js-list-menu-link">Бюджет</a>
+                                </div>
+
+
+                                <div class="list-menu__item">
+                                    <a href="#" class="list-menu__link js-list-menu-link" data-action="education" data-droplist="true">Обучение</a>
+                                </div>
+                                <div class="list-menu__detail js-list-menu-detail" data-view="education">
+                                    <div class="list-menu__item"><a href="/education" class="list-menu__link list-menu__link_detail">Вопросы по бюджету</a></div>
+                                    <div class="list-menu__item"><a href="#" class="list-menu__link list-menu__link_detail">Вопросы и ответы</a></div>
+                                    <div class="list-menu__item"><a href="#" class="list-menu__link list-menu__link_detail">Нормативная база</a></div>
+                                    <div class="list-menu__item"><a href="#" class="list-menu__link list-menu__link_detail">Документы</a></div>
+                                    <div class="list-menu__item"><a href="#" class="list-menu__link list-menu__link_detail">Словарь</a></div>
+                                    <div class="list-menu__item"><a href="#" class="list-menu__link list-menu__link_detail">Обучающие тесты</a></div>
+                                </div>
+
+                                <div class="list-menu__item">
+                                    <a href="#" class="list-menu__link js-list-menu-link" data-action="documents">Документы</a>
+                                </div>
+
+                                <div class="list-menu__item">
+                                    <a href="#" class="list-menu__link js-list-menu-link" data-action="news">Новости</a>
+                                </div>
+
+                                <div class="list-menu__item">
+                                    <a href="#" class="list-menu__link js-list-menu-link" data-action="portal">Работа портала</a>
+                                </div>
+
+                                <div class="list-menu__item">
+                                    <a href="#" class="list-menu__link js-list-menu-link" data-action="contacts">Контакты</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="footer footer_screen_menu">
+                            <div class="footer__left footer__left_page_menu">
+                                <div class="footer__copyright footer__copyright_page_menu">© 2015 Минпромторг РФ</div>
+                                <adress class="footer__adress footer__adress_page_menu">
+                                    inbox@minprom.gov.ru<br>
+                                    8 495 539-21-87<br>
+                                    Москва, Китайгородский пр., д. 7
+                                </adress>
+                            </div>
+                            <div class="footer__right footer__right_page_menu">
+                                <a href="http://minpromtorg.gov.ru/" target="_blank" class="footer__link footer__link_page_menu">Основной сайт Минпромторга</a>
+                                <div class="footer__social footer__social_page_menu">
+                                    <div class="footer__icon">
+                                        <a href="https://www.facebook.com/minpromtorg" target="_blank" class="icon icon-fbook_white"></a>
+                                    </div>
+                                    <div class="footer__icon">
+                                        <a href="http://vk.com/minpromtorgrus" target="_blank" class="icon icon-vk_white"></a>
+                                    </div>
+                                    <div class="footer__icon">
+                                        <a href="https://twitter.com/minpromtorg_rus" target="_blank" class="icon icon-twit_white"></a>
+                                    </div>
+                                    <div class="footer__icon">
+                                        <a href="https://instagram.com/minpromtorg/" target="_blank" class="icon icon-instagram_white"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="appearence">
+                            <div class="appearence__title">Внешний вид</div>
+                            <div class="appearence__theme">
+                                <div class="appearence__item">
+                                    <div class="appearence__thumbnail appearence__thumbnail_ship js-appearence-thumbnail js-ship-theme">
+                                        <img class="appearence__img js-appearence-img" src="/img/menu/theme_1.png" alt="img">
+                                    </div>
+                                    <div class="appearence__text js-appearence-text">Редактировать</div>
+                                </div>
+
+                                <div class="appearence__item">
+                                    <div class="appearence__thumbnail js-appearence-thumbnail js-theme-brown">
+                                        <img class="appearence__img js-appearence-img" src="/img/menu/theme_2.png" alt="img">
+                                    </div>
+                                    <div class="appearence__text js-appearence-text">Редактировать</div>
+                                </div>
+
+                                <div class="appearence__item">
+                                    <div class="appearence__thumbnail js-appearence-thumbnail js-theme-pink">
+                                        <img class="appearence__img js-appearence-img" src="/img/menu/theme_3.png" alt="img">
+                                    </div>
+                                    <div class="appearence__text js-appearence-text">Редактировать</div>
+                                </div>
+
+                                <div class="appearence__item">
+                                    <div class="appearence__thumbnail js-appearence-thumbnail js-theme-base theme_active">
+                                        <img class="appearence__img js-appearence-img" src="/img/menu/theme_4.png" alt="img">
+                                    </div>
+                                    <div class="appearence__text js-appearence-text appearence__text_is_active">Редактировать</div>
+                                </div>
+                            </div>
+
+                            <div class="appearence__add-btn"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <section class="dashboard">
+                    <div class="dashboard-inner">
+                        <div class="dashboard-switcher" data-container="switcher">
+                            <div class="dashboard-switcher-title">Рабочие столы</div>
+                            <?php Plugin_Menu::draw('desktop-menu', 'dashboard-switcher-list', array('active_class' => 'is-active')) ?>
+                        </div>
+                        <?= $this->layout()->content ?>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
+

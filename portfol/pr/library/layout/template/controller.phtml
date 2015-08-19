@@ -1,0 +1,30 @@
+<?
+
+/*
+// Напутствие потомкам (присно следовать да блюсти строжайше): ручная
+// правка автоматически сгенерированного кода не доведёт до добра. Коли
+// вас, несчастных, не пущают к генератору, или же
+// история не сохранила и руин оного, то ничего вам не остаётся, кроме
+// как главою бить о сруб светлицы да отраву пить. Сочувствую, коли
+// вам выпала сия доля, но чем-либо облегчить вашу участь не в моей
+// власти. Да пребудет с вами сила.
+*/
+
+class {$module}_{$controller}Controller extends Zend_Controller_Action {
+
+    function init() {
+        $this->_helper->Init->init();        
+        if(!$this->user->isLogged()) {
+            Functions::redirect('//'.Settings::get('root_domain').'/login/');
+        }
+        $this->view->home_id = isset($_SESSION['current_home_id']) ? $_SESSION['current_home_id'] : null;
+        if(!is_numeric($this->view->home_id)) {
+            Functions::redirect('/list/');
+        }
+        $default_action_name = '{$default_action_name}';
+        {$index_checker}
+    }
+    
+{$action_list}
+
+}

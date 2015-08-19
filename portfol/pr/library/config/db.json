@@ -1,0 +1,6 @@
+{
+    "allow_print_help": true,
+    "db_redis": {"dbms": "redis", "host": "mpt.redis", "port": 6379, "namespace": "mpt"},
+    "db_general": {"dbms": "pgsql", "host": "mpt.db", "port": 5433, "username": "mpt", "password": "f52393d6-e794-48e4-a425-3666954a4459", "dbname": "mpt"},
+    "mongo_log": {"dbms": "mongo", "host": "mpt.mongo", "port": 27017, "dbname": "mpt_log"}
+}

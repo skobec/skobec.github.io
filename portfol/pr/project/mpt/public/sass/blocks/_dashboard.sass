@@ -1,0 +1,331 @@
+.dashboard
+	padding: 0 0 25px
+.dashboard-switcher
+	// display: none
+	margin: 0 0 15px
+	padding: 0 0 15px
+	border-bottom: 1px solid #fff
+	font: 13px/1 $font-ag-bold
+	color: #fff
+.dashboard-switcher-title
+	margin: 0 0 15px
+	text-transform: uppercase
+.dashboard-switcher-list
+	font-size: 0
+.dashboard-switcher-item
+	display: inline-block
+	& + &
+		margin-left: 9px
+	&:hover,
+	&.is-active
+		.dashboard-switcher-link
+			border-color: #ab7260
+			background-color: #ab7260
+.dashboard-switcher-link
+	display: block
+	height: 25px
+	line-height: 25px
+	padding: 0 8px
+	border: 1px solid #fff
+	font-size: 13px
+	color: #fff
+	text-transform: uppercase
+	user-select: none
+	transition: .2s
+
+// Виджеты
+.cards
+.cards-list
+	font-size: 0
+	margin: -25px 0 0 -25px
+.cards-item
+	position: relative
+	display: inline-block
+	vertical-align: top
+	overflow: hidden
+	box-sizing: border-box
+	width: 276px
+	padding-left: 276px
+	height: 416px
+	margin: 25px 0 0 25px
+	color: #362f2d
+	font-size: 16px
+	background: #fff
+	// transition: width .4s cubic-bezier(1.000, -0.600, 0.000, 1.305)
+	transition: width .3s ease-in-out
+	&.cards-item-add
+		background: #d1d3d4
+		transition: background .3s
+		&:hover
+			background: lighten(#d1d3d4, 5%)
+	&.is-expanded
+		width: 878px
+		.cards-main
+			opacity: 1
+
+// Обложка виджета
+.cards-cover
+	z-index: 2
+	position: absolute
+	top: 0
+	left: 0
+	width: 276px
+	height: 100%
+	background: #fff
+.cards-main
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 276px
+	background: #efefef
+	opacity: 0
+	transition: opacity .1s
+
+// Набор действий для виджета
+.cards-opt
+	z-index: 3
+	position: absolute
+	top: 10px
+	right: 8px
+	font-size: 0
+.cards-opt-item
+	display: inline-block
+	vertical-align: middle
+	margin: 0 0 0 8px
+	&.is-active,
+	&:hover
+		.cards-opt-link
+			.icon:before
+				opacity: 1
+	&:hover
+		.icon
+			transform: rotate(90deg)
+.cards-opt-link
+	display: block
+	.icon
+		position: relative
+		transition: transform .3s
+	.icon:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		transition: opacity .3s
+	.icon-compare:before
+		+icon(compare_h)
+	.icon-settings:before
+		+icon(settings_h)
+	.icon-expand:before
+		+icon(expand_h)
+
+// Заголовок виджета
+.cards-header
+	padding: 40px 25px 15px
+.cards-title
+	font: 13px/17px $font-ag-medium
+	color: #362f2d
+	text-transform: uppercase
+	&:before
+		content: ""
+		display: block
+		width: 65px
+		height: 3px
+		margin: 0 0 5px
+		background: #362f2d
+.cards-title-link
+	color: #a9735d
+	cursor: pointer
+	transition: color .3s
+	&:hover
+		color: #e93b00
+
+// Ссылка добавления виджета
+.cards-link
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+// Иконка виджета
+.cards-icon
+	position: absolute
+	top: 152px
+	left: 50%
+	margin: 0 0 0 -63px
+	width: 125px
+	height: 125px
+	border-radius: 50%
+	background: #a9735d
+	.icon
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	.icon-govprog
+		margin-top: -3px
+
+// Общая сумма
+.cards-amount
+	position: absolute
+	right: 10px
+	bottom: 30px
+	left: 10px
+	text-align: center
+.cards-amount-value,
+.cards-amount-currency
+	display: inline-block
+	line-height: 1
+	text-transform: uppercase
+.cards-amount-value
+	font-family: $font-ag-light
+	font-size: 50px
+.cards-amount-currency
+	position: relative
+	top: 0.3em
+	vertical-align: top
+	font-family: $font-ag-regular
+
+// Сайдбар виджета
+.cards-sidebar
+	z-index: 1
+	position: absolute
+	width: 202px
+	top: 0
+	right: 0
+	bottom: 0
+	background: #fff
+	border-left: 1px solid rgba(#000, .10)
+	transition: .2s
+	&.is-collapsed
+		width: 0
+
+// Режимы отображения графика
+.cards-view
+	position: absolute
+	top: 48px
+	left: 25px
+.cards-view-list
+	font-size: 0
+.cards-view-item
+	display: inline-block
+	vertical-align: middle
+	opacity: 0.2
+	transition: opacity .4s
+	margin: 0 0 0 17px
+	&:hover,
+	&.is-active
+		opacity: 1
+	&:first-child
+		margin: 0
+.cards-view-link
+	display: block
+
+// Категории графика
+.cards-legend
+	position: absolute
+	top: 80px
+	left: 0
+	right: 0
+	bottom: 0
+	width: 202px
+.cards-legend-list
+	position: absolute
+	top: 0
+	left: 0
+	right: 3px
+	bottom: 45px
+	overflow-scrolling: touch
+	overflow: auto
+.cards-legend-item
+	padding: 10px 0
+	opacity: 1
+	transition: .3s
+	&.is-active,
+	&:hover
+		.cards-legend-marker
+			transform: scale(1.4)
+	&.is-inactive
+		opacity: 0.2
+.cards-legend-link
+	display: block
+	position: relative
+	padding: 0 15px 0 25px
+	line-height: 14px
+	font-size: 13px
+	color: #362f2d
+	transition: .3s
+.cards-legend-marker
+	position: absolute
+	top: 3px
+	left: 9px
+	width: 8px
+	height: 8px
+	border-radius: 50%
+	transition: .3s
+.cards-legend-more
+	position: absolute
+	bottom: 20px
+	left: 0
+	display: inline-block
+	margin: 0 20px
+	font-size: 12px
+	font-weight: 900
+	text-transform: uppercase
+	border-bottom: 3px solid #e3e3e3
+	color: #362f2d
+	transition: all .3s
+	&:hover
+		border-color: #e93b00
+		color: #e93b00
+
+// Контейнер для графика
+.cards-chart
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	padding-top: 90px
+	img
+		display: block
+.cards-chart-graph
+	position: relative
+	width: 100%
+	height: 100%
+// .cards-chart-tooltip
+
+// Фильтры виджета
+.cards-filter
+	z-index: 1
+	position: absolute
+	top: 15px
+	left: 50px
+	font-size: 0
+.cards-filter-item
+	display: inline-block
+	margin: 0 20px 0 0
+.cards-filter-link
+	display: inline-block
+	&:after
+		content: ""
+		position: relative
+		top: -0.1em
+		display: inline-block
+		vertical-align: middle
+		margin: 0 0 0 3px
+		+arrow(5,7,#050505,r)
+	&:hover
+		.cards-filter-text
+			border-color: #e93b00
+			color: #e93b00
+.cards-filter-text
+	display: inline-block
+	vertical-align: middle
+	font-size: 12px
+	color: #000
+	border-bottom: 2px solid #d7d7d7
+	transition: all .3s
+

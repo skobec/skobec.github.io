@@ -1,0 +1,9 @@
+    public function {$action}Action() {
+        $this->view->data = Service::Application()->getViewData($this->user->getSessionId(),
+            $this->view->home_id,
+            '{$application}',
+            '{$module}',
+            '{$controller}',
+            '{$action}',
+            $this->_request->getPost());
+    }

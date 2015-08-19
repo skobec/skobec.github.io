@@ -1,0 +1,23 @@
+<?$id = 'homeForm'.Mikron_Crud::getNextId()?>
+<?$_input_id = 'field_'.Mikron_Crud::getNextId()?>
+<?$real_field_name = $field->name;?>
+<?$editor_setting = (array)$field->editor_setting; ?>
+<?$value = Mikron_Entity_Model::getRowValueByPath($item, $field)?>
+
+<input type="hidden" name="form[<?=$field->name?>]" value="<?=$item->$real_field_name?>" id="<?=$_input_id?>" />
+
+<?$next_id = Mikron_Crud::getNextId();?>
+<script>
+	var search_house_id = 'select[name="form[house_id]"]';
+	$(function() {
+		// костыль, скрывает родительский элемент @todo add field type=class
+		$("#<?=$_input_id?>" ).closest('.control-group').addClass('hidden');
+		$(search_house_id).on('change', function() {
+				return searchHomeComposite<?=$next_id;?>(this);
+		});
+	});
+    function searchHomeComposite<?=$next_id;?>(a) {
+		var home_composite_id = $('#<?=$house_id?> option:selected').attr('home_composite_id');
+		$('#<?=$_input_id?>').val(home_composite_id);
+    }
+</script>

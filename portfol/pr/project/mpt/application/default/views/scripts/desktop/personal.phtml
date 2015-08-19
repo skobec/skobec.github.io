@@ -1,0 +1,162 @@
+<div class="dashboard-cards">
+    <div class="cards">
+        <script>
+
+            var widget_list = <?= json_encode($this->widget_list) ?>;
+
+            // Загрузка виджетов
+            function loadNextWidget() {
+                var widget = widget_list.shift();
+                if (widget) {
+                    $.get('/widget/get', {id: widget.id, is_expanded: widget.is_expanded, type: widget.type}, function (data) {
+                        $('.cards-item-add').before(data);
+                        loadNextWidget();
+                    });
+                }
+            }
+
+            $(function () {
+
+                // loadNextWidget();
+
+                $('#scenario1 .widget__menu-item a').on('click', function () {
+                    $('#scenario2 .widget__content-topic-item').removeClass('modal-active-item');
+                    id = $(this).data('id');
+                    $('.widget__content-topic-heading').text($(this).next().children().eq(0).text());
+                    $('#scenario3 .widget__content-question-item, #scenario2 .widget__content-topic-item').hide();
+                    $('#scenario2 .widget__content-topic-item[data-parent=' + id + ']').show();
+
+                    return CustomUI.centerForms();
+                });
+                $('#scenario2 .widget__content-topic-item').on('click', function () {
+                    $('#scenario2 .widget__content-topic-item').removeClass('modal-active-item');
+                    $(this).addClass('modal-active-item');
+                    id = $(this).data('id');
+                    $('#scenario3 .widget__content-question-item').hide();
+                    $('#scenario3 .widget__content-question-item[data-parent=' + id + ']').show();
+
+                    return CustomUI.centerForms();
+                });
+                $('#scenario3 .widget__content-question-item').on('click', function () {
+                    $('#scenario2 .widget__content-topic-item').removeClass('modal-active-item');
+                    var id = $(this).data('id');
+                    var widgets = $('.cards-item').not('.cards-item-add');
+                    var widgets_ids = $.map(widgets, function (item) {
+                        return $(item).data('widget-id');
+                    });
+                    if ($.inArray(id, widgets_ids) === -1) {
+                        $('#scenario3 .widget__content-question-item, #scenario2 .widget__content-topic-item').hide();
+                        CustomUI.hideForm('form-widget');
+                        $.get('/widget/get', {id: id, is_expanded: false, type: 'stacked_area'}, function (data) {
+                            $('.cards-item-add').before(data);
+                        });
+                    } else {
+                        alert('Эта карточка уже есть на рабочем столе. Выберите другую');
+                    }
+
+
+                });
+            });
+        </script>
+        <form class="popup-form" method="POST" action="/index.php" title="" id="form-widget">
+            <div class="popup-form-content" style="width:1180px;padding-left: 95px;">
+                <div class="widget__wrapper">
+                    <div class="widget__header">
+                        <div class="widget__title">Добавление<br>карточки</div>
+                        <div class="widget__header-icon"></div>
+                    </div>
+                    <div id="scenario1" class="widget__menu">
+                        <? foreach ($this->scenario1 as $scenario) { ?>
+                            <div class="widget__menu-item">
+                                <a data-id="<?= $scenario['id'] ?>" href="#" class="widget__menu-link">
+                                    <img class="widget__menu-icon" src="/img/widget/icon_<?= $scenario['id'] ?>.png" alt="img">
+                                </a>
+                                <div class="widget__menu-item-tooltip">
+                                    <a href="#" class="widget__menu-link"><?= $scenario['name'] ?></a>
+                                </div>
+                            </div>
+                        <? } ?>
+                    </div>
+                    <div class="widget__content">
+                        <div id="scenario2" class="widget__content-topic widget__content-topic_is_active">
+                            <div class="widget__content-topic-heading">Гражданам</div>
+                            <?php foreach ($this->scenario2 as $scenario) { ?>
+                                <div style="<?= ($scenario['parent'] == 4) ? "" : "display: none" ?>" class="widget__content-topic-item" data-id="<?= $scenario['id'] ?>" data-parent="<?= $scenario['parent'] ?>"><?= $scenario['name'] ?></div>
+
+                            <? } ?>
+
+                        </div>
+                        <div id="scenario3" class="widget__content-question widget__content-question_is_active">
+                            <?php foreach ($this->scenario3 as $scenario) { ?>
+                                <a style="display: none" href="#" data-id="<?= $scenario['id'] ?>" data-parent="<?= $scenario['parent'] ?>" class="widget__content-question-item"><?= $scenario['name'] ?></a>                                           
+                            <? } ?>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="widget__aside">
+                    <div class="widget__aside-title">Интересные запросы к бюджету минпроторга<br> рф</div>
+                    <div class="widget__aside-item">
+                        <a href="#" class="widget__aside-item-description">
+                            <img src="/img/widget/1.jpg" class="widget__aside-img" alt="image">
+                            Сколько средств в этом году выделено на развтитие отечественных лекарств?
+                        </a>
+                    </div>
+                    <div class="widget__aside-item">
+                        <a href="#" class="widget__aside-item-description">
+                            <img src="/img/widget/2.jpg" class="widget__aside-img" alt="image">
+                            Бюджет госпрограмм на 2015 год.
+                        </a>
+                    </div>
+                    <div class="widget__aside-item">
+                        <a href="#" class="widget__aside-item-description">
+                            <img src="/img/widget/3.jpg" class="widget__aside-img" alt="image">
+                            Продукция высококачественных отраслей.
+                        </a>
+                    </div>
+                </div>                          
+            </div>
+        </form>
+        <ul class="cards-list" data-container="card" id="widgets_container">
+
+            <?php if (null !== $this->widget_list) { ?>
+                <?
+                foreach ($this->widget_list as $widget) {
+                    switch ($widget->type) {
+                        case 'map': {
+                                $this->renderWidgetMap($widget);
+                                break;
+                            }
+                        default: {
+                                $this->renderWidget($widget);
+                                break;
+                            }
+                    }
+                }
+                ?>
+            <?php } ?>
+            <li class="cards-item cards-item-add">
+                <a id="widget" href="#" class="button-simple cards-link">
+                    <header class="cards-header">
+                        <h2 class="cards-title">Добавить<br> карточку</h2>
+                    </header>
+                    <div class="cards-icon">
+                        <span class="icon icon-plus"></span>
+                    </div>
+                </a>
+            </li>
+            <div class="cards-popup js-cards-popup">
+                <span class="cards-popup-title">
+                    Что такое гос программа
+                </span>
+                <p class="cards-popup-text">
+                    Система мероприятий и инструментов государственной политики, обеспечивающих в рамках реализации ключевых государственных функций достижение приоритетов и целей государственной политики в сфере социально-экономического развития и безопасности
+                </p>
+                <a href="javascript:void(0)" class="cards-popup-link">Обучающий раздел</a>
+                <a href="javascript:void(0)" class="cards-popup-link">Словарь</a>
+                <div class="cards-popup-triangle"></div>
+                <div class="cards-popup-close js-close-cards-popup icon icon-compare"></div>
+            </div>
+        </ul>
+    </div>
+</div>

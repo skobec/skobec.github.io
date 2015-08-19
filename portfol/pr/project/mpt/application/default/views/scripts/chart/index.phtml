@@ -1,0 +1,128 @@
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-3d.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script>
+    $(function () {
+        // Установка всех цветох графиков с градиентами
+        Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
+            return {
+                radialGradient: {cx: 0.5, cy: 0.3, r: 0.7},
+                stops: [
+                    [0, color],
+                    [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+                ]
+            };
+        });
+    });
+</script>
+<div class="flexbox">
+    <div>
+        <select id="chart-type" style="">
+            <option value="programs">По программам</option>
+            <option value="divisions">По разделам</option>
+        </select>
+        <button id="back-chart" class="btn btn-primary">Back!</button>
+    </div>
+    <div id="ministry-chart" style="min-width: 300px; width: 25%; height: 800px; margin-bottom: 20px;"></div>
+</div>
+<script>
+    var chartHistory = new Array();
+    $(function () {
+
+        $('#back-chart').prop('disabled', 'disabled');
+
+        $('#back-chart').on('click', function () {
+            historyData = jQuery.extend(true, {}, chartHistory[chartHistory.length - 2]);
+            chartHistory.pop();
+            if (chartHistory.length < 2) {
+                $(this).prop('disabled', 'disabled');
+            }
+            return renderChart(historyData);
+        });
+        $.getJSON('/chart/getdata', {
+            type: 'ministries'
+        },
+        function (data) {
+            chartHistory.push(data);
+
+
+            $('#ministry-chart').highcharts({
+                tooltip: {
+                    backgroundColor: '#FCFFC5',
+                    borderColor: 'black',
+                    borderRadius: 10,
+                    borderWidth: 3
+                },
+                chart: {
+                    type: 'pie',
+                    options3d: {
+                        enabled: true,
+                        alpha: 45
+                    }
+                },
+                title: {
+                    text: data['title']
+                },
+                plotOptions: {
+                    series: {
+                        cursor: 'pointer',
+                        point: {
+                            events: {
+                                click: function () {
+                                    var type = (this.type.length > 1) ? $('#chart-type').val() : this.type[0];
+                                    $.getJSON(
+                                            '/chart/getdata', {
+                                                type: type,
+                                                data: this.data
+                                            }, function (data) {
+                                        chartHistory.push(data);
+                                        if (chartHistory.length == 2) {
+                                            $('#back-chart').removeProp('disabled');
+                                        }
+                                        renderChart(data);
+                                    }
+
+                                    );
+                                }
+                            }
+                        },
+                        marker: {
+                            lineWidth: 1
+                        }
+                    },
+                    pie: {
+                        innerSize: 100,
+                        depth: 45,
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.y}</b>',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                        name: '',
+                        data: data.series
+                    }]
+            });
+
+
+        });
+
+    });
+    //Отрисовка графика
+    function renderChart(data) {
+        var chart = $('#ministry-chart').highcharts();
+        //Generate fake data for pretty rendering
+        fake_series = jQuery.extend(true, [], data['series']);
+        for (i = 0; i < fake_series.length; i++) {
+            fake_series[i].y = i ? 1 : 1000;
+        }
+        chart.series[0].setData(fake_series);
+        chart.series[0].setData(data['series']);
+        chart.setTitle({text: data['title']});
+        return false;
+    }
+</script>

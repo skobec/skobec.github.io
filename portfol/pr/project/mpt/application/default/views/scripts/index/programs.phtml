@@ -1,0 +1,38 @@
+<section class="dashboard">
+			<div class="dashboard-inner">
+				<div class="dashboard-switcher" data-container="switcher">
+					<div class="dashboard-switcher-title">Рабочие столы</div>
+					<ul class="dashboard-switcher-list">
+						<li class="dashboard-switcher-item is-active" data-item="switcher">
+							<a href="#" class="dashboard-switcher-link" data-action="switcher">Обучающий</a>
+						</li>
+						<li class="dashboard-switcher-item" data-item="switcher">
+							<a href="#" class="dashboard-switcher-link" data-action="switcher">Для граждан</a>
+						</li>
+						<li class="dashboard-switcher-item" data-item="switcher">
+							<a href="#" class="dashboard-switcher-link" data-action="switcher">Для прессы</a>
+						</li>
+						<li class="dashboard-switcher-item" data-item="switcher">
+							<a href="#" class="dashboard-switcher-link" data-action="switcher">Создать новый...</a>
+						</li>
+					</ul>
+				</div>
+				<div class="dashboard-cards">
+					<div class="cards">
+						<ul class="cards-list" data-container="card">
+							<? $this->renderWidget($this->money,$this->nextLevel)?>
+							<li class="cards-item cards-item-add" data-item="card">
+								<a href="#" class="cards-link" data-action="clone">
+									<header class="cards-header">
+										<h2 class="cards-title">Добавить<br> виджет</h2>
+									</header>
+									<div class="cards-icon">
+										<span class="icon icon-plus"></span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>

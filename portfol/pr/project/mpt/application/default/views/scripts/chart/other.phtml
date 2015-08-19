@@ -1,0 +1,171 @@
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-3d.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script>
+    $(function () {
+        // Установка всех цветох графиков с градиентами
+        Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
+            return {
+                radialGradient: {cx: 0.5, cy: 0.3, r: 0.7},
+                stops: [
+                    [0, color],
+                    [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+                ]
+            };
+        });
+    });
+</script>
+<div class="flexbox">
+    <div id="container3" style="min-width: 310px; width: 50%; height: 400px; margin-bottom: 20px;"></div>
+    <div id="container4" style="min-width: 310px; width: 50%; height: 400px; margin-bottom: 20px;"></div>
+</div>
+<div class="flexbox">
+    <div id="container5" style="min-width: 310px; width: 50%; height: 400px; margin-bottom: 20px;"></div>
+
+</div>
+<a id="a" href="#">Switch Data</a>
+<script>
+    $(function () {
+
+        $('#a').click(function () {
+
+            var chart = $('#container3').highcharts();
+            chart.series[0].setData([["Январь", 1591172600], ["Февраль", 2633656520], ["Маsssрт", 2719563750], ["Апрель", 794024540], ["Май", 2091483500], ["Июнь", 3027838640], ["Июль", 862001670], ["Август", 19723143650], ["Сентябрь", 18617048530], ["Октябрь", 6461744600], ["Ноябрь", 16287913050], ["Декабрь", 49380531490]]);
+            return false;
+
+        });
+
+        $('#container3').highcharts({
+            xAxis: {
+                categories: ['Green', 'Pink'],
+                type: 'category'
+            },
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45,
+                    beta: 0
+                }
+            },
+            title: {
+                text: 'Запланированные расходы в 2015г'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 50,
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} % ({point.y}, руб.)',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                    type: 'pie',
+                    name: 'В процентах',
+                    data: <?= $this->monthPlanMoney ?>
+                }]
+        });
+    });
+
+</script>
+<script>
+    $(function () {
+        $('#container4').highcharts({
+            xAxis: {
+                categories: ['Green', 'Pink'],
+                type: 'category'
+            },
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45,
+                    beta: 0
+                }
+            },
+            title: {
+                text: 'Произведенные расходы в 2015г'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 50,
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} % ({point.y}, руб.)',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                    type: 'pie',
+                    name: 'В процентах',
+                    data: <?= $this->monthCompleteMoney ?>
+                }]
+        });
+    })</script>
+<script>
+    $(function () {
+        $('#container5').highcharts({
+            chart: {
+                type: 'column',
+                margin: 75,
+                options3d: {
+                    enabled: true,
+                    alpha: 10,
+                    beta: 25,
+                    depth: 70
+                }
+            },
+            title: {
+                text: 'Сравнение запланированный и произведенных мероприятий'
+            },
+            subtitle: {
+                text: 'Notice the difference between a 0 value and a null point'
+            },
+            plotOptions: {
+                column: {
+                    depth: 25
+                }
+            },
+            xAxis: {
+                categories: Highcharts.getOptions().lang.shortMonths
+            },
+            yAxis: {
+                title: {
+                    text: null
+                }
+            },
+            series: [{
+                    name: 'Запланированный',
+                    data: <?= $this->monthPlanMoney ?>
+                },
+                {
+                    name: 'Произведенные',
+                    data: <?= $this->monthCompleteMoney ?>
+                }
+            ]
+        });
+    });
+</script>

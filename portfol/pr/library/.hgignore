@@ -1,0 +1,3 @@
+syntax: glob
+nbproject
+config/db_local.json

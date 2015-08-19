@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC  "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Справка по шлюзу</title>
+    <style type="text/css">
+        body {font-family: Arial; background: #f7f7f7;}
+        pre {margin: 0;}
+        .method_help {color: #7c0; display: block; padding: 0em 0;}
+        .method-params {padding: .5em; display: block;}
+        .method-return {background: #dee; padding: .5em; display: block;}
+        .method-return table {border-collapse: collapse; border: none; }
+        .method-params th, .method-params td {text-align: left; padding: .5em; }
+        .method-params th {color: #fff; font-weight: normal; }
+        .method-params thead {background: #aaa;}
+        .method-params tbody tr > td {vertical-align: top;}
+        #method-description {padding-left: 4em; padding-top: 2em; }
+        .warning {background: #ecc; color: #a00; font-size: 10pt; display: inline-block; padding: .2em .5em; border-radius: .2em;}
+        .tech-info {
+            color: #aaa;
+            font-size: 10pt;
+            position: absolute;
+            left: 50%;
+            text-shadow: 1px 1px 1px #fff;
+        }
+        .method-name {font-size: 10pt; color: #999; display: inline-block; padding: .3em .5em; border-radius: .2em;}
+        .method-name:hover {background: #aaa; color: #fff;}
+        .params {display: none;}
+        code {background: #eee; border-radius: .2em; padding: 0; font-size: 12pt; }
+        /* tree */
+        ul {list-style-type: none; margin-left: 1em; padding: 0; }
+        .services ul {display: none;}
+        .services li {margin-bottom: .25em; margin: 0; padding: 0;}
+        .service-name {color: #0ac; display: inline-block; padding: .2em; border-radius: .2em; margin-bottom: .1em;}
+        a.service-selected {background: #0ac; color: #fff;}
+        a.method-selected {background: #333; color: #fff;}
+        .muted {opacity: .25;}
+        
+        .sub-type {
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        .sub-type thead {
+            background: #ddd;
+        }
+        .sub-type th, .sub-type td {
+            color: #444;
+            vertical-align: top;
+            padding: .5em 1em;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        h3 {font-weight: normal;}
+
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.services > li > a').click(function(){
+                $('.services > li > a').removeClass('service-selected');
+                $('.services > li > ul').hide();
+                $(this).addClass('service-selected');
+                $(this).next('ul').toggle();
+            });
+            $('.method-name').click(function(){
+                $('#method-description').html($(this).next('div.params').html());
+                $('.method-name').removeClass('method-selected');
+                $(this).addClass('method-selected');
+            });
+        });
+    </script>
+</head>
+<body>
+    <?
+        $url = $_SERVER['REQUEST_URI'];
+        $url = explode('/', $url);
+        $selected_gateway = null;
+        $selected_method = null;
+        $selected_method_help = null;
+        $is_admin = isset($_GET['admin']);
+        if(count($url) > 2) {
+            $selected_gateway = $url[2];
+        }
+        if(count($url) > 3) {
+            $selected_method = $url[3];
+        }
+    ?>
+    <span class="tech-info"><?=date('d.m.Y H:i:s', time())?></span>
+    <table><tr><td valign="top" style="max-width: 320px;">
+        <ul class="services">
+            <?foreach($help as $serviceClass => $attr) { $serviceClass = str_replace('_Service', null, $serviceClass); ?>
+                <?if(!$is_admin && ($serviceClass != $selected_gateway)){continue;}?>
+                <li>
+                    <a class="service-name<?if($serviceClass == $selected_gateway){echo ' service-selected';}?>" href="#"><?=$serviceClass?></a>
+                    <ul class="methods" <?if($serviceClass == $selected_gateway){echo ' style="display: block;"';}?>>
+                    <?foreach($attr['methods'] as $method) {
+                        if(array_key_exists('internal', $method) && !$is_admin){continue;}
+                        $method_name = substr($method['call'], 0, strpos($method['call'], '('));
+                        ?>
+                        <li>
+                            <a href="#" class="method-name <?if($method_name == $selected_method){echo ' method-selected';}?>"><?=$method_name?></a>
+                            <div class="params">
+                                <?if($method_name == $selected_method){ob_start();}?>
+                                <small class="muted">Ссылка на страницу справки: <a href="/help/<?=$serviceClass?>/<?=$method_name?>"><?=$serviceClass?>/<?=$method_name?></a></small>
+                                <h3>Автор:</h3>
+                                <blockquote><code><?=$method['author']?></code></blockquote>
+                                <h3>Вызов:</h3>
+                                <blockquote><code><?=$method['call']?></code></blockquote>
+                                <?if(strlen($method['help'])){?><h3>Описание:</h3><blockquote class="method_help"><?=$method['help']?></blockquote><?}?>
+                                <h3>Возвращает:</h3>
+                                    <blockquote class="class="method-return"><?drawTypeHelp($method['return']['type'])?></blockquote>
+                                    <blockquote class="method_help"><?=$method['return']['description']?></blockquote>
+                                <h3>Аргументы функции:</h3>
+                                <blockquote>
+                                <?if(count($method['params'])){?>
+                                    <table class="method-params sub-type" cellpadding="0" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Имя</th>
+                                                <th>Тип</th>
+                                                <th>Описание</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?foreach($method['params'] as $param){?>
+                                                <tr>
+                                                    <td style="background-color: #eee;"><code><?=$param['name']?></code></td>
+                                                    <td><?drawTypeHelp($param['type'])?></td>
+                                                    <td style="background-color: #eee;"><?=$param['description']?></td>
+                                                </tr>
+                                            <?}?>
+                                        </tbody>
+                                    </table>
+                                <?}else{?><span class="muted">у функции нет входных аргументов</span><?}?>
+                                </blockquote>
+                                <?if($method_name == $selected_method){$selected_method_help = ob_get_clean(); echo $selected_method_help;}?>
+                            </div>
+                        </li>
+                    <?}?>
+                    </ul>
+                </li>
+            <?}?>
+        </ul>
+    </td>
+    <td valign="top" id="method-description"><?=$selected_method_help?></td>
+    </tr>
+    </table>
+</body>
+</html>
+
+<? function drawTypeHelp($type) { ?>
+    <?if(is_array($type)) {?>
+        <?foreach($type as $type_name => $type) { ?>
+            структура <strong><?=$type_name?></strong><br />
+            <table class="sub-type">
+            <thead>
+                <tr>
+                    <th>имя</th>
+                    <th>тип</th>
+                    <th>описание</th>
+                </tr>
+            </thead>
+            <?foreach($type as $param_name => $info){?>
+                <tr>
+                    <td style="background-color: #eee;"><code><?=$param_name?></code></td>
+                    <td><code><?drawTypeHelp($info['type'])?></code></td>
+                    <td style="background-color: #eee;"><?=$info['description']?></td>
+                </tr>
+            <?}?>
+            </table>
+        <?}?>
+    <?
+    } elseif(!$type) {
+        ?><span class="muted">информация отсутствует</span><?
+    } else {
+        echo "<code>{$type}</code>";
+    }
+}

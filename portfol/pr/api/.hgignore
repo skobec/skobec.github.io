@@ -1,0 +1,4 @@
+exception
+nbproject
+/*.orig
+/*.tmp

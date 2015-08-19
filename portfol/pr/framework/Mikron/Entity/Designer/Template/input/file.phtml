@@ -1,0 +1,36 @@
+<?
+    $dir_name = self::$dir_name;
+    $file = '';
+    if (Mikron_Entity_Model::getRowValueByPath($item, $field)){
+        $file = "/upload/{$dir_name}/{$item->id}/".Mikron_Entity_Model::getRowValueByPath($item, $field);
+        $title = Mikron_Entity_Model::getRowValueByPath($item, $field); 
+    }
+?>
+<?if ($file) {?>
+	<div class="home-file-list" id="<?= substr(md5(htmlspecialchars($file)), 0, 5) ?>">
+	    <a href="<?=htmlspecialchars($file)?>" class="home-file"><img src="/img/icon-file.png" alt="file" align="absmiddle" /><?=htmlspecialchars($title)?></a>
+	    <?if(!$field->readonly && (!defined('READ_ONLY_MODE') || (defined('READ_ONLY_MODE') && !READ_ONLY_MODE))) {?>
+	        <a href="#" onclick="return deleteFile('<?=htmlspecialchars($file)?>', '<?=$field->name?>');"><i class="icon-remove"></i></a>
+	    <?}?>
+	</div>
+<? } elseif($field->readonly) { ?>
+	<?=Constant_Base::NO_VALUE?>
+<? } ?>
+<table>
+    <tr>
+        <td style="vertical-align: top;">
+            <?if(!$field->readonly && (!defined('READ_ONLY_MODE') || (defined('READ_ONLY_MODE') && !READ_ONLY_MODE))) {?>
+                <input type="file" name="form[<?=$field->name?>]" class="form-control <?=implode(' ', $class)?>" id="<?=$_input_id?>" /> 
+                <?/*
+                <div id="<?=$_input_id?>"></div>
+                <script>
+                    $(function(){
+                        $('#<?=$_input_id?>').customFileInput({name: 'form[<?=$field->name?>][]', max_count: 5 });
+                    });
+                </script>
+                */?>
+            <?}?>
+        </td>
+        <td style="vertical-align: top;"><?if(!defined('READ_ONLY_MODE')) {?><?}?></td>
+    </tr>
+</table>

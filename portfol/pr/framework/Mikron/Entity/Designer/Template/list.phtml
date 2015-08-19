@@ -1,0 +1,362 @@
+<?php
+    $list = self::$list;
+    $sub_select_list = $list->params->sub_select_list;
+    $class_name = self::$list->class_name;
+    $fields = self::$list->params->field_list ?: $class_name::getFields();
+    $white_space = '&nbsp;';
+    $list_id = $list->id;
+    $edit_by_click = !$list->params->can_reorder;
+    
+    if(is_callable($list->params->can_delete)) {
+		$can_delete = true;
+    } else {
+		$can_delete = $list->params->can_delete;
+    }
+
+    Mikron_Entity_Designer_Template_List::run();
+
+/**
+* Код, который отрисуется на странице только 1 раз, даже если на с транице много списков сгенерированных Микроном
+* @author sciner
+*/
+if(Mikron_Entity_Designer_Template_List::isFirstRun()) { ?>
+    <style>
+        .td-move {
+            width: 1em;
+            background: #444 !important;
+            cursor: move;
+        }
+    </style>
+    <script>
+        $(function() {
+            $('.table-search .datepicker2').change(function() {
+                $(this).closest('form').submit();
+            });
+        });
+        // Return a helper with preserved width of cells
+        var fixHelper = function(e, ui) {
+            ui.children().each(function() {
+                $(this).width($(this).width());
+            });
+            return ui;
+        };
+    </script>
+<? } ?>
+
+<? if($can_delete) { ?>
+    <? $delete_form_id = Mikron_Crud::getNextId(); ?>
+    <script>
+        function deleteForm<?=$delete_form_id?>(id) {
+            $('#deleteForm-<?=$delete_form_id?>_id').val(id);
+            if(Mikron.raiseListHandlers('<?=$list_id?>', Mikron.list_events.before_item_delete, {id: id, form_id: 'deleteForm-<?=$delete_form_id?>'})) {
+                return false;
+            }
+            $('#deleteForm-<?=$delete_form_id?>').submit();
+            return false;
+        }
+        $(function() {
+            $('#deleteForm-<?=$delete_form_id?>').customSubmit({
+                json: true,
+                caption: 'Ожидание',
+                confirm: 'Вы действительно хотите удалить запись?',
+                success: function(data) {
+                    location.reload();
+                    return false;
+                }
+            });
+        })
+    </script>
+    <form method="post" class="popup-form" id="deleteForm-<?=$delete_form_id?>" action="/<?=md5(self::$list->params->delete_state)?>.aspx">
+        <input type="hidden" name="_mikron[state]" value="<?=self::$list->params->delete_state?>"  />
+        <input type="hidden" id="deleteForm-<?=$delete_form_id?>_id" name="form[id]" value=""  />
+    </form>
+<? } ?>
+
+<?
+/**
+* Сортировка элементов таблицы
+*/
+if($list->params->can_reorder) { ?>
+    <? $form_id = Mikron_Crud::getNextId(); ?>
+    <script>
+        $(function() {
+            // Сортировка
+            $('#<?=$list_id?> table tbody').sortable({
+                helper: fixHelper,
+                axis: 'y',
+                distance: 15,
+                handle: '.td-move',
+                start: function(e, ui) {
+                    // $('body').css({cursor: 'move'});
+                },
+                stop: function() {
+                    // $('body').css({cursor: 'default'});
+                    var item_list = $('#<?=$list_id?> table tbody [data-item-id]');
+                    var data = [];
+                    $.each(item_list, function(index, item) {
+                        var item_id = $(this).data('item-id');
+                        data.push(item_id);
+                    });
+                    $('#reorderForm-<?=$form_id?>_id').val(JSON.stringify(data));
+                    $('#reorderForm-<?=$form_id?>').submit();
+                }
+            }).disableSelection();
+            $('#reorderForm-<?=$form_id?>').data('success', function() {
+                return CustomUI.hideForm();
+            });
+        });
+    </script>
+    <form method="post" class="popup-form popup-ajax" id="reorderForm-<?=$form_id?>" action="/<?=md5(self::$list->params->reorder_state)?>.aspx">
+        <input type="hidden" name="_mikron[state]" value="<?=self::$list->params->reorder_state?>"  />
+        <input type="hidden" name="form[id]" id="reorderForm-<?=$form_id?>_id"  />
+    </form>
+<? } ?>
+
+<? if(self::$list->params->edit_popup) {
+    $get_form_id = Mikron_Crud::getNextId();
+    $edit_container_id = Mikron_Crud::getNextId(); ?>
+    <div id="editContainer-<?=$edit_container_id?>"></div>
+
+    <form method="post" class="popup-form popup-ajax" id="getForm-<?=$get_form_id?>" action="/<?=md5(self::$list->params->edit_state)?>.aspx">
+        <input type="hidden" name="_mikron[state]" value="<?=self::$list->params->edit_state?>"  />
+        <input type="hidden" id="getForm-<?=$get_form_id?>_id" name="form[id]" value=""  />
+    </form>
+
+    <script>
+        function showEditForm_<?=$get_form_id?>(id) {
+            // @sciner
+            if(Mikron.raiseListHandlers('<?=$list_id?>', Mikron.list_events.before_load_edit_form, {id: id, form_id: '#editContainer-<?=$edit_container_id?>'})) {
+                return false;
+            }
+            $('#getForm-<?=$get_form_id?>_id').val(id);
+            $('#getForm-<?=$get_form_id?>').submit();
+            return false;
+        };
+        $(function() {
+            $('#getForm-<?=$get_form_id?>').data('success', function(data) {
+                resp = data.data;
+                $('#editContainer-<?=$edit_container_id?>').html(resp.html);
+                // @sciner
+                var id = $('#getForm-<?=$get_form_id?>_id').val();
+                if(Mikron.raiseListHandlers('<?=$list_id?>', Mikron.list_events.before_show_edit_form, {id: id, form_id: '#editContainer-<?=$edit_container_id?>', data: resp})) {
+                    return false;
+                }
+                CustomUI.showForm(resp.form_id);
+                return false;
+            });
+	    });
+    </script>
+<?}?>
+
+<script>
+    $(function() {
+        // Нажатие на Enter в полях фильтров
+        if($('.table-search').size() > 0) {
+            $('.table-search input').keydown(function(e) {
+                if(e.keyCode == 13) {
+                    $(this).closest('form').submit();
+                    return false;   
+                }
+            });   
+        }
+    });
+</script>
+
+<?
+	$show_action_bar = count(self::$list->params->item_menu) || ($can_delete && (!defined('READ_ONLY_MODE') || (defined('READ_ONLY_MODE') && !READ_ONLY_MODE)));
+
+?>
+
+<form method="post" action="" id="<?=$list_id?>">
+    <input type="hidden" name="mikron_sort[<?= $list->params->form_id; ?>][field]" value="<?=$list->sort->field?>" class="sort_field" />
+    <input type="hidden" name="mikron_sort[<?= $list->params->form_id; ?>][dir]" value="<?=$list->sort->dir?>" class="sort_dir" />
+    <table class="dark-table table-condensed data_table highlited">
+	    <thead>
+	        <tr>
+	            <?if($list->params->can_reorder){?>
+	                <th></th>
+	            <?}?>
+	            <?if(!$edit_by_click && $list->params->can_edit){?>
+	                <th></th>
+	            <?}?>
+	            <?foreach($fields as $field){?>
+	                <?if(!$field->hidden){?>
+	                    <th>
+	                    	<? if($list->params->hide_filter) { ?>
+	                    		<?=$field->description?>
+	                    	<?}else{?>
+	                        	<a href="#" <? $list->sort->draw($field->path); ?>><?=$field->description?></a>
+	                        <?}?>
+	                    </th>
+	                <?}?>
+	            <?}?>
+	            <?if($list->params->extra_fields){?>
+	                <?foreach($list->params->extra_fields as $extra_field){?>
+	                    <th>
+	                        <?=Mikron_Entity_Model::getItemFieldName($extra_field->path)?>
+	                    </th>
+	                <?}?>
+	            <?}?>
+	            <? if($show_action_bar) { ?>
+	                <th></th>
+	            <? } ?>
+	        </tr>
+	        <? if(!$list->params->hide_filter) { ?>
+		        <tr class="table-search">
+		            <?if($list->params->can_reorder){?>
+		                <th></th>
+		            <?}?>
+		            <?if(!$edit_by_click && $list->params->can_edit){?>
+		                <th></th>
+		            <?}?>
+		            <?foreach($fields as $field){?>
+		                <?if(!$field->hidden){?>
+		                    <th>
+		                        <?$class = array();?>
+		                        <?if($field->type == 'datetime'){$class[]='datepicker2';}?>
+		                        <?if($field->id && $field->type == 'datetime') {
+		                            $list->filter->draw($field->path, false, null, $field->id);
+		                        }else{
+		                            $list->filter->draw($field->path, false, implode(' ', $class), $field->id);
+		                        }?>
+		                    </th>
+		                <?}?>
+		            <?}?>
+		            <?if($list->params->extra_fields){?>
+		                <?foreach($list->params->extra_fields as $extra_field){?>
+		                    <th>
+		                       
+		                    </th>
+		                <?}?>
+		            <?}?>
+		            <?if($show_action_bar){?>
+		                <th></th>
+		            <?}?>
+		        </tr>
+		    <? } ?>
+	    </thead>
+        <tbody>
+            <? $list_items_count = 0; ?>
+            <? foreach($list->items as $item) { ?>
+            	<? $list_items_count++; ?>
+                <? if($edit_by_click && $list->params->can_edit) { ?>
+                    <?
+                        // $item = (array)$item;
+                        $link = $list->params->edit_link;
+                        $link = str_replace('{$', "{\$item['", $link);
+                        $link = str_replace('}', "']}", $link);
+                        eval('$link = "'.$link.'";');
+                        $link = $link ? ('data-href="'.$link.'"') : null;
+                    ?>
+                <?} else {
+                    $link = '';
+                }?>
+                <tr <?=isset($item['id']) ? 'id="tr-'.$item['id'].'" data-item-id="'.$item['id'].'"' : null?> <?=$link?>>
+                    <? if(!$edit_by_click && $list->params->can_reorder) { ?>
+                        <td class="td-move"><i class="icon-move icon-white"></i></td>
+                    <? } ?>
+                    <? if(!$edit_by_click && $list->params->can_edit) { ?>
+                        <td style="width: 1em;">
+                            <?
+                                $link = $list->params->edit_link;
+                                $link = str_replace('{$', "{\$item['", $link);
+                                $link = str_replace('}', "']}", $link);
+                                eval('$link = "'.$link.'";');
+                            ?>
+                            <a <?=self::$list->params->edit_popup ? 'href="#" onclick="showEditForm_'.$get_form_id.'('.$item['id'].'); return false;"' : 'href="'.$link.'"'?>><i class="icon icon-pencil"></i></a>
+                        </td>
+                    <? } ?>
+                    <? foreach($fields as $field) { ?>
+                        <? if(!$field->hidden) { ?>
+                            <td<?if(in_array($field->type, array('float'))) {echo ' class="align-right"';}?>>
+                                <?php
+                                $value = null;
+                                if($field->type == 'virtual' || strpos($field->path, '/')) {
+	                                if(strpos($field->path, '/')) {
+	                                    $p = explode('/', $field->path);
+	                                    $value = null;
+	                                    $pc = count($p);
+	                                    if($pc > 1) {
+	                                        $tn = array_shift($p);
+	                                        $pc = count($p);
+	                                        $row = $item->$tn;
+	                                        foreach($p as $_pc_index => $k) {
+	                                            if($_pc_index >= $pc - 1) {
+	                                                break;
+	                                            }
+	                                            $row = is_object($row) ? $row->$k : null;
+	                                        }
+	                                        $value = $row ? ($row[array_pop($p)] ?: $white_space) : $white_space;
+	                                    }
+	                                } else {
+	                                	if(is_array($sub_select_list) && array_key_exists($field->name, $sub_select_list)) {
+											$value = $item[$field->name] ?: $white_space;
+										}
+	                                }
+								} else {
+	                                /*if(strpos($field->path, '/')) {
+	                                    $p = explode('/', $field->path);
+	                                    $value = null;
+	                                    $pc = count($p);
+	                                    if($pc > 1) {
+	                                        $tn = array_shift($p);
+	                                        $pc = count($p);
+	                                        $row = $item->$tn;
+	                                        foreach($p as $_pc_index => $k) {
+	                                            if($_pc_index >= $pc - 1) {
+	                                                break;
+	                                            }
+	                                            $row = is_object($row) ? $row->$k : null;
+	                                        }
+	                                        $value = $row ? ($row[array_pop($p)] ?: $white_space) : $white_space;
+	                                    }
+	                                } else
+	                                */
+	                            	if($field->link) {
+	                                    $link_class = $field->link;
+	                                    $tsf = $link_class::getToStringFormat();
+	                                    $tn = Mikron_Entity_Model::getTableName($link_class);
+	                                    $row = $item->$tn;
+	                                    $value = ($row[$tsf] !== null) ? $row[$tsf] : $white_space;
+	                                } else {
+	                                    $value = ($item[$field->name] !== null) ? $item[$field->name] : $white_space;
+	                                }
+                                }
+                                ?>
+                                <? if($field->type == 'bool') { ?>
+                                    <?=Mikron_Entity_Model::getItemFieldValue($field, $value, $item) == '1' ? '<i class="icon icon-ok fa fa-check"></i>' : '' ?>
+                                <? } else { ?>
+                                    <?=Mikron_Entity_Model::getItemFieldValue($field, $value, $item)?>
+                                <? } ?>
+                            </td>
+                        <?}?>
+                    <?}?>
+                    <? if($show_action_bar) { ?>
+                        <td data-href="" style="width: 1em; white-space: nowrap;">
+							<? if(!empty(self::$list->params->item_menu)) { ?>
+								<? foreach(self::$list->params->item_menu as $menu) { ?>
+									<?=Functions::makeTag('a', (array)$menu, null);?>
+								<? } ?> 
+							<? } ?>
+							<? if(is_callable($list->params->can_delete)) {
+									$cd = call_user_func($list->params->can_delete, $item);
+								} else {
+									$cd = $list->params->can_delete;
+								}
+							?>
+                        	<? if($cd && (!defined('READ_ONLY_MODE') || (defined('READ_ONLY_MODE') && !READ_ONLY_MODE))) { ?>
+                        		<a href="#" onclick="return deleteForm<?=$delete_form_id?>('<?=$item['id']?>');" class="fa fa-trash"></a>
+                        	<? } ?>
+                        </td>
+                    <? } ?>
+                </tr>
+            <? } ?>
+        </tbody>
+    </table>
+    <? if($list_items_count == 0) { ?>
+    	<div style="text-align: center; font-size: 8pt; color: #000; opacity: .4;">
+        	Список пуст
+        </div>
+    <? } ?>
+    <?=$list->paginator?>
+</form>

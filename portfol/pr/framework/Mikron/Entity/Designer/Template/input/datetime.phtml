@@ -1,0 +1,15 @@
+<?php
+    $class[] = 'datepicker2 span2';
+    $field_name = $field->name;
+    if($field->readonly) {
+        ?>
+        <?=$item->$field_name ? Format::date(strtotime($item->$field_name)) : Mikron_Entity_Designer::NO_VALUE?>
+        <?
+    } else {
+        ?>
+        <div class="input-append input-group">
+          <input type="text" name="form[<?=$field->name?>]" class="<?=implode(' ', $class)?>" value="<?=$item->$field_name ? date('d-m-Y', strtotime($item->$field_name)) : null?>"  id="<?=$_input_id?>" placeholder="" />
+          <a class="btn btn-default" onclick="$(this).prev().focus(); return false;" ><i class="icon icon-calendar"></i></a>
+        </div>
+        <?
+    }

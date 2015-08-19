@@ -1,0 +1,12 @@
+<?
+
+switch($this->widget->type) {
+    case 'map': {
+        $this->renderWidgetMap($this->widget);
+        break;
+    }
+    default: {
+        $this->renderWidget($this->widget);
+        break;
+    }
+}

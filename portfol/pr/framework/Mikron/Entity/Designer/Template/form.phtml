@@ -1,0 +1,130 @@
+<?
+$item = self::$item;
+$fields = self::$params->field_list ?: $item::getFields();
+$form_id = self::$params->id;
+$_css_class = 'btn btn-default btn-simple button-add';
+$_form_class = self::$params->popup ? 'popup-form' : '';
+$popup = self::$params->popup;
+$readonly = self::$params->readonly ? false : true;
+$caption_text = self::$params->state ? 'Сохранить изменения' : 'Добавить';
+$action = null !== self::$params->action ? self::$params->action : sprintf("/%s.aspx", md5(self::$params->state));
+?>
+
+<? if($popup) {
+	if(self::$params->text_btn_add) {
+    	Mikron_Entity_Designer_Toolbar::addTag('a', array('href' => '#', 'class' => $_css_class, 'onclick' => "return CustomUI.showForm('form-{$form_id}');"), self::$params->text_btn_add);
+	}
+} else {
+    Mikron_Entity_Designer_Toolbar::addTag('a', array('href' => '#', 'class' => 'btn btn-default', 'onclick' => "event.preventDefault(); history.back(1);"), 'Назад');
+} ?>
+
+<? if(!$popup) { ?>
+    <h3 class="formh"></h3>
+<? } ?>
+
+<form action="<?=$action?>" method="post" class="form-horizontal <?=$_form_class?> popup-ajax" id="form-<?=$form_id?>" <?if($popup){?>title="<?=self::$params->text_caption?>"<?}?> enctype="multipart/form-data">
+    <input type="hidden" name="_mikron[state]" value="<?=self::$params->state?>"  />
+    <?if($popup) {?>
+        <div class="popup-form-content">
+    <?}?>
+    <?foreach($fields as $field){?>
+        <?if(!$field->hidden){?>
+            <?
+                $_input_id = 'input_'.$field->path.'_'.Mikron_Crud::getNextId();
+                if($field->link && !$field->editor) {
+                    $field->editor = 'link_id.phtml';
+                }
+            ?>
+            <div class="control-group form-group <?="{$field->path}-control-group"?>">
+                <label class="control-label col-sm-4" for="<?=$_input_id?>">
+                    <?=$field->description?>:<?php if($field->is_require) { ?><span style="color: red;">*</span> <?php } ?>
+                </label>
+                <div class="controls col-sm-8">
+                    <?if(!$readonly) {
+                        $field->readonly = true;
+                    }?>
+                    <?$class = array();?>
+                    <?if($field->is_require) {
+                        $class[] = 'validate[required]';
+                    }?>
+                    <?$path = str_replace('/', '.', $field->path);?>
+                    <?if($field->editor){?>
+                        <?include dirname(__FILE__).'/../../../../../library/Template/'.$field->editor?>
+                    <?}elseif($field->format){?>
+                        <?=Mikron_Entity_Model::getItemFieldValue($field, null, $item)?>
+                    <?}else{?>
+                        <?switch($field->type){
+                            case 'file': include dirname(__FILE__).'/input/file.phtml'; break;
+                            case 'file[]': include dirname(__FILE__).'/input/file_list.phtml'; break;
+                            case 'datetime': include dirname(__FILE__).'/input/datetime.phtml'; break;
+                            case 'text': include dirname(__FILE__).'/input/textarea.phtml'; break;
+                            case 'html': include dirname(__FILE__).'/input/html.phtml'; break;
+                            case 'bool': include dirname(__FILE__).'/input/radio.phtml'; break;
+							case 'datetime_month' : include dirname(__FILE__).'/input/datetime_month.phtml'; break;
+                            default: include dirname(__FILE__).'/input/string.phtml'; break;
+                        }?>
+                    <?}?>
+                </div>
+            </div>
+        <?}?>
+    <?}?>
+    <?if($popup) {?>
+        </div>
+    <?}?>
+    <?if($popup) {?>
+        <div class="popup-form-footer">
+    <?} else {?>
+        <div class="control-group">
+        <div class="controls">
+    <?}?>
+    <?if($readonly) {?>
+        <a class="btn btn-primary button-submit"><?=$caption_text?></a>
+    <?}?>
+    <?if($popup) {?>
+        <a href="#" class="btn" onclick="return CustomUI.hideForm();" style="margin-left: 1em;">Отмена</a>
+    <?} else {?>
+        </div>
+    <?}?>
+    </div>
+</form>
+
+<form class="popup-form popup-ajax" action="/<?=md5(self::$delete_file_state)?>.aspx" id="form-deletefile" title="Удаление файла" method="POST">
+    <input type="hidden" name="_mikron[state]" value="<?=self::$delete_file_state?>" />
+    <input type="hidden" name="form[filename]" id="deletefile-name" />
+    <input type="hidden" name="form[code]" id="deletefile-code" />
+</form>
+
+<script>
+    $(function() {
+
+        $('#form-<?=$form_id?>').data('success', function(data) {
+            location.reload();
+            return false;
+        });
+
+    });
+
+    $(function(){
+        // @notfoolen
+        if(Mikron.raiseListHandlers('<?=$form_id?>', Mikron.list_events.onload_edit_form, {id: 'form-<?=$form_id?>'})) {
+            return false;
+        }
+    });
+
+    $(function(){
+        $('#form-deletefile').data('success', function(data) {
+            $('#' + data.hash).remove();
+            hide_form()
+        });
+    });
+
+    function deleteFile(filepath, code) {
+        if(!confirm('Вы действительно хотите удалить приложенный файл?')) {
+            return false;
+        }
+        $('#deletefile-name').val(filepath);
+        $('#deletefile-code').val(code);
+        $('#form-deletefile').submit();
+        return false;
+    }
+</script>

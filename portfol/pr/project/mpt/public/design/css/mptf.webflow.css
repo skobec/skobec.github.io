@@ -1,0 +1,2168 @@
+body {
+  background-color: #2a87d4;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 700;
+}
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 40px;
+  line-height: 25px;
+  font-weight: 500;
+}
+h4 {
+  margin: 12px 27px 10px;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+}
+h5 {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 15px;
+  font-weight: 500;
+}
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.dashboard {
+  position: relative;
+  z-index: 10;
+  display: block;
+  margin-bottom: 28px;
+}
+.light-green {
+  display: block;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.wg-govprogs-lg {
+  width: 334px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  border-radius: 6px;
+  background-color: #47c55a;
+  background-image: url('../images/RU-Flag.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wg-govprog-farma-lg {
+  display: none;
+  width: 334px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  border-radius: 6px;
+  background-color: #47c55a;
+  background-image: url('../images/WG-Farma-Cover-DarkGreen.jpg'), url('../images/WG-Farma-Cover.jpg');
+  background-position: 50% 50%, 50% 50%;
+  background-size: cover, cover;
+  background-repeat: no-repeat, repeat;
+  color: white;
+}
+.wg-govprogs-expand-lg {
+  display: block;
+  width: 1059px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  clear: left;
+  border-radius: 6px;
+  background-color: #47c55a;
+}
+.wg-empty-lg {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 334px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  border: 1px dashed #727a8f;
+  border-radius: 6px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.wg-empty-lg:hover {
+  border-style: solid;
+  border-color: #79bdfc;
+  background-color: #79bdfc;
+}
+.add-wg-linkblock {
+  width: 334px;
+  height: 516px;
+  background-image: url('../images/Add-Widget.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 750ms ease;
+  transition: all 750ms ease;
+}
+.add-wg-linkblock:hover {
+  background-image: url('../images/Add-Widget-Hover.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.govprogs-nav-bar-lg {
+  height: 51px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+.wg-h4-link {
+  color: #fff799;
+  text-decoration: none;
+}
+.wg-h4-link.invertlink {
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  color: #c46047;
+}
+.wg-h4-link.invertlink:hover {
+  color: black;
+}
+.one-year {
+  line-height: 55px;
+  text-align: left;
+}
+.one-year.center {
+  margin-left: 0px;
+  padding-top: 60px;
+  text-align: center;
+}
+.govprogs-more-btn-lg {
+  position: relative;
+  bottom: -85px;
+  display: block;
+  width: 279px;
+  height: 52px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 3px solid white;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprogs-more-btn-lg:hover {
+  background-color: white;
+}
+.govprogs-more-btn-lg.cm {
+  margin-top: -60px;
+}
+.govprogs-more-link-lg {
+  display: block;
+  width: 279px;
+  height: 52px;
+  padding-top: 9px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+}
+.govprogs-more-link-lg:hover {
+  color: #47c55a;
+}
+.govprogs-more-link-lg.black:hover {
+  color: black;
+}
+.big {
+  font-size: 60px;
+}
+.invert {
+  color: black;
+}
+.govprogs-set-btn-lg {
+  width: 22px;
+  height: 22px;
+  margin-top: 12px;
+  margin-right: 12px;
+  float: right;
+  background-image: url('../images/WG-Nav-Icons-Black.png');
+  background-position: 0px 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprogs-set-btn-lg:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.govprogs-compare-btn-lg {
+  width: 22px;
+  height: 22px;
+  margin-top: 12px;
+  margin-right: 12px;
+  float: right;
+  background-image: url('../images/WG-Nav-Icons-Black.png');
+  background-position: 100% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprogs-compare-btn-lg:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.wg-govprogs-set-lg {
+  display: none;
+  width: 334px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  background-color: #47c55a;
+}
+.govprogs-set-btn-inside-lg {
+  width: 22px;
+  height: 22px;
+  margin-top: 12px;
+  margin-right: 12px;
+  float: right;
+  background-image: url('../images/WG-Nav-Icons-Black.png');
+  background-position: 0px 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprogs-set-btn-inside-lg:hover {
+  background-position: 0px 50%;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.wg-govprogs-expand-lg {
+  display: none;
+  width: 1224px;
+}
+.expand-left-collumn {
+  width: 337px;
+  height: 465px;
+  float: left;
+}
+.expand-right-collumn {
+  width: 884px;
+  height: 461px;
+  padding-top: 15px;
+  float: left;
+  border-bottom-right-radius: 4px;
+  background-color: white;
+}
+.govprogs-years-compare {
+  display: block;
+  width: 251px;
+  height: 187px;
+  margin-top: 27px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url('../images/GovsProg-Years-Comapre_1.png');
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprogs-years-compare:hover {
+  background-image: url('../images/GovsProg-Years-Comapre-Hover.png');
+  background-size: cover;
+}
+.govsprogs-year-dot-2015 {
+  position: relative;
+  left: 275px;
+  top: -151px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govsprogs-year-dot-2015:hover {
+  background-color: black;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.govprogs-year-dot-2014 {
+  position: relative;
+  left: 162px;
+  top: -95px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: white;
+  opacity: 0.5;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprogs-year-dot-2014:hover {
+  background-color: black;
+  opacity: 1;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.govprogs-year-dot-2013 {
+  position: relative;
+  left: 51px;
+  top: -96px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: white;
+  opacity: 0.5;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprogs-year-dot-2013:hover {
+  background-color: black;
+  opacity: 1;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.govprogs-hide-more-btn-lg {
+  position: relative;
+  top: -13px;
+  display: block;
+  width: 279px;
+  height: 52px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 3px solid white;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprogs-hide-more-btn-lg:hover {
+  background-color: white;
+}
+.black-h4 {
+  margin-bottom: 15px;
+  color: black;
+}
+.govprogs-expand-v-bar-2015 {
+  height: 170px;
+  padding-left: 27px;
+  border-bottom: 1px solid #ccc;
+}
+.govprogs-2015-v-1 {
+  width: 50px;
+  height: 110px;
+  float: left;
+  background-color: #15ad2c;
+}
+.govprogs-2015-v-2 {
+  position: relative;
+  top: 25px;
+  width: 50px;
+  height: 85px;
+  float: left;
+  background-color: #e8db64;
+}
+.govprogs-2015-v-3 {
+  position: relative;
+  top: 45px;
+  width: 50px;
+  height: 65px;
+  float: left;
+  background-color: #04f;
+}
+.govprogs-2015-v-4 {
+  position: relative;
+  top: 60px;
+  width: 50px;
+  height: 50px;
+  float: left;
+  background-color: #ad3737;
+}
+.govprogs-2015-v-5 {
+  position: relative;
+  top: 70px;
+  width: 50px;
+  height: 40px;
+  float: left;
+  background-color: #5f63b3;
+}
+.govprogs-2015-v-6 {
+  position: relative;
+  top: 80px;
+  width: 50px;
+  height: 30px;
+  float: left;
+  background-color: #873131;
+}
+.govprogs-2015-v-7 {
+  position: relative;
+  top: 85px;
+  width: 50px;
+  height: 25px;
+  float: left;
+  background-color: #3162a3;
+}
+.govpogs-2015-v-8 {
+  position: relative;
+  top: 93px;
+  width: 50px;
+  height: 17px;
+  float: left;
+  background-color: #fb00ff;
+}
+.govprogs-2015-v-8 {
+  width: 50px;
+  height: 110px;
+  float: left;
+  background-color: deepskyblue;
+}
+.govprogs-2015-v-9 {
+  position: relative;
+  top: 95px;
+  width: 50px;
+  height: 15px;
+  float: left;
+  background-color: #ff9100;
+}
+.govprogs-2015-v-10 {
+  position: relative;
+  top: 100px;
+  width: 50px;
+  height: 10px;
+  float: left;
+  background-color: #df0;
+}
+.govprogs-2015-v-11 {
+  position: relative;
+  top: 104px;
+  width: 50px;
+  height: 6px;
+  float: left;
+  background-color: #00ffea;
+}
+.govprogs-2015-v-12 {
+  position: relative;
+  top: 106px;
+  width: 50px;
+  height: 4px;
+  float: left;
+  background-color: #0d00ff;
+}
+.govprogs-2015-v-13 {
+  position: relative;
+  top: 107px;
+  width: 50px;
+  height: 3px;
+  float: left;
+  background-color: red;
+}
+.govprogs-2015-v-14 {
+  position: relative;
+  top: 108px;
+  width: 50px;
+  height: 2px;
+  float: left;
+  background-color: #07f;
+}
+.v-1-link {
+  position: relative;
+  top: 115px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-2-link {
+  position: relative;
+  top: 90px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.govprogs-2015-unit-select-num {
+  width: 104px;
+  height: 26px;
+  margin-top: 15px;
+  margin-right: 28px;
+  float: right;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprogs-2015-unit-select-num:hover {
+  border-color: #ff5100;
+}
+.govprogs-2015-unit-link-num {
+  display: block;
+  width: 104px;
+  height: 26px;
+  padding-top: 4px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 14px;
+  line-height: 13px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+}
+.govprogs-2015-unit-link-num:hover {
+  color: #ff5100;
+}
+.triangle-sign {
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  color: #ccc;
+  font-size: 11px;
+}
+.triangle-sign:hover {
+  color: #ff5100;
+}
+.govprogs-legend {
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 469px;
+  height: 223px;
+  float: left;
+  border-right: 1px solid #ccc;
+}
+.legend {
+  height: 50px;
+}
+.legend.light-silver {
+  background-color: rgba(114, 122, 143, 0.09);
+}
+.legend.light-silver.bigcell {
+  height: 85px;
+}
+.legend.light-silver.mediumcell {
+  height: 67px;
+}
+.legend.light-silver.large {
+  height: 104px;
+}
+.govprogs-l-1 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-1.l-green {
+  background-color: #bfed61;
+}
+.govprogs-l-1.blackgreen {
+  background-color: #2aa83d;
+}
+.govprogs-l-1-link {
+  display: block;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.govprogs-l-1-link:hover {
+  color: #ff5100;
+}
+.marker-cell {
+  display: block;
+  height: 50px;
+  padding-top: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.legend-collumn {
+  height: 50px;
+  padding-top: 8px;
+  padding-right: 0px;
+  padding-left: 0px;
+  font-family: Roboto, sans-serif;
+}
+.num-cell {
+  height: 50px;
+  padding-top: 8px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.govprogs-diag {
+  width: 246px;
+  height: 223px;
+  float: left;
+  border-right: 1px solid #ccc;
+  background-image: url('../images/GovProgs-2015-Diag.png');
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.govprogs-sugblock {
+  width: 169px;
+  height: 223px;
+  padding-top: 10px;
+  padding-left: 15px;
+  float: left;
+}
+.sugblock-link {
+  display: block;
+  margin-bottom: 10px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.sugblock-link:hover {
+  color: #ff5100;
+}
+.v-3-link {
+  position: relative;
+  top: 70px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-4-link {
+  position: relative;
+  top: 54px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-5-link {
+  position: relative;
+  top: 44px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-6-link {
+  position: relative;
+  top: 34px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-7-link {
+  position: relative;
+  top: 29px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-8-link {
+  position: relative;
+  top: 21px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-9-link {
+  position: relative;
+  top: 19px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-10-link {
+  position: relative;
+  top: 14px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-11-link {
+  position: relative;
+  top: 10px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-12-link {
+  position: relative;
+  top: 8px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-13-link {
+  position: relative;
+  top: 7px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.v-14-link {
+  position: relative;
+  top: 6px;
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.govprogs-l-2 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-2.green {
+  background-color: #39ad4b;
+}
+.govprogs-l-3 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-3.yellow {
+  background-color: #fadf43;
+}
+.govprogs-l-4 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-4.cyan {
+  background-color: #00ffea;
+}
+.govprogs-l-5 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-5.darkblue {
+  background-color: #4e6e96;
+}
+.govprogs-l-6 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-6.velvet {
+  background-color: #8744c9;
+}
+.govprogs-l-7 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-7.darkred {
+  background-color: #cf4023;
+}
+.govprogs-l-8 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-8.dryblue {
+  background-color: #06f;
+}
+.govprogs-l-9 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-9.darkred {
+  background-color: #9c2f2f;
+}
+.govprogs-l-10 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-10.orange {
+  background-color: #fa7d16;
+}
+.govprogs-l-11 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-11.red {
+  background-color: red;
+}
+.govprogs-l-12 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-12.darkblue {
+  background-color: #04f;
+}
+.govprogs-l-13 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprogs-l-13.lightblue {
+  background-color: #52a3ff;
+}
+.govprog-l-14 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+}
+.govprog-l-14.pink {
+  background-color: #e600ff;
+}
+.govprogs-expand-popups {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  border-radius: 6px;
+}
+.ed-govprog {
+  display: none;
+  width: 650px;
+  height: 290px;
+  margin-top: 115px;
+  margin-left: 100px;
+  padding-top: 20px;
+  padding-right: 28px;
+  padding-left: 28px;
+  border-radius: 6px;
+  background-color: rgba(32, 43, 69, 0.95);
+}
+.whitetext {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+}
+.whitetext.yeardynamics {
+  margin-top: 11px;
+  font-family: Roboto, sans-serif;
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+.whitetext.yeardynamics.v-bar {
+  margin-top: 5px;
+  color: white;
+}
+.whitetext.select {
+  width: 245px;
+  margin-top: 6px;
+  padding-left: 10px;
+}
+.whitetext.select.center {
+  width: auto;
+  height: 26px;
+  margin-top: 4px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+}
+.whitetext.select.center:hover {
+  color: rgba(21, 38, 82, 0.90);
+}
+.whitetext.searchpopup {
+  width: 600px;
+  margin-left: 275px;
+  font-size: 16px;
+  line-height: 28px;
+}
+.popup-h3 {
+  margin-left: 0px;
+}
+.popup-link {
+  margin-right: 30px;
+  float: left;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: #fffbc4;
+  font-size: 16px;
+  text-decoration: none;
+}
+.popup-link:hover {
+  color: white;
+}
+.ed-govprog-close-btn {
+  width: 25px;
+  height: 25px;
+  float: right;
+  background-image: url('../images/Search-Close-Icon.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.ed-govprog-close-btn:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.govprogs-timeline-2015 {
+  position: absolute;
+  left: 162px;
+  top: 205px;
+  display: none;
+  width: 236px;
+  height: 85px;
+  border-radius: 6px;
+  background-color: rgba(21, 38, 82, 0.90);
+}
+.yeardynamics-h3 {
+  margin-top: -30px;
+  margin-left: 0px;
+  font-size: 25px;
+  text-align: center;
+}
+.yeardynamics-h3.v-bar {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.govprogs-timeline-2014 {
+  position: absolute;
+  left: 54px;
+  top: 252px;
+  display: none;
+  width: 236px;
+  height: 85px;
+  border-radius: 6px;
+  background-color: rgba(21, 38, 82, 0.90);
+}
+.govprogs-timeline-2013 {
+  position: absolute;
+  left: -20px;
+  top: 240px;
+  width: 236px;
+  height: 85px;
+  border-radius: 6px;
+  background-color: rgba(21, 38, 82, 0.90);
+}
+.govprogs-v-3-pop {
+  position: absolute;
+  left: 335px;
+  top: 79px;
+  width: 318px;
+  height: 82px;
+  border-radius: 6px;
+  background-color: rgba(19, 50, 189, 0.90);
+}
+.govprogs-l-2-link {
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-3-link {
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-4-link {
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-5-link {
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-6-link {
+  display: block;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-7-link {
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-8-link {
+  display: block;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-9-link {
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.govprogs-l-10-link {
+  display: block;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-11-link {
+  display: block;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-12-link {
+  display: block;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-13-link {
+  display: block;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-l-14-link {
+  display: block;
+  color: black;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.govprogs-diag-v-3 {
+  display: none;
+  width: 246px;
+  height: 223px;
+  float: left;
+  background-image: url('../images/GovProgs-2015-Diag-Hover.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.govprogs-diag-minus-1 {
+  display: none;
+  width: 246px;
+  height: 223px;
+  float: left;
+  background-image: url('../images/GovProgs-2015-Diag-1.png');
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.wg-govprog-farma-expand-lg {
+  display: none;
+  width: 1224px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  border-radius: 6px;
+  background-color: #47c55a;
+}
+.govprog-farma-hide-more-lg {
+  position: relative;
+  top: -13px;
+  display: block;
+  width: 279px;
+  height: 52px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 3px solid white;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.govprog-farma-hide-more-lg:hover {
+  background-color: white;
+}
+.govprog-farma-expand-v-bar {
+    width:850px;
+  height: 170px;
+  padding-left: 27px;
+  border-bottom: 1px solid #ccc;
+}
+.govprog-farma-2015-v-1 {
+  width: 50px;
+  height: 110px;
+  float: left;
+  background-color: #1aad30;
+}
+.farma-v-bar-add {
+  width: 50px;
+  height: 110px;
+  float: left;
+  border: 1px solid #ccc;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.farma-v-bar-add:hover {
+  -webkit-transform: translate(0px, -5px);
+  -ms-transform: translate(0px, -5px);
+  transform: translate(0px, -5px);
+}
+.farma-add-btn {
+  height: 109px;
+  background-image: url('../images/Add-Widget.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.farma-add-btn:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.farma-diag {
+  width: 226px;
+  height: 223px;
+  float: left;
+  border-right: 1px solid #ccc;
+  background-image: url('../images/GovProgs-2015-Diag-Full.png');
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.wg-compare {
+  display: none;
+  width: 334px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  border-radius: 6px;
+  background-color: #1cbbb4;
+}
+.cm-p-1 {
+  width: 280px;
+  height: 20px;
+  margin-bottom: 6px;
+  margin-left: 27px;
+  border-radius: 30px;
+  background-color: white;
+}
+.cm-p-1-text {
+  display: block;
+  padding-left: 8px;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+.cm-p-1-text.whitetxt {
+  color: white;
+}
+.cm-p-1-text.whitetxt.cmadd {
+  margin-top: -2px;
+  padding-left: 11px;
+  font-size: 17px;
+  text-align: left;
+}
+.cm-p-1-text.whitetxt.blacktext {
+  float: left;
+  color: black;
+}
+.cm-p-2 {
+  width: 280px;
+  height: 20px;
+  margin-bottom: 6px;
+  margin-left: 27px;
+  border-radius: 30px;
+  background-color: #ff5100;
+}
+.cm-p-add {
+  width: 35px;
+  height: 20px;
+  margin-left: 27px;
+  float: left;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+.cm-timeline {
+  display: block;
+  width: 251px;
+  height: 187px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url('../images/GovsProg-Years-Comapre.png');
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.cm-tm-2015 {
+  position: relative;
+  left: 233px;
+  top: 27px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: white;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.cm-tm-2015:hover {
+  background-color: black;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.cm-tm-2014 {
+  position: relative;
+  left: 120px;
+  top: 62px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: white;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.cm-tm-2014:hover {
+  background-color: black;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.cm-tm-2013 {
+  position: relative;
+  left: 9px;
+  top: 40px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: white;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.cm-tm-2013:hover {
+  background-color: black;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.cm-redline {
+  position: relative;
+  left: 13px;
+  top: 99px;
+  width: 225px;
+  height: 12px;
+  background-image: url('../images/CM-RedLine-0.png');
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.cm-r-tm-2015 {
+  position: relative;
+  left: 233px;
+  top: 135px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: #ff5100;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.cm-r-tm-2015:hover {
+  z-index: 1;
+  background-color: black;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.cm-r-tm-2014 {
+  position: relative;
+  left: 120px;
+  top: 164px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: #ff5100;
+}
+.cm-r-tm-2013 {
+  position: relative;
+  left: 9px;
+  top: 155px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: #ff5100;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.cm-r-tm-2013:hover {
+  background-color: black;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.cm-add {
+  position: relative;
+  left: 25px;
+  top: -220px;
+  z-index: 2;
+  display: none;
+  width: 300px;
+  height: 230px;
+  padding-top: 5px;
+  border-radius: 6px;
+  background-color: rgba(21, 38, 82, 0.90);
+}
+.cm-select {
+  display: block;
+  width: 82%;
+  height: 35px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid white;
+}
+.cm-ok-btn {
+  display: block;
+  width: 50%;
+  height: 35px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid white;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.cm-ok-btn:hover {
+  background-color: white;
+}
+.cm-yline {
+  position: relative;
+  left: 12px;
+  top: -69px;
+  display: none;
+  width: 227px;
+  height: 16px;
+  background-image: url('../images/Y-Line.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.cm-p-3 {
+  display: none;
+  width: 180px;
+  height: 20px;
+  margin-bottom: 6px;
+  margin-left: 27px;
+  float: left;
+  border-radius: 30px;
+  background-color: #fdff91;
+}
+.intro-1 {
+  width: 800px;
+  height: 600px;
+  background-image: url('../images/Intro.jpg');
+  background-position: 50% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.intro-1:hover {
+  background-image: url('../images/Intro-Hover.jpg'), url('../images/Intro.jpg');
+  background-position: 50% 50%, 50% 50%;
+  background-size: cover, auto;
+  background-repeat: no-repeat, no-repeat;
+}
+.gotodash {
+  width: 800px;
+  height: 600px;
+}
+.hero {
+  width: 83.8%;
+}
+.intro-nav-bar {
+  position: relative;
+  z-index: 199;
+  padding-top: 17px;
+}
+.intro-nav-bar.dashnav {
+  width: 1280px;
+}
+.menu-btn {
+  width: 23px;
+  height: 21px;
+  margin-left: 33px;
+  float: left;
+  background-image: url('../images/Nav-Icons-Blue-Hover.png');
+  background-position: 0px 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.menu-btn:hover {
+  opacity: 1;
+}
+.search-buttn {
+  width: 23px;
+  height: 21px;
+  margin-left: 23px;
+  float: left;
+  background-image: url('../images/Nav-Icons-White.png');
+  background-position: 38% 0%;
+  opacity: 0.3;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.search-buttn:hover {
+  opacity: 1;
+}
+.search-buttn.invert-2 {
+  background-image: url('../images/Nav-Icons-Blue-Hover.png');
+  background-position: -23px 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.voice-search-btn {
+  position: relative;
+  z-index: 201;
+  width: 17px;
+  height: 21px;
+  margin-left: 21px;
+  float: left;
+  background-image: url('../images/Nav-Icons-White.png');
+  background-position: -46px 50%;
+  opacity: 0.3;
+  -webkit-transition-delay: initial;
+  transition-delay: initial;
+}
+.voice-search-btn:hover {
+  opacity: 1;
+}
+.voice-search-btn.invert-3 {
+  background-image: url('../images/Nav-Icons-Blue-Hover.png');
+  background-position: -46px 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.feedback-link {
+  display: block;
+  margin-right: 66px;
+  float: right;
+  border-bottom: 4px solid black;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+}
+.brand {
+  margin-left: 225px;
+}
+.mpt-logo {
+  width: 222px;
+  height: 38px;
+  background-image: url('../images/MPT-Logo-Intro-White.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.brand-lead {
+  padding-top: 24px;
+  padding-left: 51px;
+  opacity: 0.6;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+}
+.infographic {
+  width: 600px;
+  height: 1075px;
+  margin-top: 55px;
+  margin-left: 22px;
+  float: left;
+  background-image: url('../images/14Info.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.info-link {
+  width: 600px;
+  height: 1075px;
+}
+._5-quest {
+  margin-top: 125px;
+  margin-left: 60px;
+  float: left;
+}
+.quset-img {
+  width: 31px;
+  height: 57px;
+  margin-top: -1px;
+  margin-right: 13px;
+  float: left;
+  background-image: url('../images/5.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.quest-header {
+  margin-top: -5px;
+  float: left;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 19px;
+  line-height: 21px;
+  font-weight: 700;
+}
+.q-linkbar {
+  margin-top: 70px;
+  padding-left: 45px;
+}
+.q-link {
+  display: block;
+  margin-bottom: 15px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+}
+.q-link:hover {
+  color: white;
+}
+.script-choser {
+  margin-top: -5px;
+  margin-bottom: 150px;
+  clear: left;
+}
+.intro {
+  width: 528px;
+  height: 80px;
+  margin-left: 215px;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 700;
+}
+.scr-icon-bar {
+  margin-top: 65px;
+  margin-bottom: 75px;
+  padding-left: 55px;
+}
+.budget-icon {
+  width: 75px;
+  height: 75px;
+  float: left;
+  background-image: url('../images/Scripts-Icons-Medium-NoHover.png');
+  background-position: 0px 50%;
+  background-repeat: no-repeat;
+}
+.budget-icon-txt {
+  margin-top: 10px;
+  margin-left: 15px;
+  float: left;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.budget-icon-txt:hover {
+  color: black;
+}
+.payments-icon {
+  width: 75px;
+  height: 75px;
+  margin-left: 55px;
+  float: left;
+  background-image: url('../images/Scripts-Icons-Medium-NoHover.png');
+  background-position: -75px 50%;
+}
+.result-icon {
+  width: 75px;
+  height: 75px;
+  margin-left: 55px;
+  float: left;
+  background-image: url('../images/Scripts-Icons-Medium-NoHover.png');
+  background-position: -150px 50%;
+}
+.mans {
+  width: 75px;
+  height: 75px;
+  margin-left: 45px;
+  float: left;
+  background-image: url('../images/Scripts-Icons-Medium-NoHover.png');
+  background-position: 100% 50%;
+}
+.groups {
+  width: 250px;
+  margin-left: 115px;
+  float: left;
+}
+.gr-link {
+  display: block;
+  margin-bottom: 15px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+.gr-link:hover {
+  color: white;
+}
+.scr-end-level {
+  width: 450px;
+  margin-left: 95px;
+  padding-left: 50px;
+  float: left;
+  border-left: 1px solid rgba(0, 0, 0, 0.29);
+}
+.scr-end-level-url {
+  display: block;
+  margin-bottom: 15px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+.scr-end-level-url:hover {
+  color: white;
+}
+.right-cross {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 16.2%;
+  height: 1600px;
+  min-width: 223px;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  background-color: #40debe;
+}
+.rightcros {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.cd-1 {
+  margin-bottom: 25px;
+}
+.cd-cover {
+  height: 125px;
+  margin-bottom: 10px;
+  background-image: url('../images/YotaPhone_Photo_4.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cd-cover.medical {
+  background-image: url('../images/1391252710_farma-1920x1080-31246290.jpg');
+}
+.cd-cover.auto {
+  background-image: url('../images/RU-Flag.jpg');
+}
+.cd-cover.ph2 {
+  background-image: url('../images/yotaphone-2-1.jpg');
+}
+.cd-link {
+  display: block;
+  margin-bottom: 25px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: black;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.cd-link:hover {
+  color: white;
+}
+.search {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 200;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  background-color: rgba(28, 128, 186, 0.95);
+}
+.introheader {
+  width: 600px;
+  height: 56px;
+  margin-top: 70px;
+  margin-left: 275px;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+}
+.introheader.voice {
+  margin-top: 30px;
+  border-bottom-style: none;
+  font-size: 30px;
+  line-height: 34px;
+}
+.voice-search {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  background-color: rgba(47, 125, 214, 0.95);
+}
+.voice-search.vcpop {
+  z-index: 202;
+  display: none;
+}
+.voiceanim {
+  width: 277px;
+  height: 277px;
+  margin-top: 40px;
+  margin-left: 257px;
+  background-image: url('../images/VoiceS.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-menu {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  background-color: rgba(23, 119, 230, 0.95);
+}
+.main-menu.dashlight {
+  display: none;
+}
+.folder {
+  width: 250px;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 275px;
+  float: left;
+}
+.folder-link {
+  display: block;
+  margin-bottom: 15px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+.folder-link:hover {
+  color: black;
+}
+.end-url {
+  width: 250px;
+  height: 250px;
+  margin-top: 50px;
+  padding-left: 50px;
+  float: left;
+  border-left: 1px solid white;
+}
+.cutoms-bg {
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  background-color: white;
+}
+.dash-icon {
+  width: 17px;
+  height: 21px;
+  margin-left: 17px;
+  float: left;
+  background-color: white;
+}
+.dashboard-icon {
+  width: 21px;
+  height: 21px;
+  margin-top: -1px;
+  margin-left: 21px;
+  float: left;
+  background-image: url('../images/Dashboards-Icon.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.dashboard-icon:hover {
+  opacity: 1;
+}
+.help-icon {
+  width: 21px;
+  height: 21px;
+  margin-left: 17px;
+  float: left;
+  background-image: url('../images/Nav-Icons-Blue-Hover.png');
+  background-position: -63px 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.help-icon:hover {
+  opacity: 1;
+}
+.white-dash {
+  background-color: white;
+}
+.wg-1 {
+  width: 334px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  border-radius: 6px;
+  background-image: url('../images/wg-1.jpg');
+  background-position: 37% 38%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.wg-2 {
+  width: 334px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  border-radius: 6px;
+  background-image: url('../images/w-2.jpg');
+  background-position: -5px 42%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.wg-sug {
+  width: 334px;
+  height: 516px;
+  margin-top: 28px;
+  margin-left: 28px;
+  float: left;
+  border-radius: 6px;
+  background-image: url('../images/W-Sug.jpg');
+}
+.gamma {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  width: 1280px;
+  height: 192px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url('../images/GammaFooter.jpg');
+}
+.gamma-block {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 192px;
+  background-color: #191919;
+}
+.alt-bg {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+}
+.auttumn {
+  height: 100%;
+  background-image: url('../images/Alt-BG.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.auttumn-link {
+  display: block;
+  width: 1000px;
+  height: 190px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.dashother {
+  position: relative;
+  z-index: 100;
+  display: none;
+  width: 1192px;
+  height: 52px;
+  margin-top: 20px;
+  margin-left: 27px;
+  background-image: url('../images/DashOther.png');
+  background-position: 0px 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.education-intro {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  height: 800px;
+  background-image: url('../images/Education-Start.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+.ed-cotent {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 3756px;
+  background-image: url('../images/Education-Scroll-23-apr-2015-ED.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+html.w-mod-js *[data-ix="dynamics-hidden"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: translate(0px, 15px);
+  -ms-transform: translate(0px, 15px);
+  transform: translate(0px, 15px);
+}
+html.w-mod-js *[data-ix="v-pop-hidden"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: translate(0px, 15px);
+  -ms-transform: translate(0px, 15px);
+  transform: translate(0px, 15px);
+}
+html.w-mod-js *[data-ix="search-hidden"] {
+  display: none;
+  opacity: 0;
+}
+html.w-mod-js *[data-ix="end-url-menu-hidden"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: translate(-10px, 0px);
+  -ms-transform: translate(-10px, 0px);
+  transform: translate(-10px, 0px);
+}
+html.w-mod-js *[data-ix="hidden-groups"] {
+  display: none;
+  opacity: 0;
+}
+html.w-mod-js *[data-ix="end-level-src-hidden"] {
+  opacity: 0;
+  -webkit-transform: translate(-10px, 0px);
+  -ms-transform: translate(-10px, 0px);
+  transform: translate(-10px, 0px);
+}
+html.w-mod-js *[data-ix="wg-n-hidden"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: scale(0.9) translate(0px, 30px);
+  -ms-transform: scale(0.9) translate(0px, 30px);
+  transform: scale(0.9) translate(0px, 30px);
+}
+html.w-mod-js *[data-ix="sug-show"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: scale(0.9) translate(0px, 30px);
+  -ms-transform: scale(0.9) translate(0px, 30px);
+  transform: scale(0.9) translate(0px, 30px);
+}
+html.w-mod-js *[data-ix="alt-bg-hidden"] {
+  display: none;
+  opacity: 0;
+}
+html.w-mod-js *[data-ix="hide-otherdash"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: translate(0px, -150px);
+  -ms-transform: translate(0px, -150px);
+  transform: translate(0px, -150px);
+}
+@media (max-width: 991px) {
+}
+

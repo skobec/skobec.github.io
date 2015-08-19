@@ -1,0 +1,29 @@
+Prodom_Api_Server Object
+(
+    [gatewayDirectory:Prodom_Api_Server:private] => 
+    [_serviceName:Prodom_Api_Server:private] => Employee
+    [_methodName:Prodom_Api_Server:private] => 
+    [_params:Prodom_Api_Server:private] => Array
+        (
+            [0] => e573b6f9bf51c717043d8abc599b7449
+        )
+
+    [_apiKey:Prodom_Api_Server:private] => 49942EDD-3876-4A93-8027-7EFA8AFCD257
+    [_apiKeyManager:Prodom_Api_Server:private] => 
+    [_requestID:Prodom_Api_Server:private] => 2b38f15720d0d299e1108e2750ebe0fd
+    [_method] => getEmployeeProfile
+)
+
+
+stdClass Object
+(
+    [jsonrpc] => 2.0
+    [method] => getEmployeeProfile
+    [params] => Array
+        (
+            [0] => e573b6f9bf51c717043d8abc599b7449
+        )
+
+    [id] => 2b38f15720d0d299e1108e2750ebe0fd
+    [key] => 49942EDD-3876-4A93-8027-7EFA8AFCD257
+)

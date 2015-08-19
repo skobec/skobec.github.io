@@ -1,0 +1,472 @@
+body {
+}
+html{
+    //overflow-x: hidden;
+}
+.hidden_block{
+    display:none;
+}
+/*Главная страница карта*/
+#main-map-container{
+    .highcharts-container{
+        overflow: visible!important;
+    }
+}
+/* Меню */
+
+/* Главное меню */
+#mpt-menu {
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        a {
+            display: inline-block;
+            padding: 5px;
+            /* text-decoration: underline; */
+            color:white;
+            font-size: 13px;
+            margin: 0 2px;
+            box-sizing: border-box;
+        }
+    }
+    li.active {
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #a9735d;
+        }
+    }
+    li:not(.active):hover {
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 5px;
+            background-color: #a9735d;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.flexbox {
+    display: flex;
+}
+
+
+/* Popup-form */
+.popup-form {
+    .popup-form-toolbox td {
+        padding: 10px 20px 0 20px;
+    }
+    .popup-form-content {
+        li {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 16px;
+            a {
+                color: #0088cc;
+            }
+            a:hover {
+                color: #06f;
+            }
+        }
+    }
+}
+.cards-popup{
+    z-index:300;
+}
+
+/* Highcharts */
+//.cards-chart-graph {
+//    width: 65%;
+//}
+.cards-sidebar {
+    width: 34.5%;
+}
+//.cards-chart-graph.is-expanded{
+//    width: 100%;
+//}
+/*.highcharts-button {
+    display: none;
+}*/
+#map_widget .highcharts-button{
+    display: block;
+}
+
+.chartArea{
+    cursor: pointer;
+}
+/* Фильтры виджетов */
+.plan-input {
+    .radio + label::before {
+        background: url("../img/icons/radio.png") no-repeat center;
+    }
+    .radio:checked + label::before {
+        background: url("../img/icons/radio-checked.png") no-repeat center;
+    }
+}
+
+
+/* Виджет */
+.cards-list {
+    position: relative;
+    font-size: 0;
+    margin: -25px 0 0 -25px;
+    .cards-opt{
+        z-index: 203;
+    }
+    .cards-item {
+        overflow: visible;
+
+        .cards-cover{
+            .previous_chart{
+                cursor: pointer;
+                position: absolute;
+                top:15px;
+                font: 13px/17px "AkzidenzGroteskPro Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
+                text-transform: uppercase;
+            }
+            .previous_chart:hover{
+                color: #e93b00;
+            }
+        }
+        //        .cards-opt {
+        ////            z-index: 199;
+        //            position: absolute;
+        //            top: 10px;
+        //            right: 8px;
+        //            font-size: 0;
+        //        }
+        .cards-main {
+            overflow: visible;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 276px;
+            background: #efefef;
+            /*            opacity: 0;*/
+            transition: opacity 0.1s;
+            .cards-main__top-menu{
+                display: none;
+            }
+            .cards-chart {
+                background: none!important;
+                transition: 0.5s;
+                width: 65%;
+                z-index: 210;
+                position: relative !important;
+                padding-top: 0;
+                margin-top: 40px;
+                background: #efefef;
+                .cards-chart-graph {
+                    height: 375px;
+                    position: static !important;
+                    .highcharts-container {
+                        position: static !important;
+                    }
+                }
+
+                .tooltip_container {
+                    display:none;
+                    .cards-chart-tooltip {
+
+                        top: 0;
+                        left: 0;
+                        width: 80px;
+                        .cards-chart-tooltip-title {
+                            font-size: 10px;
+                        }
+                        .cards-chart-tooltip-cols {
+                            margin: 0 -10px 2px;
+                        }
+                    }
+                }
+                .plan.active{
+                    display: block;
+                }
+                .plan{
+                    left: 75px;
+                    top: 0px;
+                }
+                .plan-main{
+                    left: -45px;
+                    top: 0px;
+                }
+                .years{
+                    left: 50px;
+                    top: 0px;
+                }
+            }
+            .cards-chart.is-expanded{
+                transition: 0.45s;
+                width: 100%;
+            }
+            /* Сайдбар */
+            .cards-sidebar {
+                transition: 0.2s;
+                z-index: 201;
+                width:35%;
+                background-color: rgba(255,255,255,.9);
+                overflow: hidden;
+                /* кнопки управления виджетом */
+                .cards-view {
+                    .cards-view-list {
+                        white-space: nowrap;
+                    }
+                }
+                /* легенда */
+                .cards-legend {
+                    z-index: 200;
+                }
+                .cards-legend-list{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    .cards-legend-item:hover a{
+                        color: #ff4800;
+                    }
+                }
+            }
+            .cards-sidebar.is-collapsed {
+                width: 0;
+            }
+        }
+    }
+    .cards-item.cards-item_full{
+        .cards-main__top-menu-title{
+            width: 650px;
+            font-size: 14px;
+        }
+        .cards-amount_top-menu{
+            width:210px;
+        }
+        .cards-main{
+            left: 0;
+            height: 100%;
+            .cards-main__top-menu{
+                display: block;
+                z-index:202;
+            }
+            .cards-filter {
+                left: 1210px;
+                top: 24px;
+                display: block;
+                z-index: 203;
+            }
+            .cards-chart{
+                margin-top: 90px;
+                //        width: 80%;
+                //        margin-top: 0;
+                width: 80%;
+                height: 100%;
+                padding-bottom: 90px;
+                box-sizing: border-box;
+                //        transition: 0.4s;
+                .cards-chart-graph {
+                    height: inherit;
+                }
+                .plan{
+                    left: 1113px;
+                    top: -40px;
+                }
+                //        .plan-main{
+                //          left: 1053px;
+                //          top: -40px;
+                //        }
+                .period{
+                    left: 1233px;
+                    top: -40px;
+                }
+                .years{
+                    left: 1210px;
+                    top: -40px;
+                }
+            }
+            .cards-sidebar {
+                width: 20%;
+                .cards-legend{
+                    .cards-legend-more{
+                        display:none;
+                    }
+                }
+
+            }
+            .cards-sidebar.is-collapsed {
+                width: 0;
+            }
+            .cards-chart.is-expanded{
+                width: 100%;
+            }
+        }
+        .cards-opt {
+            right: 75px;
+            top: 20px;
+        }
+    }
+}
+.dashboard-cards{
+    //overflow:visible;
+}
+.dashboard-inner{
+    overflow: hidden;
+    max-width: 1688px;
+    margin: 0 auto;
+    width: 1496px;
+}
+.dashboard {
+    height: 90vh;
+    width: 103%;
+}
+.cards-chart-tooltip:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    margin-left: -6px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border: 1px solid #c4c4c4;
+    box-shadow: 1.5px 2.6px 10px rgba(0,0,1,0.18);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.cards-chart-tooltip-inner {
+    position: relative;
+    background: white;
+    padding: 10px;
+    text-align: center;
+}
+.cards-chart-tooltip-units {
+    font-size: 10px;
+}
+.cards-chart-tooltip-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.cards-chart-tooltip-cols:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.cards-chart-tooltip-col {
+    float: none;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: inline-block;
+}
+.cards-chart-tooltip-col.single {
+    width: auto;
+    text-align: center;
+}
+.cards-chart-tooltip-col + .cards-chart-tooltip-col {
+    text-align: right;
+}
+.cards-chart-tooltip-col + .cards-chart-tooltip-col .cards-chart-tooltip-num:before {
+    content: "/";
+    position: absolute;
+    top: 1px;
+    left: -15px;
+}
+.cards-chart-tooltip-subtitle {
+    margin: 0 0 3px;
+    font-size: 10px;
+    color: #adacab;
+}
+.cards-chart-tooltip-num {
+    position: relative;
+    font-size: 20px;
+}
+.cards-chart-tooltip-summary {
+    text-align: center;
+}
+.cards-chart-tooltip-percent {
+    display: inline-block;
+    vertical-align: top;
+}
+.cards-chart-tooltip-total {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 5px;
+}
+.cards-chart-tooltip-arrow {
+    display: inline-block;
+    vertical-align: middle;
+}
+.cards-chart-tooltip-value {
+    display: inline-block;
+    vertical-align: middle;
+}
+.cards-filter {
+    z-index: 1;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    font-size: 0;
+}
+.cards-filter-item {
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
+.cards-filter-link {
+    display: inline-block;
+}
+.cards-filter-link:after {
+    content: "";
+    position: relative;
+    top: -0.1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 3px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 3.5px 0 3.5px 5px;
+    border-color: transparent transparent transparent #050505;
+}
+.cards-filter-link:hover .cards-filter-text {
+    border-color: #e93b00;
+    color: #e93b00;
+}
+.cards-filter-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #000;
+    border-bottom: 2px solid #d7d7d7;
+    transition: all 0.3s;
+}
+.dashboard-switcher{
+    display: block;
+}
+.screen-menu_show{
+    z-index: 250;
+}
+.intro__search_showed{
+    z-index: 250;
+}
+.modal-active-item{
+    font-weight: bold;
+    color:black;
+}
+.info__tabs-inner{
+    position: absolute;
+}
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+.allocation-filter__label{
+    width: 165px;
+}
+.jelect-options{
+    max-height: none;
+}

@@ -1,0 +1,11 @@
+syntax: glob
+exception
+nbproject
+public/temp/*.xlsx
+public/upload/
+public/temp/
+public/files/
+public/protected/
+data/cache/
+/*.orig
+vendor

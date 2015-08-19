@@ -1,0 +1,15 @@
+<fieldset>
+    <legend><span>{$title}</span></legend>
+    <div class="fieldset-content">
+        <form class="form-horizontal" enctype="multipart/form-data" <? if(!defined('READ_ONLY_MODE')) { ?> method="POST" action="/index/save/" <? } ?>>
+            <?if(!defined('READ_ONLY_MODE')) {?>
+                <input type="hidden" name="q" value="<?=$this->data->q?>" />
+                <input type="hidden" name="form[home_id]" value="<?=$this->home_id?>" />
+                <input type="hidden" name="form[id]" class="input_form_id" <?if($this->data->values && $this->data->values->id){?>value="<?=(int)$this->data->values->id?>"<?}?> />
+            <?}?>
+            {$content}
+            {$save}
+            {$inner_tables}
+        </form>
+    </div>
+</fieldset>

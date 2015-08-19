@@ -1,0 +1,542 @@
+<section class="budget" id="budget">
+    <header class="budget__header">
+        <h2 class="budget__title">
+            Бюджет
+            <br>
+            Министерства
+            <br>
+            промышленности
+            <br>
+            и торговли РФ
+            <br>
+            на 2015 год
+            <span class="budget__title-sum">
+                <?= $this->totalMoney ?>
+                <br>
+                МЛРД. <span class="rouble"> Р.</span>
+            </span>
+        </h2>
+    </header>
+    <ul class="budget-filter">
+        <li class="budget-filter__item budget-filter__item_state_active js-budget-filter" data-type="0">Программные расходы</li>
+        <li class="budget-filter__item js-budget-filter" data-type="1">Непрограммные расходы</li>
+    </ul>
+    <div class="budget-pie js-budget-pie">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="budget-pie__control" usemap="#budgetMapie">
+        <map class="budget-mapie" name="budgetMapie">
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 1), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="0" shape="poly" coords="435,396,474,402,482,402,518,395,535,378,552,371,573,362,615,344,636,335,645,331,646,328,647,327,647,325,646,323,644,323,644,319,643,316,641,314,639,312,639,299,642,296,643,295,643,292,645,291,646,288,650,287,651,284,655,284,656,282,657,279,659,278,661,278,661,250,661,218,661,180,658,178,649,175,640,175,624,168,606,168,585,165,582,164,582,153,580,150,580,145,567,136,565,135,565,119,623,99,647,82,664,70,677,59,682,37,582,31,554,37,534,75,523,100,514,119,511,128,503,144,503,156,488,178,478,194,475,198,468,198,468,209,435,256,435,396">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 2), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="1" shape="poly" coords="331,182,391,282,391,385,435,385,435,268,435,256,500,165,451,151,335,149,331,167">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 4), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="2" shape="poly" coords="351,378,353,377,356,377,361,382,362,383,364,383,367,384,369,386,373,385,376,386,379,385,391,384,391,299,391,282,388,277,370,247,353,219,330,180,301,181,249,176,229,188,210,193,172,202,173,217,230,243,274,263,291,271,323,286,351,299">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 7), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="3" shape="poly" coords="61,264,61,278,104,286,103,281,106,280,106,274,107,276,108,277,109,277,109,281,118,281,119,282,121,284,120,288,151,294,189,301,241,310,322,324,323,324,323,351,323,379,337,385,339,386,340,385,341,385,345,382,351,378,351,299,191,225,173,217,159,220,148,223,131,229,74,251,68,252">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 10), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="4" shape="poly" coords="311,351,313,356,316,361,318,364,320,366,320,377,323,379,323,324,168,297,120,288,121,284,120,281,118,281,113,281,109,281,109,277,108,276,107,276,107,275,106,274,106,280,104,281,104,286,60,278,51,284,37,292,20,312,16,336,16,346,16,351">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 8), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="5" shape="poly" coords="312,351,315,359,319,364,321,368,321,378,213,394,214,389,213,387,204,387,199,388,199,386,197,386,194,386,178,390,175,390,170,391,171,392,174,392,155,398,152,402,152,403,149,404,54,418,54,469,54,496,54,502,13,463,15,425,9,358,14,353,19,351">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 13), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="6" shape="poly" coords="54,417,120,408,151,403,154,398,158,396,165,394,169,392,171,390,180,388,195,385,216,386,215,392,318,376,322,378,330,382,336,384,340,386,333,386,325,385,316,389,314,393,308,389,298,388,294,391,292,391,288,392,288,399,284,402,279,406,279,412,277,415,275,411,265,414,261,417,259,421,258,415,250,413,235,430,232,436,229,449,223,448,214,448,211,451,182,464,165,472,162,479,160,480,160,545,147,542,133,538,117,532,101,525,85,517,64,505,54,498,54,497">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 9), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="7" shape="poly" coords="228,448,229,447,230,442,231,438,233,435,234,432,236,429,240,424,243,422,245,418,246,415,248,413,250,412,254,413,256,414,257,415,258,416,259,417,260,417,263,415,265,414,266,414,271,412,272,411,275,411,276,411,278,410,279,407,280,405,281,403,282,401,283,400,285,397,286,396,288,395,289,393,290,391,294,391,294,389,295,389,296,387,301,387,310,390,313,391,313,393,318,389,324,386,337,385,340,386,342,383,350,377,353,376,357,376,361,381,362,383,365,382,368,383,370,385,373,385,374,384,376,385,379,389,383,397,385,400,381,407,376,409,375,411,374,417,374,419,374,423,370,428,370,431,369,434,368,435,368,446,317,520,316,522,316,564,316,574,312,576,309,578,305,581,302,581,269,581,265,579,261,577,258,576,252,576,244,576,237,576,231,574,227,571,222,568,214,565,202,563,188,560,176,557,165,552,160,546,160,544,160,479,162,472,167,470,184,463,194,458,206,453,211,449,217,447,224,447">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 11), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="8" shape="poly" coords="352,468,367,447,368,445,368,433,370,425,373,423,374,419,374,418,375,413,375,409,376,406,378,405,383,401,385,399,384,398,382,393,384,390,398,386,408,385,416,383,425,388,434,395,434,402,433,414,431,420,493,521,492,575,477,576,459,577,441,578,405,578,382,578,353,576,315,574,315,520,316,521">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 5), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="9" shape="poly" coords="435,429,464,425,464,369,466,369,483,385,485,390,485,398,483,400,479,399,475,394,467,389,467,424,473,424,485,430,487,429,486,386,488,386,504,404,507,409,508,413,509,418,508,422,506,425,505,425,506,423,505,419,503,417,502,415,498,414,494,413,491,411,489,411,489,433,512,443,513,443,513,405,516,405,535,426,540,434,542,440,542,446,541,447,538,447,538,444,531,440,527,439,523,438,520,436,517,434,516,434,516,445,542,456,542,425,547,425,559,439,565,449,569,455,569,460,571,465,572,468,564,468,561,463,560,460,547,455,547,458,650,505,649,550,628,555,601,561,567,567,543,570,515,573,494,575,491,575,490,519,489,519">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 12), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="10" shape="poly" coords="759,466,666,449,666,440,662,437,661,437,661,434,662,433,662,431,660,430,657,430,656,433,657,435,657,437,655,438,653,441,653,447,629,442,628,440,626,439,625,433,611,426,605,410,604,408,584,401,549,403,545,419,545,426,543,426,543,427,543,426,543,427,533,426,533,425,516,406,512,406,512,422,508,421,507,424,506,424,506,422,506,421,506,420,497,420,489,427,489,433,513,444,513,406,516,406,541,436,542,441,541,445,540,446,539,446,538,443,538,442,535,441,527,438,522,436,519,435,518,434,516,434,516,446,543,457,543,426,546,426,554,435,560,444,565,451,568,458,568,461,570,464,571,466,571,467,566,467,564,467,562,465,562,461,559,459,554,458,552,456,550,455,547,453,546,454,546,458,598,482,649,505,649,522,649,550,678,542,708,531,743,514,759,504">
+
+            <area href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 6), null, true); ?>" class="budget-mapie__part js-budget-mapie-part" data-id="11" shape="poly" coords="759,502,759,467,666,450,666,443,666,441,665,440,663,438,662,438,660,438,660,434,661,433,662,433,662,431,661,430,659,430,657,430,656,431,656,433,657,434,657,436,657,437,655,438,654,439,653,441,653,447,628,443,627,440,626,440,625,440,625,436,620,432,615,430,608,425,604,409,580,402,550,404,549,405,548,409,547,414,522,414,516,408,516,407,516,406,513,406,513,414,508,414,509,416,509,418,509,421,508,422,513,423,513,405,516,405,516,408,529,420,532,424,533,426,543,427,543,426,545,426,545,419,546,415,549,404,582,402,604,409,605,414,674,414,674,408,674,399,676,392,681,384,688,378,694,375,701,373,710,373,719,376,727,382,733,389,737,402,747,408,747,412,761,414,803,414,803,451,797,466,789,478,768,497,759,504">
+
+            <area href="/desktop/personal" class="budget-mapie__part js-budget-mapie-part" data-id="12" shape="poly" coords="661,278,657,278,656,280,656,280,653,281,653,282,651,283,650,286,647,286,646,286,646,288,645,289,644,289,643,293,642,296,639,298,638,313,640,316,643,316,642,321,645,325,646,328,644,331,620,347,616,353,608,368,629,383,567,392,527,399,502,402,505,405,507,409,508,412,509,414,513,414,513,406,516,406,516,408,522,414,546,414,547,414,549,404,555,403,584,402,604,408,605,414,675,414,674,411,674,401,676,390,683,383,688,378,695,375,706,373,718,376,723,379,728,383,733,390,736,399,738,403,744,408,746,409,746,412,750,414,803,414,804,414,803,400,789,375,774,362,767,359,754,363,715,368,713,354,697,340,686,338,683,332,687,319,695,307,693,297,687,285,672,275,663,276">
+        </map>
+
+        <div class="budget-pie__part js-budget-pie-part" data-id="0">
+            <img class="budget-pie__img" src="img/budget/part1.png" > 
+        </div>
+
+        <div class="budget-pie__part js-budget-pie-part" data-id="1">
+            <img class="budget-pie__img" src="img/budget/part2.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="2">
+            <img class="budget-pie__img" src="img/budget/part3.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="3">
+            <img class="budget-pie__img" src="img/budget/part4.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="4">
+            <img class="budget-pie__img" src="img/budget/part5.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="5">
+            <img class="budget-pie__img" src="img/budget/part6.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="6">
+            <img class="budget-pie__img" src="img/budget/part7.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="7">
+            <img class="budget-pie__img" src="img/budget/part8.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="8">
+            <img class="budget-pie__img" src="img/budget/part9.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="9">
+            <img class="budget-pie__img0" src="img/budget/part10.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="10">
+            <img class="budget-pie__img1" src="img/budget/part11.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="11">
+            <img class="budget-pie__img2" src="img/budget/part12.png">
+        </div>
+        <div class="budget-pie__part js-budget-pie-part" data-id="12">
+            <img class="budget-pie__img3" src="img/budget/part13.png">
+        </div>
+
+        <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 1), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="0">
+                <div class="budget-pie__sum"><?= $this->main_pie_data[1] ?></div>
+                <div class="budget-pie__text">Развитие промышленности и повышение ее конкуренто-способности</div>
+            </div>
+        </a>
+        <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 2), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="1">
+                <div class="budget-pie__sum"><?= $this->main_pie_data[2] ?></div>
+                <div class="budget-pie__text">Развитие авиационной промышленности<br> на 2013 — 2025 годы</div>
+            </div>
+        </a>
+        <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 4), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="2">
+                <div class="budget-pie__sum"><?= $this->main_pie_data[4] ?></div>
+                <div class="budget-pie__text">Развитие фармацевтической<br> и медицинской<br> промышленности</div>
+            </div>
+            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 7), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="3">
+                    <div class="budget-pie__sum"><?= $this->main_pie_data[7] ?></div>
+                    <div class="budget-pie__text">Развитие электронной и радиоэлектронной промышленности на 2013 — 2025 годы</div>
+                </div>
+            </a>
+            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 10), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="4">
+                    <div class="budget-pie__sum"> <?= $this->main_pie_data[10] ?> </div>
+                    <div class="budget-pie__text"> Развитие <br> судостроения <br> на 2013 — <br> 2030 годы </div>
+                </div>
+            </a>
+            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 8), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="5">
+                    <div class="budget-pie__sum"><?= $this->main_pie_data[8] ?></div>
+                    <div class="budget-pie__text">Космическая <br>деятельность <br>России<br> на 2013 —<br> 2020 годы</div>
+                </div>
+            </a>
+            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 13), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="6">
+                    <div class="budget-pie__sum"><?= $this->main_pie_data[13] ?></div>
+                    <div class="budget-pie__text">Защита населения и <br> территорий <br> от чрезвычайных <br> ситуаций, обеспечение <br>пожарной безопасности<br>людей на водных <br> объектах</div>
+                </div>
+            </a>
+            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 9), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="7">
+                    <div class="budget-pie__sum"> <?= $this->main_pie_data[9] ?> </div>
+                    <div class="budget-pie__text"> Развитие Северо-<br>Кавказкого федераль-<br>ного округа на период <br> до 2025 года </div>
+                </div>
+            </a>
+            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 11), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="8">
+                    <div class="budget-pie__sum"><?= $this->main_pie_data[11] ?></div>
+                    <div class="budget-pie__text">Развитие атомного<br>энергокопромышленного<br>комплекса</div>
+                </div>
+            </a>
+            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 5), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="9">
+                    <div class="budget-pie__sum"><?= $this->main_pie_data[5] ?></div>
+                    <div class="budget-pie__text">Развитие<br>внешнеэкономической<br>деятельности</div>
+                </div>
+            </a>
+            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 12), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="10">
+                    <div class="budget-pie__sum"><?= $this->main_pie_data[12] ?></div>
+                    <div class="budget-pie__text">Обеспечение общественного <br> порядка и противодействие <br> преступности</div>
+                </div>
+            </a>
+            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'program', 'id' => 6), null, true); ?>"><div class="budget-pie__hint js-budget-pie-hint" data-id="11">
+                    <div class="budget-pie__sum"><?= $this->main_pie_data[6] ?></div>
+                    <div class="budget-pie__text">Энергоэффектив-<br>ность и развитие <br> энергетики</div>
+                </div>
+            </a>
+            <a href="/desktop/personal"><div class="budget-pie__hint js-budget-pie-hint" data-id="12">
+                    <div class="budget-pie__sum">0,018</div>
+                    <div class="budget-pie__text">Развитие культуры<br>и туризма на 2013 —<br>2020 годы</div>
+                </div>
+                </div>
+                </section>
+
+                <section class="topquestion">
+                    <header class="topquestion__header">
+                        <h2 class="topquestion__title">
+                            <span class="topquestion__title-number">5</span>
+                            Популярных
+                            <br>
+                            вопросов граждан
+                            <br>
+                            к министерству
+                        </h2>
+                        <div class="topquestion__all">
+                            <a href="javascript:void(0);" class="topquestion__all-link">
+                                Все материалы
+                                <br>
+                                обучающего раздела
+                            </a>
+                        </div>
+                    </header>
+                    <ul class="topquestion__list">
+                        <li class="topquestion__item">
+                            <a href="/education#struct" class="topquestion__link">
+                                Как устроен
+                                <br>
+                                бюджет?
+                            </a>
+                        </li>
+                        <li class="topquestion__item">
+                            <a href="/education#diff" class="topquestion__link">
+                                Бюджет Минпромторга
+                                <br>
+                                и Федеральный бюджет
+                                <br>
+                                РФ — в чем разница?
+                            </a>
+                        </li>
+                        <li class="topquestion__item">
+                            <a href="/education" class="topquestion__link">
+                                Каким образом и
+                                <br>
+                                за счет чего происходит
+                                <br>
+                                наполнение бюджета?
+                            </a>
+                        </li>
+                        <li class="topquestion__item">
+                            <a href="/education" class="topquestion__link">
+                                По каким правилам
+                                <br>
+                                работает бюджетная
+                                <br>
+                                система РФ?
+                            </a>
+                        </li>
+                        <li class="topquestion__item">
+                            <a href="/education" class="topquestion__link">
+                                Кто и как контролирует
+                                <br>
+                                процесс исполнения
+                                <br>
+                                бюджета?
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="allocation">
+                    <header class="allocation__header">
+                        <div class="allocation-filter">
+                            <div class="allocation-filter__row">
+                                <label class="allocation-filter__label">Меня интересуют:</label>
+                                <div class="allocation-filter__select">
+                                    <div id="jelectTool" role="combobox" class="jelect js-jelect">
+                                        <input id="jelectToolInput" value="3" data-text="gulp-autoprefixer" type="text" class="jelect-input js-jelect-input">
+                                        <div data-val='3' tabindex="1" role="button" class="jelect-current js-jelect-current">Все расходы</div>
+                                        <div role="list-box" class="jelect-options js-jelect-options">
+                                            <div>
+                                                <div data-val='0' tabindex="1" role="option" class="jelect-option js-jelect-option">
+                                                    <div class="jelect-option__value js-jelect-option-value">Все расходы</div>
+                                                </div>
+                                                <div data-val='1' tabindex="1" role="option" class="jelect-option js-jelect-option">
+                                                    <div class="jelect-option__value js-jelect-option-value">Программные расходы</div>
+                                                </div>
+                                                <div data-val='2' tabindex="1" role="option" class="jelect-option js-jelect-option">
+                                                    <div class="jelect-option__value js-jelect-option-value">Непрограммные расходы</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="districts" class="allocation-filter__row">
+                                <label class="allocation-filter__label">Федеральный округ:</label>
+
+                                <div class="allocation-filter__select">
+                                    <div class="allocation-filter__select">
+                                        <div id="jelectTool" role="combobox" class="jelect js-jelect">
+                                            <input id="jelectToolInput" value="3" data-text="gulp-autoprefixer" type="text" class="jelect-input js-jelect-input">
+                                            <div data-val='0' tabindex="1" role="button" class="jelect-current js-jelect-current">Все</div>
+                                            <div role="list-box" class="jelect-options js-jelect-options">
+                                                <div>
+                                                    <div data-val='0' tabindex="1" role="option" class="jelect-option js-jelect-option">
+                                                        <div class="jelect-option__value js-jelect-option-value">Все</div>
+                                                    </div>
+                                                    <?php foreach ($this->districts as $district) { ?>
+                                                        <div data-val='<?= $district->id ?>' tabindex="1" role="option" class="jelect-option js-jelect-option">
+                                                            <div class="jelect-option__value js-jelect-option-value"><?= $district->title ?></div>
+                                                        </div>
+                                                    <?php } ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="region" class="allocation-filter__row" style="display: none;">
+                                <label class="allocation-filter__label">Регион:</label>
+                                <div class="allocation-filter__select">
+                                    <div id="jelectTool" role="combobox" class="jelect js-jelect">
+                                        <input id="jelectToolInput" value="3" data-text="gulp-autoprefixer" type="text" class="jelect-input js-jelect-input">
+                                        <div data-val='3' tabindex="1" role="button" class="jelect-current js-jelect-current">Все регионы</div>
+                                        <div role="list-box" class="jelect-options js-jelect-options">
+                                            <div>
+                                                <div data-val='0' tabindex="1" role="option" class="jelect-option js-jelect-option">
+                                                    <div class="jelect-option__value js-jelect-option-value">Все расходы</div>
+                                                </div>
+                                                <div data-val='1' tabindex="1" role="option" class="jelect-option js-jelect-option">
+                                                    <div class="jelect-option__value js-jelect-option-value">Программные расходы</div>
+                                                </div>
+                                                <div data-val='2' tabindex="1" role="option" class="jelect-option js-jelect-option">
+                                                    <div class="jelect-option__value js-jelect-option-value">Непрограммные расходы</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="allocation__title">
+                            Распределение средств
+                            <br>
+                            минпромторга рф
+                            <br>
+                            по регионам
+                        </h2>
+                    </header>
+
+                    <div class="allocation__wrapper">
+                        <div style="height: 650px;" id="main-map-container">
+
+
+                        </div>
+                    </div>
+
+
+
+                </section>
+
+                <section class="info" id="info">
+                    <h2 class="info__title">
+                        <span class="info__title-hl">Найдите нужную</span>
+                        <br>
+                        информацию по бюджету
+                        <br>
+                        всего за три клика
+                    </h2>
+                    <ul class="info__list">
+                        <li class="info__item">
+                            <a href="javascript:void(0);" class="info__link js-info-link" data-action="scenario1-1" data-droplist="true">
+                                <span class="info__icon icon icon-info-budget"></span>
+                                <span class="info__name">
+                                    Вопросы
+                                    <br>
+                                    о бюджете
+                                    <br>
+                                    и минпромторга
+                                </span>
+                            </a>
+                        </li>
+                        <li class="info__item">
+                            <a href="javascript:void(0);" class="info__link js-info-link" data-action="scenario1-2" data-droplist="true">
+                                <span class="info__icon icon icon-info-expensive"></span>
+                                <span class="info__name">
+                                    Расходы
+                                </span>
+                            </a>
+                        </li>
+                        <li class="info__item">
+                            <a href="javascript:void(0);" class="info__link js-info-link" data-action="scenario1-3" data-droplist="true">
+                                <span class="info__icon icon icon-info-total"></span>
+                                <span class="info__name">
+                                    Итоги
+                                    <br>
+                                    и результаты
+                                </span>
+                            </a>
+                        </li>
+                        <li class="info__item">
+                            <a href="javascript:void(0);" class="info__link js-info-link" data-action="scenario1-4" data-droplist="true">
+                                <span class="info__icon icon icon-info-citizens"></span>
+                                <span class="info__name">
+                                    Гражданам
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="info__tabs js-info-tabs">
+                        <?php foreach ($this->scenarios as $scenario) { ?>
+                            <ul class="info__tabs-inner js-info-tabs-inner" data-view="scenario1-<?= $scenario->id ?>">
+
+                                <?php foreach ($scenario->children as $child) { ?>
+                                    <li class="info__item info__item_citizens">
+                                        <a href="javascript:void(0)" class="info__link info__link-tabs js-list-menu-link" data-droplist="true"  data-action="scenario2-<?= $child->id ?>"><?= $child->title ?></a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                            <?php foreach ($scenario->children as $child) { ?>
+                                <div class="list-menu__detail list-menu__detail_section_info js-list-menu-detail" data-view="scenario2-<?= $child->id ?>">
+                                    <?php foreach ($child->children as $lastChild) { ?>
+                                        <div class="list-menu__item list-menu__item_section_info">
+                                            <a href="<?= $this->url(array('module' => 'default', 'controller' => 'desktop', 'action' => 'personal', 'id' => $lastChild->id), null, true); ?>" class="list-menu__link list-menu__link_detail list-menu__link_detail_section_info"><?= $lastChild->title ?></a>
+                                        </div>    
+                                    <?php } ?>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
+                    </div>
+                </section>
+                <script>
+                    $(document).ready(function () {
+                        $('#districts div[role="option"]').on('click', function () {
+                            var district = ($(this).data('val'));
+                            if (district === 0) {
+                                $('#region').hide();
+                            } else {
+                                var regions = $.grep(<?= json_encode($this->regions) ?>, function (el) {
+                                    return el.parent_id === district;
+                                });
+                                var container = $('#region div[role="list-box"] div');
+                                container.empty();
+                                $('#region div[role="button"]').html('Все регионы');
+                                var row = $('<div>').attr({
+                                    'data-val': 0,
+                                    'tabindex': 1,
+                                    'role': 'option',
+                                    'class': 'jelect-option js-jelect-option'
+                                }).appendTo(container);
+
+                                var region_text = $('<div>').attr({
+                                    'class': 'jelect-option__value js-jelect-option-value'
+                                }).html('Все регионы').appendTo(row);
+                                $.each(regions, function (key, region) {
+
+                                    var row = $('<div>').attr({
+                                        'data-val': region.id,
+                                        'tabindex': 1,
+                                        'role': 'option',
+                                        'class': 'jelect-option js-jelect-option'
+                                    }).appendTo(container);
+
+                                    var region_text = $('<div>').attr({
+                                        'class': 'jelect-option__value js-jelect-option-value'
+                                    }).html(region.title).appendTo(row);
+
+                                });
+                                $('#region').show();
+                            }
+
+
+                        });
+
+
+                        $('#main-map-container').highcharts('Map', {
+                            tooltip: {
+                                positioner: function (labelWidth, labelHeight, point) {
+
+                                    var coords = {x: point.plotX - 228, y: point.plotY - 380};
+                                    return coords;
+                                },
+                                shape: 'square',
+                                useHTML: true,
+                                backgroundColor: null,
+                                borderWidth: 0,
+                                shadow: false,
+                                formatter: function () {
+
+                                    return renderTooltip(this);
+                                },
+                            },
+                            legend: {
+                                enabled: false
+                            },
+                            mapNavigation: {
+                                enabled: false
+                            },
+                            exporting: {
+                                enabled: false
+                            },
+                            credits: false,
+                            chart: {
+                            },
+                            title: {text: '' // Россия
+                            },
+                            colors: ["#B1806C"],
+                            plotOptions: {
+                                map: {
+                                    states: {
+                                        hover: {
+                                            color: {
+                                                linearGradient: {x1: 0, x2: 0, y1: 0, y2: 1},
+                                                stops: [
+                                                    [0, '#6ec5b5'],
+                                                    [1, '#e3e6ae']
+                                                ]
+                                            },
+                                        }
+                                    }
+                                }
+                            },
+                            series: [{
+                                    data: <?= json_encode($this->main_map_data, JSON_UNESCAPED_UNICODE) ?>,
+                                    mapData: Highcharts.maps['countries/ru/ru-all'],
+                                    joinBy: 'hc-key',
+                                    name: 'Россия'
+                                }],
+                        });
+
+                        function renderTooltip(data) {
+                            var html = "";
+                            html += "                         <div class=\"allocation__popup\">";
+                            html += "                            <div class=\"allocation__popup-item allocation__popup-item_first\">";
+                            html += "                                <div class=\"allocation__popup-title\">";
+                            html += "                                    " + data.point.title + "";
+                            html += "                                <\/div>";
+                            html += "                                <div class=\"allocation__popup-title allocation__popup-title_right\">";
+                            html += "                                    <div class=\"allocation__popup-text\">";
+                            html += "                                        Средства из бюджета <br> минпромторга";
+                            html += "                                    <\/div>";
+                            html += "                                    <div class=\"allocation__popup-count\">";
+                            html += "                                        <span class=\"allocation__popup-number\">" + data.point.value + "<\/span> млрд" + "<span class='rouble'> Р</span>";
+                            html += "                                    <\/div>";
+                            html += "                                <\/div>";
+                            html += "                            <\/div>";
+                            html += "                            <div class=\"allocation__popup-item allocation__popup-item_second\">";
+                            html += "                                <div class=\"allocation__popup-item-wrapper\">";
+                            html += "                                    <div class=\"allocation__popup-title\">";
+                            html += "                                        Программные  <br> расходы";
+                            html += "                                    <\/div>";
+                            html += "                                    <div class=\"allocation__popup-title allocation__popup-title_right\">";
+                            html += "                                        <div class=\"allocation__popup-text\">";
+                            html += "                                            Сумма по программным <br> расходам";
+                            html += "                                        <\/div>";
+                            html += "                                        <div class=\"allocation__popup-count\">";
+                            html += "                                            <span class=\"allocation__popup-number\">" + data.point.value_programmic + "<\/span> млрд" + "<span class='rouble'> Р</span>";
+                            html += "                                        <\/div>";
+                            html += "                                    <\/div>";
+                            html += "                                <\/div>";
+                            html += "                            <\/div>";
+                            html += "                            <div class=\"allocation__popup-item allocation__popup-item_last\">";
+                            html += "                                <div class=\"allocation__popup-title\">";
+                            html += "                                    Непрограммные <br> расходы";
+                            html += "                                <\/div>";
+                            html += "                                <div class=\"allocation__popup-title allocation__popup-title_right\">";
+                            html += "";
+                            html += "                                    <div class=\"allocation__popup-count\">";
+                            html += "                                        <span class=\"allocation__popup-number\">" + data.point.value_nonprogrammic + "<\/span>";
+                            html += "                                    <\/div>";
+                            html += "";
+                            html += "                                <\/div>";
+                            html += "                                <div class=\"allocation__triangle\">";
+                            html += "                                    <div class=\"allocation__triangle-main\">";
+                            html += "";
+                            html += "                                    <\/div>";
+                            html += "                                <\/div>";
+                            html += "                            <\/div>";
+                            html += "                        <\/div>";
+
+                            return html;
+                        }
+                    });
+                </script>

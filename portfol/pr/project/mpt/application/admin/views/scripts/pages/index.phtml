@@ -1,0 +1,61 @@
+<?
+    $this->bread_crumbs = array(
+        (object)array('url' => '/admin/', 'title' => 'Главная'),
+        'Страницы'
+    );
+    echo Plugin_Message::drawMessage();
+    // Mikron_Entity_Designer_Toolbar::addTag('a', array('class' => 'btn btn-success button-simple', 'href' => '/organization/new/', 'id' => 'add-org'), 'Зарегистрировать новую организацию...');
+?>
+
+<section id="left_column">
+    <h2>История</h2>
+</section>
+
+<section id="right_column" class="clearfix">
+    <div id="actions_block" class="noselect">
+        <label>
+            <input type="checkbox" id="check_all">
+            Выбрать все
+        </label>
+        <span class="delimeter">|</span>
+        действие:
+        <select class="select2">
+            <option selected="" value="выберите">выберите</option>
+            <option value="duplicate">дублировать</option>
+            <option value="delete">удалить</option>
+            <option value="hide">скрыть</option>
+            <option value="move">переместить</option>
+        </select>
+        <span class="delimeter">|</span>
+        <a href="#" class="btn btn-default" id="create_page">Создать страницу</a>
+        <a href="#" class="btn btn-default" id="create_group">Создать группу</a>
+        <span class="delimeter">|</span>
+        <select class="select2">
+            <option selected="" value="вид">вид</option>
+            <option value="крупно">крупно</option>
+            <option value="мелко">мелко</option>
+        </select>
+    </div>
+    <?foreach(Model_Admin_Page::getGroupList() as $group){?>
+        <div class="group <?= ($group['id'] == 999) ? ' empty' : ''?>">
+            <? if($group['id'] != 999){?>
+                <h4>Группа "<?=$group['title']?>"</h4>
+            <? }?>
+            <div class="flex">
+                <?foreach(Model_Admin_Page::getPageList(new Type_Page_Item(['page_group_id' => $group['id']])) as $page){?>
+                    <div class="group_item flex">
+                        <div>
+                            <input name="page_<?=$page['id']?>" type="checkbox" class="item" />
+                        </div>
+                        <div>
+                            <a target="_blank" href="<?=$page['link']?>">
+                                <img width="160" width="160" class="image" src="<?=$page['preview']?>"><br>
+                                <?=$page['title']?>
+                            </a>
+                        </div>
+                    </div>
+                <?}?>
+            </div>
+        </div>
+    <?}?>
+</section>

@@ -1,0 +1,8 @@
+<div class="controls-selectbox">
+    <select class="list {$validator}" name="form[{$code}][]" id="field_list-{$code}">
+        <option value="" >Не выбрано...</option>
+        <?foreach($this->data->list_fields->{$code} as $field) {?>
+            <option <?=$this->data->table_values && property_exists($this->data->table_values, '{$code}') && ($this->data->table_values->{$code} == $field->id) ? 'selected' : '' ?> value="<?=$field->id?>"><?=htmlspecialchars($field->title)?></option>
+        <?}?>
+    </select> 
+</div>
