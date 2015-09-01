@@ -1,7 +1,0 @@
-RewriteEngine on
-Options -Indexes
-AddDefaultCharset utf-8
-RewriteBase / 
-RewriteCond %{SCRIPT_FILENAME} !-f
-RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule !\.(php|js|ico|gif|html|swf|flv|xml|jpg|jpeg|png|css|pdf|doc|xls|ppt|php|zip|7z|rar)$ /server.php

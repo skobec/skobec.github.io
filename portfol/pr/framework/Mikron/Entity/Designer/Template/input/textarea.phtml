@@ -1,5 +1,0 @@
-<? if($field->readonly) { ?>
-	<?=htmlspecialchars(Mikron_Entity_Model::getRowValueByPath($item, $field)) ?: Mikron_Entity_Designer::NO_VALUE?>
-<? } else { ?>
-	<textarea name="form[<?=$field->name?>]" rows="5" class="form-control span7 <?=implode(' ', $class)?>" id="<?=$_input_id?>" <?= !$field->readonly ?: 'disabled="disabled"'; ?>><?=htmlspecialchars(Mikron_Entity_Model::getRowValueByPath($item, $field))?></textarea>
-<? } ?>

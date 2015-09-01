@@ -1,5 +1,0 @@
-<? if($field->readonly) { ?>
-	<?=htmlspecialchars(Mikron_Entity_Model::getRowValueByPath($item, $field)) ?: Mikron_Entity_Designer::NO_VALUE?>
-<? } else { ?>
-	<input type="text" name="form[<?=$field->name?>]" class="form-control span4 <?=implode(' ', $class)?>" value="<?=htmlspecialchars(Mikron_Entity_Model::getRowValueByPath($item, $field))?>" id="<?=$_input_id?>" placeholder="" <?= !$field->readonly ?: 'disabled="disabled"'; ?> />
-<? } ?>

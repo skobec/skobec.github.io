@@ -1,1 +1,0 @@
-<textarea name="form[<?=$field->name?>]" rows="15" class="_form-control span10 mikron-input-html <?=implode(' ', $class)?>" id="<?=$_input_id?>" <?= !$field->readonly ?: 'disabled="disabled"'; ?>><?=htmlspecialchars(Mikron_Entity_Model::getRowValueByPath($item, $field))?></textarea>
