@@ -1,0 +1,220 @@
+/* font-family: "GloberThin"; */
+@font-face {
+    font-family: "GloberThin";
+    src: url("../fonts/GloberThin.eot");
+    src: url("../fonts/GloberThin.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GloberThin.woff") format("woff"),
+    url("../fonts/GloberThin.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "GloberBold"; */
+@font-face {
+    font-family: "GloberBold";
+    src: url("../fonts/GloberBold.eot");
+    src: url("../fonts/GloberBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GloberBold.woff") format("woff"),
+    url("../fonts/GloberBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body,html {
+    min-width: 1024px;
+}
+a {
+    font-family: GloberBold,sans-serif;
+}
+p, span {
+    font-family: GloberThin,sans-serif;
+}
+.container {
+    min-width: 1024px;
+}
+header {
+    padding: 24px 0 0;
+}
+.logo img{
+    width: 100%;
+}
+.date_adres_bl {
+    display: inline-block;
+}
+.date_head {
+    display: block;
+    font-size: 22px;
+    color: #292929;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.adres_head {
+    display: block;
+    font-size: 26px;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    font-family: GloberBold,sans-serif;
+    line-height: 22px;
+}
+.carousel-inner>.item>img {
+    margin: 0 auto;
+    width: 100%;
+}
+.soc_links a {
+    margin-left: 15px;
+}
+.language_link {
+    list-style: none;
+    float: right;
+    margin-top: 15px;
+}
+.language_link li {
+    float: left;
+    margin-left: 20px;
+}
+.language_link li a {
+    display: block;
+    padding: 15px 0;
+    color: #b4b4b4;
+    text-transform: uppercase;
+    position: relative;
+}
+.language_link li.active a {
+    color: #343239;
+}
+.language_link li:first-child a:after {
+    content: "";
+    height: 10px;
+    width: 2px;
+    background-color: #b4b4b4;
+    position: absolute;
+    right: -11px;
+    top: -6px;
+    bottom: 0;
+    margin: auto 0;
+}
+.nav_bl {
+    background-color: #fafafa;
+}
+.title_inf_bl {
+    font-size: 22px;
+    color: #ffffff;
+    font-family: GloberBold,sans-serif;
+    text-transform: uppercase;
+    margin-top: 18px;
+    float: left;
+}
+.bl_info {
+    background-color: #f39323;
+    padding-right: 0;
+    margin-bottom: 30px;
+}
+.text_inf_bl {
+    color: #2a2a2a;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.mini_txt {
+    text-transform: none;
+}
+.link_info_bl {
+    font-size: 16px;
+    color: #2a2a2a;
+    text-transform: uppercase;
+}
+.no_pad {
+    padding: 0;
+}
+.img_bl_info {
+    float: right;
+    width: 192px;
+    position: relative;
+}
+.img_bl_info img {
+    width: 100%;
+}
+.bl_inform {
+    margin: 50px 0 0;
+    min-height: 180px;
+}
+.bl_inform:nth-child(2) .bl_info {
+    background-color: #02aef0;
+}
+.bl_inform:nth-child(3) .bl_info {
+    background-color: #90278e;
+}
+.bl_inform:nth-child(4) .bl_info {
+    background-color: #9cbb43;
+}
+section {
+    padding-bottom: 50px;
+}
+footer {
+    background-color: #1d2124;
+    padding: 20px 0 10px;
+}
+.foot_text {
+    color: #98989a;
+    font-size: 16px;
+    font-weight: bold;
+}
+.foot_text span {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.nav li {
+    float: none;
+    display: table-cell;
+    width: 1%;
+    text-align: center;
+    padding: 0 10px;
+}
+.nav li a {
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 20px 15px 12px;
+}
+.nav li:nth-child(1) a {
+    background-color: #f39323;
+}
+.nav li:nth-child(2) a {
+    background-color: #02aef0;
+}
+.nav li:nth-child(3) a {
+    background-color: #90278e;
+}
+.nav li:nth-child(4) a {
+    background-color: #9cbb43;
+}
+.nav li a:hover {
+    background-color: #b4b4b4;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+.carousel-control .glyphicon-chevron-left {
+    border-top: 3px solid;
+    border-left: 3px solid;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.carousel-control .glyphicon-chevron-right {
+    border-bottom: 3px solid;
+    border-right: 3px solid;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.carousel-control .glyphicon-chevron-left:before,.carousel-control .glyphicon-chevron-right:before {
+    content: "";
+}
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
