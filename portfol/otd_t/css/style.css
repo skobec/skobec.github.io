@@ -218,3 +218,122 @@ footer {
         width: 100%;
     }
 }
+/*blur page*/
+.body_background {
+    background: url("../img/background_heaven.jpg")no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -ms-touch-action: none;
+}
+
+.body_background, ul, li {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.body_background {
+    font-size: 12px;
+    font-style: "Light";
+    font-weight: none;
+    text-shadow: none;
+    overflow: hidden;
+}
+
+#header {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 135px;
+    line-height: 44px;
+    background: url("../img/background_heaven.jpg")no-repeat top;
+    background-size: cover;
+    padding: 0;
+    color: #eee;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0.4;
+    -webkit-filter: blur(3px);
+}
+
+.header-blur {
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 135px;
+    padding: 0;
+}
+
+canvas {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 44px;
+    bottom: 0px;
+    left: 0;
+    width: 100%;  }
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+#scroller ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+#scroller li {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#scroller li.img {
+    height: 81px;
+}

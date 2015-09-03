@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>blur_page</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="body_background">
+<div id="header">blur header</div>
+<div class="header-blur"></div>
+
+<div id="wrapper">
+    <div id="scroller">
+        <ul>
+            <li>Text text text text 1</li>
+            <li>Text text text text 2</li>
+            <li>Text text text text 3, text text</li>
+            <li>Text text text text 4</li>
+            <li>Text text text text 5</li>
+            <li>Text text text text 6</li>
+            <li>Text text text text 7</li>
+            <li>Text text text text 8</li>
+            <li>Text text text text 9</li>
+            <li>Text text text text 10, text text text text text text</li>
+            <li>Text text text text 11</li>
+            <li>Text text text text 12</li>
+            <li>Text text text text 13</li>
+            <li>Text text text text 14</li>
+            <li>Text text text text 15</li>
+            <li>Text text text text 16</li>
+            <li>Text text text text 17</li>
+            <li>Text text text text 18</li>
+            <li>Text text text text 19</li>
+            <li>Text text text text 20</li>
+            <li>Text text text text 21</li>
+            <li>Text text text text 22</li>
+            <li>Text text text text 23</li>
+            <li>Text text text text 24</li>
+            <li>Text text text text 25</li>
+            <li>Text text text text 26</li>
+            <li>Text text text text 27</li>
+            <li>Text text text text 28</li>
+            <li>Text text text text 29</li>
+            <li>Text text text text 30</li>
+            <li>Text text text text 31</li>
+            <li>Text text text text 32</li>
+            <li>Text text text text 33</li>
+            <li>Text text text text 34</li>
+            <li>Text text text text 35</li>
+            <li>Text text text text 36</li>
+            <li>Text text text text 37</li>
+            <li>Text text text text 38</li>
+            <li>Text text text text 39</li>
+            <li>Text text text text 40</li>
+            <li>Text text text text 41</li>
+            <li>Text text text text 42 text text text text</li>
+            <li>Text text text text 43</li>
+            <li>Text text text text 44</li>
+            <li>Text text text text 45</li>
+            <li>Text text text text 46</li>
+            <li>Text text text text 47</li>
+            <li>Text text text text 48</li>
+            <li>Text text text text 49</li>
+            <li>Text text text text 50</li>
+        </ul>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/iscroll-probe.js"></script>
+<script src="js/StackBlur.js"></script>
+<script src="js/canvas.js"></script>
+<script>
+    $(function() {
+        var transformCanvas = function () {
+            $("canvas").css("-webkit-transform", "translatey(-" + (0 - this.y) + "px)");
+        };
+
+        var scroller = new IScroll("#wrapper", { mouseWheel: true, probeType: 3 });
+        scroller.on("scroll", transformCanvas);
+        scroller.on("scrollEnd", transformCanvas);
+
+        html2canvas($("body"), {
+            onrendered: function(canvas) {
+                $("#header").show();
+                $("#wrapper").css("overflow", "hidden");
+                $(".header-blur").append(canvas);
+                $("canvas").attr("id", "canvas");
+                stackBlurCanvasRGB("canvas", 0, 0, $("canvas").width(), $("canvas").height(), 20);
+            }
+        });
+
+        $(document).bind("touchmove touchend", function(e) {
+            e.preventDefault();
+            transformCanvas();
+        });
+    });
+</script>
+</body>
+</html>
