@@ -48,16 +48,16 @@
                 <div class="col-xs-12">
                     <div class="btn-group" data-toggle="buttons">
                         <label class="btn_check btn btn-success active">
-                            <input type="checkbox" autocomplete="off" checked>Паспорт
+                            <input type="radio" autocomplete="off" checked>Паспорт
                         </label>
                         <label class="btn_check btn btn-success">
-                            <input type="checkbox" autocomplete="off">Полис ОМС
+                            <input type="radio" autocomplete="off">Полис ОМС
                         </label>
                         <label class="btn_check btn btn-success">
-                            <input type="checkbox" autocomplete="off">Военный билет
+                            <input type="radio" autocomplete="off">Военный билет
                         </label>
                         <label class="btn_check btn btn-success">
-                            <input type="checkbox" autocomplete="off">Свидетельство о рождении
+                            <input type="radio" autocomplete="off">Свидетельство о рождении
                         </label>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                             <span class="input_record">Серия</span>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" class="form-control" aria-label="...">
+                            <input type="text" class="form-control" aria-label="..."  maxlength="4" id="series">
                         </div>
                     </div>
                     <div class="col-xs-4 col-xs-offset-4">
@@ -75,7 +75,7 @@
                             <span class="input_record">Номер</span>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" class="form-control" aria-label="...">
+                            <input type="text" class="form-control" aria-label="..." maxlength="6" id="number">
                         </div>
                     </div>
                     <div class="col-xs-4 col-xs-offset-4">
@@ -83,12 +83,12 @@
                             <span class="input_record">Дата рождения</span>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" class="form-control" aria-label="...">
+                            <input type="text" class="form-control" aria-label="..." id="date">
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <button class="btn btn_check">Отправить</button>
+                    <a href="relative.html" class="btn btn_check">Отправить</a>
                 </div>
 
             </div>
@@ -98,5 +98,14 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/mask.js"></script>
+<script>
+    $('#series, #number').keyup(function () {
+        this.value = this.value.replace(/[^0-9]/g,'');
+    });
+    $(function($){
+        $("#date").mask("99/99/9999",{placeholder:"dd/mm/yyyy"});
+    });
+</script>
 </body>
 </html>
