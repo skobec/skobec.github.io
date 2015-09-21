@@ -13,7 +13,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="nav_menu col-xs-2">
+        <div class="nav_menu nav_menu_fix col-xs-2">
             <div class="row">
                 <div class="col-xs-12">
                     <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
@@ -24,7 +24,6 @@
                         <li class="active"><a href="appointments.html" class="record_ico">Запись на прием</a> </li>
                         <li><a href="#" class="recomend_ico">Уведомления</a> </li>
                         <li><a href="#" class="destination_ico">Назначения</a> </li>
-
                     </ul>
                 </div>
                 <a href="#" class="account_ava">
@@ -35,7 +34,7 @@
                 </a>
             </div>
         </div>
-        <div class="col-xs-10 col-xs-offset-2 content_bl">
+        <div class="col-xs-10 col-xs-offset-2 content_bl content_bl_full">
             <div class="row">
                 <div class="col-xs-12 history_block">
                     <ul class="his_lis">
@@ -49,147 +48,135 @@
             <div class="col-xs-12 data_bl">
                 <div class="col-xs-12">
                     <div class="col-xs-1">
-                        <a href="#" class="link_back">Назад</a>
+                        <a href="doc.html" class="link_back">Назад</a>
                     </div>
                 </div>
-              <div class="row">
-                  <div class="col-xs-6 text-right">
-                      <img src="img/calendar_test.jpg">
+              <div class="row calendar_and_time">
+                  <div class="col-xs-5 text-right">
+                      <!--<img src="img/calendar_test.jpg">-->
+
+                      <div class="calendar" style="margin:0 auto"></div>
+
+
                   </div>
-                  <div class="col-xs-1 time_bl">
+                  <div class="col-xs-5 time_bl">
                       <div class="group_list" data-toggle="buttons">
                           <label class="btn_check btn disabled" disabled="disabled" disabled>
                               <span disabled="disabled">8:00</span>
                           </label>
                           <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">10:00
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">12:00
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">15:00
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">16:00
+                          </label>
+                          <label class="btn_check btn btn-success">
                               <input type="radio" autocomplete="off">8:15
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">8:30
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">8:45
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">9:00
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">9:15
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">9:30
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">9:45
-                          </label>
-                      </div>
-                  </div>
-                  <div class="col-xs-1 time_bl">
-                      <div class="group_list" data-toggle="buttons">
-                          <label class="btn_check btn disabled" disabled="disabled">
-                              <span disabled="disabled">10:00</span>
                           </label>
                           <label class="btn_check btn btn-success">
                               <input type="radio" autocomplete="off">10:15
                           </label>
                           <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">10:30
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">10:45
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">11:00
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">11:15
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">11:30
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">11:45
-                          </label>
-                      </div>
-                  </div>
-                  <div class="col-xs-1 time_bl">
-                      <div class="group_list" data-toggle="buttons">
-                          <label class="btn_check btn disabled" disabled="disabled">
-                              <span disabled="disabled">12:00</span>
-                          </label>
-                          <label class="btn_check btn btn-success">
                               <input type="radio" autocomplete="off">13:15
                           </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">13:30
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">13:45
-                          </label>
                           <label class="btn_check btn disabled" disabled="disabled">
-                              <span disabled="disabled">14:00</span>
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">14:15
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">14:30
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">14:45
-                          </label>
-                      </div>
-                  </div>
-                  <div class="col-xs-1 time_bl">
-                      <div class="group_list" data-toggle="buttons">
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">15:00
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">15:15
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">15:30
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">15:45
-                          </label>
-                          <label class="btn_check btn disabled" disabled="disabled">
-                              <span disabled="disabled">16:00</span>
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">16:15
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">16:30
-                          </label>
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">16:45
-                          </label>
-                      </div>
-                  </div>
-                  <div class="col-xs-1 time_bl">
-                      <div class="group_list" data-toggle="buttons">
-                          <label class="btn_check btn btn-success">
-                              <input type="radio" autocomplete="off">16:00
+                              <span disabled="disabled">15:00</span>
                           </label>
                           <label class="btn_check btn btn-success">
                               <input type="radio" autocomplete="off">17:15
                           </label>
                           <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">8:30
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">10:30
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">13:30
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">15:30
+                          </label>
+                          <label class="btn_check btn btn-success">
                               <input type="radio" autocomplete="off">17:30
                           </label>
                           <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">8:45
+                          </label>
+                          <label class="btn_check btn disabled" disabled="disabled">
+                              <span disabled="disabled">10:45</span>
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">13:45
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">15:45
+                          </label>
+                          <label class="btn_check btn btn-success">
                               <input type="radio" autocomplete="off">17:45
+                          </label>
+                          <label class="btn_check btn disabled" disabled="disabled">
+                              <span disabled="disabled">9:00</span>
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">11:00
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">14:00
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">16:00
                           </label>
                           <label class="btn_check btn btn-success">
                               <input type="radio" autocomplete="off">18:00
                           </label>
                           <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">9:15
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">11:15
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">14:15
+                          </label>
+                          <label class="btn_check btn disabled" disabled="disabled">
+                              <span disabled="disabled">16:15</span>
+                          </label>
+                          <label class="btn_check btn btn-success">
                               <input type="radio" autocomplete="off">18:15
                           </label>
                           <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">9:30
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">11:30
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">14:30
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">16:30
+                          </label>
+                          <label class="btn_check btn btn-success">
                               <input type="radio" autocomplete="off">18:30
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">9:45
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">11:45
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">14:45
+                          </label>
+                          <label class="btn_check btn btn-success">
+                              <input type="radio" autocomplete="off">16:45
                           </label>
                       </div>
                   </div>
@@ -204,5 +191,23 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.supercal.js"></script>
+<script>
+    $('.calendar').supercal({
+        transition: 'carousel-vertical'
+    });
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
 </body>
 </html>

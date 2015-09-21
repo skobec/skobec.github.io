@@ -120,7 +120,8 @@ a:hover,a:active,a:focus {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    height: 84%;
+    height: auto;
+    min-height: 87vh;
     padding: 30px 15px;
 }
 .data_bl_center {
@@ -432,7 +433,7 @@ a:hover,a:active,a:focus {
 }
 .search_input {
     border: 0;
-    border-bottom: 2px solid #4ebfae;
+    border-bottom: 1px solid #4ebfae;
     color: #4ebfae;
     font-size: 14px;
     font-family: Roboto,sans-serif;
@@ -790,14 +791,158 @@ a:hover,a:active,a:focus {
 }
 .time_bl {
     padding-right: 0;
+    min-width: 460px;
 }
 .time_bl .btn_check {
-    display: block;
-    margin-right: 0;
-    margin-bottom: 9px;
-    padding: 8px 0;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 7px 0;
     border: 1px solid;
+    width: 78px;
+    float: left;
 }
 .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
     opacity: .15;
+}
+.supercal {
+    width: 225px;
+    float: right;
+}
+.supercal .supercal-header {
+    display: block;
+    line-height: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    /*position: relative;*/
+    position: absolute;
+    top: -52px;
+    width: 150px;
+    left: 100%;
+}
+.supercal .supercal-header .prev-month {
+    float: left;
+}
+.supercal .supercal-header .next-month {
+    float: right;
+}
+.supercal-month {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.supercal table {
+    /*width: 300px;*/
+    width: 211px;
+    table-layout: fixed;
+    background: #fff;
+}
+.supercal td {
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.supercal td:hover {
+    background: #4EBFAE !important;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.supercal td.month-prev, .supercal td.month-next {
+    background: none;
+    color: #cccccc;
+}
+.supercal td.selected {
+    background: #4EBFAE;
+    color: #fff;
+    font-weight: normal;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.supercal td.today {
+    font-weight: bold;
+}
+/* Footer */
+.supercal .supercal-footer {
+    width: 100%;
+    display: table;
+}
+.supercal .supercal-footer span.supercal-input {
+    /*display: table-cell;*/
+    display: none;
+    width: 100%;
+    cursor: default;
+}
+.supercal tr:first-child th {
+    border-bottom: 1px solid #e6e6e6;
+    font-weight: normal;
+    padding: 0 0 3px 6px;
+    color: #cccccc;
+}
+.supercal table tbody tr th, .supercal table tr td {
+    border-top: 0;
+    color: #666666;
+    font-weight: bold;
+    text-align: center;
+}
+.month div {
+    color: #4ebfae;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.change-month {
+    background-color: transparent;
+    margin-top: 10px;
+}
+.prev-month  {
+    border-top: 2px solid #4EBFAE;
+    border-left: 2px solid #4EBFAE;
+    height: 8px;
+    width: 8px;
+    padding: 0;
+    border-radius: 0;
+    -webkit-transform: rotate(-43deg);
+    -moz-transform: rotate(-43deg);
+    -ms-transform: rotate(-43deg);
+    -o-transform: rotate(-43deg);
+    transform: rotate(-43deg);
+    outline: none!important;
+}
+.next-month  {
+    border-bottom: 2px solid #4EBFAE;
+    border-right: 2px solid #4EBFAE;
+    height: 8px;
+    width: 8px;
+    padding: 0;
+    border-radius: 0;
+    -webkit-transform: rotate(-43deg);
+    -moz-transform: rotate(-43deg);
+    -ms-transform: rotate(-43deg);
+    -o-transform: rotate(-43deg);
+    transform: rotate(-43deg);
+    outline: none!important;
+}
+.supercal-today {
+    display: none;
+}
+.calendar_and_time {
+    margin-top: 50px;
 }
