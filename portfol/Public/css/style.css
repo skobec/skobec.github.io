@@ -792,6 +792,7 @@ a:hover,a:active,a:focus {
 .time_bl {
     padding-right: 0;
     min-width: 460px;
+    max-width: 500px;
 }
 .time_bl .btn_check {
     display: inline-block;
