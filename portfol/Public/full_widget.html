@@ -23,7 +23,7 @@
                     <ul class="nav nav_icon">
                         <li class="active"><a href="monitoring.html" class="monitoring_ico">Мониторинг</a> </li>
                         <li><a href="appointments.html" class="record_ico">Запись на прием</a> </li>
-                        <li><a href="#" class="recomend_ico">Уведомления</a> </li>
+                        <li><a href="recomend.html" class="recomend_ico">Уведомления</a> </li>
                     </ul>
                 </div>
                 <a href="#" class="account_ava">
@@ -77,7 +77,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="graf" class="graf" style=" height: 200px; width: 100%; margin: 0 auto"></div>
+                                    <div id="graf" class="graf graf_full" class="graf" style=" height: 200px; width: 102%; margin: 0 0 0 -1%"></div>
                                     <div class="col-xs-12 info_full_widg">
                                         <div class="col-xs-12 rec_pag">
                                             <label>Показывать по</label>
@@ -212,7 +212,8 @@
         $('#graf').highcharts({
             chart: {
                 type: 'spline',
-                inverted: false
+                inverted: false,
+
             },
             title:{
                 text:''
@@ -221,227 +222,106 @@
                 text:''
             },
             xAxis: {
-                reversed: false,
-                title: {
-                    enabled: false,
-                    text: 'Altitude'
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    day: '%e of %b'
                 },
-                labels: {
-                    formatter: function () {
-                        return this.value + 'km';
-                    }
-                },
-                maxPadding: 0.05,
-                showLastLabel: true
+                lineWidth: 0
             },
             yAxis: {
                 title: {
                     enabled: false,
                     text: 'Temperature'
                 },
-                labels: {
-                    formatter: function () {
-                        return this.value + '';
+                min: 0,
+                minorGridLineWidth: 0,
+                gridLineWidth: 0,
+                alternateGridColor: null,
+                plotBands: [{ // 1 var
+                    from: 0.5,
+                    to: 13,
+                    color: '#f6fcfb',
+                    label: {
+                        text:'Покой',
+                        y: 3,
+                        x: -6,
+                        align:'right',
+                        style: {
+                            color: '#4ebfae'
+                        }
                     }
                 },
-                lineWidth: 2
+                    { // 2 var
+                        from: 27,
+                        to: 15,
+                        color: '#f6fcfb',
+                        label: {
+                            text: 'Актив ',
+                            y: 3,
+                            x: -6,
+                            align:'right',
+                            style: {
+                                color: '#4ebfae'
+                            }
+                        }
+                    }
+                ],
+
+                labels: {
+                    align: 'left',
+                    x: 3,
+                    y: 16,
+                    format: '{value:.,0f}'
+                },
+                lineWidth: 0
             },
+
             legend: {
                 enabled: false
             },
             tooltip: {
                 headerFormat: '<b>{series.name}</b><br/>',
-                pointFormat: '{point.x} у: {point.y}°C'
+                pointFormat: '{point.x} у: {point.y}',
+                shadow: false
+
             },
             plotOptions: {
                 spline: {
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
                     marker: {
-                        enable: false
-                    }
+                        enabled: true,
+                        symbol: '',
+                        states: {
+                            hover: {
+                                enabled: false
+                            }
+                        }
+                    },
+                    pointInterval: 1 // one hour
                 }
             },
             series: [{
                 name: 'Пульс',
-                data: [[0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
-                    [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]],
+                data: [15.0, 16.9, 18.5, 18.5, 18.2, 21.5, 25.2, {
+                    y: 26.5
+                }, 23.3, 18.3, 15.9, 15.6],
+                marker: {
+                    symbol: 'circle'
+                },
                 color: '#4ebfae'
-            }]
-        });
-        $('#graf_3').highcharts({
-            chart: {
-                type: 'spline',
-                inverted: false
             },
-            title:{
-                text:''
-            },
-            subTitle:{
-                text:''
-            },
-            xAxis: {
-                reversed: false,
-                title: {
-                    enabled: false,
-                    text: 'Altitude'
-                },
-                labels: {
-                    formatter: function () {
-                        return this.value + 'km';
-                    }
-                },
-                maxPadding: 0.05,
-                showLastLabel: true
-            },
-            yAxis: {
-                title: {
-                    enabled: false,
-                    text: 'Temperature'
-                },
-                labels: {
-                    formatter: function () {
-                        return this.value + '';
-                    }
-                },
-                lineWidth: 2
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                headerFormat: '<b>{series.name}</b><br/>',
-                pointFormat: '{point.x} у: {point.y}°C'
-            },
-            plotOptions: {
-                spline: {
-                    marker: {
-                        enable: false
-                    }
+                {
+                    name: 'Пульс',
+                    data: [{
+                        y: 3.9
+                    }, 4.2, 5.7, 8.5, 10.9, 12.2, 12.0, 12.6, 12.2, 10.3]
                 }
-            },
-            series: [{
-                name: 'Пульс',
-                data: [[0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
-                    [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]],
-                color: '#4ebfae'
-            }]
-        });
-        $('#graf_4').highcharts({
-            chart: {
-                type: 'spline',
-                inverted: false
-            },
-            title:{
-                text:''
-            },
-            subTitle:{
-                text:''
-            },
-            xAxis: {
-                reversed: false,
-                title: {
-                    enabled: false,
-                    text: 'Altitude'
-                },
-                labels: {
-                    formatter: function () {
-                        return this.value + 'km';
-                    }
-                },
-                maxPadding: 0.05,
-                showLastLabel: true
-            },
-            yAxis: {
-                title: {
-                    enabled: false,
-                    text: 'Temperature'
-                },
-                labels: {
-                    formatter: function () {
-                        return this.value + '';
-                    }
-                },
-                lineWidth: 2
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                headerFormat: '<b>{series.name}</b><br/>',
-                pointFormat: '{point.x} у: {point.y}°C'
-            },
-            plotOptions: {
-                spline: {
-                    marker: {
-                        enable: false
-                    }
-                }
-            },
-            series: [{
-                name: 'Пульс',
-                data: [[0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
-                    [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]],
-                color: '#4ebfae'
-            }]
-        });
-    });
-    $(function () {
-        $('#graf_2').highcharts({
-            chart: {
-                type: 'spline',
-                inverted: false
-            },
-            title:{
-                text:''
-            },
-            subTitle:{
-                text:''
-            },
-            xAxis: {
-                reversed: false,
-                title: {
-                    enabled: false,
-                    text: 'Altitude'
-                },
-                labels: {
-                    formatter: function () {
-                        return this.value + 'km';
-                    }
-                },
-                maxPadding: 0.05,
-                showLastLabel: true
-            },
-            yAxis: {
-                title: {
-                    enabled: false,
-                    text: 'Temperature'
-                },
-                labels: {
-                    formatter: function () {
-                        return this.value + '';
-                    }
-                },
-                lineWidth: 2
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                headerFormat: '<b>{series.name}</b><br/>',
-                pointFormat: '{point.x} у: {point.y}°C'
-            },
-            plotOptions: {
-                spline: {
-                    marker: {
-                        enable: false
-                    }
-                }
-            },
-            series: [{
-                name: 'Пульс',
-                data: [[0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
-                    [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]],
-                color: '#4ebfae'
-            }]
+            ]
         });
     });
 

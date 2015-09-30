@@ -1063,10 +1063,15 @@ a.recomend_ico:hover,.active .recomend_ico {
     position: relative;
     min-height: 307px!important;
     width: 283px;
+    overflow: hidden;
 }
 .graf {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     float: left;
+}
+.graf_full {
+    position: relative;
 }
 .graf:after {
     content: "";
@@ -1194,12 +1199,13 @@ a.recomend_ico:hover,.active .recomend_ico {
 }
 .select_cart {
     border-bottom: 0;
-    width: 89px;
+    width: 82px;
     height: 32px;
     margin-left: -2px;
+    padding-left: 1px;
 }
 .select_cart select {
-    width: 85px;
+    width: 91px;
     font-weight: normal;
 
 }
@@ -1455,11 +1461,24 @@ a.recomend_ico:hover,.active .recomend_ico {
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid #4ebfae;
-    color: #4ebfae;
+    color: rgba(78, 191, 174, 0.72);
+    width: 100%;
+    text-align: left;
+    font-size: 11px;
+    padding-bottom: 5px;
+    position: relative;
+    padding-right: 50px;
+    z-index: 1;
+}
+.inp_crit_txt span {
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    color: rgba(78, 191, 174, 0.72);
     width: 100%;
     text-align: right;
     font-size: 11px;
-    padding-bottom: 5px;
+    z-index: 0;
 }
 .inp_criterien::-webkit-input-placeholder {color: rgba(78, 191, 174, 0.63);}
 .inp_criterien::-moz-placeholder          {color: rgba(78, 191, 174, 0.69);}/* Firefox 19+ */
@@ -1562,6 +1581,26 @@ a.recomend_ico:hover,.active .recomend_ico {
 .del_rec_kart_w:hover {
     color: #d94039;
 }
-/*=======*/
-/********************************/
-/*>>>>>>> origin/master*/
+
+
+.link_list {
+    list-style: none;
+    line-height: 50px;
+}
+.highcharts-tooltip {
+    box-shadow: none;
+}
+.kart_dat .btn-group .btn_check {
+    padding: 4px 12px;
+}
+.kart_list_links a {
+    line-height: 30px;
+    opacity: 0.6;
+    display: block;
+}
+.kart_list_links a:hover {
+    opacity: 1;
+}
+.highcharts-axis-labels.highcharts-xaxis-labels text,.highcharts-axis-labels.highcharts-yaxis-labels text {
+    fill: #b3b3b3!important;
+}

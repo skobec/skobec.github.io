@@ -241,6 +241,7 @@
 .calendar-body span {
   line-height: 26px;
   border: 1px dashed transparent;
+  border-radius: 4px;
 }
 
 .calendar-body span:hover {
@@ -249,10 +250,11 @@
 
 .calendar-body span.calendar_active {
   color: white !important;
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
-  background-color:  #50BFAE !important;
-  border: 1px solid rgba(0, 0, 0, 0.15) !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+  /* text-shadow: 0 2px 1px rgba(0, 0, 0, 0.15); */
+  background-color: #50BFAE !important;
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset; */
+  border-radius: 4px;
 }
 
 .calendar-body span.calendar_otherMonth,
@@ -272,7 +274,7 @@
 }
 
 .calendar-body span.calendar_inRange {
-  background-color: rgba(122, 207, 194, 0.45);
+  /*background-color: rgba(122, 207, 194, 0.45);*/
 }
 
 .calendar-body span.calendar_inRange:hover {
