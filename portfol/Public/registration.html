@@ -11,7 +11,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 </head>
 <body>
-<div class="start_page">
+<div class="start_page registration">
     <div class="vert_cntr_start">
         <div class="container">
             <div class="row">
@@ -19,25 +19,37 @@
                     <span class="logo_start"></span>
                 </div>
                 <div class="col-xs-12 text-center">
-                    <p class="start_cont">Следите за своим здоровьем, получайте рекомедации и записывайтесь на прием.
-                        Все это в одном приложении. </p>
+                    <p class="start_cont">Регистрация</p>
                 </div>
             </div>
             <div class="row bl_log_pas">
+            <script>
+                function ShowHidePassword(id) {
+                element = document.getElementById(id);
+                if (element.type == 'password') {
+                    element.type = 'text';
+                }
+                else {
+                    element.type = 'password';
+                }
+                }  
+            </script>
                 <div class="col-xs-12">
-                    <input type="text" class="form-control input_log" aria-label="..." placeholder="Логин" name="login">
+                    <input type="text" class="form-control input_log" aria-label="..." placeholder="Ваш e-mail" name="login">
                 </div>
                 <div class="col-xs-12">
-                    <input type="password" class="form-control input_log" aria-label="..." placeholder="Пароль" name="password">
+                    <input type="password" class="form-control input_log" id="id-reg-pass" aria-label="..." placeholder="Пароль" name="password">
+                    <a href="#" class="ShowHidePassword" onclick="ShowHidePassword('id-reg-pass')">Показать</a>
                 </div>
                 <div class="col-xs-12">
-                    <a href="add_widget.html" class="btn btn-danger btn_log">Войти</a>
+                    <a href="registration2.html" class="btn btn-danger btn_log">Зарегистрироваться</a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-4 col-xs-offset-4 text-center">
-                    <a href="#" class="link_login_pas">Напомнить пароль</a>
-                    <a href="registration.html" class="link_login_pas">Зарегистрироваться</a>
+                <div class="text-center link-regist">
+                    <div><a href="index.html" class="link_login_pas">Войти</a></div>
+                    <div><a href="agreement.html" class="link_login_pas">Пользовательское соглашение</a></div>
+                    <div><a href="agreement-confidential.html" class="link_login_pas">Соглашение о конфиденциальности</a></div>
                 </div>
             </div>
             <div class="row aps_link">

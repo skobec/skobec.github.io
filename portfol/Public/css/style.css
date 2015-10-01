@@ -1408,6 +1408,33 @@ a.recomend_ico:hover,.active .recomend_ico {
     float: none;
 }
 .recomend-graf{border: 1px solid #eee;display: inline-block;}
+
+/************/
+/*Registration*/
+.registration .col-xs-4{width: auto;}
+.link-regist div{margin: 10px 0;}
+a.ShowHidePassword{color: #4ebfae;font-size: 12px;position: absolute;top: 10px;right: 15px;}
+.registration .col-xs-12{position: relative;}
+.registration-answer{color: #fff;text-align: center;margin: 140px 0 110px;font-size: 16px;line-height: 25px;}
+.agreement{
+    padding: 30px 10px 20px 30px;
+    width: 620px;
+    height:300px;
+    overflow: hidden;
+    border-radius:10px;
+    background: #000;
+    color:#fff;
+    font-size: 12px;
+}
+.agreement-text{overflow-y: scroll;max-height: 100%;padding: 0 20px 0 0;}
+::-webkit-scrollbar              {background: #000;width: 7px;}
+/*::-webkit-scrollbar-button       {}*/
+::-webkit-scrollbar-track        {}
+::-webkit-scrollbar-track-piece  {}
+::-webkit-scrollbar-thumb        {background: #fff;border-radius: 10px;}
+::-webkit-scrollbar-corner       {}
+::-webkit-resizer                {}
+/************/
 /*<<<<<<< HEAD*/
 /********************************/
 
@@ -1422,6 +1449,8 @@ a.recomend_ico:hover,.active .recomend_ico {
     font-size: 14px;
     height: 34px;
     width: 100%;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
 }
 .calendar_data:after {
     content: "";
@@ -1464,11 +1493,12 @@ a.recomend_ico:hover,.active .recomend_ico {
     color: rgba(78, 191, 174, 0.72);
     width: 100%;
     text-align: left;
-    font-size: 11px;
+    font-size: 14px;
     padding-bottom: 5px;
     position: relative;
     padding-right: 50px;
     z-index: 1;
+    font-family: 'Roboto', sans-serif;
 }
 .inp_crit_txt span {
     position: absolute;
@@ -1518,8 +1548,8 @@ a.recomend_ico:hover,.active .recomend_ico {
 }
 .btn_black:focus,.btn_black:active,.btn_black:hover {
     outline: none;
-    color: #ffffff;
-    border-color: #17d6cb;
+    color: #5df6e4;
+    border-color: #1af1e5;
 }
 .flip-container .btn-group {
     margin-top: -20px;
@@ -1549,6 +1579,8 @@ a.recomend_ico:hover,.active .recomend_ico {
 .num_rec_fw span {
     color: #4ebfae;
     font-size: 14px;
+    margin-bottom: 6px;
+    float: left;
 }
 .date_rec_fw span {
     color: #b3b3b3;
