@@ -173,6 +173,11 @@ footer {
     font-size: 20px;
     text-transform: uppercase;
     padding: 20px 15px 12px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
 .nav li:nth-child(1) a {
     background-color: #f39323;
