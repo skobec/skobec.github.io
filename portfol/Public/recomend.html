@@ -13,6 +13,32 @@
         function moreinfo(el){
             $(".info-text").slideToggle(100);
         }
+        function morepollsinfo(el){
+            $(".polls-info-text").slideToggle(100);
+        }
+        function otlozhit(){
+            $(".data_bl_black2").animate({opacity:"0"}, 400);
+            setTimeout('$(".data_bl_black2").css({display:"none"})', 300);
+        }
+        function otlozhit1(){
+            $(".data_bl_black2").animate({opacity:"0"}, 400);
+            setTimeout('$(".data_bl_black2").css({display:"none"})', 300);
+        }
+        function otlozhit2(){
+            $(".data_bl_black2").animate({opacity:"0"}, 400);
+            setTimeout('$(".data_bl_black2").css({display:"none"})', 300);
+        }
+        function otlozhit3(){
+            $(".data_bl_black2").animate({opacity:"0"}, 400);
+            setTimeout('$(".data_bl_black2").css({display:"none"})', 300);
+        }
+        function otlozhit4(){
+            $(".data_bl_black1").animate({opacity:"0"}, 500);
+            setTimeout('$(".data_bl_black1").css({display:"none"})', 500);
+        }
+        function otlozhit5(){
+            $(".data_bl_black1").css({position:"static", background: "#fff", color: "#000"});
+        }
     </script>
 </head>
 <body>
@@ -30,7 +56,7 @@
                         <li class="active"><a href="recomend.html" class="recomend_ico">Уведомления</a> </li>
 <!--<<<<<<< HEAD-->
 <!--=======-->
-                        <li><a href="#" class="destination_ico">Назначения</a> </li>
+                        <!--<li><a href="#" class="destination_ico">Назначения</a> </li>-->
 <!--&gt;>>>>>> origin/master-->
                     </ul>
                 </div>
@@ -47,7 +73,8 @@
                 <div>
                     <div>
                         <ul class="nav tabular" role="tablist">
-                            <li role="presentation" class="active"><a href="#new-tab" aria-controls="home" role="tab" data-toggle="tab" class="new-tab">Новые</a></li>
+                            <li role="presentation" class="active"><a href="#all-tab" aria-controls="home" role="tab" data-toggle="tab" class="all-tab">Все</a></li>
+                            <li role="presentation"><a href="#deferred-tab" aria-controls="profile" role="tab" data-toggle="tab" class="deferred-tab">Отложенные</a></li>
                             <li role="presentation"><a href="#delete-tab" aria-controls="profile" role="tab" data-toggle="tab" class="delete-tab">Удаленные</a></li>
                         </ul>
                     </div>
@@ -55,13 +82,13 @@
                 <div>
                     <div class="col-xs-12">
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane fade in active" id="new-tab">
+                            <div role="tabpanel" class="tab-pane fade in active" id="all-tab">
                                 <div class="row">
-                                    <div>
-                                        <div class="recom-title">Диспансеризация</div>
-                                        <div class="recom-data title_table "><span>Сегодня</span></div>
-                                    </div>
                                     <div class="data_bl">
+                                        <div>
+                                            <div class="recom-title">Диспансеризация</div>
+                                            <div class="recom-data title_table "><span>Сегодня</span></div>
+                                        </div>
                                         В этом году вы имеете право на бесплатную диспансеризацию, то есть можете пройти полное обследование в клинике, к которой прикреплены.
                                         <div class="more-info" onclick="moreinfo()"><span>Подробная иформация</span></div>
                                         <div class="info-text">
@@ -90,13 +117,66 @@
                                         </div>
                                         <a href="appointments.html" class="button-appoint">Записаться</a>
                                     </div>
-                                    <div>
-                                        <div class="recom-title">Высокая температура</div>
-                                        <div class="recom-data title_table "><span>15 марта 2015</span></div>
-                                        <div class="recom-setup"><a href="appointments.html" class="">Записаться к терапевту</a><a href="" class="">Не показывать рекомендацию</a><a href="" class="">Удалить</a></div>
+                                    <div class="data_bl_black data_bl_black1">
+                                        <div class="polls-info">
+                                            <div class="polls-info-title" onclick="morepollsinfo()">
+                                                Зачем нам это знать?
+                                            </div>
+                                            <div class="polls-info-text">
+                                                <img src="img/trig.png">
+                                                Чем больше мы будем о вас знать, тем точнее будут наши рекомендации.
+                                            </div>
+                                        </div>
+                                        <div>
+                                            Когда вы родились?
+                                            <div class="poll-answer">
+                                                <div>
+                                                    <form action="" name="poll_form" onsubmit="return validate_form ( );">
+                                                        <input name="birthday" type="text" class="form-control input_data_birth" aria-label="..." id="date_birth" placeholder="дд.мм.гггг">
+                                                        <input type="button" class="button-appoint" value="Ответить" onclick="otlozhit4()">
+                                                    </form>
+                                                </div>
+                                                <div>
+                                                    <a href="#" onclick="otlozhit5()">Отложить</a>
+                                                </div>                                            
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="data_bl_black data_bl_black2">
+                                        <div class="polls-info">
+                                            <div class="polls-info-title" onclick="morepollsinfo()">
+                                                Зачем нам это знать?
+                                            </div>
+                                            <div class="polls-info-text">
+                                                <img src="img/trig.png">
+                                                Чем больше мы будем о вас знать, тем точнее будут наши рекомендации.
+                                            </div>
+                                        </div>
+                                        <div>
+                                            Случались ли у Вас неприятности из-за употребления алкоголя или наркотиков?
+                                            <div class="poll-answer">
+                                                <div>
+                                                    <form action="">
+                                                        <input type="text" class="button-appoint" style="width:100px" value="Да" onclick="otlozhit1()">
+                                                        <input type="text" class="button-appoint" style="width:100px" value="Нет" onclick="otlozhit2()">
+                                                        <input type="text" class="button-appoint" value="Не употребляю" onclick="otlozhit3()">
+                                                    </form>
+                                                </div>
+                                                <div>
+                                                    <a href="#" onclick="otlozhit()">Отложить</a>
+                                                </div>                                            
+                                            </div>
+                                        </div>
                                         <div class="clear"></div>
                                     </div>
                                     <div class="data_bl">
+                                        <div>
+                                            <div class="recom-title">Высокая температура</div>
+                                            <div class="recom-data title_table "><span>15 марта 2015</span></div>
+                                            <div class="recom-setup"><a href="appointments.html" class="">Записаться к терапевту</a><a href="" class="">Не показывать рекомендацию</a><a href="" class="">Удалить</a></div>
+                                            <div class="clear"></div>
+                                        </div>
                                         <p>Повышенная температура тела является не болезнью, а симптомом. Ее повышение указывает на то, что организм борется с какой-либо болезнью, определять которую должен врач. Фактически, повышенная температура тела – это защитная реакция организма (иммунной системы), который посредством различных биохимических реакций, ликвидирует очаг инфекции, при этом повышая температуру тела. Установлено, что при температуре 38°С, большинство вирусов и бактерий погибает, или как минимум их жизнедеятельность подвергается угрозе.</p>
                                         <div style="text-align:center;">
                                             <div class="recomend-graf">
@@ -183,13 +263,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="delete-tab">
-                             <div class="row">
-                                    <div>
-                                        <div class="recom-title">Диспансеризация</div>
-                                        <div class="recom-data title_table "><span>Сегодня</span></div>
-                                    </div>
+                            <div role="tabpanel" class="tab-pane fade" id="deferred-tab">
+                                <div class="row">
                                     <div class="data_bl">
+                                        <div>
+                                            <div class="recom-title">Диспансеризация</div>
+                                            <div class="recom-data title_table "><span>Сегодня</span></div>
+                                        </div>
                                         В этом году вы имеете право на бесплатную диспансеризацию, то есть можете пройти полное обследование в клинике, к которой прикреплены.
                                         <div class="more-info" onclick="moreinfo()"><span>Подробная иформация</span></div>
                                         <div class="info-text">
@@ -218,18 +298,65 @@
                                         </div>
                                         <a href="appointments.html" class="button-appoint">Записаться</a>
                                     </div>
-                                    <div>
-                                        <div class="recom-title">Высокая температура</div>
-                                        <div class="recom-data title_table "><span>15 марта 2015</span></div>
-                                        <div class="recom-setup"><a href="appointments.html" class="">Записаться к терапевту</a><a href="" class="">Не показывать рекомендацию</a><a href="" class="">Удалить</a></div>
-                                        <div class="clear"></div>
-                                    </div>
                                     <div class="data_bl">
+                                        <div>
+                                            <div class="recom-title">Высокая температура</div>
+                                            <div class="recom-data title_table "><span>15 марта 2015</span></div>
+                                            <div class="recom-setup"><a href="appointments.html" class="">Записаться к терапевту</a><a href="" class="">Не показывать рекомендацию</a><a href="" class="">Удалить</a></div>
+                                            <div class="clear"></div>
+                                        </div>
                                         <p>Повышенная температура тела является не болезнью, а симптомом. Ее повышение указывает на то, что организм борется с какой-либо болезнью, определять которую должен врач. Фактически, повышенная температура тела – это защитная реакция организма (иммунной системы), который посредством различных биохимических реакций, ликвидирует очаг инфекции, при этом повышая температуру тела. Установлено, что при температуре 38°С, большинство вирусов и бактерий погибает, или как минимум их жизнедеятельность подвергается угрозе.</p>
 <!--<<<<<<< HEAD-->
-                                        <div class="recom-img"><img src="/img/Recommend_img1.png"></div>
 <!--=======-->
-                                        <div class="recom-img"><img src="img/Recommend_img1.png"></div>
+<!--&gt;>>>>>> origin/master-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="delete-tab">
+                                <div class="row">
+                                    <div class="data_bl">
+                                        <div>
+                                            <div class="recom-title">Диспансеризация</div>
+                                            <div class="recom-data title_table "><span>Сегодня</span></div>
+                                        </div>
+                                        В этом году вы имеете право на бесплатную диспансеризацию, то есть можете пройти полное обследование в клинике, к которой прикреплены.
+                                        <div class="more-info" onclick="moreinfo()"><span>Подробная иформация</span></div>
+                                        <div class="info-text">
+                                            <p>Всем гражданам 1 раз в 3 года предлагается пройти диспансеризацию.</p>
+                                            <p>Обращаться нужно в поликлинику, к которой вы прикреплены для обслуживания по своему полису обязательного медицинского страхования (ОМС). Напомним: сейчас пациенты вправе выбирать как медицинскую страховую компанию для получения полиса, так и поликлинику, к которой хотели бы прикрепиться.</p>
+                                            <p>
+                                                <strong>1. Какие обследования можно пройти?</strong>
+                                                Диспансеризация проводится в два этапа. Первый – скрининг: у граждан выявляются признаки наиболее распространенных хронических болезней, факторы риска развития таких заболеваний. Если результаты обследований оказались тревожными – важные показатели состояния здоровья серьезно отклоняются от нормы, то назначаются дополнительные обследования. Они проводятся в рамках второго этапа диспансеризации.
+                                                Первый этап включается в себя 20 видов обследований и анализов, среди них 10 особенно значимых, а именно:
+                                                - определение уровня общего холестерина в крови,
+                                                - определение уровня глюкозы в крови,
+                                                - флюорография легких,
+                                                - определение уровня простатспецифического антигена в крови (для мужчин в возрасте старше 50 лет),
+                                                - маммографию (для женщин в возрасте 39 лет и старше),
+                                                - мазок с шейки матки на цитологическое исследование (для женщин всех возрастов, проходящих диспансеризацию),
+                                                - клинический анализ крови (в объеме не менее определения концентрации гемоглобина в эритроцитах, количества лейкоцитов и скорости оседания эритроцитов),
+                                                - исследование кала на скрытую кровь (для граждан в возрасте 45 лет и старше),
+                                                - ультразвуковое исследование органов брюшной полости (для граждан в возрасте 39 лет и старше с периодичностью 1 раз в 6 лет),
+                                                - измерение внутриглазного давления (для граждан в возрасте 39 лет и старше).
+                                                В рамках второго этапа диспансеризации при необходимости назначаются гастроскопия, колоноскопия, ректороманоскопия, дуплексное сканирование брахицефальных артерий, другие обследования и консультации врачей-специалистов.
+                                            </p>
+                                            <p>
+                                                <strong>2. Можно ли отказаться от отдельных видов анализов/обследований, если недавно уже сдавал/проходил их?</strong>
+                                                Многие приходят в ужас, едва услышав об «угрозе» гастроскопии или колоноскопии и готовы бежать подальше от такой диспансеризации. Однако в приказе подчеркивается, что гражданин вправе отказаться от любого из обследований и анализов, при этом право на остальные сохраняется в полном объеме (пункт 8 приказа). Также приказ специально оговаривает, что флюорография не проводится, если пациенту в течение предшествующего календарного года либо года проведения диспансеризации проводилась рентгенография (рентгеноскопия) или компьютерная томография органов грудной клетки.
+                                            </p>
+                                        </div>
+                                        <a href="appointments.html" class="button-appoint">Записаться</a>
+                                    </div>
+                                    <div class="data_bl">
+                                        <div>
+                                            <div class="recom-title">Высокая температура</div>
+                                            <div class="recom-data title_table "><span>15 марта 2015</span></div>
+                                            <div class="recom-setup"><a href="appointments.html" class="">Записаться к терапевту</a><a href="" class="">Не показывать рекомендацию</a><a href="" class="">Удалить</a></div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <p>Повышенная температура тела является не болезнью, а симптомом. Ее повышение указывает на то, что организм борется с какой-либо болезнью, определять которую должен врач. Фактически, повышенная температура тела – это защитная реакция организма (иммунной системы), который посредством различных биохимических реакций, ликвидирует очаг инфекции, при этом повышая температуру тела. Установлено, что при температуре 38°С, большинство вирусов и бактерий погибает, или как минимум их жизнедеятельность подвергается угрозе.</p>
+<!--<<<<<<< HEAD-->
+<!--=======-->
 <!--&gt;>>>>>> origin/master-->
                                     </div>
                                 </div>
@@ -246,6 +373,12 @@
 <script src="js/flip.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="js/mask.js"></script>
+<script>
+    $(function($){
+        $("#date_birth").mask("99.99.9999",{placeholder:"дд.мм.гггг"});
+    });
+</script>
 <!--<script>-->
     <!--$(".flip").flip();-->
 <!--</script>-->

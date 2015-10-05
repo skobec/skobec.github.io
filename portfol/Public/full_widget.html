@@ -267,7 +267,6 @@
     $(function () {
         $('#graf').highcharts({
             chart: {
-
                 type: 'spline',
                 inverted: false
 
@@ -280,8 +279,10 @@
             },
             xAxis: {
                 type: 'datetime',
-                dateTimeLabelFormats: {
-                    day: '%e of %b'
+                labels: {
+                    format: '{value:%d.%m}',
+                    rotation: 0,
+                    align: 'left'
                 },
                 lineWidth: 0
             },
@@ -295,22 +296,22 @@
                 gridLineWidth: 0,
                 alternateGridColor: null,
                 plotBands: [{ // 1 var
-                    from: 0.5,
-                    to: 13,
+                    from: 0,
+                    to: 40,
                     color: '#f6fcfb',
                     label: {
-                        style: {
-                            color: '#4ebfae',
-                        },
                         text:'Покой',
                         y: 3,
                         x: 0,
-                        align:'right'
+                        align:'right',
+                        style: {
+                            color: '#4ebfae'
+                        }
                     }
                 },
                     { // 2 var
-                        from: 27,
-                        to: 15,
+                        from: 48,
+                        to: 90,
                         color: '#f6fcfb',
                         label: {
                             text: 'Актив ',
@@ -325,10 +326,7 @@
                 ],
 
                 labels: {
-                    style: {
-                        fontFamily: 'Roboto,san-serif',
-                        fontSize: '10px'
-                    },
+
                     x: 0,
                     y: 0,
                     format: '{value:.,0f}'
@@ -367,9 +365,9 @@
             },
             series: [{
                 name: 'Пульс',
-                data: [15.0, 16.9, 18.5, 18.5, 18.2, 21.5, 25.2, {
-                    y: 26.5
-                }, 23.3, 18.3, 15.9, 15.6],
+                data: [10.9, 20.5, 16.4, 30.2, 40.0, 40.0, 20.6, 30.5, 40.4, 20.1, 30.6, 30.4],
+                pointInterval: 7 * 36e5,
+                pointStart: Date.UTC(2013, 2, 8),
                 marker: {
                     symbol: 'circle',
                     radius: 3
@@ -378,9 +376,9 @@
             },
                 {
                     name: 'Пульс',
-                    data: [{
-                        y: 3.9
-                    }, 4.2, 5.7, 8.5, 10.9, 12.2, 12.0, 12.6, 12.2, 10.3],
+                    data: [50.9, 60.5, 60.4, 70.2, 50.0, 60.0, 80.6, 80.5, 70.4, 60.1, 50, 50.4],
+                    pointInterval: 7 * 36e5,
+                    pointStart: Date.UTC(2013, 2, 8),
                     marker: {
                         symbol: 'circle',
                         radius: 3
