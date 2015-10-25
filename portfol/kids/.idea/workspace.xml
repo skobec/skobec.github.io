@@ -50,15 +50,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="badges.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="badges.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/badges.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.774194">
-              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.55207026">
+              <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1445810663240" expanded="true" signature="448:517" placeholder="..." />
-                <marker date="1445810663240" expanded="true" signature="468:505" placeholder="{...}" />
+                <marker date="1445812085093" expanded="true" signature="448:517" placeholder="..." />
+                <marker date="1445812085093" expanded="true" signature="468:505" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -77,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5706019">
+            <state vertical-scroll-proportion="-18.961538">
               <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
               <folding>
                 <marker date="1445811966246" expanded="true" signature="510:579" placeholder="..." />
@@ -116,10 +116,10 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/sss.js" />
         <option value="$PROJECT_DIR$/js/lib.js" />
-        <option value="$PROJECT_DIR$/badges.html" />
         <option value="$PROJECT_DIR$/bs.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/main.html" />
+        <option value="$PROJECT_DIR$/badges.html" />
       </list>
     </option>
   </component>
@@ -620,18 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/badges.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.774194">
-          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1445810663240" expanded="true" signature="448:517" placeholder="..." />
-            <marker date="1445810663240" expanded="true" signature="468:505" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.382353">
@@ -645,11 +633,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5706019">
+        <state vertical-scroll-proportion="-18.961538">
           <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
           <folding>
             <marker date="1445811966246" expanded="true" signature="510:579" placeholder="..." />
             <marker date="1445811966246" expanded="true" signature="530:567" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/badges.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55207026">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1445812085093" expanded="true" signature="448:517" placeholder="..." />
+            <marker date="1445812085093" expanded="true" signature="468:505" placeholder="{...}" />
           </folding>
         </state>
       </provider>
