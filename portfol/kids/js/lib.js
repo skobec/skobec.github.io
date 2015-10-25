@@ -8,7 +8,7 @@ $.fn.overlay=function() {
         $("div.header_links a").removeClass('active');
         $('.popup').css({left: -10000, top: -10000});
     });
-    $('#fancy_overlay').show('slow');
+    $('#fancy_overlay').fadeIn('slow');
     return this;
 }
 
@@ -22,7 +22,7 @@ $.fn.overlay_opacity=function() {
         $("div.header_links a").removeClass('active');
         $('.popup').css({left: -10000, top: -10000});
     });
-    $('#fancy_overlay_opacity').show('slow');
+    $('#fancy_overlay_opacity').fadeIn('slow');
     return this;
 }
 
@@ -114,31 +114,31 @@ function Lib(){
                             if (data.message.character !== undefined) {
                                 $character.parent().removeClass("character_hide");
                                 $character.parent().parent().removeClass("without_character");
-                                $character.attr("src", data.message.character);
+                                $character.attr("src", data.message.character).fadeOut('slow');
                             }
                             else{
                                 $character.parent().addClass("character_hide");
                                 $character.parent().parent().addClass("without_character");
-                                $character.attr("src", default_character);
+                                $character.attr("src", default_character).fadeIn('slow');
                             }
 
                             if (data.left_image !== undefined) {
-                                $("#img_left").attr("src", data.left_image).show();
+                                $("#img_left").attr("src", data.left_image).fadeIn('slow');
                             }
                             else{
-                                $("#img_left").hide();
+                                $("#img_left").fadeOut('slow');
                             }
                             if (data.right_image !== undefined) {
-                                $("#img_right").attr("src", data.right_image).show();
+                                $("#img_right").attr("src", data.right_image).fadeIn('slow');
                             }
                             else{
-                                $("#img_right").hide();
+                                $("#img_right").fadeOut('slow');
                             }
                             if (data.footer_image !== undefined) {
-                                $("#img_footer").attr("src", data.footer_image).show();
+                                $("#img_footer").attr("src", data.footer_image).fadeIn('slow');
                             }
                             else{
-                                $("#img_footer").hide();
+                                $("#img_footer").fadeOut('slow');
                             }
                             self.close_all_dots(false);
                             self.show_dot_image($dot, data);
@@ -151,32 +151,38 @@ function Lib(){
     };
 
     /**
-     * ���������� �������� �����.
+     * ?????????? ???????? ?????.
      * @param $dot
-     * @param data - ������ � ����������� �����.
+     * @param data - ?????? ? ??????????? ?????.
      */
     this.show_dot_image = function($dot, data){
         var $img = $("#"+data.click_image_target);
 
             if ($dot.hasClass("image_opened")){
                 if (data.click_image_target !== undefined && $img.length) {
-                    $img.hide();
+                    $img.fadeOut('slow');
                 }
                 $dot.removeClass("image_opened");
                 $dot.find("a").removeClass("ico_close2");
             }
             else{
                 if (data.click_image_target !== undefined && $img.length) {
-                    $img.show();
+                    $img.fadeIn('slow');
                 }
                 $dot.addClass("image_opened");
                 $dot.find("a").addClass("ico_close2");
             }
-
     };
+    $('#d_door').click(function(){
+        $('#trap').toggleClass('trap_go');
+    });
+    $('a.view').click(function(){
+        $('#trap').removeClass('trap_go');
+    });
+
 
     /**
-     * ��������� ��� �������� �����.
+     * ????????? ??? ???????? ?????.
      */
     this.close_all_dots = function(close_image){
         $(".image_opened").each(function(){
@@ -186,13 +192,13 @@ function Lib(){
                 if (self.dots_obj[i].id == $(this).attr("id")){
                     var $t = $("#"+self.dots_obj[i].click_image_target);
                     if (self.dots_obj[i].click_image_target !== undefined && $t.length) {
-                        $t.hide();
+                        $t.fadeOut('slow');
                     }
 
                     if (close_image) {
-                        if (self.dots_obj[i].left_image !== undefined) $("#img_left").hide();
-                        if (self.dots_obj[i].right_image !== undefined) $("#img_right").hide();
-                        if (self.dots_obj[i].footer_image !== undefined) $("#img_footer").hide();
+                        if (self.dots_obj[i].left_image !== undefined) $("#img_left").fadeOut('slow');
+                        if (self.dots_obj[i].right_image !== undefined) $("#img_right").fadeOut('slow');
+                        if (self.dots_obj[i].footer_image !== undefined) $("#img_footer").fadeOut('slow');
                         $info_text_container.html(default_text);
 
                         $character.parent().removeClass("character_hide");
@@ -233,7 +239,7 @@ function Lib(){
 
 
     /**
-     * ��������� ������� ���� ����������� ������� ��� �����
+     * ????????? ??????? ???? ??????????? ??????? ??? ?????
      * @param dot_obj
      */
     this.check_data = function(dot_obj){
