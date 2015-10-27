@@ -250,7 +250,16 @@ function Lib(){
         return true;
     };
 
-
+    $('.back_game').click(function(){
+        $('.help_bl').fadeOut('fast');
+        $('.help_menu').fadeOut('fast');
+        $('.main').css('position','fixed')
+    });
+    $('.help_link').click(function(){
+        $('.help_bl').fadeIn('600');
+        $('.help_menu').fadeIn('fast');
+        $('.main').css('position','absolute')
+    })
 
 
 }
