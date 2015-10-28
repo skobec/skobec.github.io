@@ -1553,3 +1553,114 @@ header.main .user_name {
     margin: -90px 0 0;
     padding: 9px;
 }
+.modal_window {
+    border: 3px solid #ff7800;
+    background: url("../img/info_window_bg.jpg");
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.form-control {
+    border: 2px solid #bccee7;
+    height: 58px;
+    padding: 20px;
+    font-size: 15px;
+    font-family: 'Intro', sans-serif;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    box-shadow: inset 0 3px 9px 1px rgba(188, 206, 231, 0.43);
+}
+.inputs_modal {
+    padding: 0 35px;
+}
+.login_inp {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.password_input  {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: -2px;
+}
+.header_modal .modal-title {
+    font-size: 28px;
+    font-family: 'Intro', sans-serif;
+    font-weight: bold;
+    color: #051653;
+    text-align: center;
+    margin: 25px 0;
+}
+.close-modal {
+    opacity: 1;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    outline: none;
+}
+.close-modal:hover,.close-modal:focus,.close-modal:active {
+    opacity: 1;
+}
+.close-modal span{
+    height: 35px;
+    width: 35px;
+    border: 3px solid #ff7800;
+    background-color: #1ac4e5;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: block;
+    color: #ffffff;
+    padding: 1px;
+    font-weight: 100;
+    font-size: 28px;
+    text-shadow: 2px 2px 6px #1665ba;
+}
+.btn_login {
+    float: left;
+    display: block;
+    margin: 10px 0;
+    padding: 9px 45px;
+    font-size: 16px;
+    color: #FFF;
+    text-shadow: none;
+    border: 2px solid #ff6c00;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -khtml-border-radius: 25px;
+    border-radius: 25px;
+    font-family: 'Intro';
+    background: #ffaa00;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffd95e), to(#ffaa00));
+    background: -webkit-linear-gradient(top, #ffd95e, #ffaa00);
+    background: -moz-linear-gradient(top, #ffd95e, #ffaa00);
+    background: -ms-linear-gradient(top, #ffd95e, #ffaa00);
+    background: -o-linear-gradient(top, #ffd95e, #ffaa00);
+    text-align: center;
+    text-decoration: none!important;
+}
+.btn_login:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer_modal {
+    background-color: rgba(101, 164, 211, 0.12);
+    height: 70px;
+    border-top: 1px solid #ffffff;
+    text-align: center;
+}
+.sign_up_link {
+    color: #051653;
+    font-size: 18px;
+    font-family: Intro,sans-serif;
+    font-weight: bold;
+    border-bottom: dashed 1px rgba(5, 22, 83, 0.5);
+    text-decoration: none!important;
+    margin-top: 25px;
+    display: inline-block;
+    line-height: 18px;
+}
+.modal {
+    background: url("../img/mask_background.png");
+    background-size: cover;
+}
