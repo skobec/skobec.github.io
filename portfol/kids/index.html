@@ -106,24 +106,116 @@
 <!--</div>-->
 
 
-    <div class="modal fade" id="reg_modal" tabindex="-1" role="dialog" aria-labelledby="reg_modal">
+    <div class="modal fade" id="reg_modal" tabindex="-1" role="dialog" aria-labelledby="reg_modal" >
         <div class="modal-dialog" role="document">
             <div class="modal-content modal_window">
                 <div class="header_modal">
                     <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Войти</h4>
+                    <h4 class="modal-title">Войти</h4>
                 </div>
                 <div class="inputs_modal">
                     <input type="text" class="form-control login_inp" placeholder="Имя">
                     <input type="password" class="form-control password_input" placeholder="Пароль">
                     <div class="row" style="margin: 40px -15px">
-                        <div class="col-xs-6">
+                        <div class="col-xs-4">
                             <a href="#" class="btn_login">Войти</a>
+                        </div>
+                        <div class="col-xs-8">
+                            <span class="soc_link_modal">Войти при помощи:<a href="#"></a> </span>
                         </div>
                     </div>
                 </div>
                 <div class="footer_modal">
-                    <a href="#" class="sign_up_link">Зарегистрироваться</a>
+                    <a href="" class="sign_up_link" data-toggle="modal" data-target="#reg_modal_2" data-dismiss="modal">Зарегистрироваться</a>
+                </div>
+                </div>
+        </div>
+        </div>
+    <div class="modal fade" id="reg_modal_2" tabindex="-1" role="dialog" aria-labelledby="reg_modal_2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal_window">
+                <div class="header_modal">
+                    <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
+                </div>
+                <div class=''>
+
+                    <section id="wizard">
+                           <div id="rootwizard">
+                            <div class="navbar" style="display: none">
+                                <div class="navbar-inner">
+                                    <div class="container">
+                                        <ul>
+                                            <li><a href="#tab1" data-toggle="tab">First</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">Second</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">Third</a></li>
+                                            <li><a href="#tab4" data-toggle="tab">Forth</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="bar" class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane fade" id="tab1">
+                                    <div class="inputs_modal" >
+                                        <input type="text" class="form-control" placeholder="Твое Имя">
+                                    </div>
+                                    <div class="footer_modal">
+                                        <ul class="wizard">
+                                            <li class="previous"><a href="#" class="previous_link">Назад</a></li>
+                                            <li class="next" style="margin-left: -16%;"><a href="#" class="btn_login">Продолжить</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab2">
+                                    <div class="inputs_modal">
+                                        <input type="text" class="form-control" placeholder="Эл. почта, твоя или кого то из родителей">
+                                    </div>
+                                    <div class="footer_modal">
+                                        <ul class="wizard">
+                                            <li class="previous"><a href="#" class="previous_link">Назад</a></li>
+                                            <li class="next" style="margin-left: -16%;"><a href="#" class="btn_login">Продолжить</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab3">
+                                    <div class="inputs_modal">
+                                        <input type="password" class="form-control login_inp" placeholder="Пароль">
+                                        <input type="password" class="form-control password_input" placeholder="Пароль еще раз">
+                                    </div>
+                                    <div class="footer_modal">
+                                        <ul class="wizard">
+                                            <li class="previous"><a href="#" class="previous_link">Назад</a></li>
+                                            <li class="next" style="margin-left: -16%;"><a href="#" class="btn_login">Продолжить</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab4">
+                                    <div class="inputs_modal">
+
+                                    </div>
+                                    <div class="footer_modal">
+                                        <ul class="wizard">
+                                            <li class="previous"><a href="#" class="previous_link">Назад</a></li>
+                                            <li class="next" style="margin-left: -16%;"><a href="#" class="btn_login">Зарегистрировать</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--<ul class="pager wizard">-->
+                                <!--<li class="previous first" style="display:none;"><a href="#">First</a></li>-->
+                                <!--<li class="previous"><a href="#">Previous</a></li>-->
+                                <!--<li class="next last" style="display:none;"><a href="#">Last</a></li>-->
+                                <!--<li class="next"><a href="#">Next</a></li>-->
+                                <!--</ul>-->
+                            </div>
+                        </div>
+                    </section>
+
+
+
+
                 </div>
             </div>
         </div>
@@ -131,13 +223,28 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.positioning.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
 <script src="js/lib.js"></script>
 
+
+
+        <script src="js/step/jquery.bootstrap.wizard.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+                    var $total = navigation.find('li').length;
+                    var $current = index+1;
+                    var $percent = ($current/$total) * 100;
+                    $('#rootwizard .progress-bar').css({width:$percent+'%'});
+                }});
+                window.prettyPrint && prettyPrint()
+            });
+        </script>
 <!--<script>-->
     <!--var Lib = new Lib();-->
     <!--Lib.init();-->

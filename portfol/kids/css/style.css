@@ -1620,15 +1620,16 @@ header.main .user_name {
     float: left;
     display: block;
     margin: 10px 0;
-    padding: 9px 45px;
-    font-size: 16px;
+    padding: 13px 34px;
+    font-size: 20px;
+    font-weight: bold;
     color: #FFF;
     text-shadow: none;
     border: 2px solid #ff6c00;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -khtml-border-radius: 25px;
-    border-radius: 25px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -khtml-border-radius: 40px;
+    border-radius: 40px;
     font-family: 'Intro';
     background: #ffaa00;
     background: -webkit-gradient(linear, left top, left bottom, from(#ffd95e), to(#ffaa00));
@@ -1648,6 +1649,10 @@ header.main .user_name {
     height: 70px;
     border-top: 1px solid #ffffff;
     text-align: center;
+    margin-top: 37px;
+}
+.progress-bar {
+    background-color: #57cd57;
 }
 .sign_up_link {
     color: #051653;
@@ -1663,4 +1668,46 @@ header.main .user_name {
 .modal {
     background: url("../img/mask_background.png");
     background-size: cover;
+}
+.wizard li {
+    display: inline-block;
+    /*float: left;*/
+}
+.wizard .sign_up_link {
+    text-align: left;
+}
+.wizard .previous {
+    float: left;
+}
+.previous_link {
+    color: #051653;
+    font-size: 18px;
+    font-family: Intro,sans-serif;
+    font-weight: bold;
+    border-bottom: dashed 1px rgba(5, 22, 83, 0.5);
+    text-decoration: none!important;
+    display: inline-block;
+    line-height: 18px;
+    float: left;
+    margin: 10px 0;
+    padding: 15px 0 2px;
+}
+.wizard {
+    list-style: none;
+    width: 100%;
+    display: block;
+}
+.next .btn_login {
+    padding: 7px 27px;
+    font-size: 16px;
+    margin: 14px auto;
+}
+.progress {
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.39);
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    width: 50%;
+    margin: 20px auto;
 }
