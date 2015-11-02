@@ -1683,7 +1683,6 @@ header.main .user_name {
     color: #051653;
     font-size: 18px;
     font-family: Intro,sans-serif;
-    font-weight: bold;
     border-bottom: dashed 1px rgba(5, 22, 83, 0.5);
     text-decoration: none!important;
     display: inline-block;
@@ -1701,13 +1700,109 @@ header.main .user_name {
     padding: 7px 27px;
     font-size: 16px;
     margin: 14px auto;
+    outline: none;
 }
 .progress {
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.39);
-    -webkit-border-radius: 24px;
-    -moz-border-radius: 24px;
-    border-radius: 24px;
-    width: 50%;
+    /*background-color: rgba(255, 255, 255, 0.39);*/
+    /*background-color: transparent;*/
+    /*-webkit-border-radius: 24px;*/
+    /*-moz-border-radius: 24px;*/
+    /*border-radius: 24px;*/
+    /*width: 50%;*/
+    width: 95px;
     margin: 20px auto;
+    background: url("../img/reg/progress_body.png")no-repeat left top;
+    -webkit-box-shadow: none;
+     box-shadow: none;
+    height: 16px;
+
+}
+.progress-bar {
+    background: url("../img/reg/progress_body_prog.png")no-repeat left top;
+     -webkit-box-shadow: none;
+     box-shadow: none;
+    height: 16px;
+}
+.group_ava {
+    margin-top: 35px;
+    display: block;
+}
+.group_ava .btn {
+    width: 74px;
+    height: 74px;
+    padding: 0;
+    border-radius: 50%;
+    position: relative;
+    margin: 5px 13px;
+}
+.group_ava .btn img {
+    width: 100%;
+    height: 100%;
+}
+.group_ava .btn:after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    height: 74px;
+    width: 74px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: 0.3s;
+}
+.group_ava .btn.active:after {
+    border: 3px solid #FF6C00;
+}
+.soc_link_modal {
+    float: right;
+    font-size: 14px;
+    font-family: Intro, sans-serif;
+    color: rgba(5, 22, 83, 0.53);
+    margin: 20px 0 0;
+}
+.icon_reg {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin-bottom: -14px;
+    margin-left: 9px;
+}
+.fb_reg {
+    background: url("../img/reg/fb_ico.png")no-repeat;
+}
+.vk_reg {
+    background: url("../img/reg/vk_ico.png")no-repeat;
+}
+.password_group {
+    height: 58px;
+    position: relative;
+}
+.password_group a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 100%;
+    padding: 19px;
+    color: #051653;
+    font-size: 14px;
+    font-family: intro_book_altregular, sans-serif;
+    text-decoration: none!important;
+}
+.modal-dialog {
+    margin-top: 10%;
+}
+@media only screen and (max-width: 1366px) {
+    body {
+        zoom: 0.6;
+        -moz-transform: scale(0.6);
+        -ms-zoom: 0.6;
+    }
+    .plain .container {
+        width: 1167px;
+    }
 }
