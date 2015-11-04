@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Большое путешествие</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!--[if gte IE 9]>
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+<body class="plain">
+<div class="plain_cintainer">
+    <header class="main">
+        <a href="#" class="logo"><img src="img/logo.png" /></a>
+        <nav>
+            <ul>
+                <li><a href="librar.html">Библиотека</a></li>
+                <li><a href="heroes.html">Герои</a></li>
+                <li><a href="badges.html">Награды</a></li>
+                <li><a href="#" class="help_link">Помощь</a></li>
+            </ul>
+            <figure class="avatar">
+                <div class="frame"></div>
+                <img src="img/ava.png" alt="" />
+            </figure>
+            <a href="#" class="user_name">Илья Фомин</a>
+        </nav>
+        <img src="img/help/top_right_help.png" class="help_menu" style="        top: -22px;    position: absolute;    right: 80px; display: none">
+    </header>
+    <div class="wrapper">
+        <div class="clear"></div>
+        <div class="top_block opacity">
+            <span class="name_tech">Судно A145</span>
+        </div>
+        <div class="left_block opacity">
+            <img id="img_left" alt="" style="display:none" />
+        </div>
+        <div class="right_block opacity">
+            <img id="img_right" alt="" style="display:none" />
+        </div>
+        <div class="planner">
+            <div class="planner_items">
+                <img id="salon_ship" src="img/ship/salon_ship.png" class="pl_item" />
+                <!--<img id="door" src="img/planner/door.png" class="pl_item" />-->
+                <img id="trap" src="img/planner/trap_img.png" class="pl_item" />
+                <img id="spas_plot_ship" src="img/ship/spas_plot.png" class="pl_item" />
+                <img id="trap_ship" src="img/ship/trap.png" class="pl_item" />
+                <img id="engine_ship" src="img/ship/engine.png" class="pl_item" />
+                <!--<img id="antenna_ship" src="img/planner/antenna_ship.png" class="pl_item" />-->
+                <!--<img id="pered" src="img/planner/pered.png" class="pl_item" />-->
+                <!--<img id="salon" src="img/planner/salon.png" class="pl_item" />-->
+                <!--<img id="anchor_ship" src="img/ship/anchor_ship.png" class="pl_item" />-->
+                <!--<img id="zad" src="img/planner/krylo.png" class="pl_item" />-->
+                <img id="window_ship" src="img/ico_action.png" class="pl_item" />
+            </div>
+            <!-- -->
+            <div class="arrow_dot" id="d_salon_ship">
+                <div class="arrow salon_ship"></div>
+                <a href="javascript:void(0);" class="view salon_ship"></a>
+            </div>
+            <!--<div class="arrow_dot" id="d_door">-->
+                <!--<div class="arrow door"></div>-->
+                <!--<a href="javascript:void(0);" class="view door"></a>-->
+            <!--</div>-->
+            <div class="arrow_dot" id="d_spas_plot_ship">
+                <div class="arrow spas_plot_ship"></div>
+                <a href="javascript:void(0);" class="view spas_plot_ship"></a>
+            </div>
+            <div class="arrow_dot" id="d_trap_ship">
+                <div class="arrow trap_ship"></div>
+                <a href="javascript:void(0);" class="view trap_ship"></a>
+            </div>
+
+            <div class="arrow_dot" id="d_engine_ship">
+                <div class="arrow engine_ship"></div>
+                <a href="javascript:void(0);" class="view engine_ship"></a>
+            </div>
+            <div class="arrow_dot" id="d_antenna_ship">
+                <div class="arrow antenna_ship"></div>
+                <a href="javascript:void(0);" class="view antenna_ship"></a>
+            </div>
+            <!--<div class="arrow_dot" id="d_pered">
+                <div class="arrow pered"></div>
+                <a href="javascript:void(0);" class="view pered"></a>
+            </div>-->
+            <!--<div class="arrow_dot" id="d_salon" style="width: 56px">-->
+                <!--<div class="arrow salon"></div>-->
+                <!--<a href="javascript:void(0);" class="view salon"></a>-->
+            <!--</div>-->
+            <div class="arrow_dot" id="d_anchor_ship">
+                <div class="arrow anchor_ship"></div>
+                <a href="javascript:void(0);" class="view anchor_ship"></a>
+            </div>
+            <!--<div class="arrow_dot" id="d_zad">-->
+                <!--<div class="arrow zad"></div>-->
+                <!--<a href="javascript:void(0);" class="view zad"></a>-->
+            <!--</div>-->
+            <div class="arrow_dot" id="d_window_ship">
+                <div class="arrow window_ship"></div>
+                <a href="javascript:void(0);" class="view window_ship"></a>
+            </div>
+            <img src="img/ship/top_ship.png" alt="" class="top_ship"/>
+            <img src="img/ship/down_ship.png" alt="" class="down_ship"/>
+        </div>
+    </div>
+    <div class="footer_block opacity">
+        <img id="img_footer" alt="" style="display:none" />
+    </div>
+    <div class="footer_tools">
+        <div class="clear"></div>
+        <a href="#" class="btn btn_blue btn_viktorin">Викторина</a>
+        <a href="main.html" class="btn btn_maps"><span>На карту</span></a>
+    </div>
+    <div class="info_message">
+        <div class="inner_b">
+            <div class="inner_space">
+                <div class="text_height">
+                    Теплоход проекта А-145 - скоростное пассажирское судно глиссирующего типа. Глиссирующими называют быстроходные суда, при движении которых на днище действует подъемная сила, обеспечивающая скольжение корпуса по водной поверхности. А-145 это самое безопасное судно своего класса в России. Корпус судна от носа до машинного отделения, имеет двойное дно, что позволяет ему держаться на плаву даже в случае пробоины.
+
+                    <div class="clear"></div>
+                    <a href="#" class="btn btn_blue continue go_view_dot"><span>Продолжить</span></a>
+                    <div class="clear"></div>
+                </div>
+                <div class="character">
+                    <img id="character" src="img/girl_1.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_tech">
+
+    </div>
+
+</div>
+
+
+
+<!-- popup -->
+<div class="popup" id="popup_library">
+    <div class="info_window" id="info_window">
+        <div class="info_window_inner has_header">
+            <h1>Библиотека</h1>
+            <div class="scroll-pane">
+
+                <div class="row">
+                    <div class="library_item unlock">
+                        <div class="photo">
+                            <div class="sticker"></div>
+                            <img src="img/lib1.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Сухой Суперджет 100
+                        </div>
+                    </div>
+                    <div class="library_item">
+                        <div class="photo">
+                            <img src="img/lib2.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Судно А-145
+                        </div>
+                    </div>
+                    <div class="library_item">
+                        <div class="photo">
+                            <img src="img/lib3.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Автобус «НЕФАЗ»
+                        </div>
+                    </div>
+                    <div class="library_item lock">
+                        <div class="photo">
+                            <img src="img/lib4.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Танк «Армата»
+                        </div>
+                    </div>
+                    <div class="library_item lock">
+                        <div class="photo">
+                            <img src="img/lib5.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Процессор «Эльбрус»
+                        </div>
+                    </div>
+                    <div class="library_item lock">
+                        <div class="photo">
+                            <img src="img/lib6.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Радиовышка
+                        </div>
+                    </div>
+                    <div class="library_item lock">
+                        <div class="photo">
+                            <div class="sticker"></div>
+                            <img src="img/photo_.jpg" alt="" />
+                        </div>
+                        <div class="name">
+                            Добро пожаловать
+                            дорогой друг!
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <a href="javascript:void(0);" class="popup_close" data-rel="info_window"></a>
+    </div>
+</div>
+
+<div class="popup" id="popup_badges">
+    <div class="info_window">
+        <div class="info_window_inner has_header">
+            <h1>Награды</h1>
+            <div class="scroll-pane">
+
+                <div class="row">
+                    <div class="library_item unlock">
+                        <div class="photo">
+                            <div class="sticker"></div>
+                            <img src="img/bd2.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Авиастроение
+                        </div>
+                    </div>
+                    <div class="library_item lock">
+                        <div class="photo">
+                            <div class="sticker"></div>
+                            <img src="img/bd2.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Транспорт
+                        </div>
+                    </div>
+                    <div class="library_item unlock">
+                        <div class="photo">
+                            <div class="sticker"></div>
+                            <img src="img/bd3.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Судостроение
+                        </div>
+                    </div>
+                    <div class="library_item unlock">
+                        <div class="photo">
+                            <div class="sticker"></div>
+                            <img src="img/bd3.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Армия
+                        </div>
+                    </div>
+                    <div class="library_item unlock">
+                        <div class="photo">
+                            <div class="sticker"></div>
+                            <img src="img/bd4.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Транспорт
+                        </div>
+                    </div>
+                    <div class="library_item unlock">
+                        <div class="photo">
+                            <div class="sticker"></div>
+                            <img src="img/bd5.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Транспорт
+                        </div>
+                    </div>
+                    <div class="library_item unlock">
+                        <div class="photo">
+                            <div class="sticker"></div>
+                            <img src="img/bd5.png" alt="" />
+                        </div>
+                        <div class="name">
+                            Транспорт
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <a href="javascript:void(0);" class="popup_close"></a>
+    </div>
+</div>
+
+
+
+<div class="popup" id="popup_carousel_window">
+    <div class="popup_window">
+        <div class="popup_window_inner">
+            <div class="carousel_wrapper">
+                <a href="javascript:void(0);" class="popup_prev"></a>
+                <a href="javascript:void(0);" class="popup_next"></a>
+                <div id="popup_carousel" class="owl-carousel">
+                    <div class="item">
+                        <figure class="photo_tmp"></figure>
+                        <section>
+                            <article class="text">
+                                Место для текста всплывающего окна с сюжетной линией
+                            </article>
+                        </section>
+                    </div>
+                    <div class="item">
+                        <figure class="photo_tmp"></figure>
+                        <section>
+                            <article class="text">
+                                Место для текста всплывающего окна с сюжетной линией Место для текста всплывающего окна с сюжетной линией Место для текста всплывающего окна с сюжетной линией
+
+                            </article>
+                        </section>
+                    </div>
+                    <div class="item">
+                        <figure class="photo_tmp"></figure>
+                        <section>
+                            <article class="text">
+                                Место для текста всплывающего окна с сюжетной линией
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="popup_close"></a>
+    </div>
+</div>
+<div class="help_bl">
+    <div class="container">
+        <img src="img/help/left_top_help.png" style="top: 39px; position: relative;">
+        <img src="img/help/plan_help_right_bottom.png" style="    position: absolute;    bottom: 100px;    right: 0;">
+        <img src="img/help/plane_help__bottom_left.png" style="    position: absolute;    bottom: 45px;    left: 90px;">
+        <img src="img/help/samolet_help.png" style="top: 301px;    position: absolute;    left: 493px;">
+        <button class="back_game">Вернуться в игру</button>
+    </div>
+</div>
+<!-- / popup -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/jquery.positioning.js"></script>
+<script src="js/lib.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".go_view_dot").click(function(){
+            $("#d_trap_ship").click();
+        });
+    });
+    var dots = {
+        salon_ship: {
+            id: "d_salon_ship",
+            coordinates: [399,362],
+            message: {
+                text: "Судно А-145 предназначено для перевозки до 150 пассажиров. Благодаря специальной системе стабилизации, во время движения люди совершенно не почувствуют качку и могут послушать музыку, посмотреть мультфильм или перекусить.",
+                //character: "img/girl_1.png"
+            },
+            click_image_target: "salon_ship"
+//            left_image: "img/baggaje_left_image.jpg"
+        },
+//        door: {
+//            id: "d_door",
+//            coordinates: [158,406],
+//            message: {
+//                text: "У Суперджета-100 четыре герметичных двери. Две на левой стороне для экипажа и пассажиров и две на правой – для служебных целей. Все двери открываются наружу. Хоть дверь и выглядит очень тяжелой, но открыть и закрыть ее может один человек.                  Каждая дверь снабжена надувным аварийным трапом для экстренных ситуаций.",
+//                //character: "img/girl_1.png"
+//            },
+//            click_image_target: "door"
+//        },
+        spas_plot_ship: {
+            id: "d_spas_plot_ship",
+            coordinates: [770,129],
+            message: {
+                text: "На А-145 в качестве средств безопасности предусмотрена лодка и два надувных спасательных плота. Также в салоне теплохода, под сиденьями, припасены спасательные жилеты для каждого пассажира. ",
+                //character: "img/girl_1.png"
+            },
+            click_image_target: "spas_plot_ship"
+        },
+        trap_ship: {
+            id: "d_trap_ship",
+            coordinates: [551,283],
+            message: {
+                text: "Трапы располагаются с левой и правой стороны судна, для того, чтобы теплоход мог причалить к берегу любой стороной.",
+                //character: "img/girl_1.png"
+            },
+            click_image_target: "trap_ship"
+//            footer_image: "img/eng_bottom_image.png"
+
+        },
+        engine_ship: {
+            id: "d_engine_ship",
+            coordinates: [604,-8],
+            message: {
+                text: "Движение судна обеспечивают 2 водометных движетеля, которые были разработаны специально для А-145. Использование движетелей позволяет уменьшить осадку судна, избавиться от сопротивления выступающих частей и повысить его маневренность (например, А-145 умеет разворачиваться на месте и двигаться лагом (то есть бортом по направлению к движению)).",
+                //character: "img/girl_1.png"
+            },
+            click_image_target: "engine_ship"
+//            left_image: "img/ship/engine.png"
+        },
+        antenna_ship: {
+            id: "d_antenna_ship",
+            coordinates: [475,-57],
+            message: {
+                text: "Судно А-145 оснащено телевизионными антеннами, антеннами радиолокационной станции, GPS-навигаторами и приборами ночного видения.",
+                //character: "img/girl_1.png"
+            },
+            click_image_target: "antenna_ship"
+//            right_image: "img/fuel_right_image.png"
+        },
+        pered: {
+            id: "d_pered",
+            coordinates: [554,426],
+            message: {
+                text: "444 Область может быть меньше, если текста в диалоге не так много Область может быть меньше, если текста в диалоге не так много",
+                //character: "img/girl_1.png"
+            },
+            click_image_target: "pered"
+        },
+//        salon: {
+//            id: "d_salon",
+//            coordinates: [422,148],
+//            message: {
+//                text: "Теплоход проекта А-145 - скоростное пассажирское судно глиссирующего типа. Глиссирующими называют быстроходные суда, при движении которых на днище действует подъемная сила, обеспечивающая скольжение корпуса по водной поверхности. А-145 это самое безопасное судно своего класса в России. Корпус судна от носа до машинного отделения, имеет двойное дно, что позволяет ему держаться на плаву даже в случае пробоины.",
+//                //character: "img/girl_1.png"
+//            },
+//            click_image_target: "salon",
+//            left_image: "img/salon_left_image.png",
+//            right_image: "img/salon_right_image.png",
+//            footer_image: "img/salon_footer_image.png"
+//        },
+//        zad: {
+//            id: "d_zad",
+//            coordinates: [620,338],
+//            message: {
+//                text: "Крыло современного самолета – практически трансформер. В зависимости от того, что нужно самолету – взлететь или зайти на посадку его конструкция меняется. В этом участвуют элероны, предкрылки, закрылки и интерцепторы.  ",
+//                //character: "img/girl_1.png"
+//            },
+//            click_image_target: "zad",
+//            left_image: "img/krylo_left.png",
+//            right_image: "img/krylo_right.png"
+//        },
+        anchor_ship: {
+            id: "d_anchor_ship",
+            coordinates: [60,455],
+            message: {
+                text: "Становой якорь — это главный носовой якорь, обеспечивающий надежную стоянку судна на выбранном месте. ",
+                character: "img/boy_hand_up.png"
+            },
+//            click_image_target: "shassi",
+//            left_image: "img/shassi_left_image.png",
+//            right_image: "img/anchor_ship_right_image.png"
+        },
+        window_ship: {
+            id: "d_window_ship",
+            coordinates: [211,165],
+            message: {
+                text: "Маневренность судна А-145 обеспечивает джойстиковое управление водометными движителями. Это значит, что пилоты управляют судном с помощью джойстика, как в компьютерной игре.",
+                //character: "img/boy_hand_up.png"
+            },
+            // click_image_target: "window_ship",
+//            left_image: "img/cabin_left_image.png"
+        }
+    };
+    var Lib = new Lib();
+    Lib.set_obj(dots);
+    Lib.init();
+</script>
+
+</body>
+</html>

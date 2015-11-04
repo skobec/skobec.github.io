@@ -554,10 +554,21 @@ header.main .user_name {
     -o-transform: rotate(305deg);
     transform: rotate(305deg);
 }
+.arrow_dot .arrow.salon_ship {
+    -webkit-transform: rotate(305deg);
+    -moz-transform: rotate(305deg);
+    -ms-transform: rotate(305deg);
+    -o-transform: rotate(305deg);
+    transform: rotate(305deg);
+}
 
 .arrow_dot a.baggaje {
     left: 3px;
     top: 39px;
+}
+.arrow_dot a.salon_ship {
+    left: 2px;
+    top: 40px;
 }
 
 .arrow_dot .arrow.door {
@@ -580,12 +591,22 @@ header.main .user_name {
     -o-transform: rotate(228deg);
     transform: rotate(228deg);
 }
+.arrow_dot .arrow.spas_plot_ship {
+    -webkit-transform: rotate(228deg);
+    -moz-transform: rotate(228deg);
+    -ms-transform: rotate(228deg);
+    -o-transform: rotate(228deg);
+    transform: rotate(228deg);
+}
 
 .arrow_dot a.door2 {
     left: 34px;
     top: 53px;
 }
-
+.arrow_dot a.spas_plot_ship {
+    left: 34px;
+    top: 53px;
+}
 .arrow_dot .arrow.eng {
     -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
@@ -593,12 +614,21 @@ header.main .user_name {
     -o-transform: rotate(270deg);
     transform: rotate(270deg);
 }
-
+.arrow_dot .arrow.trap_ship {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
 .arrow_dot a.eng {
     left: 15px;
     top: 51px;
 }
-
+.arrow_dot a.trap_ship {
+    left: 15px;
+    top: 51px;
+}
 .arrow_dot .arrow.engine {
     -webkit-transform: rotate(310deg);
     -moz-transform: rotate(310deg);
@@ -606,12 +636,21 @@ header.main .user_name {
     -o-transform: rotate(310deg);
     transform: rotate(310deg)
 }
-
+.arrow_dot .arrow.engine_ship {
+    -webkit-transform: rotate(138deg);
+    -moz-transform: rotate(138deg);
+    -ms-transform: rotate(138deg);
+    -o-transform: rotate(138deg);
+    transform: rotate(138deg)
+}
 .arrow_dot a.engine {
     left: 1px;
     top: 38px;
 }
-
+.arrow_dot a.engine_ship {
+    left: 53px;
+    top: 19px;
+}
 .arrow_dot .arrow.fuel {
     -webkit-transform: rotate(159deg);
     -moz-transform: rotate(159deg);
@@ -620,12 +659,22 @@ header.main .user_name {
     transform: rotate(159deg);
     margin-top: 12px;
 }
-
+.arrow_dot .arrow.antenna_ship {
+    -webkit-transform: rotate(159deg);
+    -moz-transform: rotate(159deg);
+    -ms-transform: rotate(159deg);
+    -o-transform: rotate(159deg);
+    transform: rotate(159deg);
+    margin-top: 12px;
+}
 .arrow_dot a.fuel {
     left: 54px;
     top: 41px;
 }
-
+.arrow_dot a.antenna_ship {
+    left: 54px;
+    top: 41px;
+}
 .arrow_dot .arrow.pered {
     -webkit-transform: rotate(163deg);
     -moz-transform: rotate(163deg);
@@ -676,12 +725,21 @@ header.main .user_name {
     -o-transform: rotate(343deg);
     transform: rotate(343deg);
 }
-
+.arrow_dot .arrow.anchor_ship {
+    -webkit-transform: rotate(343deg);
+    -moz-transform: rotate(343deg);
+    -ms-transform: rotate(343deg);
+    -o-transform: rotate(343deg);
+    transform: rotate(343deg);
+}
 .arrow_dot a.shassi {
     left: -1px;
     top: 22px;
 }
-
+.arrow_dot a.anchor_ship {
+    left: -1px;
+    top: 22px;
+}
 .arrow_dot .arrow.window {
     -webkit-transform: rotate(385deg);
     -moz-transform: rotate(385deg);
@@ -691,15 +749,30 @@ header.main .user_name {
     margin-top: 12px;
     margin-left: 7px;
 }
-
+.arrow_dot .arrow.window_ship {
+    -webkit-transform: rotate(385deg);
+    -moz-transform: rotate(385deg);
+    -ms-transform: rotate(385deg);
+    -o-transform: rotate(385deg);
+    transform: rotate(385deg);
+    margin-top: 12px;
+    margin-left: 7px;
+}
 .arrow_dot a.window {
     left: 16px;
     top: 17px;
 }
-
+.arrow_dot a.window_ship {
+    left: 16px;
+    top: 17px;
+}
 #baggaje {
     left: 185px;
     top: 227px;
+}
+#salon_ship {
+    left: 155px;
+    top: 158px;
 }
 
 #door {
@@ -726,22 +799,35 @@ header.main .user_name {
     left: 610px;
     top: 202px;
 }
-
+#spas_plot_ship {
+    left: 730px;
+    top: 210px;
+}
 #eng {
     left: 262px;
     top: 267px
 }
-
+#trap_ship {
+    left: 95px;
+    top: 136px;
+    z-index: 3;
+}
 #engine {
     left: 368px;
     top: 395px;
 }
-
+#engine_ship {
+    left: 409px;
+    top: 163px;
+}
 #fuel {
     left: 314px;
     top: 77px;
 }
-
+#antenna_ship {
+    left: 314px;
+    top: 77px;
+}
 #pered {
     left: 300px;
     top: 87px;
@@ -757,7 +843,11 @@ header.main .user_name {
     top: 315px;
     z-index: 1
 }
-
+#anchor_ship {
+    left: 124px;
+    top: 315px;
+    z-index: 1
+}
 #zad {
     left: 312px;
     top: 87px;
@@ -810,7 +900,18 @@ header.main .user_name {
     margin: 30px auto;
     width: 770px;
 }
-
+.popup_window_ship {
+    position: relative;
+    border: 3px solid #ff8800;
+    height: 540px;
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -khtml-border-radius: 13px;
+    border-radius: 13px;
+    background: #ff8800;
+    margin: 30px auto;
+    width: 770px;
+}
 .popup_close {
     display: block;
     background: url(../img/ico_close.png) no-repeat 0 0;
@@ -1221,7 +1322,25 @@ header.main .user_name {
     z-index: 1;
     margin-left: 50px;
 }
-
+.planner .down_ship {
+    position: relative;
+    z-index: 1;
+}
+.planner .top_ship {
+    z-index: 2;
+    position: absolute;
+    top: -25px;
+    left: 105px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.planner .top_ship_marg {
+    margin-top: -180px!important;
+    opacity: 0.3!important;
+}
 .planner .planner_items img {
     z-index: 2;
     display: none;
