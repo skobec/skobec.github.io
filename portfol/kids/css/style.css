@@ -1943,13 +1943,13 @@ header.main .user_name {
         margin-right: 0;
     }
     .plain {
-        min-height: 675px;
+        min-height: 600px;
     }
     .plain_cintainer {
-        min-height: 675px;
+        min-height: 600px;
     }
     .wrapper {
-        min-height: 675px;
+        min-height: 600px;
         /*zoom: 0.6;*/
         /*-moz-transform: scale(0.6);*/
         /*-ms-zoom: 0.6;*/
