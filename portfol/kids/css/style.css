@@ -1927,10 +1927,25 @@ header.main .user_name {
     /*.plain .container {*/
         /*width: 1167px;*/
     /*}*/
+    .logo {
+        width: 150px;
+    }
+    .logo img {
+        width: 100%;
+    }
+    header.main nav {
+        float: right;
+        background: url(../img/menu_bg.png) repeat-x 0 0;
+        position: relative;
+        width: 75%;
+        height: 69px;
+        background-size: 100%;
+        margin-right: 0;
+    }
     .wrapper {
-        zoom: 0.6;
-        -moz-transform: scale(0.6);
-        -ms-zoom: 0.6;
+        /*zoom: 0.6;*/
+        /*-moz-transform: scale(0.6);*/
+        /*-ms-zoom: 0.6;*/
     }
 }
 .container {
