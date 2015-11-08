@@ -1942,10 +1942,114 @@ header.main .user_name {
         background-size: 100%;
         margin-right: 0;
     }
+    .plain {
+        min-height: 730px;
+    }
+    .plain_cintainer {
+        min-height: 730px;
+    }
     .wrapper {
         /*zoom: 0.6;*/
         /*-moz-transform: scale(0.6);*/
         /*-ms-zoom: 0.6;*/
+    }
+    .info_message {
+        font-size: 14px;
+    }
+    .info_message .inner_space {
+        padding: 5px;
+    }
+    .info_message .character {
+        width: 80px;
+    }
+    .info_message .character img {
+        width: 100%;
+    }
+    .btn_blue {
+        height: 41px;
+        min-width: 136px;
+        margin: 10px 0;
+        padding: 0;
+        font-size: 14px;
+    }
+
+
+    .planner .top_ship {
+        z-index: 2;
+        position: absolute;
+        width: 437px;
+        left: 8%;
+        top: -11px;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+    }
+    .planner .down_ship {
+        position: absolute;
+        top: 0;
+        width: 600px;
+    }
+    .planner .top_ship_marg {
+        margin-top: -180px!important;
+        opacity: 0.3!important;
+    }
+
+    #d_window_ship {
+        left: 12%!important;
+        top: 95px!important;
+    }
+    #d_anchor_ship {
+        left: 3%!important;
+        top: 300px!important;
+    }
+    #d_trap_ship {
+        left: 42%!important;
+        top: 185px!important;
+    }
+    #trap_ship {
+        left: 62px;
+        top: 93px;
+        z-index: 3;
+        width: 612px;
+    }
+    #d_salon_ship {
+        left: 213px!important;
+        top: 261px!important;
+    }
+    #salon_ship {
+        left: 13%;
+        top: 99px;
+        width: 394px;
+    }
+    #d_antenna_ship {
+        left: 280px!important;
+        top: -45px!important;
+    }
+    #d_engine_ship {
+        left: 414px!important;
+        top: -29px!important;
+    }
+    #engine_ship {
+        left: 230px;
+        top: 75px;
+        width: 285px;
+    }
+    #d_spas_plot_ship {
+        left: 489px!important;
+        top: 77px!important;
+    }
+    #spas_plot_ship {
+        left: 465px;
+        top: 134px;
+        width: 90px;
+    }
+    .planner {
+        position: relative;
+        z-index: 0;
+        margin: 153px 0 0 auto;
+        width: 854px;
     }
 }
 .container {
@@ -1976,19 +2080,3 @@ header.main .user_name {
     margin: auto;
 }
 
-
-.planner .top_ship {
-    z-index: 2;
-    position: absolute;
-    top: -25px;
-    left: 105px;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-}
-.planner .top_ship_marg {
-    margin-top: -180px!important;
-    opacity: 0.3!important;
-}
