@@ -1838,3 +1838,20 @@ header.main .user_name {
     bottom: 0;
     margin: auto;
 }
+
+
+.planner .top_ship {
+    z-index: 2;
+    position: absolute;
+    top: -25px;
+    left: 105px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.planner .top_ship_marg {
+    margin-top: -180px!important;
+    opacity: 0.3!important;
+}
