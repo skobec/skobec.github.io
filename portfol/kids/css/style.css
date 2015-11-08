@@ -1949,6 +1949,7 @@ header.main .user_name {
         min-height: 675px;
     }
     .wrapper {
+        min-height: 675px;
         /*zoom: 0.6;*/
         /*-moz-transform: scale(0.6);*/
         /*-ms-zoom: 0.6;*/
