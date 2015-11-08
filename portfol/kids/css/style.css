@@ -1927,6 +1927,11 @@ header.main .user_name {
     /*.plain .container {*/
         /*width: 1167px;*/
     /*}*/
+    .wrapper {
+        zoom: 0.6;
+        -moz-transform: scale(0.6);
+        -ms-zoom: 0.6;
+    }
 }
 .container {
     width: 970px;
