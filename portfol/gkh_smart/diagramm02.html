@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Главная</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="./css/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.css" />
+    <!--[if lt IE 9]>
+		<script src="./js/html5shiv.min.js"></script>
+		<script src="./js/respond.min.js"></script>
+	<![endif]-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={
+
+            'modules':[{
+
+              'name':'visualization',
+
+              'version':'1',
+
+              'packages':['corechart']
+
+            }]
+
+          }"></script>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+    <!-- wrap -->
+    <div class="wrap">
+        <!-- header -->
+        <header class="header">
+            <div class="inner">
+                <nav class="main_menu">
+                    <a href="" class="btn_toggle"><span class="i i-btn-menu"></span>Управляющая компания</a>
+                    <div class="submenu">
+                        <div class="info_block">
+                            <div class="name">Денис Пиксель</div>
+                            <p>ул. Священая церковь, д. 56, кв. 78
+                                <br>Лицевой счет 174 № 8787889889</p>
+                        </div>
+                        <ul>
+                            <li><a href=""><span class="i i-menu01"></span>Новости</a>
+                            </li>
+                            <li><a href=""><span class="i i-menu02"></span>Энергоресурсы</a>
+                            </li>
+                            <li><a href=""><span class="i i-menu03"></span>Потребление</a>
+                            </li>
+                            <li><a href=""><span class="i i-menu04"></span>Финансы</a>
+                            </li>
+                            <li><a href=""><span class="i i-menu05"></span>Видеосервис</a>
+                            </li>
+                            <li><a href="" class="active"><span class="i i-menu06"></span>Управ. компания</a>
+                            </li>
+                            <li><a href=""><span class="i i-menu07"></span>Полезные советы</a>
+                            </li>
+                        </ul>
+                        <div class="login_block"><a href="" class="btn btn_block">Выйти</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- /header -->
+        <!-- nav -->
+        <nav class="nav_box">
+            <ul>
+                <li><a href="" class="active">Электричество</a>
+                </li>
+                <li><a href="">Холодная вода</a>
+                </li>
+                <li><a href="">Горячая вода</a>
+                </li>
+                <li><a href="">Газ</a>
+                </li>
+                <li><a href="">Отопление</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /nav -->
+        <!-- page -->
+        <div class="page">
+            <!-- diagramm box -->
+            <div class="content_box">
+                <div class="filter_title">
+                    <h1>Счетчик Меркурий 1-35</h1>
+                    <div class="frm_cal">
+                        <input type="text" placeholder="Выберите дату">
+                    </div>
+                </div>
+
+                <div class="diagramm_box nolegend">
+                    <script type="text/javascript">
+                        google.setOnLoadCallback(drawChart);
+
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Days', 'Gr1'],
+                                ['1 ЯНВ.', 0],
+                                ['2 ЯНВ.', 0.8],
+                                ['3 ЯНВ.', 0.5],
+                                ['4 ЯНВ.', 1],
+                                ['5 ЯНВ.', 1],
+                                ['6 ЯНВ.', 1.5],
+                                ['7 ЯНВ.', 1.3],
+                                ['8 ЯНВ.', 1.8],
+                                ['9 ЯНВ.', 1.5],
+                                ['10 ЯНВ.', 1.8],
+                                ['11 ЯНВ.', 2],
+                                ['12 ЯНВ.', 2],
+                                ['13 ЯНВ.', 2.2],
+                                ['14 ЯНВ.', 2.5]
+                            ]);
+
+                            var options = {
+                                tooltip: false,
+                                width: 940,
+                                height: 260,
+                                colors: ['#eb5b0c', '#607d8b'],
+                                chartArea: {
+                                    left: 20,
+                                    top: 10,
+                                    width: 850,
+                                    height: '85%'
+                                },
+                                lineWidth: 3,
+
+                                hAxis: {
+                                    textStyle: {
+                                        color: '#757575',
+                                        fontSize: 11,
+                                        fontName: 'source_sans_proregular',
+                                        bold: false,
+                                        italic: false
+                                    }
+                                },
+
+                                vAxis: {
+                                    format: 'decimal',
+                                    gridlines: {
+                                        color: '#e0e0e0',
+                                        count: 6
+                                    },
+                                    ticks: [1, 2, 3, 4, 5, 6],
+                                    textStyle: {
+                                        color: '#757575',
+                                        fontSize: 11,
+                                        fontName: 'source_sans_proregular',
+                                        bold: false,
+                                        italic: false
+                                    }
+                                }
+                            };
+
+                            var chart = new google.visualization.LineChart(document.getElementById('diagramm'));
+
+                            chart.draw(data, options);
+                        }
+                    </script>
+                    <div id="diagramm" class="diagramm_block"></div>
+                </div>
+                <div class="actions_block">
+                    <a href="" class="btn_left">Вернуться ко всем счетчикам</a>
+                    <a href="" class="btn btn_right">Распечатать</a>
+                    <a href="" class="btn btn_right">Сохранить</a>
+                </div>
+            </div>
+            <!-- /diagramm box -->
+        </div>
+        <!-- /page -->
+    </div>
+    <!-- /wrap -->
+    <div class="overlay"></div>
+</body>
+
+</html>
