@@ -271,8 +271,10 @@ body {
   top: 8px;
 }
 .nav_box {
-  height: 70px;
-  line-height: 74px;
+  /*height: 70px;*/
+  /*line-height: 74px;*/
+  height: 46px;
+  line-height: 47px;
   overflow: hidden;
   background: white;
   min-width: 1024px;
