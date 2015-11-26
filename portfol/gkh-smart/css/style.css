@@ -178,7 +178,7 @@ body {
 }
 .nav_box + .page {
   /*min-height: calc(100% - 140px);*/
-  min-height: calc(100% - 205px);
+  min-height: calc(100% - 224px);
 }
 .main_menu {
   float: left;
