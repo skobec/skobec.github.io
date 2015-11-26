@@ -119,14 +119,14 @@ body {
   display: block;
 }
 .header {
-  height: 70px;
-  min-height: 70px;
-  /*background: linear-gradient(to left, #0066cb 45%,#ffffff 0px);*/
-  /*background: -webkit-linear-gradient(to left, #0066cb 45%,#ffffff 0px);*/
-  /*background: -o-linear-gradient(to left, #0066cb 45%,#ffffff 0px);*/
-  /*background: -moz-linear-gradient(to left, #0066cb 45%,#ffffff 0px);*/
+  height: 60px;
+  min-height: 60px;
+  /*background: linear-gradient(to left, #0083c9 45%,#ffffff 0px);*/
+  /*background: -webkit-linear-gradient(to left, #0083c9 45%,#ffffff 0px);*/
+  /*background: -o-linear-gradient(to left, #0083c9 45%,#ffffff 0px);*/
+  /*background: -moz-linear-gradient(to left, #0083c9 45%,#ffffff 0px);*/
   /*background: #eb5b0c;*/
-  background: #0066cb;
+  background: #0083c9;
   min-width: 1024px;
   position: relative;
   clear: both;
@@ -134,15 +134,20 @@ body {
 }
 .header .inner {
   width: 1024px;
-  height: 70px;
+  height: 60px;
   position: relative;
   margin: 0 auto;
-  background: linear-gradient(to left,  #0066cb 0%, #0066cb 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%)repeat-y right,linear-gradient(to right,  #0066cb 0%, #0066cb 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%);
-  background: -webkit-linear-gradient(to left,  #0066cb 0%, #0066cb 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%)repeat-y right,-webkit-linear-gradient(to right,  #0066cb 0%, #0066cb 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%);
-  background: -o-linear-gradient(to left,  #0066cb 0%, #0066cb 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%)repeat-y right,-o-linear-gradient(to right,  #0066cb 0%, #0066cb 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%);
-  background: -moz-linear-gradient(to left,  #0066cb 0%, #0066cb 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%)repeat-y right,-moz-linear-gradient(to right,  #0066cb 0%, #0066cb 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%);
+  /*background: linear-gradient(to left,  #0083c9 0%, #0083c9 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%)repeat-y right,linear-gradient(to right,  #0083c9 0%, #0083c9 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%);*/
+  /*background: -webkit-linear-gradient(to left,  #0083c9 0%, #0083c9 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%)repeat-y right,-webkit-linear-gradient(to right,  #0083c9 0%, #0083c9 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%);*/
+  /*background: -o-linear-gradient(to left,  #0083c9 0%, #0083c9 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%)repeat-y right,-o-linear-gradient(to right,  #0083c9 0%, #0083c9 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%);*/
+  /*background: -moz-linear-gradient(to left,  #0083c9 0%, #0083c9 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%)repeat-y right,-moz-linear-gradient(to right,  #0083c9 0%, #0083c9 20%,  #3384d6 0%,#3384d6 28%, #4f92da 0%, #4f92da 35%,  #80b4e6  0%, #80b4e6  42%, #98c2ea  0%,#98c2ea  50%,  #b3d2f1 0%,#b3d2f1 58%, #cbe0f4 0%,#cbe0f4 66%,  #e6effc 0%, #e6effc 72%, #f3f8fc 0%,#f3f8fc 80%, #f7fbfe 0%, #f7fbfe 88%, #ffffff 0%, #ffffff 96%);*/
   /*background-size: 490px;*/
   background-size: 513px;
+}
+.inner_logo {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 .header_login {
   height: 115px;
@@ -183,12 +188,12 @@ body {
   padding: 0 20px 0 85px;
   float: left;
   line-height: 62px;
-  height: 70px;
+  height: 60px;
   position: relative;
   font-size: 24px;
   font-family: 'source_sans_prolight';
   /*color: white;*/
-  color: #000000;
+  color: #ffffff;
 }
 .main_menu .btn_toggle .i {
   position: absolute;
@@ -296,10 +301,10 @@ body {
   padding: 0 12px;
   float: left;
   background-color: #abbdc8;
-  /*background: linear-gradient(to right, #0066cb  0%,#6095fd 60%);*/
-  /*background: -webkit-linear-gradient(to right, #0066cb  0%,#6095fd 60%);*/
-  /*background: -o-linear-gradient(to right, #0066cb  0%,#6095fd 60%);*/
-  /*background: -moz-linear-gradient(to right, #0066cb  0%,#6095fd 60%);*/
+  /*background: linear-gradient(to right, #0083c9  0%,#6095fd 60%);*/
+  /*background: -webkit-linear-gradient(to right, #0083c9  0%,#6095fd 60%);*/
+  /*background: -o-linear-gradient(to right, #0083c9  0%,#6095fd 60%);*/
+  /*background: -moz-linear-gradient(to right, #0083c9  0%,#6095fd 60%);*/
 }
 .nav_box li+li {
   background-color: #bbccd3;
@@ -328,7 +333,7 @@ body {
 .nav_box a:hover,
 .nav_box a.active {
   /*color: #eb5b0c;*/
-  color: #0066CB;
+  color: #0083c9;
   text-decoration: none;
 }
 /* ----------------------------------- *\
@@ -398,9 +403,9 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 1px;
 }
 .i-btn-menu {
-  background-image: url("../img/spr/btn-menu_black.png");
-  /*background-image: url(../img/spr.png);*/
-  /*background-position: -515px -289px;*/
+  /*background-image: url("../img/spr/btn-menu_black.png");*/
+  background-image: url(../img/spr.png);
+  background-position: -515px -289px;
   width: 27px;
   height: 21px;
 }
@@ -1671,7 +1676,7 @@ figure img {
   float: right;
 }
 .logo_link {
-  float: right;
+  float: left;
   margin-top: 15px;
 }
 .footer_page {
