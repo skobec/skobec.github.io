@@ -1232,6 +1232,7 @@ figure img {
   top: -107px;
   left: 50%;
   margin-left: -52px;
+  z-index: 1;
 }
 .decor_box.decor02:before {
   background-image: url(../img/spr.png);
