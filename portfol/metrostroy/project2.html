@@ -38,10 +38,10 @@
     <div class="nav_menu">
         <div class="container">
             <div class="row">
-                <div class="col-xs-10">
+                <div class="col-xs-10 no_pad">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Планы</a> </li>
-                        <li><a href="#">Реестр заявок</a> </li>
+                        <li><a href="#">Планы</a> </li>
+                        <li class="active"><a href="#">Реестр заявок</a> </li>
                         <li><a href="#">Справочники</a> </li>
                         <li><a href="#">Отчёты</a> </li>
                     </ul>
@@ -58,15 +58,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-8">
-                    <button class="btn_back">Назад</button>
-                    <button class="add_zayav">Добавить заявку</button>
-                    <select class="status_variant">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
+                    <button class="add_project btn_back"><i class="ico"></i>Назад</button>
+                    <button class="add_project add_zayav"><i class="ico"></i>Добавить заявку</button>
+                    <select class="add_project status_variant">
+                        <option>Все статусы</option>
+                        <option>2 статус</option>
+                        <option>3 статус</option>
                         <option>4</option>
                     </select>
-                    <button class="search"><i class="ico_search"></i> </button>
+                    <button class="add_project search"><i class="ico_search"></i> </button>
                 </div>
                 <div class="col-xs-4">
 
@@ -76,236 +76,144 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <table class="table">
+            <div class="col-xs-12 no_pad">
+                <table class="table table-striped ">
                     <thead>
                     <tr>
-                        <th>ID заявки</th>
+                        <th>id заявки</th>
                         <th>Дата актуализации</th>
                         <th>Заказчик</th>
                         <th>Заявка</th>
                         <th>Стоимость</th>
                         <th>Проект\план</th>
                         <th>Статус заявки</th>
-
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            208660                         </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>2 ноября 2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            Махонин
+                        </td>
+                        <td valign="top">
+                       Заявка на строй материалы
+                        <td valign="top" style="white-space: nowrap;">
+                        </td>
+                        <td>
+                            проект план
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #47ffc7" title="Поступившее"></span>
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            208660                         </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>2 ноября 2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            Махонин
+                        </td>
+                        <td valign="top">
+                            Заявка на строй материалы
+                        <td valign="top" style="white-space: nowrap;">
+                        </td>
+                        <td>
+                            проект план
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #ff5454" title="Поступившее"></span>
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            208660                         </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>2 ноября 2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            Махонин
+                        </td>
+                        <td valign="top">
+                            Заявка на строй материалы
+                        <td valign="top" style="white-space: nowrap;">
+                        </td>
+                        <td>
+                            проект план
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #f71eff" title="Поступившее"></span>
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            208660                         </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>2 ноября 2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            Махонин
+                        </td>
+                        <td valign="top">
+                            Заявка на строй материалы
+                        <td valign="top" style="white-space: nowrap;">
+                        </td>
+                        <td>
+                            проект план
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #afff40" title="Поступившее"></span>
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            208660                         </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>2 ноября 2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            Махонин
+                        </td>
+                        <td valign="top">
+                            Заявка на строй материалы
+                        <td valign="top" style="white-space: nowrap;">
+                        </td>
+                        <td>
+                            проект план
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #585cff" title="Поступившее"></span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
