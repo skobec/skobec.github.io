@@ -298,6 +298,12 @@ p.ps1 {
 }
 .table_plans {
   width: 100%;
+  .form-control {
+    border-color: #AAAAAA;
+  }
+  select {
+    padding: 7px;
+  }
   thead {
     th  {
       color: #e1e9f3;
@@ -359,6 +365,7 @@ p.ps1 {
   background: url("../img/delete.png") no-repeat 100% 0;
   display: inline-block;
   margin: 3px 2px 0;
+
 }
 .modal_project {
   .modal-header {
@@ -369,6 +376,11 @@ p.ps1 {
     background-image: -ms-linear-gradient(top, #3b86da 75%, #4489d6 100%);
     color: #ffffff;
   }
+  textarea.form-control {
+    resize: none;
+    height: 100px;
+    margin: 10px 0;
+  }
   .close {
     background: url("../img/closewindow.png")no-repeat;
     height: 15px;
@@ -378,4 +390,118 @@ p.ps1 {
       font-size: 0;
     }
   }
+}
+.ico_search {
+  background: url("http://localhost:63342/metrostroy/img/lupa.png") no-repeat;
+  background-position: 100% 0;
+  height: 9px;
+  width: 20px;
+  display: block;
+  margin: 6px 8px 7px 3px;
+}
+select.add_project {
+      padding: 8px;
+}
+.btn_back {
+  .ico {
+    background: url("../img/arrow.png")no-repeat;
+    width: 11px;
+    height: 9px;
+    margin: 5px 2px;
+  }
+}
+.calendar_inputs {
+  margin: 10px 0;
+  input {
+    width: 40%;
+  }
+  span {
+    margin-top: 5px;
+    margin-right: 6px;
+  }
+}
+.form-control {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.modal-content {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid #000000;
+  .modal-title {
+    margin-left: 25px;
+  }
+}
+.blue_pod_bl {
+  padding: 5px 20px;
+  width: 100%;
+  background-color: #d1deec;
+}
+.modal-dialog {
+  width: 700px;
+}
+.add_btn {
+  padding: 5px;
+  width: 95%;
+  float: right;
+  .ico {
+    background: url("../img/ok.png") no-repeat;
+    height: 12px;
+    width: 11px;
+    display: inline-block;
+    float: left;
+    background-position: 100% 0;
+    margin-right: 5px;
+    margin-top: 4px;
+  }
+}
+.modal-footer {
+  text-align: center;
+  border-top: 0;
+}
+.add_zayav {
+  padding: 7px;
+  background-color: #cee1f7;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid #A2A2A2;
+  .ico {
+    background: url("../img/ok.png") no-repeat;
+    height: 12px;
+    width: 11px;
+    display: inline-block;
+    float: left;
+    background-position: 100% 0;
+    margin-right: 5px;
+    margin-top: 4px;
+  }
+}
+.clear_btn {
+  padding: 7px;
+  background-color: #cee1f7;
+  -webkit-border-radius: 0;
+  border: 1px solid #A2A2A2;
+
+  .ico {
+    background: url("../img/delete.png") no-repeat;
+    height: 12px;
+    width: 11px;
+    display: inline-block;
+    float: left;
+    background-position: 100% 0;
+    margin-right: 5px;
+    margin-top: 4px;
+  }
+}
+.search_btn {
+  padding: 6px;
+}
+.select_zayav {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 5px 0;
+  color: #9C9999;
 }

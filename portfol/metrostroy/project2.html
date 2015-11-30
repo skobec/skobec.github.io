@@ -58,15 +58,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-8">
-                    <button class="add_project btn_back"><i class="ico"></i>Назад</button>
-                    <button class="add_project add_zayav"><i class="ico"></i>Добавить заявку</button>
-                    <select class="add_project status_variant">
+                    <button class="add_project btn_back btn"><i class="ico"></i>Назад</button>
+                    <button class="add_project add_zayav btn" data-toggle="modal" data-target="#myModal"><i class="ico"></i>Добавить заявку</button>
+                    <select class="add_project status_variant btn">
                         <option>Все статусы</option>
                         <option>2 статус</option>
                         <option>3 статус</option>
                         <option>4</option>
                     </select>
-                    <button class="add_project search"><i class="ico_search"></i> </button>
+                    <button class="add_project search_btn btn"><i class="ico_search"></i> </button>
                 </div>
                 <div class="col-xs-4">
 
@@ -231,7 +231,108 @@
         </div>
     </div>
 </div>
-
+<!-- Modal -->
+<div class="modal modal_project fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Добавить заявку</h4>
+            </div>
+            <div class="blue_pod_bl">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input class="form-control" placeholder="Наименование заявки" style="width: 100%;margin: 0 auto">
+                        <select class="select_zayav">
+                            <option>Заказчик</option>
+                            <option>Заказчик</option>
+                            <option>Заказчик</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <input class="form-control" placeholder="Контактное лицо" style="width: 100%;margin: 0 auto">
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="form-control" placeholder="Контакты" style="width: 100%;margin: 0 auto">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <select class="select_zayav">
+                            <option>Проект\план</option>
+                            <option>Проект\план</option>
+                            <option>Проект\план</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h4>Позиции</h4>
+                <table class="table_plans">
+                    <tbody>
+                    <tr>
+                        <td><span>Теплоизоляция</span></td>
+                        <td><span>20 шт</span></td>
+                        <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Сухие тсроительные смеси</span></td>
+                        <td><span>200 кг</span></td>
+                        <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Штукатурные строитеьыне смеси</span></td>
+                        <td><span>20 уп</span></td>
+                        <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select style="width: 100%">
+                                <option>Выберите из списка</option>
+                                <option>Вариант 1</option>
+                                <option>Вариант 2</option>
+                                <option>Вариант 3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Кол-во</option>
+                                <option>Вариант 1</option>
+                                <option>Вариант 2</option>
+                                <option>Вариант 3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" placeholder="Примерна стоимость">
+                        </td>
+                        <td>
+                            <button class="add_btn"><i class="ico"></i> Добавить</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <textarea class="form-control" placeholder="Комментарии"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p style="margin-top: 5px"><input type="checkbox" name="option1" value="a1" >Создать заявку, не смотря на пердупреждение</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: left">
+                <button type="button" class="btn add_zayav" data-dismiss="modal"><i class="ico"></i> Добавить заявку </button>
+                <button type="button" class="btn clear_btn"><i class="ico"></i> очистить</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
