@@ -98,10 +98,23 @@
                         </td>
                         <td valign="top" style="cursor: auto">
                             <a href="#">САФ-1</a>
-                            МонолитСтрой
+                            <span class="box">
+                                <h4><span class="expand">  МонолитСтрой</span></h4>
+                                <ul>
+                                    <li>+7 905 456-78-90 </li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
                         </td>
                         <td valign="top">
-                            Заявка бетон
+                            <span class="box">
+                                <h4><span class="expand">  Заявка бетон</span></h4>
+                                <ul>
+                                    <li>Цемент М400 800кг</li>
+                                    <li>Цемент М400 800кг</li>
+                                    <li>Цемент М400 800кг</li>
+                                </ul>
+                            </span>
                         <td valign="top" style="white-space: nowrap;">
                         40584.39
                     </td>
@@ -154,10 +167,24 @@
                                 </tbody></table>
                         </td>
                         <td valign="top" style="cursor: auto">
-                            Спецпроектмонтаж
+                            <a href="#">САФ-2</a>
+                             <span class="box">
+                                <h4><span class="expand">  Спецпроектмонтаж</span></h4>
+                                <ul>
+                                    <li>+7 905 456-78-90 </li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
                         </td>
                         <td valign="top">
-                            Заявка на трубы
+                            <span class="box">
+                                <h4><span class="expand">               Заявка на трубы</span></h4>
+                                <ul>
+                                    <li>Цемент М400 800кг</li>
+                                    <li>Цемент М400 800кг</li>
+                                    <li>Цемент М400 800кг</li>
+                                </ul>
+                            </span>
                         <td valign="top" style="white-space: nowrap;">
                         86627.87
                     </td>
@@ -174,10 +201,12 @@
                             349                         </td>
                         <td valign="top">
                             <table width="100%">
-                                <tbody><tr>
+                                <tbody>
+                                <tr>
                                     <td>11/30/2015 15:30</td>
                                 </tr>
-                                </tbody></table>
+                                </tbody>
+                            </table>
                         </td>
                         <td valign="top" style="cursor: auto">
                             САФ-1
@@ -1198,5 +1227,15 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    <!-- Выпадающий список-->
+    $(document).ready(function(){
+        $("ul").hide();
+        $("ul li:odd").css("background-color", "transparent");
+        $("h4 span").click(function(){
+            $(this).parent().next().slideToggle();
+        });
+    });
+</script>
 </body>
 </html>
