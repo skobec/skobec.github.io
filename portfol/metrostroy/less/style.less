@@ -826,23 +826,89 @@ input.mac-style:focus{
 .bl_tabs {
   background-color: #b7c8da;
   border: 1px solid #b4b4b4;
+  float: left;
+  width: 100%;
   ul {
     list-style: none;
+    padding: 0;
     li {
-      display: inline-block;
+      position: relative;
+      display: block;
+      float: left;
+      a {
+        display: block;
+        padding: 3px 15px;
+        text-decoration: none;
+        color: #000000;
+      }
       &:active,&:focus,&:hover{
         a {
           border: 0;
-          background-color: #6487af;
+          background-color: #6588b0;
+          color: #ffffff;
         }
       }
       &.active {
         a {
-          background-color: #6487af;
+          background-color: #6588b0;
+          color: #ffffff;
         }
       }
     }
   }
+}
+.number_sum {
+  margin-top: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  color: #526174;
+}
+.paginator_arrow {
+  float: right;
+  .arrow {
+    border: 1px solid #a0b1c1;
+    background-color: #bcd2ea;
+    width: 34px;
+    height: 29px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 3px 9px;
+    font-size: 0;
+    float: left;
+    margin: 0 3px;
+  }
+  .arrow:after {
+    content: "";
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -moz-transform: rotate(-43deg);
+    -ms-transform: rotate(-43deg);
+    -webkit-transform: rotate(-43deg);
+    -o-transform: rotate(-43deg);
+    transform: rotate(-43deg);
+  }
+  .arrow_left:after {
+    border-top: 1px solid #526174;
+    border-left: 1px solid #526174;
+  }
+  .arrow_right:after {
+    border-bottom: 1px solid #526174;
+    border-right: 1px solid #526174;
+  }
+}
+.pagination > li > a, .pagination > li > span {
+  border: none;
+}
+.pagination > .active > a {
+  background-color: #3B86DA;
+  border-color: #3B86DA;
 }
 //.box {
 //  width: 250px;
