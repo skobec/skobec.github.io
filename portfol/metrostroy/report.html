@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Мегастрой</title>
+    <!-- Bootstrap -->
+    <link href="less/bootstrap.less" rel="stylesheet/less">
+    <link href="less/style.less" rel="stylesheet/less" type="text/css">
+    <!-- Scripts -->
+    <script>
+        less = {
+            env: 'development'
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+    <script>less.watch();</script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="row head_titl_bl">
+            <div class="col-xs-12">
+                <h1 class="titile_page">Система управления строительным холдингом</h1>
+                <p>Единая служба управления закупочной деятельностью предприятия</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="nav_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 no_pad">
+                    <ul class="nav navbar-nav">
+                        <li><a href="project.html">Планы</a> </li>
+                        <li><a href="project2.html">Реестр заявок</a> </li>
+                        <li class="active"><a href="#">Отчёты</a> </li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#" class="log_pers">Евсеенко Дмитрий Олегович</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="bl_button_set">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8">
+                    <button class="add_project btn"><i class="ico"></i> Добвить рабочий стол</button>
+                </div>
+                <div class="col-xs-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <img src="img/graf.jpg" style="margin-top: 35px">
+        </div>
+    </div>
+
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-6 text-right">
+                <a href="#" class="dev_link">Сообщить разработчикам об ошибке</a>
+                <a href="#" class="etton_link">ооо "Эттон"</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal modal_project fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Добавить план</h4>
+            </div>
+            <div class="blue_pod_bl">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input class="form-control" placeholder="Наименование плана" style="width: 70%;margin: 0 auto">
+                    </div>
+                </div>
+                <div class="row calendar_inputs">
+                    <div class="col-xs-6">
+                        <input class="form-control" placeholder="Дата начала" style="float: right"> <span style="float: right">c</span>
+                    </div>
+                    <div class="col-xs-6 no_pad">
+                        <span style="float: left">по </span><input class="form-control" placeholder="Дата окончания" style="float: left">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <a href="#" class="plans_proj" style="margin-top: 5px">Позиции плана</a>
+                <p style="margin-top: 5px"><input type="checkbox" name="option1" value="a1" >Перенести недосвоенные позиции текущего года</p>
+                <table class="table_plans">
+                    <thead>
+                    <tr>
+                        <th><span>Наименование</span></th>
+                        <th><span>Кол-во</span></th>
+                        <th><span>Планируемая видимость</span></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>Теплоизоляция</span></td>
+                        <td><span>20 шт</span></td>
+                        <td><span>5 678,90</span></td>
+                        <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Сухие тсроительные смеси</span></td>
+                        <td><span>200 кг</span></td>
+                        <td><span>21 523,90</span></td>
+                        <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Штукатурные строитеьыне смеси</span></td>
+                        <td><span>20 уп</span></td>
+                        <td><span>11 123,90</span></td>
+                        <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select style="width: 100%">
+                                <option>Выберите из списка</option>
+                                <option>Вариант 1</option>
+                                <option>Вариант 2</option>
+                                <option>Вариант 3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Кол-во</option>
+                                <option>Вариант 1</option>
+                                <option>Вариант 2</option>
+                                <option>Вариант 3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" placeholder="Примерна стоимость">
+                        </td>
+                        <td>
+                            <button class="add_btn"><i class="ico"></i> Добавить</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn add_zayav" data-dismiss="modal"><i class="ico"></i> Добавить заявку </button>
+                <button type="button" class="btn clear_btn"><i class="ico"></i> очистить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -7,16 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Мегастрой</title>
     <!-- Bootstrap -->
-    <link href="less/bootstrap.less" rel="stylesheet/less">
-    <link href="less/style.less" rel="stylesheet/less" type="text/css">
-    <!-- Scripts -->
-    <script>
-        less = {
-            env: 'development'
-        };
-    </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-    <script>less.watch();</script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="css/datepicker.css" rel="stylesheet" type="text/css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -40,14 +35,13 @@
             <div class="row">
                 <div class="col-xs-10 no_pad">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Планы</a> </li>
-                        <li><a href="#">Реестр заявок</a> </li>
-                        <li><a href="#">Справочники</a> </li>
-                        <li><a href="#">Отчёты</a> </li>
+                        <li class="active"><a href="project.html">Планы</a> </li>
+                        <li><a href="project2.html">Реестр заявок</a> </li>
+                        <li><a href="report.html">Отчёты</a> </li>
                     </ul>
                 </div>
                 <div class="col-xs-2">
-                    <a href="#" class="log_pers">Иванов Иван</a>
+                    <a href="#" class="log_pers">Евсеенко Дмитрий Олегович</a>
                 </div>
             </div>
         </div>
@@ -74,7 +68,7 @@
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Проект № 34511-1 Строительство линии 5<i class="ico"></i>
+                                    Проект № 34511-1 МКД 7.2<i class="ico"></i>
                                 </a>
                             </h4>
                         </div>
@@ -99,38 +93,74 @@
                                         <tbody>
                                         <tr>
                                             <th scope="row">1.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план январь 2016</span></td>
+                                            <td><span>1 января 2016 - 31 января 2016</span></td>
+                                            <td><span>1 197 443.32</span></td>
+                                            <td><span>43</span></td>
+                                            <td><span>0</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план декабрь 2015</span></td>
+                                            <td><span>1 декабря 2015 - 31 декабря 2015</span></td>
+                                            <td><span>902 011.21</span></td>
+                                            <td><span>12</span></td>
+                                            <td><span>5</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план ноябрь 2015</span></td>
+                                            <td><span>1 ноября 2015 - 30 ноября 2015</span></td>
+                                            <td><span>4 237 712.42</span></td>
+                                            <td><span>23</span></td>
+                                            <td><span>107</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">4.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план октябрь 2015</span></td>
+                                            <td><span>1 октября 2015 - 31 октября 2015</span></td>
+                                            <td><span>527 256.29</span></td>
+                                            <td><span>3</span></td>
+                                            <td><span>90</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5.</th>
+                                            <td><span>Утвержденный план сентябрь 2015</span></td>
+                                            <td><span>1 сентября 2015 - 30 сентября 2015</span></td>
+                                            <td><span>921 642.63</span></td>
+                                            <td><span>4</span></td>
+                                            <td><span>100</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6.</th>
+                                            <td><span>Утвержденный план август 2015</span></td>
+                                            <td><span>1 августа 2015 - 31 августа 2015</span></td>
+                                            <td><span>762 347.20</span></td>
+                                            <td><span>2</span></td>
+                                            <td><span>100</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7.</th>
+                                            <td><span>Утвержденный план июль 2015</span></td>
+                                            <td><span>1 июля 2015 - 31 июля 2015</span></td>
+                                            <td><span>1 028 323.32</span></td>
+                                            <td><span>6</span></td>
+                                            <td><span>91</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8.</th>
+                                            <td><span>Утвержденный план июнь 2015</span></td>
+                                            <td><span>1 июнь 2015 - 30 июня 2015</span></td>
+                                            <td><span>4 388 233.42</span></td>
+                                            <td><span>25</span></td>
+                                            <td><span>100</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         </tbody>
@@ -144,7 +174,7 @@
                         <div class="panel-heading" role="tab" id="headingTwo">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Проект № 34511-1 Строительство линии 5<i class="ico"></i>
+                                    Проект № 34512-1 Ф0.2<i class="ico"></i>
                                 </a>
                             </h4>
                         </div>
@@ -169,38 +199,56 @@
                                         <tbody>
                                         <tr>
                                             <th scope="row">1.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план январь 2016</span></td>
+                                            <td><span>1 января 2016 - 31 января 2016</span></td>
+                                            <td><span>9 236 762.50</span></td>
+                                            <td><span>38</span></td>
+                                            <td><span>0</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план декабрь 2015</span></td>
+                                            <td><span>1 декабря 2015 - 31 декабря 2015</span></td>
+                                            <td><span>3 214 421.43</span></td>
+                                            <td><span>17</span></td>
+                                            <td><span>34</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план ноябрь 2015</span></td>
+                                            <td><span>1 ноября 2015 - 30 ноября 2015</span></td>
+                                            <td><span>2 353 233.21</span></td>
+                                            <td><span>13</span></td>
+                                            <td><span>72</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">4.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план октябрь 2015</span></td>
+                                            <td><span>1 октября 2015 - 31 октября 2015</span></td>
+                                            <td><span>7 263 711.87</span></td>
+                                            <td><span>28</span></td>
+                                            <td><span>96</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5.</th>
+                                            <td><span>Утвержденный план сентябрь 2015</span></td>
+                                            <td><span>1 сентября 2015 - 30 сентября 2015</span></td>
+                                            <td><span>7 237 462.42</span></td>
+                                            <td><span>32</span></td>
+                                            <td><span>89</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6.</th>
+                                            <td><span>Утвержденный план август 2015</span></td>
+                                            <td><span>1 августа 2015 - 31 августа 2015</span></td>
+                                            <td><span>662 347.37</span></td>
+                                            <td><span>14</span></td>
+                                            <td><span>100</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         </tbody>
@@ -214,7 +262,7 @@
                         <div class="panel-heading" role="tab" id="headingThree">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Проект № 34511-1 Строительство линии 5<i class="ico"></i>
+                                    Проект № 34513-1 АГЗС9<i class="ico"></i>
                                 </a>
                             </h4>
                         </div>
@@ -236,41 +284,112 @@
                                             <th></th>
                                         </tr>
                                         </thead>
-                                        <tbody>
                                         <tr>
                                             <th scope="row">1.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план январь 2016</span></td>
+                                            <td><span>1 января 2016 - 31 января 2016</span></td>
+                                            <td><span>1 197 443.32</span></td>
+                                            <td><span>12</span></td>
+                                            <td><span>0</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план декабрь 2015</span></td>
+                                            <td><span>1 декабря 2015 - 31 декабря 2015</span></td>
+                                            <td><span>902 011.21</span></td>
+                                            <td><span>13</span></td>
+                                            <td><span>64</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план ноябрь 2015</span></td>
+                                            <td><span>1 ноября 2015 - 30 ноября 2015</span></td>
+                                            <td><span>4 237 712.42</span></td>
+                                            <td><span>27</span></td>
+                                            <td><span>78</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">4.</th>
-                                            <td><span>Утвержденный план за ноябрь</span></td>
-                                            <td><span>1 ноября 2015 - 23 февраля 2016</span></td>
-                                            <td><span>8 800 680.80</span></td>
-                                            <td><span>18</span></td>
-                                            <td><span>15</span></td>
+                                            <td><span>Утвержденный план октябрь 2015</span></td>
+                                            <td><span>1 октября 2015 - 31 октября 2015</span></td>
+                                            <td><span>527 256.29</span></td>
+                                            <td><span>7</span></td>
+                                            <td><span>110</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5.</th>
+                                            <td><span>Утвержденный план сентябрь 2015</span></td>
+                                            <td><span>1 сентября 2015 - 30 сентября 2015</span></td>
+                                            <td><span>921 642.63</span></td>
+                                            <td><span>9</span></td>
+                                            <td><span>106</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6.</th>
+                                            <td><span>Утвержденный план август 2015</span></td>
+                                            <td><span>1 августа 2015 - 31 августа 2015</span></td>
+                                            <td><span>762 347.20</span></td>
+                                            <td><span>9</span></td>
+                                            <td><span>67</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7.</th>
+                                            <td><span>Утвержденный план июль 2015</span></td>
+                                            <td><span>1 июля 2015 - 31 июля 2015</span></td>
+                                            <td><span>1 028 323.32</span></td>
+                                            <td><span>12</span></td>
+                                            <td><span>96</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8.</th>
+                                            <td><span>Утвержденный план июнь 2015</span></td>
+                                            <td><span>1 июнь 2015 - 30 июня 2015</span></td>
+                                            <td><span>4 388 233.42</span></td>
+                                            <td><span>24</span></td>
+                                            <td><span>94</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">9.</th>
+                                            <td><span>Утвержденный план мая 2015</span></td>
+                                            <td><span>1 мая 2015 - 31 мая 2015</span></td>
+                                            <td><span>187 232.55</span></td>
+                                            <td><span>2</span></td>
+                                            <td><span>100</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">10.</th>
+                                            <td><span>Утвержденный план апрель 2015</span></td>
+                                            <td><span>1 апреля 2015 - 30 апреля 2015</span></td>
+                                            <td><span>256 543.30</span></td>
+                                            <td><span>4</span></td>
+                                            <td><span>75</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">11.</th>
+                                            <td><span>Утвержденный план марта 2015</span></td>
+                                            <td><span>1 марта 2015 - 31 марта 2015</span></td>
+                                            <td><span>823 642.32</span></td>
+                                            <td><span>6</span></td>
+                                            <td><span>100</span></td>
+                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">12.</th>
+                                            <td><span>Утвержденный план февраль 2015</span></td>
+                                            <td><span>1 февраля 2015 - 28 февраля 2015</span></td>
+                                            <td><span>626 725.43</span></td>
+                                            <td><span>7</span></td>
+                                            <td><span>100</span></td>
                                             <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                         </tr>
                                         </tbody>
@@ -284,12 +403,12 @@
             </div>
             <div class="col-xs-5 right_bl_info">
                 <h4 class="title_end_proj">Завершенные проекты</h4>
-                <p class="name_proj"><span class="number_proj">Проект №45</span> <span class="name_proj">Строительные линии 4</span> </p>
-                <p class="name_proj"><span class="number_proj">Проект №45</span> <span class="name_proj">Строительные линии 4</span> </p>
-                <p class="name_proj"><span class="number_proj">Проект №45</span> <span class="name_proj">Строительные линии 4</span> </p>
-                <p class="name_proj"><span class="number_proj">Проект №45</span> <span class="name_proj">Строительные линии 4</span> </p>
-                <p class="name_proj"><span class="number_proj">Проект №45</span> <span class="name_proj">Строительные линии 4</span> </p>
-                <p class="name_proj"><span class="number_proj">Проект №45</span> <span class="name_proj">Строительные линии 4</span> </p>
+                <p class="name_proj"><span class="number_proj">Проект № 34511-1 </span> <span class="name_proj">Ф08</span> </p>
+                <p class="name_proj"><span class="number_proj">Проект № 34510-1 </span> <span class="name_proj">Ф07</span> </p>
+                <p class="name_proj"><span class="number_proj">Проект № 56113-1 </span> <span class="name_proj">КАВ 62</span> </p>
+                <p class="name_proj"><span class="number_proj">Проект № 56263-2 </span> <span class="name_proj">ЕАВ 62</span> </p>
+                <p class="name_proj"><span class="number_proj">Проект № 11514-1 </span> <span class="name_proj">МКД 150.1</span> </p>
+                <p class="name_proj"><span class="number_proj">Проект № 41387-1 </span> <span class="name_proj">ТРФ 1</span> </p>
             </div>
         </div>
     </div>
@@ -322,10 +441,10 @@
                 </div>
                 <div class="row calendar_inputs">
                     <div class="col-xs-6">
-                        <input class="form-control" placeholder="Дата начала" style="float: right"> <span style="float: right">c</span>
+                        <input class="form-control" placeholder="Дата начала" value="" id="dpd1" style="float: right"> <span style="float: right">c</span>
                     </div>
                     <div class="col-xs-6 no_pad">
-                        <span style="float: left">по </span><input class="form-control" placeholder="Дата окончания" style="float: left">
+                        <span style="float: left">по </span><input class="form-control" value="" id="dpd2"  placeholder="Дата окончания" style="float: left">
                     </div>
                 </div>
             </div>
@@ -397,5 +516,32 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script>
+    $('.datepicker').datepicker()
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+    var checkin = $('#dpd1').datepicker({
+        onRender: function(date) {
+            return date.valueOf() < now.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function(ev) {
+        if (ev.date.valueOf() > checkout.date.valueOf()) {
+            var newDate = new Date(ev.date)
+            newDate.setDate(newDate.getDate() + 1);
+            checkout.setValue(newDate);
+        }
+        checkin.hide();
+        $('#dpd2')[0].focus();
+    }).data('datepicker');
+    var checkout = $('#dpd2').datepicker({
+        onRender: function(date) {
+            return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function(ev) {
+        checkout.hide();
+    }).data('datepicker');
+</script>
 </body>
 </html>
