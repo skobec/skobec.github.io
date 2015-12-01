@@ -466,6 +466,7 @@ p.ps1 {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  float: left;
   .ico {
     background: url("../img/add_2.png")100% 100% no-repeat;
     width: 16px;
@@ -708,6 +709,8 @@ select.add_project {
   -moz-border-radius: 0;
   border-radius: 0;
   border: 1px solid #A2A2A2;
+  float: left;
+  margin-right: 6px;
   .ico {
     background: url("../img/ok.png") no-repeat;
     height: 12px;
@@ -744,4 +747,55 @@ select.add_project {
   padding: 5px 10px;
   margin: 5px 0;
   color: #9C9999;
+}
+.table_reestr {
+  thead {
+    tr {
+      background-color: #4c4c4c;
+      th {
+        font-weight: 100 ;
+        font-size: 12px;
+        color: #c9c9c9;
+        border: 1px solid #7b7b7b;
+      }
+    }
+  }
+}
+input.mac-style {
+  width: 15px!important;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  display: inline-block;
+  background-color: #c1d7ef;
+  border: 1px solid #a3b3bf;
+  padding-left: 35px;
+  float: left;
+  margin: 0;
+  height: 100%;
+  margin-left: 6px;
+}
+
+input.mac-style:focus{
+    width: 200px!important;
+  }
+
+.search_bl_input {
+  display: inline-block;
+  position: relative;
+  float: left;
+  height: 36px;
+  &:after {
+    content: "";
+    background: url("http://localhost:63342/metrostroy/img/lupa.png") no-repeat;
+    background-position: 100% 0;
+    width: 19px;
+    height: 9px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
 }
