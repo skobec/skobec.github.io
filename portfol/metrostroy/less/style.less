@@ -762,7 +762,7 @@ select.add_project {
   }
 }
 input.mac-style {
-  width: 15px!important;
+  width: 90px!important;
   -webkit-transition: width 0.5s ease-in-out;
   -moz-transition: width 0.5s ease-in-out;
   -o-transition: width 0.5s ease-in-out;
@@ -775,6 +775,8 @@ input.mac-style {
   margin: 0;
   height: 100%;
   margin-left: 6px;
+  font-size: 12px;
+  font-style: italic;
 }
 
 input.mac-style:focus{
@@ -793,11 +795,15 @@ input.mac-style:focus{
     width: 19px;
     height: 9px;
     position: absolute;
-    left: 10px;
-    top: 0;
+    left: 15px;
+    top: -2px;
     bottom: 0;
     margin: auto 0;
   }
+  ::-webkit-input-placeholder {color:#000000;}
+  ::-moz-placeholder          {color:#000000;}/* Firefox 19+ */
+  :-moz-placeholder           {color:#000000;}/* Firefox 18- */
+  :-ms-input-placeholder      {color:#000000;}
 }
 .box {
   ul {
@@ -814,6 +820,27 @@ input.mac-style:focus{
       background: url("../img/bigraskr-1.png")no-repeat right;
       padding-right: 15px;
       color: #405a73;
+    }
+  }
+}
+.bl_tabs {
+  background-color: #b7c8da;
+  border: 1px solid #b4b4b4;
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      &:active,&:focus,&:hover{
+        a {
+          border: 0;
+          background-color: #6487af;
+        }
+      }
+      &.active {
+        a {
+          background-color: #6487af;
+        }
+      }
     }
   }
 }
