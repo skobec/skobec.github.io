@@ -7,16 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Мегастрой</title>
     <!-- Bootstrap -->
-    <link href="less/bootstrap.less" rel="stylesheet/less">
-    <link href="less/style.less" rel="stylesheet/less" type="text/css">
-    <!-- Scripts -->
-    <script>
-        less = {
-            env: 'development'
-        };
-    </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-    <script>less.watch();</script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="css/datepicker.css" rel="stylesheet" type="text/css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -40,10 +35,9 @@
             <div class="row">
                 <div class="col-xs-10 no_pad">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Планы</a> </li>
-                        <li><a href="#">Реестр заявок</a> </li>
-                        <li><a href="#">Справочники</a> </li>
-                        <li><a href="#">Отчёты</a> </li>
+                        <li class="active"><a href="project.html">Планы</a> </li>
+                        <li><a href="project2.html">Реестр заявок</a> </li>
+                        <li><a href="report.html">Отчёты</a> </li>
                     </ul>
                 </div>
                 <div class="col-xs-2">
@@ -447,10 +441,10 @@
                 </div>
                 <div class="row calendar_inputs">
                     <div class="col-xs-6">
-                        <input class="form-control" placeholder="Дата начала" style="float: right"> <span style="float: right">c</span>
+                        <input class="form-control" placeholder="Дата начала" value="" id="dpd1" style="float: right"> <span style="float: right">c</span>
                     </div>
                     <div class="col-xs-6 no_pad">
-                        <span style="float: left">по </span><input class="form-control" placeholder="Дата окончания" style="float: left">
+                        <span style="float: left">по </span><input class="form-control" value="" id="dpd2"  placeholder="Дата окончания" style="float: left">
                     </div>
                 </div>
             </div>
@@ -522,5 +516,32 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script>
+    $('.datepicker').datepicker()
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+    var checkin = $('#dpd1').datepicker({
+        onRender: function(date) {
+            return date.valueOf() < now.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function(ev) {
+        if (ev.date.valueOf() > checkout.date.valueOf()) {
+            var newDate = new Date(ev.date)
+            newDate.setDate(newDate.getDate() + 1);
+            checkout.setValue(newDate);
+        }
+        checkin.hide();
+        $('#dpd2')[0].focus();
+    }).data('datepicker');
+    var checkout = $('#dpd2').datepicker({
+        onRender: function(date) {
+            return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function(ev) {
+        checkout.hide();
+    }).data('datepicker');
+</script>
 </body>
 </html>

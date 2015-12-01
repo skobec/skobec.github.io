@@ -7,16 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Мегастрой</title>
     <!-- Bootstrap -->
-    <link href="less/bootstrap.less" rel="stylesheet/less">
-    <link href="less/style.less" rel="stylesheet/less" type="text/css">
-    <!-- Scripts -->
-    <script>
-        less = {
-            env: 'development'
-        };
-    </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-    <script>less.watch();</script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -40,10 +32,9 @@
             <div class="row">
                 <div class="col-xs-10 no_pad">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Планы</a> </li>
-                        <li class="active"><a href="#">Реестр заявок</a> </li>
-                        <li><a href="#">Справочники</a> </li>
-                        <li><a href="#">Отчёты</a> </li>
+                        <li><a href="project.html">Планы</a> </li>
+                        <li class="active"><a href="project2.html">Реестр заявок</a> </li>
+                        <li><a href="report.html">Отчёты</a> </li>
                     </ul>
                 </div>
                 <div class="col-xs-2">
@@ -58,7 +49,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-8">
-                    <button class="add_project btn_back btn"><i class="ico"></i>Назад</button>
+                    <!--<button class="add_project btn_back btn"><i class="ico"></i>Назад</button>-->
                     <button class="add_project add_zayav btn" data-toggle="modal" data-target="#myModal"><i class="ico"></i>Добавить заявку</button>
                     <select class="add_project status_variant btn">
                         <option>Все статусы</option>
@@ -93,107 +84,172 @@
                     <tr class="tr-hover" data-issue="208660">
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
-                            208660                         </td>
+                            352                      </td>
                         <td valign="top">
                             <table width="100%">
                                 <tbody><tr>
-                                    <td>2 ноября 2015 15:30</td>
+                                    <td>11/30/2015 20:15</td>
                                 </tr>
                                 </tbody></table>
                         </td>
                         <td valign="top" style="cursor: auto">
-                            Махонин
+                            МонолитСтрой
                         </td>
                         <td valign="top">
-                       Заявка на строй материалы
+                            Заявка бетон
                         <td valign="top" style="white-space: nowrap;">
+                        40584.39
+                    </td>
+                        <td>
+                            Проект № 34512-1 Ф0.2/Утвержденный план декабрь 2015
                         </td>
                         <td>
-                            проект план
-                        </td>
-                        <td>
-                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #47ffc7" title="Поступившее"></span>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #47ffc7" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
                         </td>
                     </tr>
                     <tr class="tr-hover" data-issue="208660">
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
-                            208660                         </td>
+                            351                      </td>
                         <td valign="top">
                             <table width="100%">
                                 <tbody><tr>
-                                    <td>2 ноября 2015 15:30</td>
+                                    <td>11/30/2015 15:30</td>
                                 </tr>
                                 </tbody></table>
                         </td>
                         <td valign="top" style="cursor: auto">
-                            Махонин
+                            Спецпроектмонтаж
                         </td>
                         <td valign="top">
-                            Заявка на строй материалы
+                            Арматура 200шт
                         <td valign="top" style="white-space: nowrap;">
+                        16351.12
                         </td>
                         <td>
-                            проект план
+                            Проект № 34513-1 АГЗС11/Утвержденный план ноябрь 2015
                         </td>
                         <td>
-                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #ff5454" title="Поступившее"></span>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;     float: left;background-color: #ff5454" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
                         </td>
                     </tr>
                     <tr class="tr-hover" data-issue="208660">
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
-                            208660                         </td>
+                            350                         </td>
                         <td valign="top">
                             <table width="100%">
                                 <tbody><tr>
-                                    <td>2 ноября 2015 15:30</td>
+                                    <td>11/30/2015 15:30</td>
                                 </tr>
                                 </tbody></table>
                         </td>
                         <td valign="top" style="cursor: auto">
-                            Махонин
+                            Спецпроектмонтаж
                         </td>
                         <td valign="top">
-                            Заявка на строй материалы
+                            Заявка на трубы
                         <td valign="top" style="white-space: nowrap;">
-                        </td>
+                        86627.87
+                    </td>
                         <td>
-                            проект план
-                        </td>
+                            Проект № 34511-1 МКД 7.2/Утвержденный план ноябрь 2015	                        </td>
                         <td>
-                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #f71eff" title="Поступившее"></span>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;     float: left;background-color: #ff5454" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
                         </td>
                     </tr>
                     <tr class="tr-hover" data-issue="208660">
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
-                            208660                         </td>
+                            349                         </td>
                         <td valign="top">
                             <table width="100%">
                                 <tbody><tr>
-                                    <td>2 ноября 2015 15:30</td>
+                                    <td>11/30/2015 15:30</td>
                                 </tr>
                                 </tbody></table>
                         </td>
                         <td valign="top" style="cursor: auto">
-                            Махонин
+                            САФ-1
                         </td>
                         <td valign="top">
-                            Заявка на строй материалы
+                            ОПГС 20 машин
                         <td valign="top" style="white-space: nowrap;">
+                        53719.38
+                    </td>
+                        <td>
+                            Проект № 34512-1 Ф0.2/Утвержденный план ноябрь 2015
                         </td>
                         <td>
-                            проект план
-                        </td>
-                        <td>
-                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #afff40" title="Поступившее"></span>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;     float: left;background-color: #ff5454" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
                         </td>
                     </tr>
                     <tr class="tr-hover" data-issue="208660">
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
-                            208660                         </td>
+                            348                         </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/29/2015	 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            ПСУ
+                        </td>
+                        <td valign="top">
+                            ЖБИ заявка
+                        <td valign="top" style="white-space: nowrap;">
+                        83755.38
+                    </td>
+                        <td>
+                            Проект № 34513-1 АГЗС11/Утвержденный план ноябрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;     float: left;background-color: #ff5454" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            347                         </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/28/2015		 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            МонолитСтрой
+                        </td>
+                        <td valign="top">
+                            Канализация 55 м
+                        <td valign="top" style="white-space: nowrap;">
+                        50711.61
+                        </td>
+                        <td>
+                            Проект № 34512-1 Ф0.2/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #fdfdfd" title="Поступившее" ></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Обработка</span>
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            346                         </td>
                         <td valign="top">
                             <table width="100%">
                                 <tbody><tr>
@@ -202,17 +258,272 @@
                                 </tbody></table>
                         </td>
                         <td valign="top" style="cursor: auto">
-                            Махонин
+                            Техстройресурс
                         </td>
                         <td valign="top">
-                            Заявка на строй материалы
+                            Канализация 55 м
                         <td valign="top" style="white-space: nowrap;">
+                        50711.61
                         </td>
                         <td>
-                            проект план
+                            Проект № 34512-1 Ф0.2/Утвержденный план декабрь 2015
                         </td>
                         <td>
-                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block; background-color: #585cff" title="Поступившее"></span>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #afff40" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Обработка</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            345                        </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/27/2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            СтройСервис
+                        </td>
+                        <td valign="top">
+                            Кирпич 2 лафета
+                        <td valign="top" style="white-space: nowrap;">
+                        60042.08
+                    </td>
+                        <td>
+                            Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #585cff" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            345                        </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/27/2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            СтройСервис
+                        </td>
+                        <td valign="top">
+                            Кирпич 2 лафета
+                        <td valign="top" style="white-space: nowrap;">
+                            60042.08
+                        </td>
+                        <td>
+                            Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #585cff" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            345                        </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/27/2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            СтройСервис
+                        </td>
+                        <td valign="top">
+                            Кирпич 2 лафета
+                        <td valign="top" style="white-space: nowrap;">
+                            60042.08
+                        </td>
+                        <td>
+                            Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #585cff" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            345                        </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/27/2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            СтройСервис
+                        </td>
+                        <td valign="top">
+                            Кирпич 2 лафета
+                        <td valign="top" style="white-space: nowrap;">
+                            60042.08
+                        </td>
+                        <td>
+                            Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #585cff" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            345                        </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/27/2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            СтройСервис
+                        </td>
+                        <td valign="top">
+                            Кирпич 2 лафета
+                        <td valign="top" style="white-space: nowrap;">
+                            60042.08
+                        </td>
+                        <td>
+                            Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #585cff" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            345                        </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/27/2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            СтройСервис
+                        </td>
+                        <td valign="top">
+                            Кирпич 2 лафета
+                        <td valign="top" style="white-space: nowrap;">
+                            60042.08
+                        </td>
+                        <td>
+                            Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #585cff" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            345                        </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/27/2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            СтройСервис
+                        </td>
+                        <td valign="top">
+                            Кирпич 2 лафета
+                        <td valign="top" style="white-space: nowrap;">
+                            60042.08
+                        </td>
+                        <td>
+                            Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #585cff" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            345                        </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/27/2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            СтройСервис
+                        </td>
+                        <td valign="top">
+                            Кирпич 2 лафета
+                        <td valign="top" style="white-space: nowrap;">
+                            60042.08
+                        </td>
+                        <td>
+                            Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #585cff" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            345                        </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>11/27/2015 15:30</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            СтройСервис
+                        </td>
+                        <td valign="top">
+                            Кирпич 2 лафета
+                        <td valign="top" style="white-space: nowrap;">
+                            60042.08
+                        </td>
+                        <td>
+                            Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #585cff" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 5px;    display: inline-block;    float: left;">Новая</span>
+
                         </td>
                     </tr>
                     </tbody>
@@ -232,7 +543,7 @@
     </div>
 </div>
 <!-- Modal -->
-<div class="modal modal_project fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block">
+<div class="modal modal_project fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -306,18 +617,18 @@
                 <table class="table_plans">
                     <tbody>
                     <tr>
-                        <td><span>Теплоизоляция</span></td>
-                        <td><span>20 уп</span></td>
+                        <td style="text-align: left"><span>Теплоизоляция</span></td>
+                        <td><span style="text-align: center">20 уп</span></td>
+                        <td style="    width: 120px;"><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left"><span>Сухие строительные смеси</span></td>
+                        <td><span style="text-align: center">200 кг</span></td>
                         <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                     </tr>
                     <tr>
-                        <td><span>Сухие строительные смеси</span></td>
-                        <td><span>200 кг</span></td>
-                        <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                    </tr>
-                    <tr>
-                        <td><span>Штукатурные строительные смеси</span></td>
-                        <td><span>20 уп</span></td>
+                        <td style="text-align: left"><span>Штукатурные строительные смеси</span></td>
+                        <td><span style="text-align: center">20 уп</span></td>
                         <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                     </tr>
                     <tr>
@@ -838,7 +1149,8 @@
                             </select>
                         </td>
                         <td>
-                            <select>
+                            <input class="form-control" placeholder="Примерная стоимость" style="float: left;width: 50%">
+                            <select style="width: 50%">
                                 <option>Ед. изм</option>
                                 <option>м3</option>
                                 <option>комплект</option>
@@ -854,9 +1166,6 @@
                                 <option>пог. м</option>
                                 <option>м. п.</option>
                             </select>
-                        </td>
-                        <td>
-                            <input class="form-control" placeholder="Примерная стоимость">
                         </td>
                         <td>
                             <button class="add_btn"><i class="ico"></i> Добавить</button>
