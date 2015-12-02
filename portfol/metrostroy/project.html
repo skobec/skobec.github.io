@@ -85,7 +85,7 @@
                                             <th><span>Наименование</span></th>
                                             <th><span>Период дейтсвия</span></th>
                                             <th><span>Заложенная<br> сумма</span></th>
-                                            <th><span>Колличество<br>заявок</span></th>
+                                            <th><span>Количество<br>заявок</span></th>
                                             <th><span>Процент<br> выполнения</span></th>
                                             <th></th>
                                         </tr>
@@ -182,7 +182,7 @@
                                             <th><span>Наименование</span></th>
                                             <th><span>Период дейтсвия</span></th>
                                             <th><span>Заложенная<br> сумма</span></th>
-                                            <th><span>Колличество<br>заявок</span></th>
+                                            <th><span>Количество<br>заявок</span></th>
                                             <th><span>Процент<br> выполнения</span></th>
                                             <th></th>
                                         </tr>
@@ -270,7 +270,7 @@
                                             <th><span>Наименование</span></th>
                                             <th><span>Период дейтсвия</span></th>
                                             <th><span>Заложенная<br> сумма</span></th>
-                                            <th><span>Колличество<br>заявок</span></th>
+                                            <th><span>Количество<br>заявок</span></th>
                                             <th><span>Процент<br> выполнения</span></th>
                                             <th></th>
                                         </tr>
@@ -427,14 +427,13 @@
             <div class="blue_pod_bl">
                 <div class="row">
                     <div class="col-xs-12">
-                        <input class="form-control" placeholder="Наименование плана" style="width: 70%;margin: 0 auto">
+                        <input class="form-control" placeholder="Наименование плана" style="width: 70%;">
                     </div>
                 </div>
                 <div class="row calendar_inputs">
-                    <div class="col-xs-6">
-                        <input class="form-control" placeholder="Дата начала" value="" id="dpd1" style="float: right"> <span style="float: right">c</span>
-                    </div>
-                    <div class="col-xs-6 no_pad">
+                    <div class="col-xs-9 no_pad">
+                        <span style="float: left">c</span>
+                        <input class="form-control" placeholder="Дата начала" value="" id="dpd1" style="float: left">
                         <span style="float: left">по </span><input class="form-control" value="" id="dpd2"  placeholder="Дата окончания" style="float: left">
                     </div>
                 </div>
@@ -445,9 +444,9 @@
                 <table class="table_plans" id="table_add_plans">
                     <thead>
                     <tr>
-                        <th><span>Наименование</span></th>
-                        <th style="    width: 160px;"><span>Кол-во</span></th>
-                        <th style="    width: 160px;"><span>Планируемая стоимость</span></th>
+                        <th style=" width: 210px;"><span>Наименование</span></th>
+                        <th style=" width: 160px;"><span>Количество</span></th>
+                        <th style=" width: 123px;"><span>Стоимость</span></th>
                         <th style="width: 69px;"></th>
                     </tr>
                     </thead>
@@ -475,26 +474,26 @@
                 <table class="table_plans">
                     <thead>
                     <tr>
-                        <th></th>
-                        <th style="    width: 160px;"></th>
-                        <th style="    width: 160px;"></th>
+                        <th style="width: 250px"></th>
+                        <th style="width: 190px;"></th>
+                        <th style="width: 146px;"></th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td style="    width: 278px;">
+                        <td style="    width: 250px;">
                             <select style="width: 100%" id="t1">
-                                <option>Выберите из списка</option>
+                                <option disabled selected class="placeholder">Выберите из списка</option>
                                 <option>Вариант 1</option>
                                 <option>Вариант 2</option>
                                 <option>Вариант 3</option>
                             </select>
                         </td>
-                        <td>
+                        <td width="160px">
                             <input class="form-control" placeholder="Кол-во" style="width: 50%;display: inline-block" id="t2">
                             <select style="width: 45%" id="t3">
-                                <option disabled selected>Ед. изм</option>
+                                <option disabled selected class="placeholder">Ед. изм</option>
                                 <option>м3</option>
                                 <option>комплект</option>
                                 <option>шт</option>
@@ -511,7 +510,7 @@
                             </select>
                         </td>
                         <td>
-                            <input class="form-control" placeholder="Планируемая стоимость" id="t4">
+                            <input class="form-control" placeholder="Стоимость" id="t4">
                         </td>
                         <td>
                             <button class="add_btn"><i class="ico"></i></button>
@@ -522,7 +521,7 @@
                          </div>
             <div class="modal-footer text-center">
                 <button type="button" class="btn add_zayav" data-dismiss="modal"><i class="ico"></i> Добавить план </button>
-                <button type="button" class="btn clear_btn"><i class="ico"></i> очистить</button>
+                <button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>
             </div>
         </div>
     </div>
@@ -539,7 +538,9 @@
             </div>
 
             <div class="modal-body">
-             <p style="text-align: center">Окно добавления проекта,пока в разработке</p>
+                <div class="col-xs-12">
+                    <input class="form-control" placeholder="Наименование проекта" style="width: 70%;margin: 0 auto 10px">
+                </div>
             </div>
             <div class="modal-footer text-center">
                 <button type="button" class="btn add_zayav" data-dismiss="modal"><i class="ico"></i> Добавить проект </button>

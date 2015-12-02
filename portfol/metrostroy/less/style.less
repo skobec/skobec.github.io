@@ -411,19 +411,37 @@ p.ps1 {
 }
 .nav_menu {
   //background-color: #3984cf;
-  background-image: linear-gradient(top , #3b86da 75%, #4489d6 100%);
-  background-image: -o-linear-gradient(top , #3b86da 75%, #4489d6 100%);
-  background-image: -moz-linear-gradient(top , #3b86da 75%, #4489d6 100%);
-  background-image: -webkit-linear-gradient(top , #3b86da 75%, #4489d6 100%);
-  background-image: -ms-linear-gradient(top , #3b86da 75%, #4489d6 100%);
+  background: #3b86da; /* Для старых браузров */
+  background: linear-gradient(top, #5995D2 35%, #347dc2 100%);
+  background: -o-linear-gradient(top, #5995D2 35%, #347dc2 100%);
+  background: -moz-linear-gradient(top, #5995D2 35%, #347dc2 100%);
+  background: -webkit-linear-gradient(top, #5995D2 35%, #347dc2 100%);
+  background: -ms-linear-gradient(top, #5995D2 35%, #347dc2 100%);
   border-bottom: 1px solid #104363;
-  border-top: 1px solid #b6d9fe;
+  border-top: 1px solid #DBEBFB;
   li:hover a,li.active a, li a:active, li a:focus {
-    background-color: #376796;
-    border: 1px solid #2f5c79;
+    a {
+      color: #f9ffff;
+    }
+    color: #f9ffff;
+    background: #3b86da; /* Для старых браузров */
+    background: linear-gradient(top, #3970a9 35%, #365d84 100%);
+    background: -o-linear-gradient(top, #3970a9 35%, #365d84 100%);
+    background: -moz-linear-gradient(top, #3970a9 35%, #365d84 100%);
+    background: -webkit-linear-gradient(top, #3970a9 35%, #365d84 100%);
+    background: -ms-linear-gradient(top, #3970a9 35%, #365d84 100%);
+    border: 1px solid #2d5c86;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 
   }
   li.active {
+    a {
+      color: #f9ffff;
+    }
     a:after {
       content: "";
       bottom: -15px;
@@ -438,7 +456,12 @@ p.ps1 {
   }
   li {
     a {
-      color: #ffffff;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s ;
+      -ms-transition: 0.3s ;
+      -o-transition: 0.3s ;
+      transition: 0.3s ;
+      color: #92d6ff;
       border: 1px solid transparent;
       border-right: 1px solid #387fc6;
       border-left: 1px solid #3b79bc;
@@ -539,6 +562,10 @@ p.ps1 {
 }
 .table_plans {
   width: 100%;
+  input,select {
+    font-size: 12px;
+    height: 33px;
+  }
   .form-control {
     border-color: #AAAAAA;
   }
@@ -547,7 +574,7 @@ p.ps1 {
   }
   thead {
     th  {
-      color: #e1e9f3;
+      color: #BBC2CA;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 100;
       font-style: oblique;
@@ -703,12 +730,12 @@ select.add_project {
     //background-position: 100% 0;
     //margin-right: 5px;
     //margin-top: 4px;
-    background: url("../img/add_1.png") no-repeat;
-    height: 10px;
-    width: 10px;
+    background: url("../img/add_2.png") no-repeat;
+    height: 16px;
+    width: 16px;
     display: inline-block;
     float: left;
-    background-position: 100% 0;
+    background-position: 100% 100%;
     margin-right: 0;
     margin-top: 0;
   }
@@ -716,6 +743,9 @@ select.add_project {
 .modal-footer {
   text-align: center;
   border-top: 0;
+  .btn {
+    min-width: 130px;
+  }
 }
 .add_zayav {
   padding: 7px;
@@ -782,6 +812,11 @@ select.add_project {
         vertical-align: middle;
       }
     }
+  }
+}
+table {
+  input {
+    font-size: 12px;
   }
 }
 input.mac-style {
@@ -933,6 +968,18 @@ input.mac-style:focus{
   background-color: #3B86DA;
   border-color: #3B86DA;
 }
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+select { color: #000; }
+select option { color: #000; }
+.placeholder { color: #aaa; }
 //.box {
 //  width: 250px;
 //  margin: 10px auto;
