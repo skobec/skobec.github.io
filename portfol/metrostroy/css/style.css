@@ -647,18 +647,22 @@ select.add_project {
 }
 .add_btn {
   padding: 5px;
-  width: 95%;
-  float: right;
+  /* width: 95%; */
+  /* float: right; */
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  margin: auto;
 }
 .add_btn .ico {
-  background: url("../img/ok.png") no-repeat;
-  height: 12px;
-  width: 11px;
+  background: url("../img/add_1.png") no-repeat;
+  height: 10px;
+  width: 10px;
   display: inline-block;
   float: left;
   background-position: 100% 0;
-  margin-right: 5px;
-  margin-top: 4px;
+  margin-right: 0;
+  margin-top: 0;
 }
 .modal-footer {
   text-align: center;
