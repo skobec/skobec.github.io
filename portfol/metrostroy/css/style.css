@@ -838,7 +838,7 @@ input.mac-style:focus {
 }
 .search_bl_input:after {
   content: "";
-  background: url("http://localhost:63342/metrostroy/img/lupa.png") no-repeat;
+  background: url("../img/lupa.png") no-repeat;
   background-position: 100% 0;
   width: 19px;
   height: 9px;
