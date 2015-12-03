@@ -480,12 +480,7 @@
                         <td style="    width: 349px;">
                             <select style="width: 100%" id="t1">
                                 <option value="" disabled selected class="placeholder">Выберите из списка</option>
-                                <option>Стоимость деревянной Г - образной лестницы престиж класса</option>
-                                <option>Стоимость деревянной Г - образной лестницы стандарт класса</option>
-                                <option>Стоимость деревянной Г - образной лестницы эконом класса</option>
-                                <option>Стоимость деревянной прямой лестницы престиж класса</option>
-                                <option>Стоимость деревянной прямой лестницы стандарт класса</option>
-                                <option>Стоимость деревянной прямой лестницы эконом класса</option>
+
                                 <option>Бетон марка 200</option>
                                 <option>Винтовая свая СВС 108 L=3500 мм</option>
                                 <option>Винтовая свая СВС 108 L=3000 мм</option>
@@ -496,8 +491,7 @@
                                 <option>Изопласт кровельный подкладочный</option>
                                 <option>Потолочная рейка 20 мм</option>
                                 <option>Потолочная рейка 16 мм</option>
-                                <option>Стоимость материалов для канализации</option>
-                                <option>Стоимость материалов для системы водоснабжения</option>
+
                                 <option>Септик</option>
                                 <option>Смесь растворная сухая грубый ровнитель для полов</option>
                                 <option>Мастика битумная готовая</option>
@@ -511,7 +505,6 @@
                                 <option>Доска обрезная 20 мм</option>
                                 <option>Болт 8х50 мм</option>
                                 <option>Доска ограждения (готовая) 20 мм</option>
-                                <option>Стоимость материалов для системы отопления</option>
                                 <option>Доска обрезная 50х100 мм</option>
                                 <option>Доска обрезная 50х200 мм</option>
                                 <option>Саморез 4,2х100 мм</option>
@@ -1022,8 +1015,8 @@
                     </tbody>
                 </table>
                          </div>
-            <div class="modal-footer text-center">
-                <button type="button" class="btn add_zayav" data-dismiss="modal"><i class="ico"></i> Добавить план </button>
+            <div class="modal-footer">
+                <button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить план </button>
                 <button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>
             </div>
         </div>
@@ -1046,7 +1039,7 @@
                 </div>
             </div>
             <div class="modal-footer text-center">
-                <button type="button" class="btn add_zayav" data-dismiss="modal"><i class="ico"></i>Добавить проект </button>
+                <button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i>Добавить проект </button>
             </div>
         </div>
     </div>
@@ -1121,6 +1114,26 @@
             </div>
         </div>
     </div>
+</div>
+<div class="modal modal_project fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="modal-dialog" role="document">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title text-center" id="myModalLabel4">Уведомление</h4>
+        </div>
+        <div class="modal-content">
+            <div class="modal-body">
+               <div class="row">
+                   <div class="col-xs-12">
+                       <p style="text-align: center">Уважаемый пользователь,у вас недостаточно полномочий</p>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
