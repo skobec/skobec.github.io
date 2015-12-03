@@ -1,3 +1,17 @@
+a {
+  -webkit-transition: 0.3s ;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s ;
+  -o-transition: 0.3s ;
+  transition: 0.3s ;
+}
+button {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s ;
+  -o-transition: 0.3s ;
+  transition: 0.3s ;
+}
 body,
 .navbar-fixed-top,
 .navbar-fixed-bottom {
@@ -363,7 +377,7 @@ p.ps1 {
   background-color: #ffffff;
 }
 .head_titl_bl {
-  padding: 30px 0 15px;
+  padding: 13px 0 8px;
 }
 .titile_page {
   font-size: 22px;
@@ -459,11 +473,16 @@ p.ps1 {
 }
 .bl_button_set {
   background-color: #d1deec;
-  padding: 20px;
+  padding: 11px 0;
 }
 .add_project {
-  border: 1px solid #a3b3bf;
-  background-color: #c1d7ef;
+  border: 1px solid #8fa5bc;
+  background: #cee3f8;
+  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -650,7 +669,7 @@ select.add_project {
   margin: 10px 0;
 }
 .calendar_inputs input {
-  width: 40%;
+  width: 45%;
 }
 .calendar_inputs span {
   margin-top: 5px;
@@ -668,7 +687,7 @@ select.add_project {
   border: 1px solid #000000;
 }
 .modal-content .modal-title {
-  margin-left: 25px;
+  margin-left: 10px;
 }
 .blue_pod_bl {
   padding: 5px 20px;
@@ -706,7 +725,12 @@ select.add_project {
 }
 .add_zayav {
   padding: 7px;
-  background-color: #cee1f7;
+  background: #cee3f8;
+  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -725,9 +749,15 @@ select.add_project {
 }
 .clear_btn {
   padding: 7px;
-  background-color: #cee1f7;
+  background: #cee3f8;
+  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   -webkit-border-radius: 0;
   border: 1px solid #A2A2A2;
+  text-align: left;
 }
 .clear_btn .ico {
   background: url("../img/delete.png") no-repeat;
@@ -770,7 +800,12 @@ input.mac-style {
   -o-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
   display: inline-block;
-  background-color: #c1d7ef;
+  background: #cee3f8;
+  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   border: 1px solid #a3b3bf;
   padding-left: 35px;
   float: left;
@@ -934,4 +969,7 @@ select option {
 }
 .placeholder {
   color: #aaa;
+}
+.pointer_tables tbody tr {
+  cursor: pointer;
 }
