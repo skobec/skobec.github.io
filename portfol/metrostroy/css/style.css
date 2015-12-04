@@ -772,6 +772,31 @@ select.add_project {
   margin-right: 5px;
   margin-top: 4px;
 }
+.v_rab {
+  margin-left: 25px;
+  padding: 7px;
+  background: #cee3f8;
+  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid #A2A2A2;
+  margin-right: 6px;
+}
+.v_rab .ico {
+  background: url("../img/ok.png") no-repeat;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  float: left;
+  background-position: 100% 51%;
+  margin-right: 5px;
+  margin-top: 4px;
+}
 .clear_btn {
   padding: 7px;
   background: #cee3f8;
