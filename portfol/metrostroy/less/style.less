@@ -678,6 +678,13 @@ p.ps1 {
   margin: 3px 2px 0;
 
 }
+.modal_scroll {
+  .modal-body {
+    height: 410px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
 .modal_project {
   .modal-header {
     background-image: linear-gradient(top, #3b86da 75%, #4489d6 100%);
@@ -903,6 +910,14 @@ select.add_project {
 .table-striped {
   tbody {
     tr {
+      &:hover {
+        background-color: #e2e8ef;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+      }
       td {
         vertical-align: middle;
       }
@@ -1118,8 +1133,8 @@ select option { color: #000; }
   right: 0;
   margin: 0 auto;
 }
-.tr-hover {
-  cursor: pointer;
+.name_zakazaka {
+  color: #2269b6;
 }
 .journal_bl {
   margin-bottom: 7px;
