@@ -819,6 +819,24 @@ select.add_project {
   margin-right: 5px;
   margin-top: 4px;
 }
+.bl_diagramm {
+  background-color: #d4ddee;
+  border: 1px solid #89a0b0;
+  margin-top: 15px;
+}
+.bl_diagramm span {
+  font-size: 12px;
+}
+.bl_diagramm img {
+  width: 100%;
+}
+.bl_diagramm .key_ico {
+  float: right;
+  background: url("../img/key_graf.jpg") no-repeat;
+  border: 0;
+  height: 29px;
+  width: 37px;
+}
 .search_btn {
   padding: 6px;
 }
