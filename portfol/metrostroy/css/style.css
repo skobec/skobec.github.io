@@ -1,9 +1,17 @@
+a,
+span,
+button {
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
 a {
   -webkit-transition: 0.3s ;
   -moz-transition: 0.3s ;
   -ms-transition: 0.3s ;
   -o-transition: 0.3s ;
   transition: 0.3s ;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
 }
 button {
   -webkit-transition: 0.3s;
@@ -986,8 +994,64 @@ select option {
 .nav_paginator {
   text-align: center;
   position: absolute;
-  bottom: 7%;
+  bottom: 2%;
   left: 0;
   right: 0;
   margin: 0 auto;
+}
+.tr-hover {
+  cursor: pointer;
+}
+.journal_bl {
+  margin-bottom: 7px;
+}
+.journal_bl span {
+  display: block;
+}
+.info_zak {
+  margin-bottom: 7px;
+}
+.info_zak span {
+  display: inline-block;
+  margin-right: 5px;
+  color: #64788f;
+}
+.info_zak .zak_name {
+  color: #000000;
+}
+.ellow_blue_bl {
+  background-color: #e3edf6;
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 25px;
+}
+.comments_fr {
+  margin-left: 15px;
+  width: 98.6%;
+  height: 110px!important;
+  margin-top: 15px;
+  resize: none;
+}
+span.zayav_prosrok {
+  background: url("../img/alarm-time.png") no-repeat 0 1px;
+  color: #d52728;
+  padding-left: 19px;
+}
+.title_zak_proj {
+  color: #536880;
+  font-size: 16px;
+}
+.alarm_txt span {
+  color: #da2f2f;
+}
+tr.alarm_row td span {
+  background-color: #ecd6d1;
+  color: #d51212;
+}
+tr.alarm_row td span .btn_edit {
+  background: url("../img/edit.png") no-repeat 100% 100%;
+}
+tr.alarm_row td span .btn_del_zap {
+  background: url("../img/delete.png") no-repeat 100% 100%;
 }

@@ -59,4 +59,15 @@ $(document).ready(function() {
             updateSelectPlaceholderClass(this);
         });
     }
+
+    //ссылки на таблицу
+    $('tr[data-href]').on("click", function(e) {
+        console.log(e.target.tagName);
+        return false;
+        if (e.target.tagName!="span") {
+            document.location = $(this).data('href');
+        }
+    });
+    //
+
 });
