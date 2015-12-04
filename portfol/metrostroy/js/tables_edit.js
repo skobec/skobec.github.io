@@ -62,9 +62,9 @@ $(document).ready(function() {
 
     //ссылки на таблицу
     $('tr[data-href]').on("click", function(e) {
-        console.log(e.target.tagName);
-        return false;
-        if (e.target.tagName!="span") {
+        //console.log(e.target.tagName);
+        //return false;
+        if (e.target.tagName !== "SPAN") {
             document.location = $(this).data('href');
         }
     });
