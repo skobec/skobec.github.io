@@ -542,18 +542,23 @@ p.ps1 {
   background-color: #e3edf6;
 }
 .left_bl_content .panel-default .panel-heading a .ico {
-  background: url("../img/bigraskr-1.png") no-repeat right;
+  background: url("../img/bigraskr-2.png") no-repeat right;
   width: 16px;
   height: 16px;
   display: inline-block;
   margin-left: 6px;
   margin-bottom: -2px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
 }
 .left_bl_content .panel-default .panel-heading a.collapsed {
   background-color: #f9f9f9;
 }
 .left_bl_content .panel-default .panel-heading a.collapsed .ico {
-  background: url("../img/bigraskr-2.png") no-repeat right;
+  background: url("../img/bigraskr-1.png") no-repeat right;
 }
 .no_pad {
   padding: 0;
@@ -880,9 +885,30 @@ input.mac-style:focus {
   cursor: pointer;
 }
 .box h4 span {
-  background: url("../img/bigraskr-1.png") no-repeat right;
   padding-right: 15px;
   color: #405a73;
+  position: relative;
+}
+.box h4 span:after {
+  content: "";
+  background: url("../img/2login.png") no-repeat right;
+  background-size: 7px 8px;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 0.3s ;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s ;
+  -o-transition: 0.3s ;
+  transition: 0.3s ;
+}
+.box h4 .expand_arrow:after {
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
 }
 .bl_tabs {
   background-color: #b7c8da;
