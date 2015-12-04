@@ -495,13 +495,15 @@ p.ps1 {
   -moz-border-radius: 0;
   border-radius: 0;
   float: left;
+  min-height: 36px;
 }
 .add_project .ico {
   background: url("../img/add_2.png") 100% 100% no-repeat;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 13px;
   float: left;
   margin: 3px 8px 3px 3px;
+  background-size: cover;
 }
 .status_variant {
   margin-left: 50px;
@@ -786,6 +788,7 @@ select.add_project {
   border-radius: 0;
   border: 1px solid #A2A2A2;
   margin-right: 6px;
+  min-height: 36px;
 }
 .v_rab .ico {
   background: url("../img/ok.png") no-repeat;
