@@ -257,6 +257,27 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+    $('input').oninput = function(){
+        var
+                selBegin = this.selectionStart,
+                val = this.value;
+        ;
+
+        if(
+                selBegin == this.selectionEnd &&
+                selBegin != val.length
+        ){
+            this.value = val.substr(0, selBegin) + val.slice(selBegin + 1);
+            this.selectionStart = this.selectionEnd = selBegin;
+        }
+    }
+
+    $('input').onfocus = function(){
+        this.selectionStart = this.selectionEnd = 3;
+    }
+</script>
+<script src="js/mainscript.js"></script>
 <script src="js/flip.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>

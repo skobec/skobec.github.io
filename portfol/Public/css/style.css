@@ -1326,6 +1326,9 @@ input.button-appoint:active,input.button-appoint:focus {
 }
 .full_flipp .select_date_bl {
     width: 330px;
+    margin: 0 auto;
+    float: none;
+    min-height: 30px;
 }
 .back .kart_dat {
     background-color: #404447;
@@ -1560,7 +1563,8 @@ a.ShowHidePassword{color: #4ebfae;font-size: 12px;position: absolute;top: 10px;r
     border: 0;
     color: #7acfc2;
     height: 34px;
-    width: 41%;
+    /*width: 41%;*/
+    width: 140px;
     font-family: Roboto, sans-serif;
     font-size: 14px;
     margin-right: -3px;
