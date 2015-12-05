@@ -1645,6 +1645,7 @@ a.ShowHidePassword{color: #4ebfae;font-size: 12px;position: absolute;top: 10px;r
 .inputs_data_black {
     height: 175px;
     display: table;
+    margin: 0 auto;
 }
 .punkt_criter {
     margin-top: 7px;

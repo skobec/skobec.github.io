@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainscript.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainscript.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/mainscript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.019101124">
-              <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1330" column="21" selection-start-line="1330" selection-start-column="21" selection-end-line="1330" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.38988763">
+              <caret line="1647" column="19" selection-start-line="1647" selection-start-column="19" selection-end-line="1647" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -167,8 +167,8 @@
         <option value="$PROJECT_DIR$/full_widget.html" />
         <option value="$PROJECT_DIR$/monitoring.html" />
         <option value="$PROJECT_DIR$/clinic_doc.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/mainscript.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -795,18 +795,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/js/mainscript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1330" column="21" selection-start-line="1330" selection-start-column="21" selection-end-line="1330" selection-end-column="21" />
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/mainscript.js">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019101124">
-          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.38988763">
+          <caret line="1647" column="19" selection-start-line="1647" selection-start-column="19" selection-end-line="1647" selection-end-column="19" />
           <folding />
         </state>
       </provider>
