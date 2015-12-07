@@ -497,6 +497,11 @@ p.ps1 {
   background: url("../img/ico-logg.png")no-repeat left;
   margin: 11px 0 0 15px;
   float: right;
+  cursor: default;
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
 }
 .bl_button_set {
   background-color: #d1deec;
@@ -917,11 +922,19 @@ select.add_project {
         -ms-transition: 0.2s;
         -o-transition: 0.2s;
         transition: 0.2s;
+        th {
+          padding-top: 4px;
+          padding-bottom: 4px;
+        }
       }
       td {
         vertical-align: middle;
       }
     }
+  }
+  a {
+    text-decoration: none;
+    cursor: default;
   }
 }
 table {

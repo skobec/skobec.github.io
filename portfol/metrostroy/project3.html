@@ -7,11 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Мегастрой</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-
-    <link href="css/datepicker.css" rel="stylesheet" type="text/css">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,8 +32,8 @@
             <div class="row">
                 <div class="col-xs-7 no_pad">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="project.html">Планы</a> </li>
-                        <li><a href="project2.html">Реестр заявок</a> </li>
+                        <li><a href="project.html">Планы</a> </li>
+                        <li class="active"><a href="project2.html">Реестр заявок</a> </li>
                         <li><a href="report.html">Отчёты</a> </li>
                     </ul>
                 </div>
@@ -51,359 +48,760 @@
     <div class="bl_button_set">
         <div class="container">
             <div class="row">
-                <div class="col-xs-8">
-                    <button class="add_project btn" data-toggle="modal" data-target="#myModal2"><i class="ico"></i> Добавить проект</button>
-                </div>
-                <div class="col-xs-4">
+                <div class="col-xs-7">
+                    <!--<button class="add_project btn_back btn"><i class="ico"></i>Назад</button>-->
+                    <button class="add_project add_zayav btn" data-toggle="modal" data-target="#myModal"><i class="ico"></i>Добавить заявку</button>
+                    <select class="add_project status_variant btn">
+                        <option>Все статусы</option>
+                        <option>Новая</option>
+                        <option>Обработка</option>
+                        <option>Согласование</option>
+                        <option>В работе</option>
+                        <option>Выполнена</option>
+                    </select>
+                    <div class="search_bl_input">
+                        <input type="text" class="form-control mac-style" name="Search" id='nav-search' placeholder="Найти">
+                    </div>
+                    <!--<button class="add_project search_btn btn"><i class="ico_search"></i> </button>-->
 
+                </div>
+                <div class="col-xs-5 text-right">
+                    <span class="number_sum"><span class="one_sum"><span>21</span>-<span>40</span></span> из <span>3026</span>   </span>
+                    <div class="paginator_arrow">
+                        <a href="project2.html" class="arrow arrow_left"><</a>
+                        <a href="#" class="arrow arrow_right">></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-xs-8 left_bl_content">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                            <h4 class="panel-title">
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Проект № 34511-1 МКД 7.2<i class="ico"></i>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="panel-body">
-                                <div class="col-xs-12">
-                                    <a href="#" class="plans_proj" data-toggle="modal" data-target="#myModal">Планы проекта</a>
-                                </div>
-                                <div class="col-xs-12">
-                                    <table class="table_plans pointer_tables">
-                                        <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th><span>Наименование</span></th>
-                                            <th><span>Период дейтсвия</span></th>
-                                            <th><span>Заложенная<br> сумма</span></th>
-                                            <th><span>Количество<br>заявок</span></th>
-                                            <th><span>Процент<br> выполнения</span></th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">2.</th>
-                                            <td><span>Утвержденный план декабрь 2015</span></td>
-                                            <td><span>1 декабря 2015 - 31 декабря 2015</span></td>
-                                            <td><span>902 011.21</span></td>
-                                            <td><span>12</span></td>
-                                            <td><span>5</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr  data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">3.</th>
-                                            <td><span>Утвержденный план ноябрь 2015</span></td>
-                                            <td><span>1 ноября 2015 - 30 ноября 2015</span></td>
-                                            <td><span>4 237 712.42</span></td>
-                                            <td><span>23</span></td>
-                                            <td><span>107</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr  data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">4.</th>
-                                            <td><span>Утвержденный план октябрь 2015</span></td>
-                                            <td><span>1 октября 2015 - 31 октября 2015</span></td>
-                                            <td><span>527 256.29</span></td>
-                                            <td><span>3</span></td>
-                                            <td><span>90</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr  data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">5.</th>
-                                            <td><span>Утвержденный план сентябрь 2015</span></td>
-                                            <td><span>1 сентября 2015 - 30 сентября 2015</span></td>
-                                            <td><span>921 642.63</span></td>
-                                            <td><span>4</span></td>
-                                            <td><span>100</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr  data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">6.</th>
-                                            <td><span>Утвержденный план август 2015</span></td>
-                                            <td><span>1 августа 2015 - 31 августа 2015</span></td>
-                                            <td><span>762 347.20</span></td>
-                                            <td><span>2</span></td>
-                                            <td><span>100</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr  data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">7.</th>
-                                            <td><span>Утвержденный план июль 2015</span></td>
-                                            <td><span>1 июля 2015 - 31 июля 2015</span></td>
-                                            <td><span>1 028 323.32</span></td>
-                                            <td><span>6</span></td>
-                                            <td><span>91</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr  data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">8.</th>
-                                            <td><span>Утвержденный план июнь 2015</span></td>
-                                            <td><span>1 июнь 2015 - 30 июня 2015</span></td>
-                                            <td><span>4 388 233.42</span></td>
-                                            <td><span>25</span></td>
-                                            <td><span>100</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+            <div class="col-xs-12 no_pad">
+                <table class="table table-striped table_reestr ">
+                    <thead>
+                    <tr>
+                        <th>ID заявки</th>
+                        <th>Дата актуализации</th>
+                        <th>Заказчик</th>
+                        <th>Заявка</th>
+                        <th>Стоимость</th>
+                        <th>Проект\план</th>
+                        <th>Статус заявки</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tr-hover" data-issue="208660">
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingTwo">
-                            <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Проект № 34512-1 Ф0.2<i class="ico"></i>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                            <div class="panel-body">
-                                <div class="col-xs-12">
-                                    <a href="#" class="plans_proj" data-toggle="modal" data-target="#myModal">Планы проекта</a>
-                                </div>
-                                <div class="col-xs-12">
-                                    <table class="table_plans pointer_tables">
-                                        <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th><span>Наименование</span></th>
-                                            <th><span>Период дейтсвия</span></th>
-                                            <th><span>Заложенная<br> сумма</span></th>
-                                            <th><span>Количество<br>заявок</span></th>
-                                            <th><span>Процент<br> выполнения</span></th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">1.</th>
-                                            <td><span>Утвержденный план январь 2016</span></td>
-                                            <td><span>1 января 2016 - 31 января 2016</span></td>
-                                            <td><span>9 236 762.50</span></td>
-                                            <td><span>0</span></td>
-                                            <td><span>0</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">2.</th>
-                                            <td><span>Утвержденный план декабрь 2015</span></td>
-                                            <td><span>1 декабря 2015 - 31 декабря 2015</span></td>
-                                            <td><span>3 214 421.43</span></td>
-                                            <td><span>17</span></td>
-                                            <td><span>34</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">3.</th>
-                                            <td><span>Утвержденный план ноябрь 2015</span></td>
-                                            <td><span>1 ноября 2015 - 30 ноября 2015</span></td>
-                                            <td><span>2 353 233.21</span></td>
-                                            <td><span>13</span></td>
-                                            <td><span>72</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">4.</th>
-                                            <td><span>Утвержденный план октябрь 2015</span></td>
-                                            <td><span>1 октября 2015 - 31 октября 2015</span></td>
-                                            <td><span>7 263 711.87</span></td>
-                                            <td><span>28</span></td>
-                                            <td><span>96</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">5.</th>
-                                            <td><span>Утвержденный план сентябрь 2015</span></td>
-                                            <td><span>1 сентября 2015 - 30 сентября 2015</span></td>
-                                            <td><span>7 237 462.42</span></td>
-                                            <td><span>32</span></td>
-                                            <td><span>89</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">6.</th>
-                                            <td><span>Утвержденный план август 2015</span></td>
-                                            <td><span>1 августа 2015 - 31 августа 2015</span></td>
-                                            <td><span>662 347.37</span></td>
-                                            <td><span>14</span></td>
-                                            <td><span>100</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12524                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>25 ноября 2015	14:21</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">САФ-1</a>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Утеплитель на АГЗС</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            804 87,1
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34513-1 АГЗС11</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Проект № 34513-1 АГЗС9<i class="ico"></i>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                            <div class="panel-body">
-                                <div class="col-xs-12">
-                                    <a href="#" class="plans_proj" data-toggle="modal" data-target="#myModal">Планы проекта</a>
-                                </div>
-                                <div class="col-xs-12">
-                                    <table class="table_plans pointer_tables">
-                                        <thead>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th></th>
-                                            <th><span>Наименование</span></th>
-                                            <th><span>Период дейтсвия</span></th>
-                                            <th><span>Заложенная<br> сумма</span></th>
-                                            <th><span>Количество<br>заявок</span></th>
-                                            <th><span>Процент<br> выполнения</span></th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">1.</th>
-                                            <td><span>Утвержденный план январь 2016</span></td>
-                                            <td><span>1 января 2016 - 31 января 2016</span></td>
-                                            <td><span>1 197 443.32</span></td>
-                                            <td><span>0</span></td>
-                                            <td><span>0</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">2.</th>
-                                            <td><span>Утвержденный план декабрь 2015</span></td>
-                                            <td><span>1 декабря 2015 - 31 декабря 2015</span></td>
-                                            <td><span>902 011.21</span></td>
-                                            <td><span>13</span></td>
-                                            <td><span>64</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">3.</th>
-                                            <td><span>Утвержденный план ноябрь 2015</span></td>
-                                            <td><span>1 ноября 2015 - 30 ноября 2015</span></td>
-                                            <td><span>4 237 712.42</span></td>
-                                            <td><span>27</span></td>
-                                            <td><span>78</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">4.</th>
-                                            <td><span>Утвержденный план октябрь 2015</span></td>
-                                            <td><span>1 октября 2015 - 31 октября 2015</span></td>
-                                            <td><span>527 256.29</span></td>
-                                            <td><span>7</span></td>
-                                            <td><span>110</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">5.</th>
-                                            <td><span>Утвержденный план сентябрь 2015</span></td>
-                                            <td><span>1 сентября 2015 - 30 сентября 2015</span></td>
-                                            <td><span>921 642.63</span></td>
-                                            <td><span>9</span></td>
-                                            <td><span>106</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">6.</th>
-                                            <td><span>Утвержденный план август 2015</span></td>
-                                            <td><span>1 августа 2015 - 31 августа 2015</span></td>
-                                            <td><span>762 347.20</span></td>
-                                            <td><span>9</span></td>
-                                            <td><span>67</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">7.</th>
-                                            <td><span>Утвержденный план июль 2015</span></td>
-                                            <td><span>1 июля 2015 - 31 июля 2015</span></td>
-                                            <td><span>1 028 323.32</span></td>
-                                            <td><span>12</span></td>
-                                            <td><span>96</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">8.</th>
-                                            <td><span>Утвержденный план июнь 2015</span></td>
-                                            <td><span>1 июнь 2015 - 30 июня 2015</span></td>
-                                            <td><span>4 388 233.42</span></td>
-                                            <td><span>24</span></td>
-                                            <td><span>94</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">9.</th>
-                                            <td><span>Утвержденный план мая 2015</span></td>
-                                            <td><span>1 мая 2015 - 31 мая 2015</span></td>
-                                            <td><span>187 232.55</span></td>
-                                            <td><span>2</span></td>
-                                            <td><span>100</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">10.</th>
-                                            <td><span>Утвержденный план апрель 2015</span></td>
-                                            <td><span>1 апреля 2015 - 30 апреля 2015</span></td>
-                                            <td><span>256 543.30</span></td>
-                                            <td><span>4</span></td>
-                                            <td><span>75</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">11.</th>
-                                            <td><span>Утвержденный план марта 2015</span></td>
-                                            <td><span>1 марта 2015 - 31 марта 2015</span></td>
-                                            <td><span>823 642.32</span></td>
-                                            <td><span>6</span></td>
-                                            <td><span>100</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        <tr data-toggle="modal" data-target="#myModal3">
-                                            <th scope="row">12.</th>
-                                            <td><span>Утвержденный план февраль 2015</span></td>
-                                            <td><span>1 февраля 2015 - 28 февраля 2015</span></td>
-                                            <td><span>626 725.43</span></td>
-                                            <td><span>7</span></td>
-                                            <td><span>100</span></td>
-                                            <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-4 right_bl_info">
-                <h4 class="title_end_proj">Завершенные проекты</h4>
-                <p data-toggle="modal" data-target="#myModal4" class="name_proj"><span class="number_proj">Проект № 34511-1 </span> <span class="name_proj">Ф08</span> </p>
-                <p data-toggle="modal" data-target="#myModal4" class="name_proj"><span class="number_proj">Проект № 34510-1 </span> <span class="name_proj">Ф07</span> </p>
-                <p data-toggle="modal" data-target="#myModal4" class="name_proj"><span class="number_proj">Проект № 56113-1 </span> <span class="name_proj">КАВ 62</span> </p>
-                <p data-toggle="modal" data-target="#myModal4" class="name_proj"><span class="number_proj">Проект № 56263-2 </span> <span class="name_proj">ЕАВ 62</span> </p>
-                <p data-toggle="modal" data-target="#myModal4" class="name_proj"><span class="number_proj">Проект № 11514-1 </span> <span class="name_proj">МКД 150.1</span> </p>
-                <p data-toggle="modal" data-target="#myModal4" class="name_proj"><span class="number_proj">Проект № 41387-1 </span> <span class="name_proj">ТРФ 1</span> </p>
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12523                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>25 ноября 2015	10:07</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">МонолитСтрой</a>
+                            <span class="box">
+                                <h4><span class="expand">Исхаков Р.К.</span></h4>
+                                <ul>
+                                    <li><a href="#">iskhakov@monstroy.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">цементный раствор</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            455 131,46
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 МКД 7.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12522                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>24 ноября 2015	17:33</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">Спецпроектмонтаж</a>
+                            <span class="box">
+                                <h4><span class="expand">не назначено</span></h4>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Кирпич</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            342 581,92
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34513-1 АГЗС10</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12521                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>23 ноября 2015	15:18</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">САФ-1</a>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Канализация 55м</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            407 975,93
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #b46bd1" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">В работе</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12520                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>23 ноября 2015	14:23</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">ПСУ</a>
+                            <span class="box">
+                                <h4><span class="expand">Антонов А.С.</span></h4>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Метизы, крепеж</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            389 65,32
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12519                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>23 ноября 2015	12:07</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">ПСУ</a>
+                            <span class="box">
+                                <h4><span class="expand">Антонов А.С.</span></h4>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Песок</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            160 078
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12518                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>23 ноября 2015	11:18</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">МонолитСтрой</a>
+                            <span class="box">
+                                <h4><span class="expand">Исхаков Р.К.</span></h4>
+                                <ul>
+                                    <li><a href="#">iskhakov@monstroy.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Деревянный брус</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            86 920
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12517                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>23 ноября 2015	9:45</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">МонолитСтрой</a>
+                            <span class="box">
+                                <h4><span class="expand">Исхаков Р.К.</span></h4>
+                                <ul>
+                                    <li><a href="#">iskhakov@monstroy.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Матералы, грунт</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            96 123,4
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #b46bd1" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">В работе</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12516                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>23 ноября 2015	8:54</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">ПСУ</a>
+                            <span class="box">
+                                <h4><span class="expand">Антонов А.С.</span></h4>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Электрика</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            86 520,9
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12515                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>20 ноября 2015	17:42</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">МонолитСтрой</a>
+                            <span class="box">
+                                <h4><span class="expand">Исхаков Р.К.</span></h4>
+                                <ul>
+                                    <li><a href="#">iskhakov@monstroy.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">ЖБИ, Крепеж</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            652 328,17
+
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12514                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>20 ноября 2015	16:15</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">СитиСтрой</a>
+                            <span class="box">
+                                <h4><span class="expand">Нигматуллин А.А.</span></h4>
+                                <ul>
+                                    <li>8(843)-221-72-95</li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Цемент,грунт</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            325 036,32
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34513-1 АГЗС11</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12513                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>20 ноября 2015	15:02</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">ПСУ</a>
+                            <span class="box">
+                                <h4><span class="expand">Антонов А.С.</span></h4>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Инструменты</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            275 313
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34513-1 АГЗС11</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12512                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>19 ноября 2015	15:14</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">СитиСтрой</a>
+                            <span class="box">
+                                <h4><span class="expand">Нигматуллин А.А.</span></h4>
+
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">ОПГС</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            193 615,18
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34513-1 АГЗС11</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12511                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>19 ноября 2015	12:42</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">САФ-1</a>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Стекло</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            12 674,18
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34513-1 АГЗС11</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12510                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>19 ноября 2015	11:17</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">САФ-1</a>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Кирпич силикатный</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            238 526,12
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12509                    </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>18 ноября 2015	17:13</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">САФ-1</a>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Септик</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            5760,50
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12508                     </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>18 ноября 2015	16:59</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">САФ-1</a>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Доска обрезная</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            462 732,43
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 МКД 7.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12507                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>18 ноября 2015	16:05</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">САФ-1</a>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Утеплитель</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            194 524,23
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12506                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>18 ноября 2015	10:58</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">САФ-1</a>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Кабели,проводка</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            235 683,4
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    <tr class="tr-hover" data-issue="208660">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12505                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>18 ноября 2015	10:01</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <a href="#">САФ-1</a>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Пеноплекс-60</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            56 320
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 Ф0.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
+<nav style="text-align: center" class="nav_paginator">
+    <ul class="pagination">
+        <li><a href="project2.html" aria-label="Previous"><span aria-hidden="true">«</span></a>
+        </li>
+        <li><a href="project2.html">1 <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="project3.html">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="project3.html" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+    </ul>
+</nav>
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -422,65 +820,102 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel1">Добавить план</h4>
+                <h4 class="modal-title" id="myModalLabel">Добавить заявку</h4>
             </div>
             <div class="blue_pod_bl">
                 <div class="row">
-                    <div class="col-xs-6">
-                        <input class="form-control" placeholder="Наименование плана" style="width: 100%;">
+                    <div class="col-xs-12">
+                        <input class="form-control" placeholder="Наименование заявки" style="width: 100%;margin: 0 auto">
+                        <select class="select_zayav">
+                            <option disabled selected class="placeholder" value="">Заказчик</option>
+                            <option>Спецпроектмонтаж</option>
+                            <option>САФ-1</option>
+                            <option>ПСУ</option>
+                            <option>МонолитСтрой</option>
+                            <option>Техстройресурс</option>
+                            <option>СтройСервис</option>
+                            <option>Ремстройсервис</option>
+                            <option>САФ-2</option>
+                            <option>СитиСтрой</option>
+                            <option>Татстрой</option>
+                            <option>Татстройинвест</option>
+                        </select>
                     </div>
                 </div>
-                <div class="row calendar_inputs">
-                    <div class="col-xs-6 no_pad">
-                        <!--<span style="float: left">c</span>-->
-                        <input class="form-control" placeholder="Дата начала" value="" id="dpd1" style="float: left">
-                        <span style="display: inline-block;float: left;margin: 5px 2%"> - </span>
-                        <!--<span style="float: left">по </span>-->
-                        <input class="form-control" value="" id="dpd2"  placeholder="Дата окончания" style="float: left">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <input class="form-control" placeholder="Контактное лицо" style="width: 100%;margin: 0 auto">
+                    </div>
+                    <div class="col-xs-6">
+                        <input class="form-control" placeholder="Контакты" style="width: 100%;margin: 0 auto">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <select class="select_zayav">
+                            <option value="" disabled selected class="placeholder">Проект/план</option>
+                            <option>Проект № 34511-1 МКД 7.2/Утвержденный план январь 2016</option>
+                            <option>Проект № 34511-1 МКД 7.2/Утвержденный план декабрь 2015</option>
+                            <option>Проект № 34511-1 МКД 7.2/Утвержденный план ноябрь 2015</option>
+                            <option>Проект № 34511-1 МКД 7.2/Утвержденный план октябрь 2015</option>
+                            <option>Проект № 34511-1 МКД 7.2/Утвержденный план сентябрь 2015</option>
+                            <option>Проект № 34511-1 МКД 7.2/Утвержденный план август 2015</option>
+                            <option>Проект № 34511-1 МКД 7.2/Утвержденный план июль 2015</option>
+                            <option>Проект № 34511-1 МКД 7.2/Утвержденный план июнь 2015</option>
+                            <option>Проект № 34512-1 Ф0.2/Утвержденный план январь 2016</option>
+                            <option>Проект № 34512-1 Ф0.2/Утвержденный план декабрь 2015</option>
+                            <option>Проект № 34512-1 Ф0.2/Утвержденный план ноябрь 2015</option>
+                            <option>Проект № 34512-1 Ф0.2/Утвержденный план октябрь 2015</option>
+                            <option>Проект № 34512-1 Ф0.2/Утвержденный план сентябрь 2015</option>
+                            <option>Проект № 34512-1 Ф0.2/Утвержденный план август 2015</option>
+                            <option>Проект № 34513-1 АГЗС9/Утвержденный план январь 2016</option>
+                            <option>Проект № 34513-1 АГЗС10/Утвержденный план декабрь 2015</option>
+                            <option>Проект № 34513-1 АГЗС11/Утвержденный план ноябрь 2015</option>
+                            <option>Проект № 34513-1 АГЗС12/Утвержденный план октябрь 2015</option>
+                            <option>Проект № 34513-1 АГЗС13/Утвержденный план сентябрь 2015</option>
+                            <option>Проект № 34513-1 АГЗС14/Утвержденный план август 2015</option>
+                            <option>Проект № 34513-1 АГЗС15/Утвержденный план июль 2015</option>
+                            <option>Проект № 34513-1 АГЗС16/Утвержденный план июнь 2015</option>
+                            <option>Проект № 34513-1 АГЗС17/Утвержденный план май 2015</option>
+                            <option>Проект № 34513-1 АГЗС18/Утвержденный план апрель 2015</option>
+                            <option>Проект № 34513-1 АГЗС19/Утвержденный план март 2015</option>
+                            <option>Проект № 34513-1 АГЗС20/Утвержденный план февраль 2015</option>
+                        </select>
                     </div>
                 </div>
             </div>
             <div class="modal-body">
-                    <a href="#" class="" style="margin-top: 5px">Позиции плана</a>
-                    <!--<p style="margin-top: 5px"><input type="checkbox" name="option1" value="a1" >Перенести недосвоенные позиции текущего года</p>-->
+                <h4>Позиции</h4>
                 <table class="table_plans" id="table_add_plans">
-                    <thead>
-                    <tr>
-                        <th style=" width: 440px;"><span>Наименование</span></th>
-                        <th style=" width: 203px;"><span>Количество</span></th>
-                        <th style=" width: 93px;"><span>Стоимость</span></th>
-                        <th style="width: 69px;"></th>
-                    </tr>
-                    </thead>
                     <tbody>
                     <!--<tr>-->
-                        <!--<td><span>Теплоизоляция</span></td>-->
-                        <!--<td><span>20 шт</span></td>-->
-                        <!--<td><span>5 678,90</span></td>-->
-                        <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+                    <!--<td style="    width: 390px; text-align: left"><span>Теплоизоляция</span></td>-->
+                    <!--<td><span style="text-align: center">20 уп</span></td>-->
+                    <!--<td style="    width: 120px;"><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
                     <!--</tr>-->
                     <!--<tr>-->
-                        <!--<td><span>Сухие тсроительные смеси</span></td>-->
-                        <!--<td style="text-align: center"><span>200 кг</span></td>-->
-                        <!--<td><span>21 523,90</span></td>-->
-                        <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+                    <!--<td style="    width: 390px; text-align: left"><span>Сухие строительные смеси</span></td>-->
+                    <!--<td><span style="text-align: center">200 кг</span></td>-->
+                    <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
                     <!--</tr>-->
                     <!--<tr>-->
-                        <!--<td><span>Штукатурные строитеьыне смеси</span></td>-->
-                        <!--<td><span>20 уп</span></td>-->
-                        <!--<td><span>11 123,90</span></td>-->
-                        <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+                    <!--<td style="    width: 390px; text-align: left"><span>Штукатурные строительные смеси</span></td>-->
+                    <!--<td><span style="text-align: center">20 уп</span></td>-->
+                    <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
                     <!--</tr>-->
+                    <tr>
+                        <td style="width: 390px"></td>
+                        <td></td>
+                        <td style="width: 120px"></td>
+                    </tr>
                     </tbody>
                 </table>
                 <table class="table_plans">
-
                     <tbody>
                     <tr>
-                        <td style="    width: 349px;">
+                        <td style="width: 390px;">
                             <select style="width: 100%" id="t1">
                                 <option value="" disabled selected class="placeholder">Выберите из списка</option>
-
                                 <option>Бетон марка 200</option>
                                 <option>Винтовая свая СВС 108 L=3500 мм</option>
                                 <option>Винтовая свая СВС 108 L=3000 мм</option>
@@ -491,7 +926,6 @@
                                 <option>Изопласт кровельный подкладочный</option>
                                 <option>Потолочная рейка 20 мм</option>
                                 <option>Потолочная рейка 16 мм</option>
-
                                 <option>Септик</option>
                                 <option>Смесь растворная сухая грубый ровнитель для полов</option>
                                 <option>Мастика битумная готовая</option>
@@ -986,10 +1420,10 @@
                                 <option>Брус 100х100 мм</option>
                             </select>
                         </td>
-                        <td style="width: 172px">
-                            <input class="form-control" placeholder="Кол-во" style="width: 50%;display: inline-block" id="t2">
-                            <select style="width: 45%" id="t3">
-                                <option disabled selected class="placeholder">Ед. изм</option>
+                        <td>
+                            <input class="form-control" placeholder="Кол-во" style="    float: left;  width: 40%;  margin: 0 2px;" id="t2">
+                            <select style=" width: 57%; float: left;" id="t3">
+                                <option value="" disabled selected class="placeholder">Ед. изм</option>
                                 <option>м3</option>
                                 <option>комплект</option>
                                 <option>шт</option>
@@ -1005,178 +1439,27 @@
                                 <option>м. п.</option>
                             </select>
                         </td>
-                        <td style="width: 86px">
-                            <input class="form-control" placeholder="Стоимость" id="t4">
-                        </td>
-                        <td>
-                            <button class="add_btn"><i class="ico"></i></button>
+                        <td style="width: 120px;">
+                            <button class="add_btn"><i class="ico"></i> </button>
                         </td>
                     </tr>
                     </tbody>
                 </table>
-                         </div>
-            <div class="modal-footer">
-                <button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить план </button>
-                <button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal modal_project fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel2">Добавить проект</h4>
-            </div>
-
-            <div class="modal-body">
-                <div class="col-xs-12">
-                    <input class="form-control" placeholder="Наименование проекта" style="width: 70%;margin: 0 auto 10px">
-                </div>
-            </div>
-            <div class="modal-footer text-center">
-                <button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i>Добавить проект </button>
-            </div>
-        </div>
-    </div>
-
-</div>
-<div class="modal modal_project modal_scroll fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel3">Проект</h4>
-            </div>
-            <div class="blue_pod_bl">
                 <div class="row">
-                    <div class="col-xs-6">
-                        <span class="form-control" style="width: 100%;">Утвержденный план за декабрь 2015</span>
+                    <div class="col-xs-12">
+                        <textarea class="form-control" placeholder="Комментарии"></textarea>
                     </div>
                 </div>
-                <div class="row calendar_inputs">
-                    <div class="col-xs-6 no_pad">
-                        <!--<span style="float: left">c</span>-->
-                        <span class="form-control"  style="float: left;display: inline-block;width: 45%">01/12/2015</span>
-                        <span style="display: inline-block;float: left;    margin: 10px 7px 10px 0px;"> - </span>
-                        <!--<span style="float: left">по </span>-->
-                        <span class="form-control"  style="float: left;display: inline-block;width: 45%">31/12/2015</span>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <h4>Позиции</h4>
-                <table class="table_plans">
-                    <tbody>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Бетон М300</span></td>
-                        <td><span style="text-align: center">120,70 м3</span></td>
-                        <td><span style="text-align: center">391 858,95</span></td>
-
-                    </tr>
-                    <tr>
-                        <td style="width: 390px; text-align: left"><span>Арматура АIII, диам.12мм</span></td>
-                        <td><span style="text-align: center">85,00 м.л</span></td>
-                        <td><span style="text-align: center">2 122,75</span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Профнастил </span></td>
-                        <td><span style="text-align: center">90,00 м2</span></td>
-                        <td><span style="text-align: center">19 227,76  </span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Уголок 25 </span></td>
-                        <td><span style="text-align: center">120,00 м.п</span></td>
-                        <td><span style="text-align: center">4 195,54</span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Маяк-труба </span></td>
-                        <td><span style="text-align: center">70,00 м.п</span></td>
-                        <td><span style="text-align: center">5 034,65</span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Подложка </span></td>
-                        <td><span style="text-align: center">65,00 м2</span></td>
-                        <td><span style="text-align: center">1 298,62    </span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Диск для заглаживания </span></td>
-                        <td><span style="text-align: center">1,00 шт</span></td>
-                        <td><span style="text-align: center">1 997,87 </span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Лопасти </span></td>
-                        <td><span style="text-align: center">1,00 т</span></td>
-                        <td><span style="text-align: center">699,25</span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Смеси упрочняющие </span></td>
-                        <td><span style="text-align: center">90,00 м2</span></td>
-                        <td><span style="text-align: center">21 976,66</span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Праймер </span></td>
-                        <td><span style="text-align: center">10,00 кг</span></td>
-                        <td><span style="text-align: center">2 297,56</span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>ПВХ шнур </span></td>
-                        <td><span style="text-align: center">80,00 м.п</span></td>
-                        <td><span style="text-align: center">479,49  </span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Герметик (0,6л) </span></td>
-                        <td><span style="text-align: center">16,00 шт</span></td>
-                        <td><span style="text-align: center">3 995,75  </span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Диск алмазный </span></td>
-                        <td><span style="text-align: center">1,00 шт</span></td>
-                        <td><span style="text-align: center">4994,69</span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Смесь кладочная М150 </span></td>
-                        <td><span style="text-align: center">4,25 т</span></td>
-                        <td><span style="text-align: center">8,485 ,78  </span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Кирпич силикатный одинарный </span></td>
-                        <td><span style="text-align: center">9494,60 шт</span></td>
-                        <td><span style="text-align: center">81 428 83 </span></td>
-                    </tr>
-                    <tr>
-                        <td style="    width: 390px; text-align: left"><span>Уголок 75 </span></td>
-                        <td><span style="text-align: center">10,00 м.п</span></td>
-                        <td><span style="text-align: center">1 548,35  </span></td>
-                    </tr>
-
-                    <tr>
-                        <td style="width: 390px"></td>
-                        <td></td>
-                        <td style="width: 120px"></td>
-                    </tr>
-                    </tbody>
-                </table>
-
                 <!--<div class="row">-->
-                    <!--<div class="col-xs-12">-->
-                        <!--<textarea class="form-control" placeholder="Комментарии"></textarea>-->
-                    <!--</div>-->
+                <!--<div class="col-xs-12">-->
+                <!--<p style="margin-top: 7px"><input type="checkbox" name="option1" value="a1" >Создать заявку, не смотря на пердупреждение</p>-->
                 <!--</div>-->
-                <div class="row">
-                    <!--<div class="col-xs-12">-->
-                        <!--<p style="margin-top: 5px"><input type="checkbox" name="option1" value="a1" >Создать заявку, не смотря на пердупреждение</p>-->
-                    <!--</div>-->
-                </div>
+                <!--</div>-->
             </div>
             <div class="modal-footer" style="text-align: left">
-
+                <button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить заявку </button>
+                <button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>
             </div>
         </div>
     </div>
@@ -1191,11 +1474,11 @@
         </div>
         <div class="modal-content">
             <div class="modal-body">
-               <div class="row">
-                   <div class="col-xs-12">
-                       <p style="text-align: center">Недостаточно полномочий</p>
-                   </div>
-               </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p style="text-align: center">Недостаточно полномочий</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1203,40 +1486,26 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script>
-    $('.datepicker').datepicker()
-    var nowTemp = new Date();
-    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
-
-    var checkin = $('#dpd1').datepicker({
-        onRender: function(date) {
-            return date.valueOf() < now.valueOf() ? 'disabled' : '';
-        }
-    }).on('changeDate', function(ev) {
-        if (ev.date.valueOf() > checkout.date.valueOf()) {
-            var newDate = new Date(ev.date)
-            newDate.setDate(newDate.getDate() + 1);
-            checkout.setValue(newDate);
-        }
-        checkin.hide();
-        $('#dpd2')[0].focus();
-    }).data('datepicker');
-    var checkout = $('#dpd2').datepicker({
-        onRender: function(date) {
-            return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
-        }
-    }).on('changeDate', function(ev) {
-        checkout.hide();
-    }).data('datepicker');
+<script type="text/javascript">
+    <!-- Выпадающий список-->
+    $(document).ready(function(){
+        $(".box ul").hide();
+        $("ul li:odd").css("background-color", "transparent");
+        $("h4 span").click(function(){
+            $(this).parent().next().slideToggle();
+            $(this).toggleClass('expand_arrow');
+        });
+    });
 </script>
 <script src="js/tables_edit.js"></script>
 <script>
-    $('.add_btn').click(function() {
-        addRowToTable($('#table_add_plans'), $('#t1').val(), $('#t2').val(),$('#t3').val(), $('#t4').val());
-        $('#t1,#t2,#t3,#t4').val('');
-        $('#t1,#t3').addClass('placeholder');
-    });
+    $(document).ready(function() {
+        $('.add_btn').click(function () {
+            addRowToTable2($('#table_add_plans'), $('#t1').val(), $('#t2').val(), $('#t3').val(), $('#t4').val());
+            $('#t1,#t2,#t3,#t4').val('');
+            $('#t1,#t3').addClass('placeholder');
+        });
+    })
 </script>
 </body>
 </html>

@@ -478,6 +478,11 @@ p.ps1 {
   background: url("../img/ico-logg.png") no-repeat left;
   margin: 11px 0 0 15px;
   float: right;
+  cursor: default;
+}
+.log_pers:hover {
+  text-decoration: none;
+  color: #ffffff;
 }
 .bl_button_set {
   background-color: #d1deec;
@@ -870,8 +875,16 @@ select.add_project {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
+.table-striped tbody tr:hover th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 .table-striped tbody tr td {
   vertical-align: middle;
+}
+.table-striped a {
+  text-decoration: none;
+  cursor: default;
 }
 table input {
   font-size: 12px;
