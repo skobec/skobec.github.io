@@ -913,6 +913,14 @@ select.add_project {
   }
 }
 .table-striped {
+  thead {
+    tr {
+      th {
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+    }
+  }
   tbody {
     tr {
       &:hover {
@@ -922,10 +930,6 @@ select.add_project {
         -ms-transition: 0.2s;
         -o-transition: 0.2s;
         transition: 0.2s;
-        th {
-          padding-top: 4px;
-          padding-bottom: 4px;
-        }
       }
       td {
         vertical-align: middle;
