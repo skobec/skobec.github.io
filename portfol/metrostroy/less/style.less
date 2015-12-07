@@ -642,7 +642,7 @@ p.ps1 {
       span {
         width: 100%;
         color: #657990;
-        font-size: 12px;
+        font-size: 10px;
         background-color: #d1deec;
         display: block;
         padding: 5px 10px;
@@ -904,12 +904,27 @@ select.add_project {
     tr {
       background-color: #4c4c4c;
       th {
-        font-weight: 100 ;
+        font-weight: 100;
         font-size: 12px;
         color: #c9c9c9;
         border: 1px solid #7b7b7b;
       }
     }
+  }
+}
+.arrow_sort {
+  position: relative;
+  &:after {
+    content: "";
+    background: url("../img/chislo.png") no-repeat;
+    background-position: 100% 0;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
   }
 }
 .table-striped {
@@ -1212,7 +1227,15 @@ tr.alarm_row {
     }
   }
 }
-
+.mini_table {
+  tr {
+   td {
+     a,span {
+       font-size: 9px;
+     }
+   }
+  }
+}
 
 
 
@@ -1269,3 +1292,11 @@ tr.alarm_row {
 //  color: #a1a1a1;
 //  padding: 5px;
 //}
+.alarm_limit {
+  background: url("../img/alarm-overflow.png")no-repeat left;
+  padding-left: 20px;
+  color: red;
+  margin: 7px 0;
+  display: block;
+  float: left;
+}

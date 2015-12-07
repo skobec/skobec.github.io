@@ -621,7 +621,7 @@ p.ps1 {
 .table_plans tbody td span {
   width: 100%;
   color: #657990;
-  font-size: 12px;
+  font-size: 10px;
   background-color: #d1deec;
   display: block;
   padding: 5px 10px;
@@ -862,10 +862,25 @@ select.add_project {
   background-color: #4c4c4c;
 }
 .table_reestr thead tr th {
-  font-weight: 100 ;
+  font-weight: 100;
   font-size: 12px;
   color: #c9c9c9;
   border: 1px solid #7b7b7b;
+}
+.arrow_sort {
+  position: relative;
+}
+.arrow_sort:after {
+  content: "";
+  background: url("../img/chislo.png") no-repeat;
+  background-position: 100% 0;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 .table-striped thead tr th {
   padding-top: 4px;
@@ -1153,4 +1168,16 @@ tr.alarm_row td span .btn_edit {
 }
 tr.alarm_row td span .btn_del_zap {
   background: url("../img/delete.png") no-repeat 100% 100%;
+}
+.mini_table tr td a,
+.mini_table tr td span {
+  font-size: 9px;
+}
+.alarm_limit {
+  background: url("../img/alarm-overflow.png") no-repeat left;
+  padding-left: 20px;
+  color: red;
+  margin: 7px 0;
+  display: block;
+  float: left;
 }
