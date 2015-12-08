@@ -835,7 +835,7 @@ select.add_project {
 }
 .bl_diagramm {
   background-color: #d4ddee;
-  border: 1px solid #89a0b0;
+  border: 3px solid #89a0b0;
   margin-top: 15px;
 }
 .bl_diagramm span {
@@ -848,7 +848,7 @@ select.add_project {
   float: right;
   background: url("../img/key_graf.jpg") no-repeat;
   border: 0;
-  height: 29px;
+  height: 27px;
   width: 37px;
 }
 .search_btn {
@@ -1033,17 +1033,27 @@ input.mac-style:focus {
   color: #ffffff;
 }
 .number_sum {
-  margin-top: 5px;
+  margin-top: 8px;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 13px;
   color: #526174;
+}
+.number_sum span {
+  font-size: 12px;
+  color: #4f647d;
+  font-weight: bold;
 }
 .paginator_arrow {
   float: right;
 }
 .paginator_arrow .arrow {
   border: 1px solid #a0b1c1;
-  background-color: #bcd2ea;
+  background: #cee3f8;
+  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   width: 34px;
   height: 29px;
   display: inline-block;
@@ -1052,12 +1062,12 @@ input.mac-style:focus {
   padding: 3px 9px;
   font-size: 0;
   float: left;
-  margin: 0 3px;
+  margin: 0 1px;
 }
 .paginator_arrow .arrow:after {
   content: "";
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
   position: absolute;
   left: 0;
   right: 0;
@@ -1073,10 +1083,12 @@ input.mac-style:focus {
 .paginator_arrow .arrow_left:after {
   border-top: 2px solid #526174;
   border-left: 2px solid #526174;
+  left: 4px;
 }
 .paginator_arrow .arrow_right:after {
   border-bottom: 2px solid #526174;
   border-right: 2px solid #526174;
+  right: 4px;
 }
 .pagination > li > a,
 .pagination > li > span {
@@ -1175,6 +1187,9 @@ tr.alarm_row td span .btn_del_zap {
 .mini_table tr td span {
   font-size: 9px;
 }
+.title_bl_diagr {
+  font-weight: bold;
+}
 .alarm_limit {
   background: url("../img/alarm-overflow.png") no-repeat left;
   padding-left: 20px;
@@ -1191,4 +1206,7 @@ tr.alarm_row td span .btn_del_zap {
   content: counter(schetchik);
   display: table-cell;
   vertical-align: middle;
+}
+.bl_title_head_diagr {
+  padding: 3px 0 3px 30px;
 }
