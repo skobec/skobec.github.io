@@ -267,6 +267,7 @@ html {
 }
 body {
   min-width: 1280px;
+  padding: 0!important;
 }
 .loginka {
   //background: url('../img/gorod_top.png') repeat-x left top;
@@ -1014,6 +1015,7 @@ input.mac-style:focus{
   ul {
     list-style: none;
     padding-left: 0;
+    display: none;
     li {
       font-size: 12px;
     }
@@ -1296,7 +1298,20 @@ tr.alarm_row {
   background: url("../img/alarm-overflow.png")no-repeat left;
   padding-left: 20px;
   color: red;
-  margin: 7px 0;
+  margin: 25px 0;
   display: block;
   float: left;
+}
+.tables_bar {
+  tbody {
+    tr {
+      counter-increment: schetchik;
+      &:before {
+        width: 20px;
+        content: counter(schetchik);
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
 }

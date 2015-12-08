@@ -89,7 +89,7 @@
                             <a href="#" class="title_zak_proj" data-toggle="modal" data-target="#myModal">Заказные позиции</a>
                         </div>
                         <div class="col-xs-12">
-                            <table class="table_plans pointer_tables" style="width: 350px" id="table_add_plans">
+                            <table class="table_plans pointer_tables tables_bar" style="width: 350px" id="table_add_plans">
                                 <tbody>
                                 <tr>
                                     <!--<th style="width: 15px" scope="row">1</th>-->
@@ -111,11 +111,11 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <table class="table_plans" style="margin-left: 14px;width: 335px">
+                            <table class="table_plans" style="margin-left: 21px ;width: 330px">
 
                                 <tbody>
                                 <tr>
-                                    <td style="    width: 90px;">
+                                    <td style="    width: 85px;">
                                         <select style="width: 100%" id="t1">
                                             <option value="" disabled selected class="placeholder">Выберите из списка</option>
 
@@ -624,25 +624,26 @@
                                             <option>Брус 100х100 мм</option>
                                         </select>
                                     </td>
-                                    <td style="width: 39px">
-                                        <select style="width: 95%" id="t2">
-                                            <option disabled selected class="placeholder">Кол-во</option>
-                                            <option>м3</option>
-                                            <option>комплект</option>
-                                            <option>шт</option>
-                                            <option>м2</option>
-                                            <option>л</option>
-                                            <option>шт.</option>
-                                            <option>кг</option>
-                                            <option>м</option>
-                                            <option>т</option>
-                                            <option>кг.</option>
-                                            <option>м. пог.</option>
-                                            <option>пог. м</option>
-                                            <option>м. п.</option>
-                                        </select>
+                                    <td style="width: 35px;padding: 0 5px">
+                                        <input type="text" id="t2" class="form-control" style="float: left;    display: inline-block;    width: 100%;    margin-top: 0;">
+                                        <!--<select style="width: 95%" id="t2">-->
+                                            <!--<option disabled selected class="placeholder">Кол-во</option>-->
+                                            <!--<option>м3</option>-->
+                                            <!--<option>комплект</option>-->
+                                            <!--<option>шт</option>-->
+                                            <!--<option>м2</option>-->
+                                            <!--<option>л</option>-->
+                                            <!--<option>шт.</option>-->
+                                            <!--<option>кг</option>-->
+                                            <!--<option>м</option>-->
+                                            <!--<option>т</option>-->
+                                            <!--<option>кг.</option>-->
+                                            <!--<option>м. пог.</option>-->
+                                            <!--<option>пог. м</option>-->
+                                            <!--<option>м. п.</option>-->
+                                        <!--</select>-->
                                     </td>
-                                    <td style="width: 28px">
+                                    <td style="width: 30px">
                                         <button class="add_btn"><i class="ico"></i></button>
                                     </td>
                                 </tr>
@@ -650,7 +651,6 @@
                             </table>
                             <span class="alarm_limit">Внимание!Позиция 2 превыашет лимит товара</span>
                             <textarea class="form-control comments_fr" placeholder="Комментарии"></textarea>
-
 
                         </div>
                     </div>
