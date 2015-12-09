@@ -834,11 +834,18 @@ select.add_project {
   margin-top: 4px;
 }
 .header_edt_bl_diagr {
-  background-color: #d4ddee;
+  background-image: linear-gradient(top, #3b86da 75%, #4489d6 100%);
+  background-image: -o-linear-gradient(top, #3b86da 75%, #4489d6 100%);
+  background-image: -moz-linear-gradient(top, #3b86da 75%, #4489d6 100%);
+  background-image: -webkit-linear-gradient(top, #3b86da 75%, #4489d6 100%);
+  background-image: -ms-linear-gradient(top, #3b86da 75%, #4489d6 100%);
+}
+.header_edt_bl_diagr .title_bl_diagr {
+  color: #ffffff;
 }
 .bl_diagramm {
   background-color: #d4ddee;
-  border: 3px solid #89a0b0;
+  border: 1px solid #89a0b0;
   margin-top: 15px;
   position: relative;
 }
@@ -893,6 +900,24 @@ select.add_project {
   top: 0;
   bottom: 0;
   margin: auto 0;
+}
+.arrow_sort {
+  width: 8%;
+}
+.arrow_sort + .arrow_sort {
+  width: 14%;
+}
+.arrow_sort + .arrow_sort + .arrow_sort {
+  width: 12%;
+}
+.arrow_sort + .arrow_sort + .arrow_sort + .arrow_sort {
+  width: 15%;
+}
+.arrow_sort + .arrow_sort + .arrow_sort + .arrow_sort + .arrow_sort {
+  width: 10%;
+}
+.arrow_sort + .arrow_sort + .arrow_sort + .arrow_sort + .arrow_sort + .arrow_sort {
+  width: 30%;
 }
 .table-striped thead tr th {
   padding-top: 4px;
@@ -1197,6 +1222,7 @@ tr.alarm_row td span .btn_del_zap {
 .mini_table tr td a,
 .mini_table tr td span {
   font-size: 9px;
+  text-decoration: none;
 }
 .title_bl_diagr {
   font-weight: bold;
@@ -1235,7 +1261,7 @@ tr.alarm_row td span .btn_del_zap {
   height: 50px;
 }
 .edit_bl_diagr {
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   top: 0;
   position: absolute;
@@ -1243,9 +1269,21 @@ tr.alarm_row td span .btn_del_zap {
   padding-bottom: 50px;
   display: none;
 }
+.edit_bl_diagr .bl_window_edt {
+  background-color: #ffffff;
+  width: 295px;
+  top: 28px;
+  position: absolute;
+  height: 240px;
+  padding-bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+}
 .period_graf_edit input {
   display: inline-block;
-  width: 43.1%;
+  width: 47%;
 }
 .period_graf_edit span {
   display: inline-block;

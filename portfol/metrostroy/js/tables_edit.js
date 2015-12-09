@@ -10,7 +10,7 @@ function addRowToTable2(table, cell1, cell2, cell3, cell4) {
 }
 function addRowToTable3(table, cell1,cell2) {
     var row;
-    row = "<tr><td><span style='text-align: center'>" + cell1 + "</span></td><td><span style='text-align: left'>" + cell2 +"</span></td><td><span>" + ('<a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a>') + "</span></td></tr>";
+    row = "<tr><td><span style='text-align: center'>" + cell1 + "</span></td><td><span style='text-align: left'>" + cell2 +""+ cell3 +"</span></td><td><span>" + ('<a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a>') + "</span></td></tr>";
     table.append(row);
 }
 $(document).ready(function() {
@@ -74,6 +74,6 @@ $(document).ready(function() {
         }
     });
     $('.bl_diagramm .key_ico, .edit_bl_diagr .key_ico, .edit_bl_diagr .clear_btn').click(function(){
-        $(this).closest('.slide_bl_diagr').find('.edit_bl_diagr').slideToggle('fast');
+        $(this).closest('.slide_bl_diagr').find('.edit_bl_diagr').fadeToggle('300');
     })
 });
