@@ -833,18 +833,29 @@ select.add_project {
   margin-right: 5px;
   margin-top: 4px;
 }
+.header_edt_bl_diagr {
+  background-color: #d4ddee;
+}
 .bl_diagramm {
   background-color: #d4ddee;
   border: 3px solid #89a0b0;
   margin-top: 15px;
+  position: relative;
 }
 .bl_diagramm span {
-  font-size: 12px;
+  font-size: 9px;
 }
 .bl_diagramm img {
   width: 100%;
 }
 .bl_diagramm .key_ico {
+  float: right;
+  background: url("../img/key_graf.jpg") no-repeat;
+  border: 0;
+  height: 27px;
+  width: 37px;
+}
+.key_ico {
   float: right;
   background: url("../img/key_graf.jpg") no-repeat;
   border: 0;
@@ -1209,4 +1220,52 @@ tr.alarm_row td span .btn_del_zap {
 }
 .bl_title_head_diagr {
   padding: 3px 0 3px 30px;
+}
+.content_editgraf_bl span {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 35px;
+  display: inline-block;
+}
+.content_editgraf_bl .editgraf_footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 50px;
+}
+.edit_bl_diagr {
+  background-color: #ffffff;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  padding-bottom: 50px;
+  display: none;
+}
+.period_graf_edit input {
+  display: inline-block;
+  width: 43.1%;
+}
+.period_graf_edit span {
+  display: inline-block;
+}
+.vertical_center_bl {
+  float: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
 }

@@ -73,6 +73,7 @@ $(document).ready(function() {
             document.location = $(this).data('href');
         }
     });
-    //
-
+    $('.bl_diagramm .key_ico, .edit_bl_diagr .key_ico, .edit_bl_diagr .clear_btn').click(function(){
+        $(this).closest('.slide_bl_diagr').find('.edit_bl_diagr').slideToggle('fast');
+    })
 });
