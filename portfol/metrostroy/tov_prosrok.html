@@ -89,7 +89,7 @@
                             <a href="#" class="title_zak_proj" data-toggle="modal" data-target="#myModal">Заказные позиции</a>
                         </div>
                         <div class="col-xs-12">
-                            <table class="table_plans pointer_tables tables_bar" style="width: 425px" id="table_add_plans">
+                            <table class="table_plans pointer_tables tables_bar" style="width: 910px" id="table_add_plans">
                                 <tbody>
                                 <tr>
                                     <!--<th style="width: 15px" scope="row">1</th>-->
@@ -111,12 +111,12 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <table class="table_plans" style="margin-left: 21px ;width: 415px">
+                            <table class="table_plans" style="margin-left: 27px ;width: 900px">
 
                                 <tbody>
                                 <tr>
                                     <td style="    width: 85px;">
-                                        <select style="width: 100%" id="t1">
+                                        <select style="width: 99%" id="t1">
                                             <option value="" disabled selected class="placeholder">Выберите из списка</option>
 
                                             <option>Бетон марка 200</option>
@@ -625,8 +625,8 @@
                                         </select>
                                     </td>
                                     <td style="width: 35px;padding: 0 5px">
-                                        <input type="text" id="t2" class="form-control" style="float: left;    display: inline-block;    width: 50%;    margin-top: 0;">
-                                        <select style="width: 50%" id="t3">
+                                        <input type="text" id="t2" class="form-control" style="float: left;    display: inline-block;    width: 45%;    margin-top: 0;">
+                                        <select style="width: 49%;padding: 0" id="t3">
                                             <option disabled selected class="placeholder">Кол-во</option>
                                             <option>м3</option>
                                             <option>комплект</option>
@@ -779,8 +779,8 @@
 <script src="js/tables_edit.js"></script>
 <script>
     $('.add_btn').click(function() {
-        addRowToTable3($('#table_add_plans'), $('#t1').val(), $('#t2').val());
-        $('#t1,#t2').val('');
+        addRowToTable3($('#table_add_plans'), $('#t1').val(), $('#t2').val(), $('#t3').val());
+        $('#t1,#t2,#t3').val('');
         $('#t1,#t2').addClass('placeholder');
     });
 </script>

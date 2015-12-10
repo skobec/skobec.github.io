@@ -24,6 +24,7 @@
         <div class="row head_titl_bl">
             <div class="col-xs-12">
                 <h1 class="titile_page">Система управления строительным холдингом</h1>
+
                 <p>Единая служба управления закупочной деятельностью предприятия</p>
             </div>
         </div>
@@ -34,9 +35,9 @@
             <div class="row">
                 <div class="col-xs-7 no_pad">
                     <ul class="nav navbar-nav">
-                        <li><a href="project.html">Планы</a> </li>
-                        <li><a href="project2.html">Реестр заявок</a> </li>
-                        <li class="active"><a href="#">Отчёты</a> </li>
+                        <li><a href="project.html">Планы</a></li>
+                        <li><a href="project2.html">Реестр заявок</a></li>
+                        <li class="active"><a href="#">Отчёты</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-5">
@@ -51,7 +52,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-8">
-                    <button class="add_project btn"  data-toggle="modal" data-target="#myModal2"><i class="ico"></i> Добавить рабочий стол</button>
+                    <button class="add_project btn" data-toggle="modal" data-target="#myModal2"><i class="ico"></i>
+                        Добавить рабочий стол
+                    </button>
                 </div>
                 <div class="col-xs-4">
 
@@ -61,7 +64,8 @@
     </div>
     <div class="bl_tabs">
         <ul class="" role="tablist">
-            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Финансы</a></li>
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Финансы</a>
+            </li>
             <!--<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Заявки</a></li>-->
             <!--<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Сотрудники</a></li>-->
         </ul>
@@ -86,51 +90,57 @@
                     </div>
                     <div class="edit_bl_diagr">
                         <div class="bl_window_edt">
-                        <div class="col-xs-12 header_edt_bl_diagr">
-                            <div class="row">
-                                <div class="col-xs-12 bl_title_head_diagr">
-                                    <span class="title_bl_diagr">Настройки</span>
+                            <div class="col-xs-12 header_edt_bl_diagr">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="title_bl_diagr">Настройки</h4>
+                                        <button type="button" class="close"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical_center_bl">
+                                <div class="row content_editgraf_bl">
+                                    <div class="col-xs-12">
+                                        <!--<div class="col-xs-4 text-right">-->
+                                        <!--<span>Проект</span>-->
+                                        <!--</div>-->
+                                        <div class="col-xs-12">
+                                            <select class="select_zayav">
+                                                <option value="" disabled selected class="placeholder">Выберите проект
+                                                </option>
+                                                <option>Проект № 34511-1 МКД 7.2</option>
+                                                <option>Проект № 34512-1 Ф0.2</option>
+                                                <option>Проект № 34513-1 АГЗС9</option>
+                                                <option>Проект № 34511-1 Ф08</option>
+                                                <option>Проект № 34510-1 Ф07</option>
+                                                <option>Проект № 56113-1 КАВ 62</option>
+                                                <option>Проект № 56263-2 ЕАВ 62</option>
+                                                <option>Проект № 11514-1 МКД 150.1</option>
+                                                <option>Проект № 41387-1 ТРФ 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <!--<div class="col-xs-4 text-right">-->
+                                        <!--<span>Период</span>-->
+                                        <!--</div>-->
+                                        <div class="col-xs-12 period_graf_edit">
+                                            <input class="form-control" placeholder="Дата начала" value="" id="dpd1"
+                                                   style="float: left">
+                                            <span style="display: inline-block;float: left;margin: 0px 2%"> - </span>
+                                            <input class="form-control" value="" id="dpd2" placeholder="Дата окончания"
+                                                   style="float: left">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 editgraf_footer">
+                                        <button class="add_zayav btn" data-dismiss="modal" data-toggle="modal"
+                                                data-target="#myModal4"><i class="ico"></i> Применить
+                                        </button>
+                                        <button class="btn clear_btn"><i class="ico"></i> Отмена</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="vertical_center_bl">
-                        <div class="row content_editgraf_bl">
-                            <div class="col-xs-12">
-                                <!--<div class="col-xs-4 text-right">-->
-                                    <!--<span>Проект</span>-->
-                                <!--</div>-->
-                                <div class="col-xs-12">
-                                    <select class="select_zayav">
-                                        <option value="" disabled selected class="placeholder">Выберите проект</option>
-                                        <option>Проект № 34511-1 МКД 7.2</option>
-                                        <option>Проект № 34512-1 Ф0.2</option>
-                                        <option>Проект № 34513-1 АГЗС9</option>
-                                        <option>Проект № 34511-1 Ф08</option>
-                                        <option>Проект № 34510-1 Ф07</option>
-                                        <option>Проект № 56113-1 КАВ 62</option>
-                                        <option>Проект № 56263-2 ЕАВ 62</option>
-                                        <option>Проект № 11514-1 МКД 150.1</option>
-                                        <option>Проект № 41387-1 ТРФ 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <!--<div class="col-xs-4 text-right">-->
-                                    <!--<span>Период</span>-->
-                                <!--</div>-->
-                                <div class="col-xs-12 period_graf_edit">
-                                    <input class="form-control" placeholder="Дата начала" value="" id="dpd1" style="float: left">
-                                    <span style="display: inline-block;float: left;margin: 0px 2%"> - </span>
-                                    <input class="form-control" value="" id="dpd2" placeholder="Дата окончания" style="float: left">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 editgraf_footer">
-                                <button class="add_zayav btn" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Принять</button>
-                                <button class="btn clear_btn"><i class="ico"></i> Отмена</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -152,48 +162,53 @@
                     </div>
                     <div class="edit_bl_diagr">
                         <div class="bl_window_edt">
-                        <div class="col-xs-12 header_edt_bl_diagr">
-                            <div class="row">
-                                <div class="col-xs-12 bl_title_head_diagr">
-                                    <span class="title_bl_diagr">Настройки</span>
+                            <div class="col-xs-12 header_edt_bl_diagr">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="title_bl_diagr">Настройки</h4>
+                                        <button type="button" class="close"></button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="vertical_center_bl">
-                            <div class="row content_editgraf_bl">
-                                <div class="col-xs-12">
+                            <div class="vertical_center_bl">
+                                <div class="row content_editgraf_bl">
                                     <div class="col-xs-12">
-                                        <select class="select_zayav">
-                                            <option disabled selected class="placeholder" value="">Заказчик</option>
-                                            <option>Спецпроектмонтаж</option>
-                                            <option>САФ-1</option>
-                                            <option>ПСУ</option>
-                                            <option>МонолитСтрой</option>
-                                            <option>Техстройресурс</option>
-                                            <option>СтройСервис</option>
-                                            <option>Ремстройсервис</option>
-                                            <option>САФ-2</option>
-                                            <option>СитиСтрой</option>
-                                            <option>Татстрой</option>
-                                            <option>Татстройинвест</option>
-                                        </select>
+                                        <div class="col-xs-12">
+                                            <select class="select_zayav">
+                                                <option disabled selected class="placeholder" value="">Заказчик</option>
+                                                <option>Спецпроектмонтаж</option>
+                                                <option>САФ-1</option>
+                                                <option>ПСУ</option>
+                                                <option>МонолитСтрой</option>
+                                                <option>Техстройресурс</option>
+                                                <option>СтройСервис</option>
+                                                <option>Ремстройсервис</option>
+                                                <option>САФ-2</option>
+                                                <option>СитиСтрой</option>
+                                                <option>Татстрой</option>
+                                                <option>Татстройинвест</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="col-xs-12 period_graf_edit">
-                                        <input class="form-control" placeholder="Дата начала" value="" id="dpd3" style="float: left">
-                                        <span style="display: inline-block;float: left;margin: 0px 2%"> - </span>
-                                        <input class="form-control" value="" id="dpd4" placeholder="Дата окончания" style="float: left">
+                                    <div class="col-xs-12">
+                                        <div class="col-xs-12 period_graf_edit">
+                                            <input class="form-control" placeholder="Дата начала" value="" id="dpd3"
+                                                   style="float: left">
+                                            <span style="display: inline-block;float: left;margin: 0px 2%"> - </span>
+                                            <input class="form-control" value="" id="dpd4" placeholder="Дата окончания"
+                                                   style="float: left">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 editgraf_footer">
-                                    <button class="add_zayav btn" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Принять</button>
-                                    <button class="btn clear_btn"><i class="ico"></i> Отмена</button>
+                                    <div class="col-xs-12 editgraf_footer">
+                                        <button class="add_zayav btn" data-dismiss="modal" data-toggle="modal"
+                                                data-target="#myModal4"><i class="ico"></i> Применить
+                                        </button>
+                                        <button class="btn clear_btn"><i class="ico"></i> Отмена</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                        </div>
                 </div>
             </div>
             <div class="col-xs-6 slide_bl_diagr">
@@ -214,42 +229,45 @@
                     </div>
                     <div class="edit_bl_diagr">
                         <div class="bl_window_edt">
-                        <div class="col-xs-12 header_edt_bl_diagr">
-                            <div class="row">
-                                <div class="col-xs-12 bl_title_head_diagr">
-                                    <span class="title_bl_diagr">Настройки</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="vertical_center_bl">
-                            <div class="row content_editgraf_bl">
-                                <div class="col-xs-12">
-
+                            <div class="col-xs-12 header_edt_bl_diagr">
+                                <div class="row">
                                     <div class="col-xs-12">
-                                        <select class="select_zayav placeholder">
-                                        <option value="" disabled selected class="placeholder">Проект</option>
-                                        <option>Проект № 34511-1 МКД 7.2</option>
-                                        <option>Проект № 34512-1 Ф0.2</option>
-                                        <option>Проект № 34513-1 АГЗС9</option>
-                                        <option>Проект № 34511-1 Ф08</option>
-                                        <option>Проект № 34510-1 Ф07</option>
-                                        <option>Проект № 56113-1 КАВ 62</option>
-                                        <option>Проект № 56263-2 ЕАВ 62</option>
-                                        <option>Проект № 11514-1 МКД 150.1</option>
-                                        <option>Выберите проект № 41387-1 ТРФ 1</option>
-                                        </select>
+                                        <h4 class="title_bl_diagr">Настройки</h4>
+                                        <button type="button" class="close"></button>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="vertical_center_bl">
+                                <div class="row content_editgraf_bl">
+                                    <div class="col-xs-12">
 
-                                <div class="col-xs-12 editgraf_footer">
-                                    <button class="add_zayav btn" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Принять</button>
-                                    <button class="btn clear_btn"><i class="ico"></i> Отмена</button>
+                                        <div class="col-xs-12">
+                                            <select class="select_zayav placeholder">
+                                                <option value="" disabled selected class="placeholder">Проект</option>
+                                                <option>Проект № 34511-1 МКД 7.2</option>
+                                                <option>Проект № 34512-1 Ф0.2</option>
+                                                <option>Проект № 34513-1 АГЗС9</option>
+                                                <option>Проект № 34511-1 Ф08</option>
+                                                <option>Проект № 34510-1 Ф07</option>
+                                                <option>Проект № 56113-1 КАВ 62</option>
+                                                <option>Проект № 56263-2 ЕАВ 62</option>
+                                                <option>Проект № 11514-1 МКД 150.1</option>
+                                                <option>Выберите проект № 41387-1 ТРФ 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 editgraf_footer">
+                                        <button class="add_zayav btn" data-dismiss="modal" data-toggle="modal"
+                                                data-target="#myModal4"><i class="ico"></i> Применить
+                                        </button>
+                                        <button class="btn clear_btn"><i class="ico"></i> Отмена</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                    </div>
             </div>
             <div class="col-xs-6 slide_bl_diagr">
                 <div class="bl_diagramm">
@@ -269,49 +287,55 @@
                     </div>
                     <div class="edit_bl_diagr">
                         <div class="bl_window_edt">
-                        <div class="col-xs-12 header_edt_bl_diagr">
-                            <div class="row">
-                                <div class="col-xs-12 bl_title_head_diagr">
-                                    <span class="title_bl_diagr">Настройки</span>
+                            <div class="col-xs-12 header_edt_bl_diagr">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="title_bl_diagr">Настройки</h4>
+                                        <button type="button" class="close"></button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="vertical_center_bl">
-                            <div class="row content_editgraf_bl">
-                                <div class="col-xs-12">
-                                    <!--<div class="col-xs-4 text-right">-->
-                                        <!--<span>Проект</span>-->
-                                    <!--</div>-->
+                            <div class="vertical_center_bl">
+                                <div class="row content_editgraf_bl">
                                     <div class="col-xs-12">
-                                        <select class="select_zayav placeholder">
-                                        <option value="" disabled selected class="placeholder">Выберите проект</option>
-                                        <option>Проект № 34511-1 МКД 7.2</option>
-                                        <option>Проект № 34512-1 Ф0.2</option>
-                                        <option>Проект № 34513-1 АГЗС9</option>
-                                        <option>Проект № 34511-1 Ф08</option>
-                                        <option>Проект № 34510-1 Ф07</option>
-                                        <option>Проект № 56113-1 КАВ 62</option>
-                                        <option>Проект № 56263-2 ЕАВ 62</option>
-                                        <option>Проект № 11514-1 МКД 150.1</option>
-                                        <option>Проект № 41387-1 ТРФ 1</option>
-                                        </select>
+                                        <!--<div class="col-xs-4 text-right">-->
+                                        <!--<span>Проект</span>-->
+                                        <!--</div>-->
+                                        <div class="col-xs-12">
+                                            <select class="select_zayav placeholder">
+                                                <option value="" disabled selected class="placeholder">Выберите проект
+                                                </option>
+                                                <option>Проект № 34511-1 МКД 7.2</option>
+                                                <option>Проект № 34512-1 Ф0.2</option>
+                                                <option>Проект № 34513-1 АГЗС9</option>
+                                                <option>Проект № 34511-1 Ф08</option>
+                                                <option>Проект № 34510-1 Ф07</option>
+                                                <option>Проект № 56113-1 КАВ 62</option>
+                                                <option>Проект № 56263-2 ЕАВ 62</option>
+                                                <option>Проект № 11514-1 МКД 150.1</option>
+                                                <option>Проект № 41387-1 ТРФ 1</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="col-xs-12 period_graf_edit">
-                                        <input class="form-control" placeholder="Дата начала" value="" id="dpd5" style="float: left">
-                                        <span style="display: inline-block;float: left;margin: 0px 2%"> - </span>
-                                        <input class="form-control" value="" id="dpd6" placeholder="Дата окончания" style="float: left">
+                                    <div class="col-xs-12">
+                                        <div class="col-xs-12 period_graf_edit">
+                                            <input class="form-control" placeholder="Дата начала" value="" id="dpd5"
+                                                   style="float: left">
+                                            <span style="display: inline-block;float: left;margin: 0px 2%"> - </span>
+                                            <input class="form-control" value="" id="dpd6" placeholder="Дата окончания"
+                                                   style="float: left">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 editgraf_footer">
-                                    <button class="add_zayav btn" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Принять</button>
-                                    <button class="btn clear_btn"><i class="ico"></i> Отмена</button>
+                                    <div class="col-xs-12 editgraf_footer">
+                                        <button class="add_zayav btn" data-dismiss="modal" data-toggle="modal"
+                                                data-target="#myModal4"><i class="ico"></i> Применить
+                                        </button>
+                                        <button class="btn clear_btn"><i class="ico"></i> Отмена</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-</div>
                 </div>
             </div>
         </div>
@@ -319,48 +343,47 @@
 
 
     <!--<div class="container">-->
-        <!--<div class="row text-center">-->
-            <!--<div class="tab-content">-->
-                <!--<div role="tabpanel" class="tab-pane active" id="home">-->
-                    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
-                <!--</div>-->
-                <!--<div role="tabpanel" class="tab-pane fade" id="profile">-->
-                    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
-                <!--</div>-->
-                <!--<div role="tabpanel" class="tab-pane fade" id="messages">-->
-                    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+    <!--<div class="row text-center">-->
+    <!--<div class="tab-content">-->
+    <!--<div role="tabpanel" class="tab-pane active" id="home">-->
+    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
+    <!--</div>-->
+    <!--<div role="tabpanel" class="tab-pane fade" id="profile">-->
+    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
+    <!--</div>-->
+    <!--<div role="tabpanel" class="tab-pane fade" id="messages">-->
+    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</div>-->
 
 
-
     <!--<div class="tab-content">-->
-        <!--<div role="tabpanel fade" class="tab-pane active" id="home">-->
+    <!--<div role="tabpanel fade" class="tab-pane active" id="home">-->
 
-        <!--</div>-->
-        <!--<div role="tabpanel fade" class="tab-pane" id="profile">-->
-            <!--<div class="container">-->
-                <!--<div class="row text-center">-->
-                    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div role="tabpanel fade" class="tab-pane" id="messages">-->
-            <!--<div class="container">-->
-                <!--<div class="row text-center">-->
-                    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div role="tabpanel fade" class="tab-pane" id="settings">-->
-            <!--<div class="container">-->
-                <!--<div class="row text-center">-->
-                    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+    <!--</div>-->
+    <!--<div role="tabpanel fade" class="tab-pane" id="profile">-->
+    <!--<div class="container">-->
+    <!--<div class="row text-center">-->
+    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div role="tabpanel fade" class="tab-pane" id="messages">-->
+    <!--<div class="container">-->
+    <!--<div class="row text-center">-->
+    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div role="tabpanel fade" class="tab-pane" id="settings">-->
+    <!--<div class="container">-->
+    <!--<div class="row text-center">-->
+    <!--<img src="img/graf.jpg" style="margin-top: 35px">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</div>-->
 
 
@@ -393,16 +416,20 @@
                 </div>
                 <div class="row calendar_inputs">
                     <div class="col-xs-6">
-                        <input class="form-control" placeholder="Дата начала" style="float: right"> <span style="float: right">c</span>
+                        <input class="form-control" placeholder="Дата начала" style="float: right"> <span
+                            style="float: right">c</span>
                     </div>
                     <div class="col-xs-6 no_pad">
-                        <span style="float: left">по </span><input class="form-control" placeholder="Дата окончания" style="float: left">
+                        <span style="float: left">по </span><input class="form-control" placeholder="Дата окончания"
+                                                                   style="float: left">
                     </div>
                 </div>
             </div>
             <div class="modal-body">
                 <a href="#" class="plans_proj" style="margin-top: 5px">Позиции плана</a>
-                <p style="margin-top: 5px"><input type="checkbox" name="option1" value="a1" >Перенести недосвоенные позиции текущего года</p>
+
+                <p style="margin-top: 5px"><input type="checkbox" name="option1" value="a1">Перенести недосвоенные
+                    позиции текущего года</p>
                 <table class="table_plans">
                     <thead>
                     <tr>
@@ -460,7 +487,8 @@
 
             </div>
             <div class="modal-footer text-center">
-                <button type="button" class="btn add_zayav" data-dismiss="modal"><i class="ico"></i> Добавить заявку </button>
+                <button type="button" class="btn add_zayav" data-dismiss="modal"><i class="ico"></i> Добавить заявку
+                </button>
                 <button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>
             </div>
         </div>
@@ -473,15 +501,18 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel2" >Добавить рабочий стол</h4>
+                <h4 class="modal-title" id="myModalLabel2">Добавить рабочий стол</h4>
             </div>
             <div class="modal-body">
                 <div class="col-xs-12">
-                    <input class="form-control" placeholder="Наименование рабочего стола" style="width: 70%;margin: 0 auto 10px">
+                    <input class="form-control" placeholder="Наименование рабочего стола"
+                           style="width: 70%;margin: 0 auto 10px">
                 </div>
             </div>
             <div class="modal-footer text-center">
-                <button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить раб стол </button>
+                <button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal"
+                        data-target="#myModal4"><i class="ico"></i> Добавить раб стол
+                </button>
             </div>
         </div>
     </div>
@@ -511,7 +542,7 @@
 <script src="js/bootstrap-datepicker.js"></script>
 
 <script>
-    $(function(){
+    $(function () {
         window.prettyPrint && prettyPrint();
         $('#dp1,#db2,#db3,#dp4,#dp5,#dp6').datepicker({
             format: 'dd/mm/yy'
@@ -520,11 +551,11 @@
         $('#dpMonths').datepicker();
 
 
-        var startDate = new Date(2015,1,20);
-        var endDate = new Date(2015,1,25);
+        var startDate = new Date(2015, 1, 20);
+        var endDate = new Date(2015, 1, 25);
         $('#dp4').datepicker()
-                .on('changeDate', function(um){
-                    if (um.date.valueOf() > endDate.valueOf()){
+                .on('changeDate', function (um) {
+                    if (um.date.valueOf() > endDate.valueOf()) {
                         $('#alert').show().find('strong').text('The start date can not be greater then the end date');
                     } else {
                         $('#alert').hide();
@@ -534,8 +565,8 @@
                     $('#dp4').datepicker('hide');
                 });
         $('#dp5').datepicker()
-                .on('changeDate', function(um){
-                    if (um.date.valueOf() < startDate.valueOf()){
+                .on('changeDate', function (um) {
+                    if (um.date.valueOf() < startDate.valueOf()) {
                         $('#alert').show().find('strong').text('The end date can not be less then the start date');
                     } else {
                         $('#alert').hide();
@@ -551,10 +582,10 @@
 
         var checkin = $('#dpd1').datepicker({
             format: 'dd/mm/yy',
-            onRender: function(date) {
-                return date.valueOf() < now.valueOf() ? 'disabled' : '';
+            onRender: function (date) {
+                return date.valueOf() < now.valueOf() ? '' : '';
             }
-        }).on('changeDate', function(um) {
+        }).on('changeDate', function (um) {
             if (um.date.valueOf() > checkout.date.valueOf()) {
                 var newDate = new Date(um.date)
                 newDate.setDate(newDate.getDate() + 1);
@@ -566,19 +597,19 @@
         var checkout = $('#dpd2').datepicker({
             format: 'dd/mm/yy',
             weekStart: 1,
-            onRender: function(date) {
-                return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+            onRender: function (date) {
+                return date.valueOf() <= checkin.date.valueOf() ? '' : '';
             }
-        }).on('changeDate', function(um) {
+        }).on('changeDate', function (um) {
             checkout.hide();
         }).data('datepicker');
-        $(function(){
+        $(function () {
             var checkin = $('#dpd3').datepicker({
                 format: 'dd/mm/yy',
-                onRender: function(date) {
-                    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+                onRender: function (date) {
+                    return date.valueOf() < now.valueOf() ? '' : '';
                 }
-            }).on('changeDate', function(um) {
+            }).on('changeDate', function (um) {
                 if (um.date.valueOf() > checkout.date.valueOf()) {
                     var newDate = new Date(um.date)
                     newDate.setDate(newDate.getDate() + 1);
@@ -590,21 +621,21 @@
             var checkout = $('#dpd4').datepicker({
                 format: 'dd/mm/yy',
                 weekStart: 1,
-                onRender: function(date) {
-                    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+                onRender: function (date) {
+                    return date.valueOf() <= checkin.date.valueOf() ? '' : '';
                 }
-            }).on('changeDate', function(um) {
+            }).on('changeDate', function (um) {
                 checkout.hide();
             }).data('datepicker');
 
         });
-        $(function(){
+        $(function () {
             var checkin = $('#dpd5').datepicker({
                 format: 'dd/mm/yy',
-                onRender: function(date) {
-                    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+                onRender: function (date) {
+                    return date.valueOf() < now.valueOf() ? '' : '';
                 }
-            }).on('changeDate', function(um) {
+            }).on('changeDate', function (um) {
                 if (um.date.valueOf() > checkout.date.valueOf()) {
                     var newDate = new Date(um.date)
                     newDate.setDate(newDate.getDate() + 1);
@@ -616,21 +647,21 @@
             var checkout = $('#dpd6').datepicker({
                 format: 'dd/mm/yy',
                 weekStart: 1,
-                onRender: function(date) {
-                    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+                onRender: function (date) {
+                    return date.valueOf() <= checkin.date.valueOf() ? '' : '';
                 }
-            }).on('changeDate', function(um) {
+            }).on('changeDate', function (um) {
                 checkout.hide();
             }).data('datepicker');
 
         });
-        $(function(){
+        $(function () {
             var checkin = $('#dpd7').datepicker({
                 format: 'dd/mm/yy',
-                onRender: function(date) {
-                    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+                onRender: function (date) {
+                    return date.valueOf() < now.valueOf() ? '' : '';
                 }
-            }).on('changeDate', function(um) {
+            }).on('changeDate', function (um) {
                 if (um.date.valueOf() > checkout.date.valueOf()) {
                     var newDate = new Date(um.date)
                     newDate.setDate(newDate.getDate() + 1);
@@ -642,21 +673,21 @@
             var checkout = $('#dpd8').datepicker({
                 format: 'dd/mm/yy',
                 weekStart: 1,
-                onRender: function(date) {
-                    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+                onRender: function (date) {
+                    return date.valueOf() <= checkin.date.valueOf() ? '' : '';
                 }
-            }).on('changeDate', function(um) {
+            }).on('changeDate', function (um) {
                 checkout.hide();
             }).data('datepicker');
 
         });
-        $(function(){
+        $(function () {
             var checkin = $('#dpd9').datepicker({
                 format: 'dd/mm/yy',
-                onRender: function(date) {
-                    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+                onRender: function (date) {
+                    return date.valueOf() < now.valueOf() ? '' : '';
                 }
-            }).on('changeDate', function(um) {
+            }).on('changeDate', function (um) {
                 if (um.date.valueOf() > checkout.date.valueOf()) {
                     var newDate = new Date(um.date)
                     newDate.setDate(newDate.getDate() + 1);
@@ -668,10 +699,10 @@
             var checkout = $('#dpd10').datepicker({
                 format: 'dd/mm/yy',
                 weekStart: 1,
-                onRender: function(date) {
-                    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+                onRender: function (date) {
+                    return date.valueOf() <= checkin.date.valueOf() ? '' : '';
                 }
-            }).on('changeDate', function(um) {
+            }).on('changeDate', function (um) {
                 checkout.hide();
             }).data('datepicker');
 
