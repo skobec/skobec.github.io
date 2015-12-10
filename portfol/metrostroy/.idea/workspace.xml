@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8174b7-56ea-4019-8626-66cd0a74d24c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project2.html" afterPath="$PROJECT_DIR$/project2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project3.html" afterPath="$PROJECT_DIR$/project3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report.html" afterPath="$PROJECT_DIR$/report.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/style.less" afterPath="$PROJECT_DIR$/less/style.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/tables_edit.js" afterPath="$PROJECT_DIR$/js/tables_edit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tov_prosrok.html" afterPath="$PROJECT_DIR$/tov_prosrok.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="metrostroy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -272,8 +266,8 @@
       <file leaf-file-name="style.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/less/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7363421">
-              <caret line="1359" column="5" selection-start-line="1359" selection-start-column="5" selection-end-line="1359" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.49406177">
+              <caret line="744" column="69" selection-start-line="744" selection-start-column="69" selection-end-line="744" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -1907,8 +1901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7363421">
-          <caret line="1359" column="5" selection-start-line="1359" selection-start-column="5" selection-end-line="1359" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.49406177">
+          <caret line="744" column="69" selection-start-line="744" selection-start-column="69" selection-end-line="744" selection-end-column="69" />
           <folding />
         </state>
       </provider>

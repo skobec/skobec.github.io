@@ -708,6 +708,11 @@ select.add_project {
 }
 .calendar_inputs input {
   width: 45%;
+  background: #ffffff url("../img/calendar.png") no-repeat 95% 50%;
+  padding-right: 25px;
+}
+.calendar_inputs span.form-control {
+  background: #ffffff url("../img/calendar.png") no-repeat 95% 50%;
 }
 .calendar_inputs span {
   margin-top: 5px;
@@ -1293,6 +1298,8 @@ tr.alarm_row td span .btn_del_zap {
   display: inline-block;
   width: 47%;
   font-size: 12px;
+  background: #ffffff url("../img/calendar.png") no-repeat 95% 50%;
+  padding-right: 25px;
 }
 .period_graf_edit span {
   display: inline-block;
