@@ -1174,10 +1174,10 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <input class="form-control" placeholder="Наименование заявки" style="width: 100%;margin: 0 auto">
-                        <select class="select_zayav">
+                        <select class="select_zayav" id="AddRequest_selectFirm">
                             <option disabled selected class="placeholder" value="">Заказчик</option>
-                            <option>Спецпроектмонтаж</option>
-                            <option>САФ-1</option>
+                            <option value="0">Спецпроектмонтаж</option>
+                            <option value="1">САФ-1</option>
                             <option>ПСУ</option>
                             <option>МонолитСтрой</option>
                             <option>Техстройресурс</option>
@@ -1192,10 +1192,10 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-6">
-                        <input class="form-control" placeholder="Контактное лицо" style="width: 100%;margin: 0 auto">
+                        <input class="form-control" placeholder="Контактное лицо" id="AddRequest_contactFace" style="width: 100%;margin: 0 auto">
                     </div>
                     <div class="col-xs-6">
-                        <input class="form-control" placeholder="Контакты" style="width: 100%;margin: 0 auto">
+                        <input class="form-control" placeholder="Контакты" id="AddRequest_contacts" style="width: 100%;margin: 0 auto">
                     </div>
                 </div>
                 <div class="row">
@@ -1852,6 +1852,19 @@
             addRowToTable2($('#table_add_plans'), $('#t1').val(), $('#t2').val(), $('#t3').val(), $('#t4').val());
             $('#t1,#t2,#t3,#t4').val('');
             $('#t1,#t3').addClass('placeholder');
+        });
+        var firmList = {
+            '0':{name:'Вася', contacts:'777-777'},
+            '1':{name:'Кузя', contacts:'111-111'}
+        };
+        $('#AddRequest_selectFirm').on('change',function(){
+            var id = +$(this).val();
+            if(firmList[id] !== undefined){
+                var name = firmList[id].name;
+                var contacts = firmList[id].contacts;
+                $('#AddRequest_contactFace').val(name);
+                $('#AddRequest_contacts').val(contacts);
+            }
         });
     })
 </script>
