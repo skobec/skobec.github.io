@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Галерея</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+<body>
+
+<header id="header">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-4">
+                    <div class="top-number"><p><i class="fa fa-phone-square"></i>  +8353 43 217 79</p></div>
+                </div>
+                <div class="col-sm-6 col-xs-8 text-right">
+                    <!--<div class="social">-->
+                    <!--<ul class="social-share">-->
+                    <!--<li><a href="#"><i class="fa fa-vk"></i></a></li>-->
+                    <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+                    <!--&lt;!&ndash;<li><a href="#"><i class="fa fa-twitter"></i></a></li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li><a href="#"><i class="fa fa-linkedin"></i></a></li> &ndash;&gt;-->
+                    <!--<li><a href="#"><i class="fa fa-skype"></i></a></li>-->
+                    <!--</ul>-->
+                    <!--&lt;!&ndash;<div class="search">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<form role="form">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="text" class="search-form" autocomplete="off" placeholder="поиск">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<i class="fa fa-search"></i>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</form>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <div class="login_btn">
+                        <a href="#">Войти</a>
+                        <a href="#">Зарегистрироваться</a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->
+    </div><!--/.top-bar-->
+
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/logotype_gor.svg" alt="logo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Услуги <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="service-1.html">По ведомствам</a></li>
+                            <li><a href="service-1.html">Жизненные ситуации</a></li>
+                            <li><a href="service-1.html">Все услуги</a></li>
+                            <li><a href="pre-entry.html">Записаться в очередь</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html">О нас</a></li>
+                    <li><a href="documents.html">Документы</a></li>
+                    <li class="active"><a href="gallery.html">Фотогалерея</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contact-us.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
+
+</header><!--/header-->
+    <section id="portfolio">
+        <div class="container">
+            <div class="center">
+               <h2>Фотогалерея</h2>
+            </div>
+
+            <ul class="portfolio-filter text-center">
+                <li><a class="btn btn-default active" href="#" data-filter="*">Все события</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Открытие</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".html">Новый год</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Доклад 2015</a></li>
+            </ul><!--/#portfolio-filter-->
+
+            <div class="row wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                <div class="portfolio-items">
+                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Бизнес тема</a></h3>
+                                    <p>Презентация нашего коллектива результатов за этот год</p>
+                                    <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Увеличить</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Бизнес тема</a></h3>
+                                    <p>Презентация нашего коллектива результатов за этот год</p>
+                                    <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Увеличить</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Бизнес тема</a></h3>
+                                    <p>Презентация нашего коллектива результатов за этот год</p>
+                                    <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i>Увеличить</a>
+                                </div> 
+                            </div>
+                        </div>        
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                          <h3><a href="#">Бизнес тема</a></h3>
+                                    <p>Презентация нашего коллектива результатов за этот год</p>
+                                    <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i>Увеличить</a>
+                                </div> 
+                            </div>
+                        </div>           
+                    </div><!--/.portfolio-item-->
+          
+                    <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item5.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                          <h3><a href="#">Бизнес тема</a></h3>
+                                    <p>Презентация нашего коллектива результатов за этот год</p>
+                                    <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i>Увеличить</a>
+                                </div> 
+                            </div>
+                        </div>      
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                          <h3><a href="#">Бизнес тема</a></h3>
+                                    <p>Презентация нашего коллектива результатов за этот год</p>
+                                    <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i>Увеличить</a>
+                                </div> 
+                            </div>
+                        </div>         
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item7.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                          <h3><a href="#">Бизнес тема</a></h3>
+                                    <p>Презентация нашего коллектива результатов за этот год</p>
+                                    <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i>Увеличить</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item8.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                          <h3><a href="#">Бизнес тема</a></h3>
+                                    <p>Презентация нашего коллектива результатов за этот год</p>
+                                    <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i>Увеличить</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+                </div>
+            </div>
+        </div>
+    </section><!--/#portfolio-item-->
+
+
+<footer id="footer" class="midnight-blue">
+    <div class="container">
+        <div class="col-sm-2 col-xs-12 text-center">
+            <a href="/" class="logotype">
+                <img src="images/logotype-gray.svg" style="width: 160px">
+            </a>
+        </div>
+        <div class="col-sm-6 col-sm-offset-1 col-xs-6">
+            <ul class="list-inline mb-20">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="documents.html">Документы</a></li>
+                <li><a href="gallery.html">Фотогалерея</a></li>
+                <li><a href="about-us.html">О нас</a></li>
+                <li><a href="contact-us.html">Контакты</a></li>
+            </ul>
+            <div class="mb-20 footerorg"><p>Государственное автономное учреждение «Многофункциональный центр предоставления государственных и муниципальных услуг Курманаевского района»</p>
+            </div>
+        </div>
+        <div class="col-sm-3 col-sm-offset-0 col-xs-5 col-xs-offset-1 rpfooter">
+            <a href="tel:88001002216" class="main-phone mb-20"><span class="fa fa-phone-square"></span> 8 800 100-22-16</a>
+            <p>461060, Оренбургская обл,Курманевский р, с.Курманаевка</p>
+
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=mfc@mfcsakha.ru" class="mail" target="_blank"><span class="fa fa-envelope-o"></span> mfc@kurman.ru</a>
+
+            <style>
+                .sociallinks {margin-top: 8px;}
+                .sociallinks a {margin-left: 3px;}
+                .sociallinks a:first-child {margin-left: 0px !important;}
+            </style>
+        </div>
+    </div>
+</footer><!--/#footer-->
+<!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+</body>
+</html>
