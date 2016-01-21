@@ -1030,46 +1030,46 @@ input {
   padding: 15px 0 5px;
   background-size: 15%;
   .container {
-    position: relative;
-    height: 300px;
-    padding-top: 110px;
-    padding-bottom: 110px;
-    padding-left: 50px;
-    margin-bottom: 50px;
-    box-sizing: border-box;
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 50%;
-      border-top: 7px solid #E84B37;
-      border-left: 7px solid #E84B37;
-      border-bottom: 7px solid #E84B37;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: -7px;
-      height: 100%;
-      width: 50%;
-      border-top: 7px solid #C69667;
-      border-right: 7px solid #C69667;
-      border-bottom: 7px solid #C69667;
-    }
     .row {
-      &:after {
+      position: relative;
+      height: 300px;
+      padding-top: 110px;
+      padding-bottom: 110px;
+      padding-left: 50px;
+      margin-bottom: 50px;
+      box-sizing: border-box;
+      &:before {
         content: "";
+        position: absolute;
         left: 0;
         top: 0;
-        width: 0;
-        height: 0;
-        border-top: 75px solid #E84B37;
-        border-right: 75px solid transparent;
-        position: absolute;
+        height: 100%;
+        width: 50%;
+        border-top: 7px solid #E84B37;
+        border-left: 7px solid #E84B37;
+        border-bottom: 7px solid #E84B37;
       }
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -7px;
+        height: 100%;
+        width: 50%;
+        border-top: 7px solid #C69667;
+        border-right: 7px solid #C69667;
+        border-bottom: 7px solid #C69667;
+      }
+      //&:after {
+      //  content: "";
+      //  left: 0;
+      //  top: 0;
+      //  width: 0;
+      //  height: 0;
+      //  border-top: 75px solid #E84B37;
+      //  border-right: 75px solid transparent;
+      //  position: absolute;
+      //}
     }
   }
 }
