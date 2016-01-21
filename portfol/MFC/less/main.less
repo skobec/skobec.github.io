@@ -1039,6 +1039,16 @@ input {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    &:after {
+      content: "";
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: 75px solid #E84B37;
+      border-right: 75px solid transparent;
+      position: absolute;
+    }
     .ram_1 {
       content: "";
       position: absolute;
@@ -1066,18 +1076,6 @@ input {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-    }
-    .row {
-      &:after {
-        content: "";
-        left: 0;
-        top: 0;
-        width: 0;
-        height: 0;
-        border-top: 75px solid #E84B37;
-        border-right: 75px solid transparent;
-        position: absolute;
-      }
     }
   }
 }
