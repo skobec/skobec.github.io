@@ -66,7 +66,7 @@
 
                 </div>
                 <div class="col-xs-5 text-right">
-                    <span class="number_sum"><span class="one_sum"><span>21</span>-<span>40</span></span> из <span>3026</span>   </span>
+                    <span class="number_sum"><span class="one_sum"><span id="one_sum_count">21</span>-<span id="one_sum_from">40</span></span> из <span>3026</span>   </span>
                     <div class="paginator_arrow">
                         <a href="project2.html" class="arrow arrow_left"><</a>
                         <a href="#" class="arrow arrow_right">></a>
@@ -814,6 +814,8 @@
 </div>
 <!-- Modal -->
 <div class="modal modal_project fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="vertical-alignment-helper">
+                <div class="modal-dialog vertical-align-center">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1458,14 +1460,18 @@
                 <!--</div>-->
             </div>
             <div class="modal-footer" style="text-align: left">
-                <button type="button" class="btn add_project " data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить заявку </button>
+                <button type="button" class="btn add_zayav  " data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить заявку </button>
                 <button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>
             </div>
         </div>
     </div>
 </div>
+        </div>
+    </div>
 <div class="modal modal_project fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
-    <div class="modal-dialog" role="document">
+    <div class="vertical-alignment-helper">
+                <div class="modal-dialog vertical-align-center">
+    <div class="modal-dialog authority_modal" role="document">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -1482,7 +1488,8 @@
             </div>
         </div>
     </div>
-
+</div>
+        </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -1505,6 +1512,18 @@
             $('#t1,#t2,#t3,#t4').val('');
             $('#t1,#t3').addClass('placeholder');
         });
+
+		$("#nav-search").on('keydown', function(e) {
+			if (e.which == 13) {
+				var headerElement=$('.arrow_sort').parent();
+				var searchString=$("#nav-search").val();
+				var foundElements = $( ".table td:contains('" + searchString + "')" );
+				$('.table tr').not('table table tr').not(headerElement).addClass('unvisible');
+				$(foundElements).parent().removeClass('unvisible');
+				var len=foundElements.length==160?20:foundElements.length + 20;
+				$('#one_sum_from').html(len);
+			}
+		});
     })
 </script>
 </body>

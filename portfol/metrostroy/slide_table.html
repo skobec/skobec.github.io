@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ПСО Казань</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="css/datepicker.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .record_table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .record_table tr:hover td span {
+            background-color: #caddd7;
+        }
+
+        tr.highlight_row td span {
+            background-color: #E4F3D4;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="row head_titl_bl">
+            <div class="col-xs-12">
+                <h1 class="titile_page">Система управления строительным холдингом</h1>
+                <p>Единая служба управления закупочной деятельностью предприятия</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="nav_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-7 no_pad">
+                    <ul class="nav navbar-nav">
+                        <li><a href="project.html">Планы</a> </li>
+                        <li class="active"><a href="project2.html">Реестр заявок</a> </li>
+                        <li><a href="report.html">Отчёты</a> </li>
+                    </ul>
+                </div>
+                <div class="col-xs-5">
+                    <a href="#" class="log_pers">Евсеенко Дмитрий Олегович</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="bl_button_set">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8">
+                    <a class="add_project btn go-back" href="project2.html">Назад</a>
+                    <button class="add_project btn" data-toggle="modal" data-target="#myModal4"><i class="ico"></i>Отклонить заявку</button>
+                    <button class="v_rab btn" data-toggle="modal" data-target="#myModal4"><i class="ico"></i>На согласование</button>
+                </div>
+                <div class="col-xs-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+           <div class="row">
+               <div class="col-xs-8 left_bl_content">
+                   <div class="ellow_blue_bl">
+                       <div class="col-xs-12">
+                           <h3 class="titile_page">Заявка №12543: "Септик, Грунтовка укрепляющая"</h3>
+                       </div>
+                       <div class="col-xs-12 info_zak">
+                           <span class="zak_com">Заказчик: <span>МонолитСтрой </span> </span>
+                           <span>Контактное лицо:</span>
+                           <span class="zak_name">Исхаков Р.К.<span> 8(843)-221-72-95</span> </span>
+
+                       </div>
+                       <div class="col-xs-12 info_zak">
+                           <span>Дата: <span class="zak_name">27 ноября 2015	17:51</span></span>
+                       </div>
+                       <div class="col-xs-12 info_zak">
+                           <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #ffe93a" title="Поступившее"></span>
+                           <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Обработка</span>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="panel-body">
+                           <div class="col-xs-12">
+                               <table class="table_plans pointer_tables mini_table record_table">
+                                   <thead>
+                                   <tr>
+                                       <!--<th style="width: 13px"></th>-->
+                                       <!--<th style="width: 115px"><span>Наименование</span></th>-->
+                                       <!--<th style="width: 150px"><span>Колличество</span></th>-->
+                                       <!--<th style="width: 77px"><span>Поставщик</span></th>-->
+                                       <!--<th style="width: 105px"><span>Стоимость<br>за единицу</span></th>-->
+                                       <!--<th style="width: 95px"><span>Общая<br>стоимость</span></th>-->
+                                       <!--<th style="width: 116px"><span>Срок</span></th>-->
+                                       <!--<th style="width: 0px"><span>Условия</span></th>-->
+                                       <th style="width: 0px"></th>
+                                       <th style="width: 0%"><span>Наименование</span></th>
+                                       <th style="width: 0%"><span>Колличество</span></th>
+                                       <th style="width: 13%"><span>Поставщик</span></th>
+                                       <th style="width: 10%"><span>Стоимость<br>за единицу</span></th>
+                                       <th style="width: 10%"><span>Срок</span></th>
+                                       <th style="width: 12%"><span>Условия</span></th>
+                                       <th style="width: 24%"><span>Общая<br>стоимость</span></th>
+
+                                       <!--<th style="width: 70px"></th>-->
+                                   </tr>
+                                   </thead>
+                               </table>
+                               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                   <div class="panel panel-default">
+                                       <div class="panel-heading" role="tab" id="headingOne">
+                                           <h4 class="panel-title">
+                                               <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="       height: 28px;    padding: 0;text-decoration: none">
+                                                   <table class="table_plans pointer_tables mini_table table_titlesss">
+                                                       <tbody>
+                                                       <tr>
+                                                           <th style="width: 0" scope="row"></th>
+                                                           <td style="width: 0"><span>Септик</span></td>
+                                                           <td style="text-decoration: none!important;width: 12%"><span>2 шт</span></td>
+                                                           <td style="width: 13%"><span class="post_select_ed">Выбрать поставщика</span></td>
+                                                           <td style="width: 10%"><span></span></td>
+                                                           <td style="width: 10%"><span></span></td>
+                                                           <td style="width: 12%"><span></span></td>
+                                                           <td style="width: 24%"><span></span></td>
+                                                           <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+                                                       </tr>
+                                                       </tbody>
+                                                   </table>
+                                                   <!--<span style="min-width: 149px;    width: 149px;display: inline-block;">Септик</span><i class="ico"></i><span style="    margin-left: 60px;"> 2 шт</span>-->
+                                               </a>
+                                           </h4>
+                                       </div>
+                                       <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                           <div class="panel-body" style="padding: 0">
+
+                                               <div class="">
+                                                   <table class="table_plans pointer_tables mini_table record_table">
+                                                       <tbody>
+                                                       <tr>
+                                                           <th style="width: 25px" scope="row"><input type="radio" name="test" /><label for="option"></label></th>
+                                                           <td style="width: 0%;"><span>ОАО «РегионПром»</span></td>
+                                                           <td style="width: 10%"><span>39400 р</span></td>
+                                                           <td style="width: 10%"><span>7 дней</span></td>
+                                                           <td style="width: 12%"><span> </span></td>
+                                                           <td style="width: 24%"><button class="btn_postaw" data-dismiss="modal" data-toggle="modal" data-target="#myModal4" disabled="disabled">Выбрать поставщика</button></td>
+                                                           <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+
+                                                           <!--<td style="width: 120px"><span>39400 р</span></td>-->
+                                                           <!--<td style="width: 120px"><span>78800 р</span></td>-->
+                                                           <!--<td style="width: 145px"><span> 20.12.2015</span></td>-->
+                                                           <!--<td style="width: 200px"><button class="btn_postaw" data-dismiss="modal" data-toggle="modal" data-target="#myModal4" disabled="disabled">Выбрать поставщика</button></td>-->
+                                                           <!--&lt;!&ndash;<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>&ndash;&gt;-->
+                                                       </tr>
+                                                       <tr>
+                                                           <th style="width: 25px" scope="row"><input type="radio" name="test" /><label for="option"></label></th>
+                                                           <td style="width: 450px"><span>Альянс-РИА</span></td>
+                                                           <td><span>36521 р</span></td>
+                                                           <td><span>3 дня</span></td>
+                                                           <td style="width: 145px"><span> Аванс 30%</span></td>
+                                                           <td style="width: 200px"><button class="btn_postaw" data-dismiss="modal" data-toggle="modal" data-target="#myModal4" disabled="disabled">Выбрать поставщика</button></td>
+                                                           <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+                                                       </tr>
+                                                       <tr data-dismiss="modal" data-toggle="modal" data-target="#myModal5" class="alert_tr">
+                                                           <th style="width: 25px" scope="row"><input type="radio" name="test" /><label for="option"></label></th>
+                                                           <td style="width: 450px"><span>ООО «ОптимаСтрой»</span></td>
+                                                           <td><span>42000 р</span></td>
+                                                           <td><span>7 дней</span></td>
+                                                           <td style="width: 145px"><span></span></td>
+                                                           <td style="width: 200px"><button class="btn_postaw" disabled="disabled">Выбрать поставщика</button></td>
+                                                           <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+                                                       </tr>
+                                                       </tbody>
+                                                   </table>
+
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="panel panel-default">
+                                       <div class="panel-heading" role="tab" id="headingTwo">
+                                           <h4 class="panel-title">
+                                               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"style="       height: 28px;    padding: 0; text-decoration: none!important">
+                                                   <table class="table_plans pointer_tables mini_table table_titlesss">
+                                                       <tbody>
+                                                       <tr>
+                                                           <th style="width: 0" scope="row"></th>
+                                                           <td style="width: 0"><span>Грунтовка укрепляющая </span></td>
+                                                           <td style="width: 12%"><span>50 л</span></td>
+                                                           <td style="width: 13%"><span class="post_select_ed">Выбрать поставщика</span></td>
+                                                           <td style="width: 10%"><span></span></td>
+                                                           <td style="width: 10%"><span></span></td>
+                                                           <td style="width: 12%"><span></span></td>
+                                                           <td style="width: 24%"><span></span></td>
+                                                           <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+                                                       </tr>
+                                                       </tbody>
+                                                   </table>
+                                                   <!--<span style="min-width: 149px;    width: 149px;    display: inline-block;">Грунтовка укрепляющая </span><i class="ico"></i><span style="    margin-left: 60px;"> 50 л</span>-->
+                                               </a>
+                                           </h4>
+                                       </div>
+                                       <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                           <div class="panel-body" style="padding: 0">
+
+                                               <div class="">
+                                                   <table class="table_plans pointer_tables mini_table record_table">
+                                                       <tbody>
+                                                       <tr>
+                                                           <th style="width: 25px" scope="row"><input type="radio" name="test" /><label for="option"></label></th>
+                                                           <td style="width: 0px"><span>ООО «СКИФ»</span></td>
+                                                           <td style="width: 10%"><span>292 р</span></td>
+                                                           <td style="width: 10%"><span>5 дней</span></td>
+                                                           <td style="width: 12%"><span></span></td>
+                                                           <td style="width: 24%"><button class="btn_postaw" data-dismiss="modal" data-toggle="modal" data-target="#myModal4" disabled="disabled">Выбрать поставщика</button></td>
+                                                           <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+                                                       </tr>
+                                                       <tr>
+                                                           <th style="width: 25px" scope="row"><input type="radio" name="test" /><label for="option"></label></th>
+                                                           <td style="width: 450px"><span>ООО «Велес+»</span></td>
+                                                           <td><span>303 р</span></td>
+                                                           <td><span>9 дней</span></td>
+                                                           <td style="width: 145px"><span>Самовывоз</span></td>
+                                                           <td style="width: 200px"><button class="btn_postaw" data-dismiss="modal" data-toggle="modal" data-target="#myModal4" disabled="disabled">Выбрать поставщика</button></td>
+                                                           <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
+                                                       </tr>
+                                                       </tbody>
+                                                   </table>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-xs-4 right_bl_info">
+                   <h4 class="title_end_proj">Журнал изменений</h4>
+                   <div class="row journal_bl">
+                       <div class="col-xs-4">
+                           <span>27 ноября 2015 17:51</span>
+                       </div>
+                       <div class="col-xs-8">
+                           <span>Исхаков Р.К. - Создана заявка № 12534</span>
+                           <span>Комментарии: нет</span>
+                       </div>
+                   </div>
+                   <div class="row journal_bl">
+                       <div class="col-xs-4">
+                           <span>5 декабря 2015 17:45</span>
+                       </div>
+                       <div class="col-xs-8">
+                           <span>Андреев В.С. - Статус изменен на "Обработка"</span>
+                           <span>Комментарии: нет</span>
+                       </div>
+                   </div>
+
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-6 text-right">
+                <a href="#" class="dev_link">Сообщить разработчикам об ошибке</a>
+                <a href="#" class="etton_link">ООО "Эттон"</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<!--<div class="modal modal_project fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--<div class="modal-dialog" role="document">-->
+<!--<div class="modal-content">-->
+<!--<div class="modal-header">-->
+<!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--<span aria-hidden="true">&times;</span>-->
+<!--</button>-->
+<!--<h4 class="modal-title" id="myModalLabel1">Добавить план</h4>-->
+<!--</div>-->
+<!--<div class="blue_pod_bl">-->
+<!--<div class="row">-->
+<!--<div class="col-xs-6">-->
+<!--<input class="form-control" placeholder="Наименование плана" style="width: 100%;">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row calendar_inputs">-->
+<!--<div class="col-xs-6 no_pad">-->
+<!--&lt;!&ndash;<span style="float: left">c</span>&ndash;&gt;-->
+<!--<input class="form-control" placeholder="Дата начала" value="" id="dpd1" style="float: left">-->
+<!--<span style="display: inline-block;float: left;margin: 5px 2%"> - </span>-->
+<!--&lt;!&ndash;<span style="float: left">по </span>&ndash;&gt;-->
+<!--<input class="form-control" value="" id="dpd2"  placeholder="Дата окончания" style="float: left">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+<!--<a href="#" class="" style="margin-top: 5px">Позиции плана</a>-->
+<!--&lt;!&ndash;<p style="margin-top: 5px"><input type="checkbox" name="option1" value="a1" >Перенести недосвоенные позиции текущего года</p>&ndash;&gt;-->
+<!--<table class="table_plans" id="table_add_plans">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th style=" width: 440px;"><span>Наименование</span></th>-->
+<!--<th style=" width: 203px;"><span>Количество</span></th>-->
+<!--<th style=" width: 93px;"><span>Стоимость</span></th>-->
+<!--<th style="width: 69px;"></th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--&lt;!&ndash;<tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span>Теплоизоляция</span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span>20 шт</span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span>5 678,90</span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span>Сухие тсроительные смеси</span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td style="text-align: center"><span>200 кг</span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span>21 523,90</span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<tr>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span>Штукатурные строитеьыне смеси</span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span>20 уп</span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span>11 123,90</span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>&ndash;&gt;-->
+<!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--</tbody>-->
+<!--</table>-->
+<!--<table class="table_plans">-->
+
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td style="    width: 349px;">-->
+<!--<select style="width: 100%" id="t1">-->
+<!--<option value="" disabled selected class="placeholder">Выберите из списка</option>-->
+
+<!--<option>Бетон марка 200</option>-->
+<!--<option>Винтовая свая СВС 108 L=3500 мм</option>-->
+<!--<option>Винтовая свая СВС 108 L=3000 мм</option>-->
+<!--<option>Винтовая свая СВС 108 L=2500 мм</option>-->
+<!--<option>Узел примыкания кровли к трубе</option>-->
+<!--<option>Изопласт кровельный покровный</option>-->
+<!--<option>Газ пропан</option>-->
+<!--<option>Изопласт кровельный подкладочный</option>-->
+<!--<option>Потолочная рейка 20 мм</option>-->
+<!--<option>Потолочная рейка 16 мм</option>-->
+
+<!--<option>Септик</option>-->
+<!--<option>Смесь растворная сухая грубый ровнитель для полов</option>-->
+<!--<option>Мастика битумная готовая</option>-->
+<!--<option>Клей для гипсовых пазогребневых блоков</option>-->
+<!--<option>Защёлка дверная накладная</option>-->
+<!--<option>Защёлка дверная врезная</option>-->
+<!--<option>Грунтовка укрепляющая</option>-->
+<!--<option>Гвозди > 80мм</option>-->
+<!--<option>Блоки гипсовые пазогребневые толщиной 80 мм</option>-->
+<!--<option>Антисептирующая пропитка</option>-->
+<!--<option>Доска обрезная 20 мм</option>-->
+<!--<option>Болт 8х50 мм</option>-->
+<!--<option>Доска ограждения (готовая) 20 мм</option>-->
+<!--<option>Доска обрезная 50х100 мм</option>-->
+<!--<option>Доска обрезная 50х200 мм</option>-->
+<!--<option>Саморез 4,2х100 мм</option>-->
+<!--<option>СИП панели (SIP панели) ПП</option>-->
+<!--<option>Шуруп М8х140</option>-->
+<!--<option>Шайба усиленная М8</option>-->
+<!--<option>Шуруп М8х160 (глухарь)</option>-->
+<!--<option>Водонагреватель косвенного нагрева 200 литров с обвязкой</option>-->
+<!--<option>Ветрозащита "Изоспан"</option>-->
+<!--<option>Доска вагонка</option>-->
+<!--<option>Оголовок для сэндвич трубы</option>-->
+<!--<option>Старт для сэндвич трубы</option>-->
+<!--<option>Дымоходный сэндвич</option>-->
+<!--<option>Сетка армирующая 10х10 мм</option>-->
+<!--<option>Камень рваный фасадный</option>-->
+<!--<option>Примыкание для круглых труб (типа мастер флеш)</option>-->
+<!--<option>Кронштейн водосточной трубы</option>-->
+<!--<option>Колено для водосточной трубы</option>-->
+<!--<option>Отлив водосточной трубы</option>-->
+<!--<option>Водоприёмная воронка</option>-->
+<!--<option>Водосточная труба</option>-->
+<!--<option>Кронштейн для водосточного жёлоба</option>-->
+<!--<option>Водосточный жёлоб</option>-->
+<!--<option>Ветровые планки для кровли</option>-->
+<!--<option>Ендовы</option>-->
+<!--<option>Торцевые планки для кровли</option>-->
+<!--<option>Цементная черепица</option>-->
+<!--<option>Саморез 4,2х55 мм</option>-->
+<!--<option>Полимерная черепица</option>-->
+<!--<option>Брусок 40х50 мм</option>-->
+<!--<option>Доска обрезная 35х100 мм</option>-->
+<!--<option>Гидроизоляция под металлочерепицу</option>-->
+<!--<option>Гвозди для крепления ондулина</option>-->
+<!--<option>Шурупы-саморезы 4,2х55 мм</option>-->
+<!--<option>Плиты ОСП 12 мм</option>-->
+<!--<option>Гвозди под черепицу катепал</option>-->
+<!--<option>Мягкая черепица катепал</option>-->
+<!--<option>Подкладочный ковёр под черепицу катепал</option>-->
+<!--<option>Гидроизоляция технониколь</option>-->
+<!--<option>Гвозди 200 мм</option>-->
+<!--<option>Гвозди 150 мм</option>-->
+<!--<option>Дюбель распорный 6х100 мм</option>-->
+<!--<option>Вазелин технический</option>-->
+<!--<option>Колено для наружной канализации ф 110 мм</option>-->
+<!--<option>Труба ПНД (Полиэтилен низкого давления) ф 160 мм</option>-->
+<!--<option>Профлист стеновой окрашенный</option>-->
+<!--<option>Электроды 3 мм</option>-->
+<!--<option>Труба прямоугольная 40х20х4 мм</option>-->
+<!--<option>Уголок стальной № 45</option>-->
+<!--<option>Краска по металлу</option>-->
+<!--<option>Грунтовка ГФ-021 красно-коричневая</option>-->
+<!--<option>Винтовая свая СВС 57 L=1500 мм</option>-->
+<!--<option>Мастика резино-битумная готовая</option>-->
+<!--<option>Праймер битумный, готовый</option>-->
+<!--<option>Дюбель строительный тарельчатый ДСТ 200-10 мм</option>-->
+<!--<option>Дюбель строительный тарельчатый ДСТ 160-10 мм</option>-->
+<!--<option>Дюбель строительный тарельчатый ДСТ 100-10 мм</option>-->
+<!--<option>Плиты перекрытия ПК60-10 (6000х1000х220 мм)</option>-->
+<!--<option>Плиты перекрытия ПК30-10 (3000х1000х220 мм)</option>-->
+<!--<option>Сурик</option>-->
+<!--<option>Брус</option>-->
+<!--<option>Скобы стальные</option>-->
+<!--<option>Плита парапетная</option>-->
+<!--<option>Рубероид покровный</option>-->
+<!--<option>Трап чугунный</option>-->
+<!--<option>Стеклоткань</option>-->
+<!--<option>Труба металлическая под столбы ограждения</option>-->
+<!--<option>Плёнка полиэтиленовая 200 мкм</option>-->
+<!--<option>Утеплитель минераловатный</option>-->
+<!--<option>Конёк кровельный</option>-->
+<!--<option>Ондулин</option>-->
+<!--<option>Профлист кровельный окрашенный</option>-->
+<!--<option>Саморез 4,2х80 мм</option>-->
+<!--<option>Металлочерепица</option>-->
+<!--<option>Гвозди кровельные</option>-->
+<!--<option>Гвозди 70 мм</option>-->
+<!--<option>Доска обрезная 25 мм</option>-->
+<!--<option>Пластины металлические 3 мм</option>-->
+<!--<option>Анкер болт 300х20 мм</option>-->
+<!--<option>Гайки с шайбами с резьбой 10 мм</option>-->
+<!--<option>Брус 200х200 мм</option>-->
+<!--<option>Анкер для крепления мауэрлата 800х10 мм с резьбой</option>-->
+<!--<option>Шурупы-саморезы 4,8х220 мм</option>-->
+<!--<option>Сэндвич-панели 200 мм</option>-->
+<!--<option>Сэндвич-панели 100 мм</option>-->
+<!--<option>Шурупы-саморезы 4,8х170 мм</option>-->
+<!--<option>Сэндвич-панели 150 мм</option>-->
+<!--<option>Шурупы-саморезы 4,8х120 мм</option>-->
+<!--<option>Металлический уголок по проекту</option>-->
+<!--<option>Прогоны из металлопроката двутавр № 20</option>-->
+<!--<option>Колонны из трубы квадратной 160х160х5 мм</option>-->
+<!--<option>Колонны из трубы квадратной 140х140х4 мм</option>-->
+<!--<option>Труба квадратная 160х160х5 мм</option>-->
+<!--<option>Колонны из швеллера № 16</option>-->
+<!--<option>Швеллер № 16</option>-->
+<!--<option>Лист стальной толщиной 6 мм</option>-->
+<!--<option>Труба квадратная 140х140х4 мм</option>-->
+<!--<option>Брус 100х200 мм</option>-->
+<!--<option>Брус 100х150 мм</option>-->
+<!--<option>Антисептирующая пропитка по дереву</option>-->
+<!--<option>Уголки металлические равнобокие 100х100х2 мм</option>-->
+<!--<option>Брус профилированный</option>-->
+<!--<option>Брус прямоугольного сечения</option>-->
+<!--<option>Шканты берёзовые ф 25 мм х 300 мм</option>-->
+<!--<option>Утеплитель межвенцовый</option>-->
+<!--<option>Брус оцилиндрованный</option>-->
+<!--<option>Щебень фракции 10 - 20 мм</option>-->
+<!--<option>Портландцемент общестроительного и специального назначения марки 400</option>-->
+<!--<option>Гравий для строительных работ</option>-->
+<!--<option>Песок для строительных работ природный</option>-->
+<!--<option>Провод БЭТ-85М</option>-->
+<!--<option>Металл листовой 10 мм</option>-->
+<!--<option>Пластиковые ограничители на арматуру обеспечивающие достаточный защитный слой бетона</option>-->
+<!--<option>Проволока вязальная 3 мм</option>-->
+<!--<option>Арматура класса А-III Ф 12 мм</option>-->
+<!--<option>Бетон марка 100</option>-->
+<!--<option>Блоки фундаментные шириной 600 мм</option>-->
+<!--<option>Блоки фундаментные шириной 400 мм</option>-->
+<!--<option>Плиты фундаментные шириной 800 мм</option>-->
+<!--<option>Плиты фундаментные шириной 1000 мм</option>-->
+<!--<option>Доска не обрезная 25 мм</option>-->
+<!--<option>Грунт (земля)</option>-->
+<!--<option>Анкерный болт с кольцом 300х10 мм</option>-->
+<!--<option>Скоба стальная 250х60х8 мм</option>-->
+<!--<option>Плита балконная</option>-->
+<!--<option>Блоки из сибита 200 мм</option>-->
+<!--<option>Блоки из сибита 100 мм</option>-->
+<!--<option>Доска обрезная 40 мм</option>-->
+<!--<option>Пластины металлические 25х20х4 мм</option>-->
+<!--<option>Арматура класса А-I Ф 6 мм</option>-->
+<!--<option>Сетка арматурная 50х50 мм</option>-->
+<!--<option>Фал капроновый 10 - 12 мм</option>-->
+<!--<option>Проволока вязальная, диаметром 6,5 мм</option>-->
+<!--<option>Утеплитель минераловатный типа Roofmate 100 мм</option>-->
+<!--<option>Скрепки строительные 12х8 мм</option>-->
+<!--<option>Ветрозащитная плёнка</option>-->
+<!--<option>Утеплитель минераловатный типа Roofmate 50 мм</option>-->
+<!--<option>Перемычки железобетонные</option>-->
+<!--<option>Блоки из сибита для наружной кладки</option>-->
+<!--<option>Клей для сибита</option>-->
+<!--<option>Клей для газобетонных блоков</option>-->
+<!--<option>Блоки из ячеистых бетонов стеновые</option>-->
+<!--<option>Затирка для швов</option>-->
+<!--<option>Плитка керамическая фасадная</option>-->
+<!--<option>Вставка для алюкобонда</option>-->
+<!--<option>Алюкобонд</option>-->
+<!--<option>Кляймера для крепления керамогранита</option>-->
+<!--<option>Заклёпки для крепления металлоконструкций</option>-->
+<!--<option>Заклёпки для крепления краспана и металлоконструкций</option>-->
+<!--<option>Дюбель-гвоздь 10х100 мм</option>-->
+<!--<option>Шурупы-саморезы 4,8х36 мм</option>-->
+<!--<option>Профиль металлический для панелей краспан</option>-->
+<!--<option>Панели краспан 1,57х1,2 м</option>-->
+<!--<option>Доборные угловые элементы для краспана</option>-->
+<!--<option>Кирпич керамический 250х120х65 облицовочный</option>-->
+<!--<option>Анкер 200 мм</option>-->
+<!--<option>Краски водоэмульсионные фасадные</option>-->
+<!--<option>Декоративная штукатурка фасадная</option>-->
+<!--<option>Грунтовка укрепляющая фасадная</option>-->
+<!--<option>Сайдинг виниловый</option>-->
+<!--<option>Начальная планка виниловая для сайдинга</option>-->
+<!--<option>Угол наружный, внутренний виниловый для сайдинга</option>-->
+<!--<option>Нащельник виниловый для сайдинга</option>-->
+<!--<option>Утеплитель сыпучий целлюлозный</option>-->
+<!--<option>СИП панели (SIP панели)</option>-->
+<!--<option>Утеплитель пенополистирол 100 мм</option>-->
+<!--<option>Карниз из полиуретана</option>-->
+<!--<option>Элемент мебели для ванных комнат</option>-->
+<!--<option>Элемент из набора для санузла</option>-->
+<!--<option>Электророзетка для кухонной плиты</option>-->
+<!--<option>Электророзетка</option>-->
+<!--<option>Шпильки оцинкованные стяжные диаметром 16 мм длиной 600 мм</option>-->
+<!--<option>Шпатлёвочный состав</option>-->
+<!--<option>Шпатлевка Унифлот (25кг)</option>-->
+<!--<option>Шпатлевка по дереву</option>-->
+<!--<option>Шпатлёвка масляно клеевая</option>-->
+<!--<option>Шпатлевка гипсовая</option>-->
+<!--<option>Шланг высокого давления</option>-->
+<!--<option>Швеллеры № 16-24</option>-->
+<!--<option>Шарниры дверные</option>-->
+<!--<option>Шайбы стальные диаметром 16 мм</option>-->
+<!--<option>Цемент</option>-->
+<!--<option>Хомут для крепления труб 50 мм</option>-->
+<!--<option>Хомут для крепления труб 32 мм (1 дюйм)</option>-->
+<!--<option>Хомут для крепления труб 20 мм (3/4 дюйма)</option>-->
+<!--<option>Хомут для крепления труб 15 мм (1/2 дюйма)</option>-->
+<!--<option>Хомут для крепления труб 110 мм</option>-->
+<!--<option>Фильтр грубой очистки</option>-->
+<!--<option>Фанера 8 мм</option>-->
+<!--<option>Фанера 18 мм</option>-->
+<!--<option>Фанера 12 мм</option>-->
+<!--<option>Утеплитель рулонный под обои полифом</option>-->
+<!--<option>Унитаз</option>-->
+<!--<option>Уголок для кафеля</option>-->
+<!--<option>Уголок декоративный обрамляющий</option>-->
+<!--<option>Труба канализационная Ф 50 мм</option>-->
+<!--<option>Труба канализационная Ф 110 мм</option>-->
+<!--<option>Труба высокого давления полипропиленовая 32 мм (дюймовая)</option>-->
+<!--<option>Труба высокого давления полипропиленовая 20 мм (3/4 дюйма)</option>-->
+<!--<option>Труба высокого давления полипропиленовая 15 мм (1/2 дюйма)</option>-->
+<!--<option>Труба высокого давления металлопластик 32 мм (дюймовая)</option>-->
+<!--<option>Труба высокого давления металлопластик 20 мм (3/4 дюйма)</option>-->
+<!--<option>Труба высокого давления металлопластик 15 мм (1/2 дюйма)</option>-->
+<!--<option>Трансформатор 220/36</option>-->
+<!--<option>Ткань для протирки</option>-->
+<!--<option>Ткань для мытья пола</option>-->
+<!--<option>Теплоизоляционный материал УРСА</option>-->
+<!--<option>Сухие гидроизолирующие смеси</option>-->
+<!--<option>Строительный мусор</option>-->
+<!--<option>Стеклообои</option>-->
+<!--<option>Стартер</option>-->
+<!--<option>Сталь угловая 63х63 мм</option>-->
+<!--<option>Соединительные элементы канализации Ф 50 мм</option>-->
+<!--<option>Соединительные элементы канализации Ф 110 мм</option>-->
+<!--<option>Соединительные элементы воздуховода пластикового 100х50 мм</option>-->
+<!--<option>Соединительные узлы для полипропиленовых труб 32 мм (дюймовая)</option>-->
+<!--<option>Соединительные узлы для полипропиленовых труб 20 мм (3/4 дюйма)</option>-->
+<!--<option>Соединительные узлы для полипропиленовых труб 15 мм (1/2 дюйма)</option>-->
+<!--<option>Соединительные узлы для металлопластиковых труб 32 мм (дюймовая)</option>-->
+<!--<option>Соединительные узлы для металлопластиковых труб 20 мм (3/4 дюйма)</option>-->
+<!--<option>Соединительные узлы для металлопластиковых труб 15 мм (1/2 дюйма)</option>-->
+<!--<option>Соединитель изолированный завинчивающийся - СИЗ</option>-->
+<!--<option>Смесь растворная сухая штукатурная</option>-->
+<!--<option>Смесь растворная сухая для полов</option>-->
+<!--<option>Смесь растворная сухая гипсовая</option>-->
+<!--<option>Смесь для устройства самовыравнивающегося наливного пола</option>-->
+<!--<option>Смеситель для раковины</option>-->
+<!--<option>Смеситель для кухонной мойки</option>-->
+<!--<option>Смеситель для ванны</option>-->
+<!--<option>Смеситель для биде</option>-->
+<!--<option>Скоба крепёжная воздуховода пластикового 100х50 мм</option>-->
+<!--<option>Скоба для крепления кабеля</option>-->
+<!--<option>Сифон для раковины</option>-->
+<!--<option>Сифон для ванны с переливом</option>-->
+<!--<option>Сифон для ванны автоматический</option>-->
+<!--<option>Сифон для биде</option>-->
+<!--<option>Серпянка 60мм (50м)</option>-->
+<!--<option>Светильник точечный</option>-->
+<!--<option>Светильник люминесцентный</option>-->
+<!--<option>Светильник для ламп накаливания</option>-->
+<!--<option>Саморез для крепления багета</option>-->
+<!--<option>Саморез 4х25 мм</option>-->
+<!--<option>Саморез 4,2х32 мм</option>-->
+<!--<option>Саморез 4,2х13 мм</option>-->
+<!--<option>Саморез 3х12 мм</option>-->
+<!--<option>Саморез 3,9х35 мм (для ГВЛ)</option>-->
+<!--<option>Саморез 3,9х25 мм (для ГВЛ)</option>-->
+<!--<option>Саморез 3,5х41 мм</option>-->
+<!--<option>Саморез 3,5х25 мм</option>-->
+<!--<option>Саморез 3,5х40 мм</option>-->
+<!--<option>Саморез "клоп" 3,8х11 мм</option>-->
+<!--<option>Ручка дверная скоба</option>-->
+<!--<option>Рубероид подкладочный</option>-->
+<!--<option>Решетка вентиляционная</option>-->
+<!--<option>Растворитель</option>-->
+<!--<option>Раствор марочный</option>-->
+<!--<option>Раствор известковый</option>-->
+<!--<option>Раствор кладочный сухая смесь</option>-->
+<!--<option>Раковина</option>-->
+<!--<option>Радиатор отопления</option>-->
+<!--<option>Профиль угловой обрамляющий ПВХ для оконных откосов 3 м</option>-->
+<!--<option>Профиль угловой для защиты наружного угла гипсокартонного листа</option>-->
+<!--<option>Профиль стоечный 3000х75х50</option>-->
+<!--<option>Профиль стартовый ПВХ для оконных откосов 3 м</option>-->
+<!--<option>Профиль потолочный 3000х60х27</option>-->
+<!--<option>Профиль направляющий 3000х75х40</option>-->
+<!--<option>Профиль направляющий 3000х27х28</option>-->
+<!--<option>Профиль декоративный потолочный</option>-->
+<!--<option>Профиль J для отделки торца гипсокартонного листа</option>-->
+<!--<option>Пропитка для укрепления основания</option>-->
+<!--<option>Провод антенный</option>-->
+<!--<option>Провод сетевой Ethernet витая пара</option>-->
+<!--<option>Провод телефонный</option>-->
+<!--<option>Провод ВВГ 3х6</option>-->
+<!--<option>Провод ВВГ 3х4</option>-->
+<!--<option>Провод ВВГ 3х2,5</option>-->
+<!--<option>Провод ВВГ 2х1,5</option>-->
+<!--<option>Провод АППВ 2х2,5</option>-->
+<!--<option>Провод АПВ 1х2,5</option>-->
+<!--<option>Провод АПВ 16</option>-->
+<!--<option>Половая плитка повышенной прочности ПВХ</option>-->
+<!--<option>Пробка рулонная</option>-->
+<!--<option>Пробка для пола</option>-->
+<!--<option>Потолок реечный</option>-->
+<!--<option>Полотенцесушитель</option>-->
+<!--<option>Половая рейка</option>-->
+<!--<option>Подрозетник</option>-->
+<!--<option>Подложка под нагревающие провода для тёплого пола</option>-->
+<!--<option>Подложка под ламинат</option>-->
+<!--<option>Подвесной потолок типа армстронг</option>-->
+<!--<option>Подвес прямой 60/27</option>-->
+<!--<option>Подвес - Т</option>-->
+<!--<option>Керамогранит</option>-->
+<!--<option>Плитка напольная керамическая</option>-->
+<!--<option>Плитка декоративная потолочная</option>-->
+<!--<option>Плитка керамическая</option>-->
+<!--<option>Плинтус пластиковый</option>-->
+<!--<option>Плинтус керамический</option>-->
+<!--<option>Плинтус дубовый</option>-->
+<!--<option>Плёнка для потолка матовая</option>-->
+<!--<option>Песок</option>-->
+<!--<option>Переходник для унитаза</option>-->
+<!--<option>Переходник для смесителя</option>-->
+<!--<option>Пеноплекс толщиной 50 мм</option>-->
+<!--<option>Пена монтажная типа Makrofleks, Soudal в баллонах по 750 мл</option>-->
+<!--<option>Патрон Е27</option>-->
+<!--<option>Паркет штучный</option>-->
+<!--<option>Паркет массивная доска лакированная</option>-->
+<!--<option>Паркет массивная доска</option>-->
+<!--<option>Панель ПВХ для оконных откосов 3 м</option>-->
+<!--<option>Панели декоративные</option>-->
+<!--<option>Олифа</option>-->
+<!--<option>Оконный блок пластиковый</option>-->
+<!--<option>Оконный блок</option>-->
+<!--<option>Ограничитель на двери</option>-->
+<!--<option>Обои флизелиновые</option>-->
+<!--<option>Обои бумажные</option>-->
+<!--<option>Наличники на двери из МДФ</option>-->
+<!--<option>Нагревающие провода для тёплого пола</option>-->
+<!--<option>Нагревательные маты для тёплого пола.</option>-->
+<!--<option>Монтажная металлическая лента для крепления нагревающих проводов тёплого пола</option>-->
+<!--<option>Монтажная коробка</option>-->
+<!--<option>Мешок для строительного мусора</option>-->
+<!--<option>Металлическая лента лоскутовая (830 шт)</option>-->
+<!--<option>Мастика</option>-->
+<!--<option>Люстра</option>-->
+<!--<option>Лист из гипсоволокна 10х2500х1200</option>-->
+<!--<option>Лист гипсокартонный влагостойкий 12,5х2500х1200</option>-->
+<!--<option>Лист гипсокартонный 12,5х2500х1200</option>-->
+<!--<option>Линолеум</option>-->
+<!--<option>Лента ФУМ</option>-->
+<!--<option>Лента уплотнительная</option>-->
+<!--<option>Лента изоляционная</option>-->
+<!--<option>Лампа люминесцентная</option>-->
+<!--<option>Лампа 36V 60w</option>-->
+<!--<option>Лампа 220V 60w</option>-->
+<!--<option>Лампа 220V 40w для точечных светильников</option>-->
+<!--<option>Ламинат</option>-->
+<!--<option>Лак по дереву</option>-->
+<!--<option>Лак паркетный</option>-->
+<!--<option>Лак грунтовочный</option>-->
+<!--<option>Лаги под паркет</option>-->
+<!--<option>Кронштейн для радиатора отопления</option>-->
+<!--<option>Крестовой соединитель профиля 60/27</option>-->
+<!--<option>Крестики для выравнивания плиток при укладке</option>-->
+<!--<option>Крепления для фаянсовой раковины</option>-->
+<!--<option>Крепления для унитаза</option>-->
+<!--<option>Крепления для зеркал</option>-->
+<!--<option>Краска алкидная (масляная)</option>-->
+<!--<option>Краска латексная</option>-->
+<!--<option>Краска водоэмульсионная</option>-->
+<!--<option>Краска масляная</option>-->
+<!--<option>Кран запорный шаровый 32 мм (1 дюйм)</option>-->
+<!--<option>Кран запорный шаровый 20 мм (3/4 дюйма)</option>-->
+<!--<option>Кран запорный шаровый 15 мм (1/2 дюйма)</option>-->
+<!--<option>Кран запорный для унитаза 15 мм (1/2 дюйма)</option>-->
+<!--<option>Кран запорный для стиральной машины 15 мм/ 25 мм</option>-->
+<!--<option>Кран воздушный для радиатора отопления</option>-->
+<!--<option>Ковровое покрытие</option>-->
+<!--<option>Кнопка для звонка</option>-->
+<!--<option>Кляймер для вагонки</option>-->
+<!--<option>Клинья пластиковые монтажные</option>-->
+<!--<option>Клинья для выравнивания плиток при укладке</option>-->
+<!--<option>Клей ПВА</option>-->
+<!--<option>Клей паркетный для массивной доски</option>-->
+<!--<option>Клей паркетный</option>-->
+<!--<option>Клей обойный</option>-->
+<!--<option>Клей для флизелиновых обоев</option>-->
+<!--<option>Клей для стеклообоев</option>-->
+<!--<option>Клей для пробки и плитки ПВХ</option>-->
+<!--<option>Клей для потолочных покрытий</option>-->
+<!--<option>Клей для облицовочной плитки</option>-->
+<!--<option>Клей для напольных покрытий</option>-->
+<!--<option>Клапан обратный 15 мм (1/2 дюйма)</option>-->
+<!--<option>Кирпич керамический 250х120х65 (м3)</option>-->
+<!--<option>Кирпич керамический 250х120х65</option>-->
+<!--<option>Кабель-канал пластиковый</option>-->
+<!--<option>Зеркало</option>-->
+<!--<option>Звонок дверной</option>-->
+<!--<option>Затирочная сетка</option>-->
+<!--<option>Замок дверной накладной</option>-->
+<!--<option>Замок дверной врезной</option>-->
+<!--<option>Замазка для швов в плитке</option>-->
+<!--<option>Заглушка доски подоконной ПВХ</option>-->
+<!--<option>Заглушка для дюбеля</option>-->
+<!--<option>Жидкость для очистки стёкол</option>-->
+<!--<option>Жидкость для мытья пола</option>-->
+<!--<option>Жидкие гвозди</option>-->
+<!--<option>Жалюзи</option>-->
+<!--<option>Дюбель складной пружинный с крючком 8х100</option>-->
+<!--<option>Дюбель распорный 8х80 мм</option>-->
+<!--<option>Дюбель распорный 6х50 мм</option>-->
+<!--<option>Дюбель распорный 6х40 мм</option>-->
+<!--<option>Дюбель распорный 6х35 мм</option>-->
+<!--<option>Дюбель распорный 5х40 мм</option>-->
+<!--<option>Дюбель распорный 10х100 мм</option>-->
+<!--<option>Дюбель NT 6х25 мм</option>-->
+<!--<option>Дюбель монтажный 10х130 мм</option>-->
+<!--<option>Дюбель для крепления теплоизоляции 10х90 мм - "гриб" (кляймер)</option>-->
+<!--<option>Душевая кабина</option>-->
+<!--<option>ДСП</option>-->
+<!--<option>Доски подоконные ПВХ</option>-->
+<!--<option>Доска подоконная мозаичная</option>-->
+<!--<option>Доска обрезная 30 мм</option>-->
+<!--<option>Дизельное топливо</option>-->
+<!--<option>Декоративная штукатурка</option>-->
+<!--<option>ДВП</option>-->
+<!--<option>Дверной блок наружный</option>-->
+<!--<option>Дверной блок внутренний откатной</option>-->
+<!--<option>Дверной блок внутренний</option>-->
+<!--<option>Грунтовка под масляную окраску</option>-->
+<!--<option>Грунтовка под водоэмульсионную окраску</option>-->
+<!--<option>Гидроизоляционный материал пенетрон</option>-->
+<!--<option>Герметик силиконовый, нейтральный</option>-->
+<!--<option>Гардина</option>-->
+<!--<option>Гайки шестигранные диаметр резьбы 16 - 18 мм</option>-->
+<!--<option>Выключатель</option>-->
+<!--<option>Воздуховод пластиковый 100х50 мм</option>-->
+<!--<option>Воздуховод из гофротрубы Ф 100 мм</option>-->
+<!--<option>Водосчётчик</option>-->
+<!--<option>Водонагреватель проточный</option>-->
+<!--<option>Водонагреватель емкостной</option>-->
+<!--<option>Вода</option>-->
+<!--<option>Вентилятор вытяжной</option>-->
+<!--<option>Ванна чугунная</option>-->
+<!--<option>Ванна гидромассажная</option>-->
+<!--<option>Вагонка</option>-->
+<!--<option>Бумага наждачная</option>-->
+<!--<option>Брусок 60х100 мм</option>-->
+<!--<option>Брусок 50х50 мм</option>-->
+<!--<option>Бра</option>-->
+<!--<option>Блоки газобетонные облегчённые 400 мм</option>-->
+<!--<option>Блоки газобетонные облегчённые 300 мм</option>-->
+<!--<option>Блоки газобетонные облегчённые 200 мм</option>-->
+<!--<option>Блоки газобетонные облегчённые 100 мм</option>-->
+<!--<option>Блок регулировки температуры тёплых полов</option>-->
+<!--<option>Битум</option>-->
+<!--<option>Биде</option>-->
+<!--<option>Багет алюминиевый универсальный</option>-->
+<!--<option>Антенный разветвитель</option>-->
+<!--<option>Алюминиевый соединительный порожек</option>-->
+<!--<option>Алебастр</option>-->
+<!--<option>Аквастоп</option>-->
+<!--<option>Автоматический выключатель 30А</option>-->
+<!--<option>Автоматический выключатель 16А</option>-->
+<!--<option>Шурупы-саморезы 4,2х45 мм</option>-->
+<!--<option>Плиты ОСП 10 мм</option>-->
+<!--<option>Гвозди 120 мм</option>-->
+<!--<option>Шурупы-саморезы 4,2х75 мм</option>-->
+<!--<option>Поковки из квадратных заготовок массой 1.8 кг</option>-->
+<!--<option>Ветошь</option>-->
+<!--<option>Профиль металлический направляющий ПН-4</option>-->
+<!--<option>Сайдинг стальной с полимерным покрытием</option>-->
+<!--<option>Пленка пароизоляционная ЮТАФОЛ (3-х слойная полиэтиленовая с армированным слоем из полиэтиленовых полос)</option>-->
+<!--<option>Лента полиэтиленовая с липким слоем А50</option>-->
+<!--<option>Лист гладкий стальной оцинкованный с покрытием "Полиэстер"</option>-->
+<!--<option>Кронштейн выравнивающий стальной оцинкованный, высотой профиля (h) 200 мм, толщиной металла (t) 1,2 мм</option>-->
+<!--<option>Начальная планка из оцинкованной стали с полимерным покрытием</option>-->
+<!--<option>Угол наружный, внутренний из оцинкованной стали с полимерным покрытием</option>-->
+<!--<option>Нащельник стальной оцинкованный с покрытием "Полиэстер"</option>-->
+<!--<option>Дюбель-гвоздь 8х100 мм</option>-->
+<!--<option>Шурупы-саморезы 4,2х16 мм</option>-->
+<!--<option>Брусок обрезной 50х50 мм</option>-->
+<!--<option>Пропитка огнезащитная, антисептирующая "Перилакс-3000"</option>-->
+<!--<option>Пароизоляция "Изоспан"</option>-->
+<!--<option>Сетка арматурная 100х100х4 мм</option>-->
+<!--<option>Теплоизоляция "Пеноплэкс"-35</option>-->
+<!--<option>Электроды 5 мм</option>-->
+<!--<option>Арматура класса А-III ф 16 мм</option>-->
+<!--<option>Швеллер № 27</option>-->
+<!--<option>Уголок стальной № 63</option>-->
+<!--<option>Раствор готовый кладочный марка по проекту</option>-->
+<!--<option>Круги отрезные по металлу</option>-->
+<!--<option>Бетон марка по проекту</option>-->
+<!--<option>Электроды 4 мм</option>-->
+<!--<option>Гвозди 100 мм</option>-->
+<!--<option>Доска обрезная 50х150 мм</option>-->
+<!--<option>Щебень фракции 20 - 40 мм</option>-->
+<!--<option>Брус 100х100 мм</option>-->
+<!--</select>-->
+<!--</td>-->
+<!--<td style="width: 172px">-->
+<!--<input class="form-control" placeholder="Кол-во" style="width: 50%;display: inline-block" id="t2">-->
+<!--<select style="width: 45%" id="t3">-->
+<!--<option disabled selected class="placeholder">Ед. изм</option>-->
+<!--<option>м3</option>-->
+<!--<option>комплект</option>-->
+<!--<option>шт</option>-->
+<!--<option>м2</option>-->
+<!--<option>л</option>-->
+<!--<option>шт.</option>-->
+<!--<option>кг</option>-->
+<!--<option>м</option>-->
+<!--<option>т</option>-->
+<!--<option>кг.</option>-->
+<!--<option>м. пог.</option>-->
+<!--<option>пог. м</option>-->
+<!--<option>м. п.</option>-->
+<!--</select>-->
+<!--</td>-->
+<!--<td style="width: 86px">-->
+<!--<input class="form-control" placeholder="Стоимость" id="t4">-->
+<!--</td>-->
+<!--<td>-->
+<!--<button class="add_btn"><i class="ico"></i></button>-->
+<!--</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+<!--<div class="modal-footer">-->
+<!--<button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить план </button>-->
+<!--<button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="modal modal_project fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">-->
+<!--<div class="modal-dialog" role="document">-->
+<!--<div class="modal-content">-->
+<!--<div class="modal-header">-->
+<!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--<span aria-hidden="true">&times;</span>-->
+<!--</button>-->
+<!--<h4 class="modal-title" id="myModalLabel2">Добавить проект</h4>-->
+<!--</div>-->
+
+<!--<div class="modal-body">-->
+<!--<div class="col-xs-12">-->
+<!--<input class="form-control" placeholder="Наименование проекта" style="width: 70%;margin: 0 auto 10px">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="modal-footer text-center">-->
+<!--<button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i>Добавить проект </button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
+<!--<div class="modal modal_project fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">-->
+<!--<div class="modal-dialog" role="document">-->
+<!--<div class="modal-content">-->
+<!--<div class="modal-header">-->
+<!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--<span aria-hidden="true">&times;</span>-->
+<!--</button>-->
+<!--<h4 class="modal-title" id="myModalLabel3">Проект</h4>-->
+<!--</div>-->
+<!--<div class="blue_pod_bl">-->
+<!--<div class="row">-->
+<!--<div class="col-xs-6">-->
+<!--<span class="form-control" style="width: 100%;">Утвержденный план за декабрь</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row calendar_inputs">-->
+<!--<div class="col-xs-6 no_pad">-->
+<!--&lt;!&ndash;<span style="float: left">c</span>&ndash;&gt;-->
+<!--<span class="form-control"  style="float: left;display: inline-block;width: 45%">12/15/2015</span>-->
+<!--<span style="display: inline-block;float: left;    margin: 10px 7px 10px 0px;"> - </span>-->
+<!--&lt;!&ndash;<span style="float: left">по </span>&ndash;&gt;-->
+<!--<span class="form-control"  style="float: left;display: inline-block;width: 45%">12/15/2015</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+<!--<h4>Позиции</h4>-->
+<!--<table class="table_plans">-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td style="    width: 390px; text-align: left"><span>Теплоизоляция</span></td>-->
+<!--<td><span style="text-align: center">20 уп</span></td>-->
+<!--<td><span style="text-align: center">120 000 р</span></td>-->
+
+<!--</tr>-->
+<!--<tr>-->
+<!--<td style="    width: 390px; text-align: left"><span>Сухие строительные смеси</span></td>-->
+<!--<td><span style="text-align: center">200 кг</span></td>-->
+<!--<td><span style="text-align: center">120 000 р</span></td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td style="    width: 390px; text-align: left"><span>Штукатурные строительные смеси</span></td>-->
+<!--<td><span style="text-align: center">20 уп</span></td>-->
+<!--<td><span style="text-align: center">120 000 р</span></td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td style="width: 390px"></td>-->
+<!--<td></td>-->
+<!--<td style="width: 120px"></td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+
+<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-xs-12">&ndash;&gt;-->
+<!--&lt;!&ndash;<textarea class="form-control" placeholder="Комментарии"></textarea>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<div class="row">-->
+<!--&lt;!&ndash;<div class="col-xs-12">&ndash;&gt;-->
+<!--&lt;!&ndash;<p style="margin-top: 5px"><input type="checkbox" name="option1" value="a1" >Создать заявку, не смотря на пердупреждение</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="modal-footer" style="text-align: left">-->
+
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="modal modal_project fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="vertical-alignment-helper">
+                <div class="modal-dialog vertical-align-center">
+    <div class="modal-dialog authority_modal" role="document">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title text-center" id="myModalLabel4">Уведомление</h4>
+        </div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p style="text-align: center">Недостаточно полномочий</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+<div class="modal modal_project fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="vertical-alignment-helper">
+                <div class="modal-dialog vertical-align-center">
+    <div class="modal-dialog" role="document">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title text-center" id="myModalLabel5">Уведомление</h4>
+        </div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p style="text-align: center">Внимание! Превышен лимит плана по стоимости на 7000 р. </p>
+                        <p style="text-align: center">Увеличить бюджет проекта?</p>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <button class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Принять</button>
+                        <button type="button" class="btn clear_btn" data-dismiss="modal"><i class="ico"></i>Отменить</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script>
+    $('.datepicker').datepicker()
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+    var checkin = $('#dpd1').datepicker({
+        onRender: function(date) {
+            return date.valueOf() < now.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function(ev) {
+        if (ev.date.valueOf() > checkout.date.valueOf()) {
+            var newDate = new Date(ev.date)
+            newDate.setDate(newDate.getDate() + 1);
+            checkout.setValue(newDate);
+        }
+        checkin.hide();
+        $('#dpd2')[0].focus();
+    }).data('datepicker');
+    var checkout = $('#dpd2').datepicker({
+        onRender: function(date) {
+            return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function(ev) {
+        checkout.hide();
+    }).data('datepicker');
+</script>
+<script src="js/tables_edit.js"></script>
+<script>
+    $('.add_btn').click(function() {
+        addRowToTable($('#table_add_plans'), $('#t1').val(), $('#t2').val(),$('#t3').val(), $('#t4').val());
+        $('#t1,#t2,#t3,#t4').val('');
+        $('#t1,#t3').addClass('placeholder');
+    });
+//    $('.record_table tr').click(function (event) {
+//        if (event.target.type !== 'radio') {
+//            $(':radio', this).trigger('click');
+//        }
+//    });
+
+    $("input[type='radio']").click(function (e) {
+        e.stopPropagation();
+        $('.record_table tr').removeClass("highlight_row");
+        $('.record_table tr td button').removeClass("btn_close").attr('disabled',true);
+        if ($(this).is(":checked")) {
+            $(this).closest('tr').addClass("highlight_row");
+            $(this).closest('tr').find('td button').addClass("btn_close").removeAttr('disabled');
+        }
+    });
+    $("tr+tr+tr input[type='radio']").click(function (e) {
+        e.stopPropagation();
+        $('.record_table tr').removeClass("highlight_row");
+        $('.record_table tr td button').removeClass("btn_close").attr('disabled',true);
+        if ($(this).is(":checked")) {
+            $(this).closest('tr').addClass("highlight_row");
+            $(this).closest('tr').find('td button').addClass("btn_close").removeAttr('disabled');
+            $('#myModal5').modal('show');
+
+        }
+    });
+</script>
+</body>
+</html>

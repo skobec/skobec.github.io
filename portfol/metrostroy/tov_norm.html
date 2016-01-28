@@ -52,6 +52,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-8">
+                    <a class="add_project btn go-back" href="project2.html">Назад</a>
                     <button class="add_project btn" data-toggle="modal" data-target="#myModal4"><i class="ico"></i>Отклонить заявку</button>
                     <button class="v_rab btn" data-toggle="modal" data-target="#myModal4"><i class="ico"></i>В работу</button>
                 </div>
@@ -62,16 +63,16 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row full_head_contetn">
             <div class="col-xs-8 left_bl_content">
               <div class="ellow_blue_bl">
                   <div class="col-xs-12">
                       <h3 class="titile_page">Заявка №12534: "Теплоизоляция"</h3>
                   </div>
                   <div class="col-xs-12 info_zak">
-                      <span>Заказчик: <a href="#">СитиСтрой </a> </span>
+                      <span>Заказчик: </span><span class="zak_name"> СитиСтрой </span>
                       <span>Контактное лицо:</span>
-                      <span class="zak_name">Нигматуллин А.А.<a href="#"> 8(843)-221-72-95</a> </span>
+                      <span class="zak_name">Нигматуллин А.А. 8(843)-221-72-95 </span>
 
                   </div>
                   <div class="col-xs-12 info_zak">
@@ -85,10 +86,10 @@
                 <div class="row">
                     <div class="panel-body">
                         <div class="col-xs-12">
-                            <a href="#" class="" data-toggle="modal" data-target="#myModal">Заказные позиции</a>
+                            <span class="title_zak_proj">Заказанные позиции</span>
                         </div>
                         <div class="col-xs-12">
-                            <table class="table_plans pointer_tables mini_table">
+                            <table class="table_plans mini_table last_row_centr">
                                 <thead>
                                 <tr>
                                     <th style="width: 13px"></th>
@@ -107,9 +108,9 @@
                                         <th scope="row">1</th>
                                         <td><span>Термоплекс-25</span></td>
                                         <td><span>80 м3</span></td>
-                                        <td><span><a href="#">ООО "Термоплакс"</a> </span></td>
-                                        <td><span>4100</span></td>
-                                        <td><span>328000 </span></td>
+                                        <td><span>ООО "Термоплакс"</span></td>
+                                        <td><span>4 100</span></td>
+                                        <td><span>328 000 </span></td>
                                         <td><span>7 дней</span></td>
                                         <td><span></span></td>
                                         <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
@@ -118,7 +119,7 @@
                                         <th scope="row">2</th>
                                         <td><span>Пенополистирол экструзионный</span></td>
                                         <td><span>50 уп</span></td>
-                                        <td><span><a href="#">ОАО "Вормэкс"</a> </span></td>
+                                        <td><span>ОАО "Вормэкс" </span></td>
                                         <td><span>60</span></td>
                                         <td><span>3 000 </span></td>
                                         <td><span>3 дня</span></td>
@@ -129,9 +130,9 @@
                                         <th scope="row">3</th>
                                         <td><span>Двухтрубная система FREXALEN 600 2X63/51.4</span></td>
                                         <td><span>93</span></td>
-                                        <td><span><a href="#">ООО "Термоплакс"</a> </span></td>
-                                        <td><span>6124,13</span></td>
-                                        <td><span>569544,09 </span></td>
+                                        <td><span>ООО "Термоплакс"</span></td>
+                                        <td><span>6 124,13</span></td>
+                                        <td><span>569 544,09 </span></td>
                                         <td><span>7-10 дней</span></td>
                                         <td><span></span></td>
                                         <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
@@ -693,6 +694,10 @@
                                 <!--</tr>-->
                                 <!--</tbody>-->
                             <!--</table>-->
+                            <div class="col-xs-12">
+                                <span class="number_sum">Общая стоимость заявки: 605 344,09 р</span>
+                            </div>
+                            <br>
                             <textarea class="form-control comments_fr" placeholder="Комментарии"></textarea>
 
 
@@ -1445,7 +1450,9 @@
     <!--</div>-->
 <!--</div>-->
 <div class="modal modal_project fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
-    <div class="modal-dialog" role="document">
+    <div class="vertical-alignment-helper">
+                <div class="modal-dialog vertical-align-center">
+    <div class="modal-dialog authority_modal" role="document">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -1462,7 +1469,8 @@
             </div>
         </div>
     </div>
-
+</div>
+    </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

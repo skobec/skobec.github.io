@@ -51,14 +51,16 @@
                 <div class="col-xs-7">
                     <!--<button class="add_project btn_back btn"><i class="ico"></i>Назад</button>-->
                     <button class="add_project  btn" data-toggle="modal" data-target="#myModal"><i class="ico"></i>Добавить заявку</button>
-                    <select class="add_project status_variant btn">
-                        <option>Все статусы</option>
-                        <option>Новая</option>
-                        <option>Обработка</option>
-                        <option>Согласование</option>
-                        <option>В работе</option>
-                        <option>Выполнена</option>
-                    </select>
+                    <div class="custom_select">
+                        <select class="add_project status_variant btn" style="margin-right: 5px">
+                            <option>Все статусы</option>
+                            <option>Новая</option>
+                            <option>Обработка</option>
+                            <option>Согласование</option>
+                            <option>В работе</option>
+                            <option>Выполнена</option>
+                        </select>
+                    </div>
                     <div class="search_bl_input">
                         <input type="text" class="form-control mac-style" name="Search" id='nav-search' placeholder="Найти">
                     </div>
@@ -66,7 +68,7 @@
 
                 </div>
                 <div class="col-xs-5 text-right">
-                    <span class="number_sum"><span class="one_sum"><span>1</span>-<span>20</span></span> из <span>3026</span>   </span>
+                    <span class="number_sum"><span class="one_sum"><span>1</span>-<span id="one_sum_from">20</span></span> из <span>3026</span>   </span>
                     <div class="paginator_arrow">
                         <a href="#" class="arrow arrow_left"><</a>
                         <a href="project3.html" class="arrow arrow_right">></a>
@@ -91,6 +93,38 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <tr class="tr-hover"  data-href="tov_process.html">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12536                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>12 января 2016	17:51</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <span class="name_zakazaka">Татстрой</span>
+                            <span class="box">
+                                <h4><span class="expand">Хамитов Д.В.</span></h4>
+                                </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Сталь листовая 50</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            323 116,14
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 МКД 7.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #b46bd1" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">В работе</span>
+
+                        </td>
+                    </tr>
                     <tr class="tr-hover"  data-href="tov_norm.html">
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
@@ -161,7 +195,7 @@
 
                         </td>
                     </tr>
-                    <tr class="tr-hover">
+                    <tr class="tr-hover" data-href="slide_table.html" >
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
                             12543                      </td>
@@ -182,7 +216,7 @@
                             </span>
                         </td>
                         <td valign="top">
-                            <span class="expand">кабель ПВ3 300м, распределители</span>
+                            <span class="expand">Септик, Грунтовка укрепляющая</span>
                         <td valign="top" style="white-space: nowrap;">
                         </td>
                         <td>
@@ -326,7 +360,7 @@
                             <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Обработка</span>
                         </td>
                     </tr>
-                    <tr class="tr-hover" >
+                    <tr class="tr-hover">
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
                             12538                      </td>
@@ -391,38 +425,6 @@
                         <td>
                             <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
                             <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
-
-                        </td>
-                    </tr>
-                    <tr class="tr-hover" >
-
-                        <td valign="top" style="white-space: nowrap; cursor: default;">
-                            12536                      </td>
-                        <td valign="top">
-                            <table width="100%">
-                                <tbody><tr>
-                                    <td>29 ноября 2015	18:03</td>
-                                </tr>
-                                </tbody></table>
-                        </td>
-                        <td valign="top" style="cursor: auto">
-                            <span class="name_zakazaka">Татстрой</span>
-                            <span class="box">
-                                <h4><span class="expand">Хамитов Д.В.</span></h4>
-                                </span>
-                        </td>
-                        <td valign="top">
-                            <span class="expand">Сталь листовая 50</span>
-                        <td valign="top" style="white-space: nowrap;">
-                            323 116,14
-                        </td>
-                        <td>
-                            <span style="display: block">Проект № 34511-1 МКД 7.2</span>
-                            <a href="#">Утвержденный план ноябрь 2015</a>
-                        </td>
-                        <td>
-                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #b46bd1" title="Поступившее"></span>
-                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">В работе</span>
 
                         </td>
                     </tr>
@@ -1162,6 +1164,8 @@
 </div>
 <!-- Modal -->
 <div class="modal modal_project fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="vertical-alignment-helper">
+                <div class="modal-dialog vertical-align-center">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1174,20 +1178,22 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <input class="form-control" placeholder="Наименование заявки" style="width: 100%;margin: 0 auto">
+                        <div class="custom_select" style="width: 100%">
                         <select class="select_zayav" id="AddRequest_selectFirm">
                             <option disabled selected class="placeholder" value="">Заказчик</option>
-                            <option value="0">Спецпроектмонтаж</option>
+                            <!--<option value="0">Спецпроектмонтаж</option>-->
                             <option value="1">САФ-1</option>
-                            <option>ПСУ</option>
-                            <option>МонолитСтрой</option>
-                            <option>Техстройресурс</option>
-                            <option>СтройСервис</option>
-                            <option>Ремстройсервис</option>
-                            <option>САФ-2</option>
-                            <option>СитиСтрой</option>
-                            <option>Татстрой</option>
-                            <option>Татстройинвест</option>
+                            <option value="2">ПСУ</option>
+                            <option value="3">МонолитСтрой</option>
+                            <option value="4">Техстройресурс</option>
+                            <option value="5">СтройСервис</option>
+                            <option value="6">Ремстройсервис</option>
+                            <option value="7">САФ-2</option>
+                            <option value="8">СитиСтрой</option>
+                            <option value="9">Татстрой</option>
+                            <option value="10">Татстройинвест</option>
                         </select>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -1200,6 +1206,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
+                        <div class="custom_select" style="width: 100%">
                         <select class="select_zayav">
                             <option value="" disabled selected class="placeholder">Проект/план</option>
                             <option>Проект № 34511-1 МКД 7.2/Утвержденный план январь 2016</option>
@@ -1229,6 +1236,7 @@
                             <option>Проект № 34513-1 АГЗС19/Утвержденный план март 2015</option>
                             <option>Проект № 34513-1 АГЗС20/Утвержденный план февраль 2015</option>
                         </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1261,31 +1269,47 @@
                 <table class="table_plans">
                     <tbody>
                      <tr>
-                        <td style="width: 390px;">
-                            <select style="width: 100%" id="t1">
+                         <td class="validate" style="width: 446px;">
+                             <div class="custom_select" style="width: 100%">
+                             <select style="width: 100%;" id="t1">
+                                <!--<option value="1">м3</option>-->
+                                <!--<option value="2">комплект</option>-->
+                                <!--<option value="3">шт</option>-->
+                                <!--<option value="4">м2</option>-->
+                                <!--<option value="5">л</option>-->
+                                <!--<option value="6">шт.</option>-->
+                                <!--<option value="7">кг</option>-->
+                                <!--<option value="8">м</option>-->
+                                <!--<option value="9">т</option>-->
+                                <!--<option value="10">кг.</option>-->
+                                <!--<option value="11">м. пог.</option>-->
+                                <!--<option value="12">пог. м</option>-->
+                                <!--<option value="13">м. п.</option>-->
+
                                 <option value="" disabled selected class="placeholder">Выберите из списка</option>
-                                <option>Бетон марка 200</option>
-                                <option>Винтовая свая СВС 108 L=3500 мм</option>
-                                <option>Винтовая свая СВС 108 L=3000 мм</option>
-                                <option>Винтовая свая СВС 108 L=2500 мм</option>
-                                <option>Узел примыкания кровли к трубе</option>
-                                <option>Изопласт кровельный покровный</option>
-                                <option>Газ пропан</option>
-                                <option>Изопласт кровельный подкладочный</option>
-                                <option>Потолочная рейка 20 мм</option>
-                                <option>Потолочная рейка 16 мм</option>
-                                <option>Септик</option>
-                                <option>Смесь растворная сухая грубый ровнитель для полов</option>
-                                <option>Мастика битумная готовая</option>
-                                <option>Клей для гипсовых пазогребневых блоков</option>
-                                <option>Защёлка дверная накладная</option>
-                                <option>Защёлка дверная врезная</option>
-                                <option>Грунтовка укрепляющая</option>
-                                <option>Гвозди > 80мм</option>
-                                <option>Блоки гипсовые пазогребневые толщиной 80 мм</option>
-                                <option>Антисептирующая пропитка</option>
-                                <option>Доска обрезная 20 мм</option>
-                                <option>Болт 8х50 мм</option>
+                                <option value="1" data-id="test">Бетон марка 200</option>
+                                <option value="3" data-id="test2">Винтовая свая СВС 108 L=3500 мм</option>
+                                <option value="3">Винтовая свая СВС 108 L=3000 мм</option>
+                                <option value="3">Винтовая свая СВС 108 L=2500 мм</option>
+                                <option value="8">Узел примыкания кровли к трубе</option>
+                                <option value="4">Изопласт кровельный покровный</option>
+                                <option value="5">Газ пропан</option>
+                                <option value="4">Изопласт кровельный подкладочный</option>
+                                <option value="6">Потолочная рейка 20 мм</option>
+                                <option value="6">Потолочная рейка 16 мм</option>
+                                <option value="6">Септик</option>
+                                <option value="10">Смесь растворная сухая грубый ровнитель для полов</option>
+                                <option value="5">Мастика битумная готовая</option>
+                                <option value="10">Клей для гипсовых пазогребневых блоков</option>
+                                <option value="6">Защёлка дверная накладная</option>
+                                <option value="6">Защёлка дверная врезная</option>
+                                <option value="5">Грунтовка укрепляющая</option>
+                                <option value="10">Гвозди > 80мм</option>
+                                <option value="4">Блоки гипсовые пазогребневые толщиной 80 мм</option>
+                                <option value="5">Антисептирующая пропитка</option>
+                                <option value="1">Доска обрезная 20 мм</option>
+                                <option value="10">Болт 8х50 мм</option>
+
                                 <option>Доска ограждения (готовая) 20 мм</option>
                                 <option>Доска обрезная 50х100 мм</option>
                                 <option>Доска обрезная 50х200 мм</option>
@@ -1394,12 +1418,10 @@
                                 <option>Утеплитель межвенцовый</option>
                                 <option>Брус оцилиндрованный</option>
                                 <option>Щебень фракции 10 - 20 мм</option>
-                                <option>Портландцемент общестроительного и специального назначения марки 400</option>
                                 <option>Гравий для строительных работ</option>
                                 <option>Песок для строительных работ природный</option>
                                 <option>Провод БЭТ-85М</option>
                                 <option>Металл листовой 10 мм</option>
-                                <option>Пластиковые ограничители на арматуру обеспечивающие достаточный защитный слой бетона</option>
                                 <option>Проволока вязальная 3 мм</option>
                                 <option>Арматура класса А-III Ф 12 мм</option>
                                 <option>Бетон марка 100</option>
@@ -1458,7 +1480,6 @@
                                 <option>Элемент из набора для санузла</option>
                                 <option>Электророзетка для кухонной плиты</option>
                                 <option>Электророзетка</option>
-                                <option>Шпильки оцинкованные стяжные диаметром 16 мм длиной 600 мм</option>
                                 <option>Шпатлёвочный состав</option>
                                 <option>Шпатлевка Унифлот (25кг)</option>
                                 <option>Шпатлевка по дереву</option>
@@ -1501,13 +1522,6 @@
                                 <option>Сталь угловая 63х63 мм</option>
                                 <option>Соединительные элементы канализации Ф 50 мм</option>
                                 <option>Соединительные элементы канализации Ф 110 мм</option>
-                                <option>Соединительные элементы воздуховода пластикового 100х50 мм</option>
-                                <option>Соединительные узлы для полипропиленовых труб 32 мм (дюймовая)</option>
-                                <option>Соединительные узлы для полипропиленовых труб 20 мм (3/4 дюйма)</option>
-                                <option>Соединительные узлы для полипропиленовых труб 15 мм (1/2 дюйма)</option>
-                                <option>Соединительные узлы для металлопластиковых труб 32 мм (дюймовая)</option>
-                                <option>Соединительные узлы для металлопластиковых труб 20 мм (3/4 дюйма)</option>
-                                <option>Соединительные узлы для металлопластиковых труб 15 мм (1/2 дюйма)</option>
                                 <option>Соединитель изолированный завинчивающийся - СИЗ</option>
                                 <option>Смесь растворная сухая штукатурная</option>
                                 <option>Смесь растворная сухая для полов</option>
@@ -1548,7 +1562,6 @@
                                 <option>Раковина</option>
                                 <option>Радиатор отопления</option>
                                 <option>Профиль угловой обрамляющий ПВХ для оконных откосов 3 м</option>
-                                <option>Профиль угловой для защиты наружного угла гипсокартонного листа</option>
                                 <option>Профиль стоечный 3000х75х50</option>
                                 <option>Профиль стартовый ПВХ для оконных откосов 3 м</option>
                                 <option>Профиль потолочный 3000х60х27</option>
@@ -1607,7 +1620,6 @@
                                 <option>Наличники на двери из МДФ</option>
                                 <option>Нагревающие провода для тёплого пола</option>
                                 <option>Нагревательные маты для тёплого пола.</option>
-                                <option>Монтажная металлическая лента для крепления нагревающих проводов тёплого пола</option>
                                 <option>Монтажная коробка</option>
                                 <option>Мешок для строительного мусора</option>
                                 <option>Металлическая лента лоскутовая (830 шт)</option>
@@ -1740,12 +1752,9 @@
                                 <option>Ветошь</option>
                                 <option>Профиль металлический направляющий ПН-4</option>
                                 <option>Сайдинг стальной с полимерным покрытием</option>
-                                <option>Пленка пароизоляционная ЮТАФОЛ (3-х слойная полиэтиленовая с армированным слоем из полиэтиленовых полос)</option>
                                 <option>Лента полиэтиленовая с липким слоем А50</option>
                                 <option>Лист гладкий стальной оцинкованный с покрытием "Полиэстер"</option>
-                                <option>Кронштейн выравнивающий стальной оцинкованный, высотой профиля (h) 200 мм, толщиной металла (t) 1,2 мм</option>
                                 <option>Начальная планка из оцинкованной стали с полимерным покрытием</option>
-                                <option>Угол наружный, внутренний из оцинкованной стали с полимерным покрытием</option>
                                 <option>Нащельник стальной оцинкованный с покрытием "Полиэстер"</option>
                                 <option>Дюбель-гвоздь 8х100 мм</option>
                                 <option>Шурупы-саморезы 4,2х16 мм</option>
@@ -1767,27 +1776,35 @@
                                 <option>Щебень фракции 20 - 40 мм</option>
                                 <option>Брус 100х100 мм</option>
                             </select>
-                        </td>
-                        <td>
+                                 </div>
+                             <div class="error_message"></div>
+
+                         </td>
+                        <td class="validate">
                             <input class="form-control" placeholder="Кол-во" style="    float: left;  width: 40%;  margin: 0 2px;" id="t2">
-                            <select style=" width: 57%; float: left;" id="t3">
+                            <div class="error_message"></div>
+                            <div class="custom_select" style="width: 55%">
+                            <select style=" width: 100%; float: left;" id="t3">
                                 <option value="" disabled selected class="placeholder">Ед. изм</option>
-                                <option>м3</option>
-                                <option>комплект</option>
-                                <option>шт</option>
-                                <option>м2</option>
-                                <option>л</option>
-                                <option>шт.</option>
-                                <option>кг</option>
-                                <option>м</option>
-                                <option>т</option>
-                                <option>кг.</option>
-                                <option>м. пог.</option>
-                                <option>пог. м</option>
-                                <option>м. п.</option>
+                                <option value="1">м3</option>
+                                <option value="2">комплект</option>
+                                <option value="3">шт</option>
+                                <option value="4">м2</option>
+                                <option value="5">л</option>
+                                <option value="6">шт.</option>
+                                <option value="7">кг</option>
+                                <option value="8">м</option>
+                                <option value="9">т</option>
+                                <option value="10">кг.</option>
+                                <option value="11">м. пог.</option>
+                                <option value="12">пог. м</option>
+                                <option value="13">м. п.</option>
                             </select>
+                                </div>
+                            <div class="error_message"></div>
+
                         </td>
-                        <td style="width: 120px;">
+                        <td style="width: 30px;">
                             <button class="add_btn"><i class="ico"></i> </button>
                         </td>
                     </tr>
@@ -1798,7 +1815,13 @@
                     <div class="col-xs-12">
                         <textarea class="form-control" placeholder="Комментарии"></textarea>
                     </div>
+                    <div id="AddRequest_msg" style="display:none">
+                    <span class="alarm_limit col-xs-12" style="margin: 25px 0 25px 10px;">Внимание! Позиция 2 превышает лимит товара</span>
+                    <input type="checkbox" style="margin-left: 20px;"> Добавить заявку, несмотря на предупреждение
+                    </div>
                 </div>
+
+
                 <!--<div class="row">-->
                     <!--<div class="col-xs-12">-->
                         <!--<p style="margin-top: 7px"><input type="checkbox" name="option1" value="a1" >Создать заявку, не смотря на пердупреждение</p>-->
@@ -1806,14 +1829,18 @@
                 <!--</div>-->
             </div>
             <div class="modal-footer" style="text-align: left">
-                <button type="button" class="btn add_project " data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить заявку </button>
+                <button id="AddRequest_btn" type="button" class="btn add_zayav " data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить заявку </button>
                 <button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>
             </div>
         </div>
     </div>
 </div>
+    </div>
+</div>
 <div class="modal modal_project fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
-    <div class="modal-dialog" role="document">
+    <div class="vertical-alignment-helper">
+                <div class="modal-dialog vertical-align-center">
+    <div class="modal-dialog authority_modal" role="document">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -1830,7 +1857,8 @@
             </div>
         </div>
     </div>
-
+</div>
+    </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -1848,14 +1876,33 @@
 <script src="js/tables_edit.js"></script>
 <script>
     $(document).ready(function() {
-        $('.add_btn').click(function () {
-            addRowToTable2($('#table_add_plans'), $('#t1').val(), $('#t2').val(), $('#t3').val(), $('#t4').val());
-            $('#t1,#t2,#t3,#t4').val('');
-            $('#t1,#t3').addClass('placeholder');
-        });
+//        $('.add_btn').click(function () {
+//            if ($('#t1 option:selected').val() !== "") {
+//                var row = $('#table_add_plans');
+//
+//                addRowToTable2($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text(), $('#t4').val());
+//
+//                $('#t1,#t2,#t3,#t4').val('');
+//                $('#t1,#t3').addClass('placeholder');
+//                if (row.find('tbody tr').length == 3) {
+//                    row.find('tbody tr').last().addClass('alarm_row');
+//                    $('#AddRequest_msg').show();
+//                }
+//            }
+//        });
+//        $('#btn add_project ')
         var firmList = {
-            '0':{name:'Вася', contacts:'777-777'},
-            '1':{name:'Кузя', contacts:'111-111'}
+            '0':{name:'', contacts:''},
+            '1':{name:'Махонин А.М.', contacts:'+7917783333'},
+            '2':{name:'Антонов А.С.', contacts:''},
+            '3':{name:'Исхаков Р.К.', contacts:'iskhakov@monstroy.ru'},
+            '4':{name:'Имамов А.И.', contacts:'amir1513@yandex.ru'},
+            '5':{name:'Калимуллин Р.Г.', contacts:'kalimullin@mail.ru'},
+            '6':{name:'Садыков Р.Р.', contacts:'+7 906333-44-44'},
+            '7':{name:'Комарова О.Ф', contacts:'+7 904215-16-17'},
+            '8':{name:'Нигматуллин А.А.', contacts:'+7 (843)221-72-95'},
+            '9':{name:'Хамитов Д.В.', contacts:''},
+            '10':{name:'Бикмуллин Р.Р.', contacts:'tatinvest2015@yandex.ru'}
         };
         $('#AddRequest_selectFirm').on('change',function(){
             var id = +$(this).val();
@@ -1866,6 +1913,72 @@
                 $('#AddRequest_contacts').val(contacts);
             }
         });
+
+        $('#AddRequest_btn').on('click',function(){
+            $('#AddRequest_msg').hide();
+        });
+
+        $('#t1').on('change',function(){
+            var selectedVal = Number($(this).val());
+            if(selectedVal){
+                $("#t3").removeClass('placeholder');
+                $('#t3').val(selectedVal);
+            }
+        });
+
+
+		$("#nav-search").on('keydown', function(e) {
+			if (e.which == 13) {
+				var headerElement=$('.arrow_sort').parent();
+				var searchString=$("#nav-search").val();
+				var foundElements = $( ".table td:contains('" + searchString + "')" );
+				$('.table tr').not('table table tr').not(headerElement).addClass('unvisible');
+				$(foundElements).parent().removeClass('unvisible');
+				var len=foundElements.length==160?20:foundElements.length;
+				$('#one_sum_from').html(len);
+			}
+		});
+        $('#t2').on('change', function() {
+            $(this).next('.error_message').text('');
+        });
+
+        $('#t1').on('change', function() {
+            $(this).next('.error_message').text('');
+        });
+
+
+        $('.add_btn').click(function() {
+            $('#t1').next('.error_message').text('');
+            $('#t2').next('.error_message').text('');
+            if (validateInput()) {
+                addRowToTable3($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text());
+                $('#t1,#t2,#t3').val("");
+                $('#t1,#t2').addClass('placeholder');
+            }
+            function validateInput() {
+                var input1 = $('#t1');
+                var input2 = $('#t2');
+                var isValid = true;
+                var regexp = /^[0-9.,]+$/;
+                var input1Value = $('#t1 option:selected').val();
+                var input2Value = $('#t2').val();
+
+                if (input1Value == "") {
+                    input1.next('.error_message').text('* Не заполнена позиция');
+                    isValid = false;
+                }
+                if (input2Value == "") {
+                    input2.next('.error_message').text('* Не указано количество');
+                    isValid = false;
+                }
+                if (input2Value !== "" && !regexp.test(input2Value)) {
+                    input2.next('.error_message').text('* Значение должно быть числом');
+                    isValid = false;
+                }
+                return isValid;
+            }
+        });
+
     })
 </script>
 </body>
