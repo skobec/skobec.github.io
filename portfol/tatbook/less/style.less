@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Exo+2:400,500,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700,100);
-p,span,a {
+p,span,a,button {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
@@ -13,8 +13,25 @@ a {
     text-decoration: none;
   }
 }
-h1,h2,h3,h4 {
+a,button {
+  &:hover,&:focus,&:active {
+    outline: none!important;
+  }
+}
+h1,h2,h3,h4,h1 a,h2 a,h3 a,h4 a {
   font-family: 'Exo 2', sans-serif;
+  font-size: 38px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+h1 a,h2 a,h3 a,h4 a {
+  border-bottom: 1px dotted rgba(1, 94, 39, 0.51);
+  &:hover {
+    border-bottom: 1px dotted;
+  }
 }
 header {
   padding: 25px 0;
@@ -63,6 +80,30 @@ header {
   transition: all 0.3s;
   &:hover,&:active,&:focus {
     color: #adc520;
+    outline: none;
+
+  }
+}
+.load_yet_bl {
+  text-align: center;
+  margin: 40px 0;
+}
+.btn-yet {
+  border: 1px solid rgba(128, 174, 146, 0.71);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  padding: 6px 20px;
+  &:hover,&:active,&:focus {
+    color: #adc520;
+    outline: none;
   }
 }
 .nav_link_header {
@@ -166,6 +207,11 @@ footer {
     font-size: 19px;
     font-weight: 100;
     text-decoration: none;
+  }
+}
+.slide {
+  img {
+    width: 100%;
   }
 }
 .carousel {
@@ -289,6 +335,15 @@ footer {
   &.orange_sec {
     background-color: #ff9c52;
   }
+  &.lite_blue_sec {
+    background-color: #eaffff;
+  }
+  &.blue_sec {
+    background-color: #94dfff;
+  }
+  &.yellow_sec {
+    background-color: #ffff00;
+  }
 }
 
 
@@ -310,12 +365,17 @@ footer {
     top: 0;
     left: 0;
     text-align: left;
-    padding: 95px 50px 0;
+    padding: 95px 40px 0;
     right: 0;
     p {
       line-height: 28px;
       font-size: 19px;
       font-weight: 300;
+    }
+  }
+  .carousel-control {
+    span {
+      color: #ffffff;
     }
   }
   &:hover {
@@ -376,6 +436,70 @@ footer {
   position: absolute;
   bottom: 0;
 }
+.read_now_bl {
+  background-color: #d6e6e9;
+  padding: 25px;
+}
+.title_block {
+  font-size: 38px;
+}
+.book_info {
+
+}
+.book_link {
+  float: left;
+  position: relative;
+  max-width: 379px;
+  margin: 0 0 10px;
+  img {
+    width: 100%;
+  }
+}
+.price_book {
+  display: block;
+  float: left;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+}
+.price_sale {
+  color: #f05237;
+}
+.rubl_symbol {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+}
+.people_rewerd {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 20px;
+  color: #015e27;
+  margin: 15px 0;
+}
+.comments_book {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 45px;
+}
+.editor_book {
+  font-size: 20px;
+}
+.owl-carousel .owl-wrapper-outer {
+  overflow-x: scroll!important;
+  width: inherit!important;
+}
+
+
+
+
+
 @media screen and (max-width: 768px) {
   .slider_grid {
   border: none!important;
