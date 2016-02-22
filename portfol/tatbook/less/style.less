@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Exo+2:400,500,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700,100);
+html,body {
+  height: 100%;
+  overflow: hidden;
+}
 p,span,a,button {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
@@ -420,6 +424,13 @@ footer {
     }
   }
 }
+.btn_book_opt {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .slide_wite {
   p,h1,span {
     color: #000000;
@@ -465,6 +476,11 @@ footer {
 }
 .price_sale {
   color: #f05237;
+  text-decoration: line-through;
+  margin-left: 10px;
+  .rubl_symbol {
+    color: #f05237;
+  }
 }
 .rubl_symbol {
   font-family: 'Exo 2', sans-serif;
@@ -487,21 +503,158 @@ footer {
   font-size: 20px;
   color: #000000;
   margin-bottom: 45px;
+  &:after {
+    content: "\00BB";
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    right: 0;
+    bottom: -7px;
+    line-height: 20px;
+    position: relative;
+  }
+  &:before {
+    content: "\00ab";
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    position: absolute;
+    left: -14px;
+    top: 0;
+    line-height: 20px;
+  }
 }
 .editor_book {
   font-size: 20px;
 }
-.owl-carousel .owl-wrapper-outer {
-  overflow-x: scroll!important;
-  width: inherit!important;
+.owl-carousel {
+  margin-bottom: 14px;
+  .owl-stage-outer {
+    //padding: 0 100px;
+
+    //overflow-x: scroll!important;
+    width: inherit !important;
+  }
+}
+.owl-carousel .item{
+  display: block;
+  padding: 30px 0px;
+  margin: 5px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.owl-nav div {
+  padding: 5px 9px;
 }
 
+.owl-nav i{
+  margin-top: 2px;
+}
 
+//To move navigation buttons outside use these settings:
 
+.owl-nav div {
+  position: absolute;
+  color: #FFF;
+  display: inline-block;
+  zoom: 1;
+  margin: 5px;
+  padding: 3px 10px;
+  font-size: 12px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background: #869791;
+  filter: Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+.owl-prev{
+  left: -45px;
+  top: 55px;
+}
+
+.owl-next{
+  right: -45px;
+  top: 55px;
+}
+#carousel_scroll .item{
+  margin: 3px 20px;
+}
+#carousel_scroll .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer {
+  margin: 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  height: 8px;
+  margin: 4px 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-image: -ms-linear-gradient(left, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+  background-image: -moz-linear-gradient(left, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+  background-image: -o-linear-gradient(left, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #015E27), color-stop(20, #026B4A), color-stop(50, #0F6C74), color-stop(75, #1E517C), color-stop(100, #114A81));
+  background-image: -webkit-linear-gradient(left, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+  background-image: linear-gradient(to right, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger {
+  background-color: rgb(155, 211, 149);
+  .mCSB_dragger_bar {
+    background-color: #9bd395;
+  }
+}
+.mCSB_scrollTools a + .mCSB_draggerContainer {
+  margin: 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_vertical .mCSB_draggerRail{
+  background-image: -ms-linear-gradient(bottom, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+  background-image: -moz-linear-gradient(bottom, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+  background-image: -o-linear-gradient(bottom, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+  background-image: -webkit-gradient(linear, bottom, top, color-stop(0, #015E27), color-stop(20, #026B4A), color-stop(50, #0F6C74), color-stop(75, #1E517C), color-stop(100, #114A81));
+  background-image: -webkit-linear-gradient(bottom, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+  background-image: linear-gradient(to top, #015E27 0%, #026B4A 20%, #0F6C74 50%, #1E517C 75%, #114A81 100%);
+  width: 8px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.mCSB_scrollTools .mCSB_dragger {
+  background-color: rgb(155, 211, 149);
+  .mCSB_dragger_bar {
+    background-color: #9bd395!important;
+  }
+  &:hover {
+    .mCSB_dragger_bar {
+      background-color: #9bd395;
+    }
+  }
+}
+.mCSB_scrollTools {
+  .mCSB_draggerRail {
+    background-color: transparent;
+  }
+}
 
 
 @media screen and (max-width: 768px) {
   .slider_grid {
   border: none!important;
+  }
+  .mCSB_container_wrapper {
+    margin-right: 0;
+  }
+  .mCSB_container_wrapper > .mCSB_container {
+    padding-right: 0;
+  }
+  .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical {
+    opacity: 0;
   }
 }
