@@ -2451,13 +2451,14 @@ a.book_library_bl:last-child {
 }
 
 .book_flip {
-    p {
+    p,h3 {
         font-size: 20px;
         color: #000000;
         font-family: 'Exo 2', sans-serif;
         font-style: italic;
         margin-bottom: 30px;
         margin-top: 10px;
+        font-weight: 100;
     }
 }
 .b-page {
@@ -2863,7 +2864,7 @@ a.book_library_bl:last-child {
 }
 @media screen and (min-width: 768px) and (max-width: 1000px) {
     .book_flip {
-        p {
+        p,h3 {
             font-size: 17px;
             color: #000;
             font-family: 'Exo 2',sans-serif;
@@ -3016,8 +3017,10 @@ a.book_library_bl:last-child {
             }
         }
     }*/
-    .book_flip p {
-        font-size: 16px;
+    .book_flip {
+        p,h3 {
+            font-size: 16px;
+        }
     }
     .tabs_slide {
         width: 100%;
@@ -3076,8 +3079,10 @@ a.book_library_bl:last-child {
             }
         }
     }
-    .book_flip p {
-        font-size: 10px;
+    .book_flip {
+        p,h3 {
+            font-size: 10px;
+        }
     }
 }
 .owl-theme .owl-controls .owl-page span {
