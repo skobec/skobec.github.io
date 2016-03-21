@@ -28,12 +28,12 @@
             <div id="left_menu">
                 <ul>
                     <li>
-                        <button href="#" class="searsh_btn" onclick="OpenSearch()">
+                        <button href="#" class="searsh_btn" onclick="OpenSearch()" data-container="body" data-toggle="popover" data-placement="right" data-content="Поиск">
                             <img src="img/search.svg" alt="">
                         </button>
                     </li>
                     <li>
-                        <a href="javascript: void(0);" class="searsh_btn left_btn_menu">
+                        <a href="javascript: void(0);" class="searsh_btn left_btn_menu" data-container="body" data-toggle="popover" data-placement="right" data-content="Меню">
                             <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      viewBox="0 0 30 27.8" style="enable-background:new 0 0 30 27.8;" xml:space="preserve">
                                 <style type="text/css">
@@ -59,12 +59,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" data-container="body" data-toggle="popover" data-placement="right" data-content="Смена языка">
                             <img src="img/flag.jpg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" data-container="body" data-toggle="popover" data-placement="right" data-content="Учебная литература">
                             <img src="img/1.svg" alt="">
                             <ul>
                                 <li>Классическая литература</li>
@@ -72,60 +72,414 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" data-container="body" data-toggle="popover" data-placement="right" data-content="Детские книги">
                             <img src="img/2.svg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" data-container="body" data-toggle="popover" data-placement="right" data-content="Современная литература">
                             <img src="img/3.svg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" data-container="body" data-toggle="popover" data-placement="right" data-content="Классика">
                             <img src="img/4.svg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" data-container="body" data-toggle="popover" data-placement="right" data-content="Интерактивные книги">
                             <img src="img/5.svg" alt="">
                         </a>
                     </li>
                 </ul>
             </div>
+            <div class="menu_link">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="language_link">
+                            <li class="active"><a href="#">Татар теле</a> </li>
+                            <li><a href="#">English</a> </li>
+                            <li><a href="#">Русский язык</a> </li>
+                            <li><a href="#">Tatar Latin</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row menu_style">
+                    <div class="col-xs-4">
+                        <ul role="tablist">
+                            <li role="presentation" class="active"><a  href="#nav_1"  role="tab" data-toggle="tab"><img src="img/1.svg" alt="">Учебная литература</a> </li>
+                            <li role="presentation"><a  href="#nav_2"  role="tab" data-toggle="tab"><img src="img/2.svg" alt=""> Детские книги</a> </li>
+                            <li role="presentation"><a  href="#nav_3"  role="tab" data-toggle="tab"><img src="img/3.svg" alt="" style="    margin-top: -5px;">Современная литература</a> </li>
+                            <li role="presentation"><a  href="#nav_4"  role="tab" data-toggle="tab"><img src="img/4.svg" alt="">Классика</a> </li>
+                            <li role="presentation"><a  href="#nav_5"  role="tab" data-toggle="tab"><img src="img/5.svg" alt="">Интерактивные книги</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated active" id="nav_1">
+                                <ul role="tablist">
+                                    <li role="presentation"><a  href="#nav_6"  role="tab" data-toggle="tab">Школьникам</a> </li>
+                                    <li role="presentation"><a  href="#nav_7"  role="tab" data-toggle="tab">Студентам</a> </li>
+                                    <li role="presentation"><a  href="#nav_8"  role="tab" data-toggle="tab">Дошколятам</a> </li>
+                                    <li role="presentation"><a  href="#nav_9"  role="tab" data-toggle="tab">История</a> </li>
+                                    <li role="presentation"><a  href="#nav_10"  role="tab" data-toggle="tab">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_2">
+                                <ul role="tablist">
+                                    <li role="presentation"><a  href="#nav_11"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_12"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_13"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_14"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_15"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_3">
+                                <ul role="tablist">
+                                    <li role="presentation"><a  href="#nav_16"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_17"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_18"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_19"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_20"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_4">
+                                <ul role="tablist">
+                                    <li role="presentation"><a  href="#nav_21"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_22"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_23"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_24"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_25"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_5">
+                                <ul role="tablist">
+                                    <li role="presentation"><a  href="#nav_21"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_22"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_23"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_24"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                    <li role="presentation"><a  href="#nav_25"  role="tab" data-toggle="tab">Ссылка</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_6">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_7">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_8">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_9">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_10">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_11">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_12">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_13">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_14">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_15">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_16">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_17">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_18">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_19">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_20">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_21">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_22">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_23">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_24">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane zoomInLeft animated" id="nav_25">
+                                <ul>
+                                    <li><a  href="#">Школьникам</a> </li>
+                                    <li><a  href="#">Студентам</a> </li>
+                                    <li><a  href="#">Дошколятам</a> </li>
+                                    <li><a  href="#">История</a> </li>
+                                    <li><a  href="#">Философия</a> </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="content_bl">
             <div class="menu_and_btn">
                 <div id="navbar-mob" class="menu_mob">
-                    <ul class="nav ">
-                        <li>
-                            <div class="btn-group">
-                                <a href="#" class="btn btn-default">Русский</a>
-                                <a href="#" class="btn btn-default">Татар теле</a>
-                            </div>
-                            <div class="btn-group">
-                                <a href="#" class="btn btn-default">Tatar latin</a>
-                                <a href="#" class="btn btn-default">English</a>
-                            </div>
-                        </li>
-                        <li><a href="#" class="btn btn-default">Вход/Регистрация</a> </li>
-                        <li class="active"><a href="#">Каталог книг</a></li>
-                        <li><a href="#">Новинки</a></li>
-                        <li><a href="#">Популярное</a></li>
-                        <li><a href="#">Моя коллекция</a></li>
-                        <li><a href="/order.html">Корзина</a><span class="number_nav_link">3</span> </li>
-                        <li><a href="#">Вопросы</a> </li>
-                        <li><a href="/blogctl.html">Беседы читателей</a> </li>
-                        <li><a href="/blogctl.html">События</a> </li>
-                        <li><a href="/blogctl.html">Спецпроекты</a> </li>
+                    <div class="mobil_menu">
+                        <ul class="nav ">
+                            <li>
+                                <div class="btn-group">
+                                    <a href="/main_ctl.html" class="btn btn-default">Интернет-магазин</a>
+                                    <a href="#" class="btn btn-default">Библиотека</a>
+                                </div>
+                            </li>
+                            <li><a href="#" class="btn btn-default">Вход/Регистрация</a> </li>
 
-                        <li>
-                            <div class="btn-group">
-                                <a href="/main_ctl.html" class="btn btn-default">Интернет-магазин</a>
-                                <a href="#" class="btn btn-default">Библиотека</a>
-                            </div>
-                        </li>
-                    </ul>
+                            <li>
+                                <div class="select-style" style="margin-bottom: 10px;">
+                                    <select>
+                                        <option>Татар теле</option>
+                                        <option>Русский</option>
+                                        <option>Tatar latin</option>
+                                        <option>English</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="nav nav_link_1">
+                            <li class="active"><a href="#">Каталог книг</a></li>
+                            <li><a href="#">Новинки</a></li>
+                            <li><a href="#">Популярное</a></li>
+                            <li><a href="#">Моя коллекция</a></li>
+                            <li><a href="/order.html">Корзина</a><span class="number_nav_link">(3)</span> </li>
+                            <li><a href="#">Вопросы</a> </li>
+                            <li><a href="/blogctl.html">Беседы читателей</a> </li>
+                            <li><a href="/blogctl.html">События</a> </li>
+                            <li><a href="/blogctl.html">Спецпроекты</a> </li>
+                        </ul>
+                        <ul id="menu" class="menu_accord">
+                            <li class="active"> <a href="#" aria-expanded="true">
+                                Учебная литература
+                            </a>
+                                <ul>
+                                    <li> <a href="#">Menu 1.3 </a>
+                                        <ul>
+                                            <li><a href="#">item 1.3.1</a></li>
+                                            <li><a href="#">item 1.3.2</a></li>
+                                            <li><a href="#">item 1.3.3</a></li>
+                                            <li><a href="#">item 1.3.4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li> <a href="#">Детские книги </a>
+                                <ul>
+                                    <li> <a href="#">Menu 1.3 </a>
+                                        <ul>
+                                            <li><a href="#">item 1.3.1</a></li>
+                                            <li><a href="#">item 1.3.2</a></li>
+                                            <li><a href="#">item 1.3.3</a></li>
+                                            <li><a href="#">item 1.3.4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#">Menu 1.3 </a>
+                                        <ul>
+                                            <li><a href="#">item 1.3.1</a></li>
+                                            <li><a href="#">item 1.3.2</a></li>
+                                            <li><a href="#">item 1.3.3</a></li>
+                                            <li><a href="#">item 1.3.4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#">Menu 1.3 </a>
+                                        <ul>
+                                            <li><a href="#">item 1.3.1</a></li>
+                                            <li><a href="#">item 1.3.2</a></li>
+                                            <li><a href="#">item 1.3.3</a></li>
+                                            <li><a href="#">item 1.3.4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#">Menu 1.5 </a>
+                                        <ul>
+                                            <li><a href="#">item 1.5.1</a></li>
+                                            <li><a href="#">item 1.5.2</a></li>
+                                            <li><a href="#">item 1.5.3</a></li>
+                                            <li><a href="#">item 1.5.4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li> <a href="#">Современная литература</a>
+                                <ul>
+                                    <li> <a href="#">Menu 1.3 </a>
+                                        <ul>
+                                            <li><a href="#">item 1.3.1</a></li>
+                                            <li><a href="#">item 1.3.2</a></li>
+                                            <li><a href="#">item 1.3.3</a></li>
+                                            <li><a href="#">item 1.3.4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#">Menu 1.5 </a>
+                                        <ul>
+                                            <li><a href="#">item 1.5.1</a></li>
+                                            <li><a href="#">item 1.5.2</a></li>
+                                            <li><a href="#">item 1.5.3</a></li>
+                                            <li><a href="#">item 1.5.4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li> <a href="#">Классика</a>
+                                <ul>
+                                    <li> <a href="#">Menu 1.3 </a>
+                                        <ul>
+                                            <li><a href="#">item 1.3.1</a></li>
+                                            <li><a href="#">item 1.3.2</a></li>
+                                            <li><a href="#">item 1.3.3</a></li>
+                                            <li><a href="#">item 1.3.4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#">Menu 1.5 </a>
+                                        <ul>
+                                            <li><a href="#">item 1.5.1</a></li>
+                                            <li><a href="#">item 1.5.2</a></li>
+                                            <li><a href="#">item 1.5.3</a></li>
+                                            <li><a href="#">item 1.5.4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="header_nav_mob">
                     <div class="navbar-header">
@@ -135,7 +489,7 @@
                         </button>
                         <div class="search_bl">
                             <input class="search_input" placeholder="Что ищем?" onkeyup='checkParams()'>
-                            <button type='button' class='submit'><img src="img/search.svg" alt=""></button>
+                            <button type='button' class='submit' ><img src="img/search.svg" alt=""></button>
                             <button type='button' class='submit buy_mobile' >&nbsp;</button>
                         </div>
                     </div>
@@ -155,10 +509,22 @@
                             </div>
                             <div class="col-lg-6 col-sm-6 link_nav_head text-right">
                                 <ul class="nav_link_header">
-                                    <li><a href="#" class="ava_btn">
-                                        <img src="img/ava.png">
-                                        <i class="ico"></i>
-                                    </a> </li>
+                                    <li>
+                                        <a href="#" class="ava_btn" id="ava_btn">
+                                            <img src="img/ava.png">
+                                            <i class="ico"></i>
+                                        </a>
+                                        <div class="ava_setting animated">
+                                            <a href="#" class="name_ava">Константин<br>Константиновский</a>
+                                            <ul class="link_ava">
+                                                <li><a href="#">Профиль</a> </li>
+                                                <li><a href="#">Книги</a> </li>
+                                                <li><a href="#">Отзывы</a> </li>
+                                                <li><a href="#">Выйти</a> </li>
+                                            </ul>
+                                            <button href="#" class="close_zak" id="close_ava"></button>
+                                        </div>
+                                    </li>
                                     <li><a href="/order.html">Корзина</a><span class="number_nav_link">3</span> </li>
                                     <li><a href="/wish.html">Желания</a><span class="number_nav_link">10</span>  </li>
                                     <li><a href="/collection.html">Заказы</a><span class="number_nav_link">2</span>  </li>

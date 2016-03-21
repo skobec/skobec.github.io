@@ -177,14 +177,25 @@ $(document).ready(function() {
             $('#left_menu').addClass('border_menu');
             $('#mob_menu').css("float","right")
         }
-    })
+    });
+    $('#ava_btn').click(function() {
+        //$('.ava_setting').removeClass('fadeOut');
+        //$('.ava_setting').addClass('fadeIn');
+        $('.ava_setting').fadeIn('400');
+    });
 
+    $('#close_ava').click(function(){
+        //$('.ava_setting').removeClass('fadeIn');
+        //$('.ava_setting').addClass('fadeOut');
+        $('.ava_setting').fadeOut('400');
+    });
 });
 
 $(".carousel").carousel({
     swipe: 30, // percent-per-second, default is 50. Pass false to disable swipe
     interval : false
 });
+
 (function($){
     $(window).load(function(){
         $.mCustomScrollbar.defaults.scrollButtons.enable=true; //enable scrolling buttons by default

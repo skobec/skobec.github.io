@@ -47,7 +47,7 @@ h1 a,h2 a,h3 a,h4 a {
 }
 header {
     .container {
-        padding: 25px 15px;
+        padding: 25px 15px 50px;
     }
     .container_full {
         max-width: 100%;
@@ -598,7 +598,9 @@ header .padd_content {
         display: inline-block;
         margin-left: 5px;
         line-height: 40px;
-        overflow: hidden;
+        float: left;
+        position: relative;
+        //overflow: hidden;
         a {
             font-size: 14px;
             color: #ffffff;
@@ -3009,6 +3011,8 @@ a.book_library_bl:last-child {
     }
 }
 .ava_btn {
+    position: relative;
+    z-index: 2;
     img {
         float: left;
         height: 45px;
@@ -3023,7 +3027,7 @@ a.book_library_bl:last-child {
     margin-right: 15px;
     /*margin-bottom: -20px;*/
     i {
-        background: url("../img/arrow_ava.png") no-repeat center;
+        background: #1C547B url("../img/arrow_ava.png") no-repeat center;
         height: 45px;
         width: 45px;
         display: inline-block;
@@ -3052,7 +3056,8 @@ a.book_library_bl:last-child {
     .search_bl {
         float: right;
         position: relative;
-        z-index: 6;
+        //z-index: 6;
+        z-index: 16;
         .search_input {
             float: left;
         }
@@ -3543,6 +3548,7 @@ h2 {
 }
 .view_list_book {
     float: right;
+    padding-top: 25px;
 }
 .tabs_genre {
     list-style: none;
@@ -3722,6 +3728,58 @@ h2 {
         }
     }
 }
+.ava_setting {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #ffffff;
+    height: 100px;
+    width: 365px;
+    z-index: 1;
+    margin: -10px 0 0 -10px;
+    padding: 10px 0 0 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    .close_zak {
+        border: none;
+        background: url("../img/ico_del.png") no-repeat;
+        background-size: 30px;
+        margin: 0px 4px;
+    }
+    .name_ava {
+        color: #000000;
+        float: left;
+        line-height: 23px;
+        text-align: left;
+        font-size: 18px;
+        margin-left: 101px;
+    }
+    ul {
+        &.link_ava {
+            list-style: none;
+            float: left;
+            position: absolute;
+            bottom: 3px;
+            left: 8px;
+            padding: 0;
+        }
+        list-style: none;
+        li {
+            float: left;
+            display: inline-block;
+            line-height: 30px;
+            margin-right: 7px;
+            a {
+                color: #000000;
+                line-height: 25px;
+                font-size: 16px;
+            }
+        }
+    }
+}
 .container_sample {
     p {
         font-size: 18px;
@@ -3746,7 +3804,7 @@ h2 {
 }
 @media screen and (max-width: 1150px) {
     .menu_mob {
-        padding: 20px 0 70px 40px;
+        padding: 65px 0 70px 40px;
         z-index: 16;
         .mobil_menu {
             display: block;

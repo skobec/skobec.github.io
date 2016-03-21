@@ -60,7 +60,7 @@ h4 a:hover {
   border-bottom: 1px dotted;
 }
 header .container {
-  padding: 25px 15px;
+  padding: 25px 15px 50px;
 }
 header .container_full {
   max-width: 100%;
@@ -590,7 +590,8 @@ header .padd_content > .row:first-child > div:first-child {
   display: inline-block;
   margin-left: 5px;
   line-height: 40px;
-  overflow: hidden;
+  float: left;
+  position: relative;
 }
 .nav_link_header li a {
   font-size: 14px;
@@ -2864,6 +2865,8 @@ a.book_library_bl:last-child {
   height: 129px;
 }
 .ava_btn {
+  position: relative;
+  z-index: 2;
   border: 1px solid rgba(255, 255, 255, 0.4);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -2879,7 +2882,7 @@ a.book_library_bl:last-child {
   height: 45px;
 }
 .ava_btn i {
-  background: url("../img/arrow_ava.png") no-repeat center;
+  background: #1c547b url("../img/arrow_ava.png") no-repeat center;
   height: 45px;
   width: 45px;
   display: inline-block;
@@ -2906,7 +2909,7 @@ a.book_library_bl:last-child {
 .header_nav_mob .search_bl {
   float: right;
   position: relative;
-  z-index: 6;
+  z-index: 16;
 }
 .header_nav_mob .search_bl .search_input {
   float: left;
@@ -3362,6 +3365,7 @@ h2 .start_review {
 }
 .view_list_book {
   float: right;
+  padding-top: 25px;
 }
 .tabs_genre {
   list-style: none;
@@ -3520,6 +3524,58 @@ h2 .start_review {
   text-decoration: none!important;
   border: 1px solid rgba(128, 174, 146, 0.71);
 }
+.ava_setting {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #ffffff;
+  height: 100px;
+  width: 365px;
+  z-index: 1;
+  margin: -10px 0 0 -10px;
+  padding: 10px 0 0 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.ava_setting .close_zak {
+  border: none;
+  background: url("../img/ico_del.png") no-repeat;
+  background-size: 30px;
+  margin: 0px 4px;
+}
+.ava_setting .name_ava {
+  color: #000000;
+  float: left;
+  line-height: 23px;
+  text-align: left;
+  font-size: 18px;
+  margin-left: 101px;
+}
+.ava_setting ul {
+  list-style: none;
+}
+.ava_setting ul.link_ava {
+  list-style: none;
+  float: left;
+  position: absolute;
+  bottom: 3px;
+  left: 8px;
+  padding: 0;
+}
+.ava_setting ul li {
+  float: left;
+  display: inline-block;
+  line-height: 30px;
+  margin-right: 7px;
+}
+.ava_setting ul li a {
+  color: #000000;
+  line-height: 25px;
+  font-size: 16px;
+}
 .container_sample p {
   font-size: 18px;
   color: #000000;
@@ -3539,7 +3595,7 @@ h2 .start_review {
 }
 @media screen and (max-width: 1150px) {
   .menu_mob {
-    padding: 20px 0 70px 40px;
+    padding: 65px 0 70px 40px;
     z-index: 16;
   }
   .menu_mob .mobil_menu {
