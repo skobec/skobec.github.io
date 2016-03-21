@@ -6,12 +6,8 @@
 
 .night_top .header { background:#191919; }
 
-.night_top .author-box { color:#000; opacity: 0.8; }
-.night_top .top-menu span b { color:#000; }
-.night_top .top-menu li.active span b { color:#000; }
-.night_theme.night_top .author-box { color:#fff; opacity: 0.8; }
-.night_theme.night_top .top-menu span b { color:#fff; }
-.night_theme.night_top .top-menu li.active span b { color:#fff; }
+.night_top .top-menu span b { color:#fff; }
+.night_top .top-menu li.active span b { color:#fff; }
 
 .night_top .top-menu li span.menu-toc i { background-position:-8px -170px; }
 .night_top .top-menu li span.menu-settings i { background-position:-41px -171px; }

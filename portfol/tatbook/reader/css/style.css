@@ -32,7 +32,7 @@ button { border:0; outline:0; padding:0; margin:0; cursor:pointer; background:tr
   -webkit-background-size:163px 18px; -moz-background-size:163px 18px;
   -o-background-size:163px 18px; background-size:163px 18px; }
 
-.header { width:100%; height:80px; border-bottom:2px solid #efeee9; position:relative; z-index:5;
+.header { width:100%; height:80px; border-bottom:2px solid #efeee9; position:relative; z-index:500 !important;
   padding-left:20px; padding-right:15px; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;
   box-sizing:border-box; line-height: 40px; overflow: hidden; /*margin: 20px 0;*/}
 .header > div, .header > span, .header > ul {
@@ -50,7 +50,7 @@ button { border:0; outline:0; padding:0; margin:0; cursor:pointer; background:tr
   -webkit-background-size:306px 204px; -moz-background-size:306px 204px;
   -o-background-size:306px 204px; background-size:306px 204px; }
 
-.top-menu span b { color:#5a7864 !important; opacity:.8; font-weight:normal; }
+.top-menu span b { color:#5a7864; opacity:.8; font-weight:normal; }
 .top-menu li.active span b { opacity:1; }
 .top-menu li:hover span b { color:#ff4d15 !important; opacity:1; }
 

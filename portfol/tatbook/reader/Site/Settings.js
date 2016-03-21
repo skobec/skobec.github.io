@@ -424,7 +424,7 @@ function changeColorsHandler() {
 function setColor(type, color) {
     switch (type) {
         case "bg":
-            changeCSS('.content-box, #zoomedImg, .FBReaderNotesDiv', 'background-color', color + ';');
+            changeCSS('.wrapper .header, .content-box, #zoomedImg, .FBReaderNotesDiv', 'background-color', color + ';');
             break;
         case "font":
             changeCSS('.content-box, #zoomedImg, .footer-info', 'color', color + ';');

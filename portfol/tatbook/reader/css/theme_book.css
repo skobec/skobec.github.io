@@ -6,7 +6,7 @@
 .book_theme .top-menu i { background:url('../images/theme/aldebaran/top-menu.png') no-repeat;
   background-image:url('../images/theme/aldebaran/top-menu.svg'), none; }
 
-.book_theme .top-menu span b { color:#fff; }
+.book_theme .top-menu span b { color:#5a7864; }
 .book_theme .top-menu li:hover span b { color:#5a7864 !important; }
 
 .book_theme .top-menu li span.menu-toc i { background-position:-8px 0px; }

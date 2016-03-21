@@ -19,115 +19,137 @@
 
     </head>
     <body class="animated fadeIn " >
-        <div class="container page">
-            <div class="left_menu_nav">
-                <button onclick="OpenMenu()" class="btn_menu">
-                    <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         viewBox="0 0 30 27.8" style="enable-background:new 0 0 30 27.8;" xml:space="preserve">
-                    <style type="text/css">
-                        .st0 {
-                            clip-path: url(#SVGID_2_);
-                            fill: none;
-                            stroke: #015E27;
-                            stroke-width: 3;
-                        }
-                    </style>
-                    <g>
-                    <defs>
-                    <rect id="SVGID_1_" y="0" width="30" height="27.8"/>
-                    </defs>
-                    <clipPath id="SVGID_2_">
-                        <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-                    </clipPath>
-                    <line class="st0" x1="0" y1="1.5" x2="30" y2="1.5"/>
-                    <line class="st0" x1="0" y1="13.9" x2="30" y2="13.9"/>
-                    <line class="st0" x1="0" y1="26.3" x2="30" y2="26.3"/>
-                    </g>
-                    </svg>
-                </button>
-                <div id="left_menu">
-                    <ul>
+    <div class="container page">
+        <div class="left_menu_nav">
+            <div id="search_bl">
+                <input id="search_input" placeholder="Что ищем?" onkeyup='checkParams()' autocomplete="off">
+                <button type='button' id='submit' disabled>Найти</button>
+            </div>
+            <div id="left_menu">
+                <ul>
+                    <li>
+                        <button href="#" class="searsh_btn" onclick="OpenSearch()">
+                            <img src="img/search.svg" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);" class="searsh_btn left_btn_menu">
+                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 30 27.8" style="enable-background:new 0 0 30 27.8;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0 {
+                                        clip-path: url(#SVGID_2_);
+                                        fill: none;
+                                        stroke: #015E27;
+                                        stroke-width: 3;
+                                    }
+                                </style>
+                                <g>
+                                <defs>
+                                <rect id="SVGID_1_" y="0" width="30" height="27.8"/>
+                                </defs>
+                                <clipPath id="SVGID_2_">
+                                    <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+                                </clipPath>
+                                <line class="st0" x1="0" y1="1.5" x2="30" y2="1.5"/>
+                                <line class="st0" x1="0" y1="13.9" x2="30" y2="13.9"/>
+                                <line class="st0" x1="0" y1="26.3" x2="30" y2="26.3"/>
+                                </g>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/flag.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/1.svg" alt="">
+                            <ul>
+                                <li>Классическая литература</li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/2.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/3.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/4.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/5.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content_bl">
+            <div class="menu_and_btn">
+                <div id="navbar-mob" class="menu_mob">
+                    <ul class="nav ">
                         <li>
-                            <button href="#" class="searsh_btn" onclick="OpenSearch()">
-                                <img src="img/search.svg" alt="">
-                            </button>
-                            <div id="search_bl">
-                                <input id="search_input" placeholder="Что ищем?" onkeyup='checkParams()'>
-                                <button type='button' id='submit' disabled>Найти</button>
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-default">Русский</a>
+                                <a href="#" class="btn btn-default">Татар теле</a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-default">Tatar latin</a>
+                                <a href="#" class="btn btn-default">English</a>
                             </div>
                         </li>
+                        <li><a href="#" class="btn btn-default">Вход/Регистрация</a> </li>
+                        <li class="active"><a href="#">Каталог книг</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Популярное</a></li>
+                        <li><a href="#">Моя коллекция</a></li>
+                        <li><a href="/order.html">Корзина</a><span class="number_nav_link">3</span> </li>
+                        <li><a href="#">Вопросы</a> </li>
+                        <li><a href="/blogctl.html">Беседы читателей</a> </li>
+                        <li><a href="/blogctl.html">События</a> </li>
+                        <li><a href="/blogctl.html">Спецпроекты</a> </li>
+
                         <li>
-                            <a href="javascript: void(0);" class="searsh_btn" onclick="OpenMenu()">
-                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 30 27.8" style="enable-background:new 0 0 30 27.8;" xml:space="preserve">
-                               <style type="text/css">
-                                   .st0 {
-                                       clip-path: url(#SVGID_2_);
-                                       fill: none;
-                                       stroke: #015E27;
-                                       stroke-width: 3;
-                                   }
-                               </style>
-                               <g>
-                               <defs>
-                               <rect id="SVGID_1_" y="0" width="30" height="27.8"/>
-                               </defs>
-                               <clipPath id="SVGID_2_">
-                                   <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-                               </clipPath>
-                               <line class="st0" x1="0" y1="1.5" x2="30" y2="1.5"/>
-                               <line class="st0" x1="0" y1="13.9" x2="30" y2="13.9"/>
-                               <line class="st0" x1="0" y1="26.3" x2="30" y2="26.3"/>
-                               </g>
-                               </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/flag.jpg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/1.svg" alt="">
-                                <ul>
-                                    <li>Классическая литература</li>
-                                </ul>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/2.svg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/3.svg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/4.svg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/5.svg" alt="">
-                            </a>
+                            <div class="btn-group">
+                                <a href="/main_ctl.html" class="btn btn-default">Интернет-магазин</a>
+                                <a href="#" class="btn btn-default">Библиотека</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
+                <div class="header_nav_mob">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" id="mob_menu"><span
+                                class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                                class="icon-bar"></span> <span class="icon-bar"></span>
+                        </button>
+                        <div class="search_bl">
+                            <input class="search_input" placeholder="Что ищем?" onkeyup='checkParams()'>
+                            <button type='button' class='submit'><img src="img/search.svg" alt=""></button>
+                            <button type='button' class='submit buy_mobile' >&nbsp;</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="content_bl">
-                <header class="header_kab">
+            <header class="header_kab">
                     <div class="container container_full">
                         <div class="row">
                             <div class="col-lg-3 col-sm-3 logo_bl">
-                                <a href="#"><img src="img/logo.png"></a>
+                                <a href="/"><img src="img/logo.png"></a>
                             </div>
                             <div class="col-lg-3 col-sm-3 kab_btn">
                                 <div class="btn-group">
-                                    <a href="#" class="btn header_btn">Интернет-магазин</a>
+                                    <a href="/main_ctl.html" class="btn header_btn">Интернет-магазин</a>
                                     <a href="#" class="btn header_btn">Библиотека</a>
                                 </div>
                             </div>
@@ -137,16 +159,15 @@
                                         <img src="img/ava.png">
                                         <i class="ico"></i>
                                     </a> </li>
-                                    <li><a href="#">Корзина</a><span class="number_nav_link">3</span> </li>
-                                    <li><a href="#">Избранное</a> </li>
-                                    <li><a href="#">Wishlist</a><span class="number_nav_link">10</span>  </li>
-                                    <li><a href="#">Заказы</a><span class="number_nav_link">2</span>  </li>
+                                    <li><a href="/order.html">Корзина</a><span class="number_nav_link">3</span> </li>
+                                    <li><a href="/wish.html">Желания</a><span class="number_nav_link">10</span>  </li>
+                                    <li><a href="/collection.html">Заказы</a><span class="number_nav_link">2</span>  </li>
                                     <li><a href="#">Вопросы</a> </li>
                                 </ul>
                                 <ul class="nav_link_header">
-                                    <li><a href="#">Беседы читателей</a> </li>
-                                    <li><a href="#">События</a> </li>
-                                    <li><a href="#">Спецпроекты</a> </li>
+                                    <li><a href="/blogctl.html">Беседы читателей</a> </li>
+                                    <li><a href="/blogctl.html">События</a> </li>
+                                    <li><a href="/blogctl.html">Спецпроекты</a> </li>
                                 </ul>
                             </div>
                         </div>
@@ -386,7 +407,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -419,7 +440,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -452,7 +473,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -485,7 +506,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -518,7 +539,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -551,7 +572,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -584,7 +605,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -741,7 +762,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -774,7 +795,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -807,7 +828,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -840,7 +861,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -873,7 +894,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -906,7 +927,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -939,7 +960,7 @@
                                                 </p>
                                             </div>
                                             <div class="btn_link_opt">
-                                                <a href="#" class="btn_slide_options">
+                                                <a href="javascript: void(0);" class="btn_slide_options">
                                                     <span class="opt_ico_1"></span>
                                                 </a>
                                                 <a href="#" class="btn_slide_options">
@@ -961,17 +982,18 @@
                     </div>
                 </content>
 
-                <footer class="footer">
-                    <div class="container">
+            <footer class="footer">
+                <div class="container container_full">
+                    <div class="background_footer">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-xs-12">
                                 <h4>Каталог книг</h4>
                                 <ul class="list_cat_book">
-                                    <li><a href="#"><span class="name_cat_reg">Учебная литература</span> <span class="number_cat_rec">845</span></a> </li>
-                                    <li><a href="#"><span class="name_cat_reg">Детские книги</span> <span class="number_cat_rec">1165</span></a> </li>
-                                    <li><a href="#"><span class="name_cat_reg">Классика</span> <span class="number_cat_rec">2365</span></a> </li>
-                                    <li><a href="#"><span class="name_cat_reg">Современная литература</span> <span class="number_cat_rec">1245</span></a> </li>
-                                    <li><a href="#"><span class="name_cat_reg">Интерактивные книги</span> <span class="number_cat_rec">23</span></a> </li>
+                                    <li><a href="/genres.html"><span class="name_cat_reg">Учебная литература</span> <span class="number_cat_rec">845</span></a> </li>
+                                    <li><a href="/genres.html"><span class="name_cat_reg">Детские книги</span> <span class="number_cat_rec">1165</span></a> </li>
+                                    <li><a href="/genres.html"><span class="name_cat_reg">Классика</span> <span class="number_cat_rec">2365</span></a> </li>
+                                    <li><a href="/genres.html"><span class="name_cat_reg">Современная литература</span> <span class="number_cat_rec">1245</span></a> </li>
+                                    <li><a href="/genres.html"><span class="name_cat_reg">Интерактивные книги</span> <span class="number_cat_rec">23</span></a> </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-sm-6 col-xs-12">
@@ -1003,7 +1025,8 @@
                             </div>
                         </div>
                     </div>
-                </footer>
+                </div>
+            </footer>
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -1016,6 +1039,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
         <script src="js/bookflip/jquery.easing.1.3.js"></script>
         <script src="js/bookflip/jquery.booklet.latest.js"></script>
+        <script src="js/jquery.mobile.custom.js"></script>
         <script>
             $(function () {
                 $("#mybook").booklet({
@@ -1024,6 +1048,12 @@
                     pageNumbers: false,
                     pagePadding: 0,
                     hash: true,
+                });
+                $(".carousel").swiperight(function() {
+                    $(this).carousel('prev');
+                });
+                $(".carousel").swipeleft(function() {  
+                    $(this).carousel('next');
                 });
             });
         </script>
