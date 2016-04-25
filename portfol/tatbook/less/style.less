@@ -3992,6 +3992,10 @@ h2, .start_review_head {
    }
 }
 .menu_visible {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
     .popover.fade.right.in {
         display: none !important;
     }
@@ -4037,7 +4041,7 @@ h2, .start_review_head {
     height: 100% !important;
     //background-color: #f4f8f7;
     position: fixed;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 252px 0 70px;
     z-index: 12;
     -webkit-overflow-scrolling: touch;

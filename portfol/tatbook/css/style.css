@@ -3765,6 +3765,12 @@ h2 .start_article,
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.menu_visible {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+}
 .menu_visible .popover.fade.right.in {
   display: none !important;
 }
@@ -3806,7 +3812,7 @@ h2 .start_article,
   left: 0;
   height: 100% !important;
   position: fixed;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 252px 0 70px;
   z-index: 12;
   -webkit-overflow-scrolling: touch;
