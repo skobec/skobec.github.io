@@ -1,0 +1,667 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,500);
+h1,h2,h3,h4 {
+  font-weight: 300;
+}
+* {
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+p,a,span,button {
+  font-weight: 400;
+  outline: none!important;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Template-specific stuff
+ *
+ * Customizations just for the template; these are not necessary for anything
+ * with disabling the responsiveness.
+ */
+
+
+body,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  min-width: 970px;
+}
+
+/* Don't let the lead text change font-size. */
+.lead {
+  font-size: 16px;
+}
+
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
+
+
+/* Non-responsive overrides
+ *
+ * Utilize the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+
+/* Reset the container */
+.container {
+  width: 970px;
+  max-width: none !important;
+}
+
+.container .navbar-header,
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+  visibility: visible !important;
+}
+
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+
+.navbar-brand {
+  margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+.navbar-nav > li > a {
+  padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+
+/* Undo form expansion */
+.navbar-form {
+  float: left;
+  width: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Copy-pasted from forms.less since we mixin the .form-inline styles. */
+.navbar-form .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control-static {
+  display: inline-block;
+}
+
+.navbar-form .input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn,
+.navbar-form .input-group .form-control {
+  width: auto;
+}
+
+.navbar-form .input-group > .form-control {
+  width: 100%;
+}
+
+.navbar-form .control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .radio,
+.navbar-form .checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .radio label,
+.navbar-form .checkbox label {
+  padding-left: 0;
+}
+
+.navbar-form .radio input[type="radio"],
+.navbar-form .checkbox input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}
+
+.navbar-form .has-feedback .form-control-feedback {
+  top: 0;
+}
+
+/* Undo inline form compaction on small screens */
+.form-inline .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.form-inline .form-control-static {
+  display: inline-block;
+}
+
+.form-inline .input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+.form-inline .input-group .input-group-addon,
+.form-inline .input-group .input-group-btn,
+.form-inline .input-group .form-control {
+  width: auto;
+}
+
+.form-inline .input-group > .form-control {
+  width: 100%;
+}
+
+.form-inline .control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.form-inline .radio,
+.form-inline .checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.form-inline .radio label,
+.form-inline .checkbox label {
+  padding-left: 0;
+}
+
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}
+
+.form-inline .has-feedback .form-control-feedback {
+  top: 0;
+}
+.header {
+  padding: 9px 0 3px;
+}
+.kurs_and_news_bl {
+  //border-top: 1px solid;
+  //border-bottom: 1px solid;
+  //border-color: gray;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+    left: 0;
+    /* top: 0; */
+    margin-top: -1px;
+  }
+}
+.link_header {
+  display: inline-block;
+  li {
+    display: inline-block;
+    a {
+      text-decoration: none;
+      text-align: center;
+      margin: 0 8px 0 0;
+      float: left;
+      span {
+        display: block;
+      }
+    }
+  }
+  &_ico {
+    margin-bottom: 5px;
+  }
+  &_txt {
+    color: #678fbf;
+    font-size: 17px;
+    border-bottom: 2px solid #e7e7e7;
+  }
+}
+.logo {
+  margin-top: 10px;
+  display: inline-block;
+}
+.links_header {
+  width: 210px;
+  li {
+    margin-top: 10px;
+  }
+}
+.call_and_prof_name {
+  display: inline-block;
+  float: right;
+}
+.prof_link {
+  float: right;
+  margin-top: 25px;
+  &_ico {
+    float: left;
+    display: inline-block;
+    margin-top: 7px;
+    margin-right: 13px;
+    position: relative;
+    &:after {
+      content: "";
+      background: url("../img/!.svg") no-repeat;
+      position: absolute;
+      top: -15px;
+      left: 1px;
+      height: 20px;
+      width: 20px;
+    }
+  }
+  &_name {
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    color: #678fbf;
+    line-height: 20px;
+  }
+}
+.call_btn {
+  border: none;
+  background-color: transparent;
+  margin-top: 16px;
+  margin-right: 30px;
+}
+.courses_bl_list {
+  //border-right: 1px solid #888888;
+  //border-top: 1px solid;
+  //border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-color: #e5e5e5;
+  padding: 0;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+    left: 0;
+    /* top: 0; */
+    margin-top: -1px;
+  }
+}
+.title_opis {
+  font-size: 30px;
+  color: #117289;
+  margin: 25px 0;
+}
+.title_name_courses {
+  color: #678fbf;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  //margin-top: 35px;
+  //display: block;
+}
+.info_name_courses {
+  color: #117289;
+  font-size: 22px;
+  line-height: 25px;
+  margin: 10px 0 33px;
+}
+.nearest_courses {
+  font-size: 15px;
+  color: #dfdfdf;
+  display: block;
+  &_date {
+    font-size: 15px;
+    color: #117289;
+    display: block;
+  }
+}
+.btn_rec_courses {
+  background-color: transparent;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-weight: 100;
+  border: 1px solid #dfdfdf;
+  color: #dfdfdf;
+  font-size: 16px;
+  padding: 8px 20px;
+  //font-size: 100%;
+}
+.kurs_bl {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 35px;
+  padding-top: 35px;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: -100%;
+    bottom: -1px;
+    background-color: #e5e5e5;
+  }
+  &:last-child {
+    border-bottom: 1px solid transparent;
+    &:after {
+      background-color: transparent;
+    }
+  }
+  //min-width: 607px;
+}
+.blogs_bl_list {
+  padding-right: 0;
+  border-left: 1px solid #e5e5e5;
+  margin-left: -1px;
+}
+.blogs_bl {
+  padding-bottom: 35px;
+  padding-top: 35px;
+  .title_name_courses{
+    font-weight: 300;
+  }
+  .info_name_courses {
+    font-size: 12px;
+    color: #117289;
+    line-height: 16px;
+    margin: 10px 0 15px;
+  }
+}
+.date_blogs {
+  font-size: 15px;
+  color: #1d4960;
+}
+.forums_blocks {
+  font-size: 25px;
+  font-weight: 300;
+  color: #cfcece;
+  margin: 25px 0 -5px;
+  svg {
+    margin-bottom: -9px;
+    margin-right: 22px;
+    rect {
+      fill: #cfcece;
+    }
+    path {
+      fill: #cfcece;
+    }
+    line {
+      stroke: #cfcece;
+    }
+  }
+  &.blog_academ {
+    svg {
+      margin-top: 5px;
+      margin-bottom: -14px;
+    }
+  }
+}
+.link_pod_kurs {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e4e4e4;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    background: url("../img/shadow_bottom.png") no-repeat left;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 895px;
+    height: 11px;
+    background-size: 100% 84%;
+  }
+  .forums_blocks {
+    display: block;
+    margin: 10px 0 18px;
+    color: #678fbf;
+    .blog_academ svg {
+      margin-bottom: -10px;
+    }
+    rect {
+      fill: #678fbf;
+    }
+    path {
+      fill: #678fbf;
+    }
+    line {
+      stroke: #678fbf;
+    }
+  }
+}
+.step_courses {
+  //padding: 0 60px;
+  margin-bottom: 55px;
+  hr {
+    width: 89.3%;
+    float: right;
+    margin: 40px 30px 0;
+  }
+  &_list {
+    margin: 40px 0 20px;
+  }
+  &_img_bl {
+    width: 30%;
+    text-align: right;
+  }
+  &_txt_bl {
+    width: 70%;
+  }
+  &_title {
+    font-size: 35px;
+    color: #00bae6;
+    margin-bottom: 15px;
+  }
+  &_text {
+    font-size: 20px;
+    color: #117289;
+  }
+  &_comment {
+    font-size: 12px;
+    color: #3e5b62;
+  }
+  &_bl_txt {
+    padding-left: 60px;
+  }
+}
+.trainin_bl {
+  height: 590px;
+  width: 100%;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    background: url("../img/shadow_bottom.png") no-repeat left;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 895px;
+    height: 11px;
+    background-size: 100% 84%;
+  }
+  &_left {
+    width: 50%;
+    background-color: #3dbfe5;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    border-right: 1px solid #fff;
+    position: relative;
+    .trainin_link {
+      right: 248px;
+      top: 37%;
+      &:hover {
+        .trainin_link_ico {
+          border-color: #fa6b3a;
+        }
+      }
+    }
+    img {
+      float: right;
+    }
+  }
+  &_right {
+    width: 50%;
+    background-color: #fa6b3a;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    position: relative;
+    .trainin_link {
+      left: 223px;
+      top: 37%;
+      &:hover {
+        .trainin_link_ico {
+          border-color: #3dbfe5;
+        }
+      }
+    }
+    img {
+      float: left;
+      margin-left: -1px;
+    }
+  }
+}
+.trainin_link {
+  position: absolute;
+  text-align: center;
+  text-decoration: none!important;
+  &:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  &_ico {
+    height: 140px;
+    width: 140px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    background-color: #ffffff;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid transparent;
+    img {
+      width: 100%;
+    }
+  }
+  &_txt {
+    font-size: 22px;
+    color: #ffffff;
+    display: block;
+    margin-top: 8px;
+  }
+}
+.footer {
+  min-height: 25px;
+  &_blue_left {
+    background-color: #3dbfe5;
+    height: 25px;
+  }
+  &_orange_right {
+    background-color: #fa6b3a;
+    border-left: 1px solid #ffffff;
+    height: 25px;
+    p {
+      margin: 0;
+      color: #f3fafc;
+      font-size: 10px;
+      text-transform: uppercase;
+      line-height: 25px;
+    }
+  }
+}
