@@ -15,6 +15,7 @@ p,a,span,button {
 }
 body {
   font-family: 'Roboto', sans-serif;
+  padding-top: 106px;
 }
 svg {
   -webkit-transition: 0.3s all;
@@ -34,7 +35,8 @@ svg {
 body,
 .navbar-fixed-top,
 .navbar-fixed-bottom {
-  min-width: 970px;
+  //min-width: 970px;
+  min-width: 1000px;
 }
 
 /* Don't let the lead text change font-size. */
@@ -273,6 +275,13 @@ body,
 }
 .header {
   padding: 9px 0 3px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+  height: 106px;
 }
 .kurs_and_news_bl {
   //border-top: 1px solid;
@@ -343,6 +352,9 @@ body,
   width: 210px;
   li {
     margin-top: 10px;
+    a {
+      margin-right: 16px;
+    }
   }
 }
 .call_and_prof_name {
@@ -401,7 +413,7 @@ body,
 }
 .call_back__data {
   position: absolute;
-  width: 570px;
+  width: 620px;
   border: 1px solid #ddddde;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -427,7 +439,7 @@ body,
   &:after {
     content: '';
     position: absolute;
-    right: 160px;
+    right: 141px;
     bottom: -20px;
     border: 17px solid transparent;
     border-bottom: 17px solid #ffffff;
@@ -437,7 +449,7 @@ body,
   &:before {
     content: '';
     position: absolute;
-    right: 160px;
+    right: 141px;
     bottom: -20px;
     border: 17px solid transparent;
     border-bottom: 17px solid #dddddd;
@@ -454,7 +466,21 @@ body,
     color: #117289;
     font-weight: 100;
   }
+  .phone_ico_call {
+    position: absolute;
+    left: 6px;
+    top: 19px;
+  }
+  .call_back_container {
+    width: 530px;
+    float: right;
+    p {
+      text-align: left;
+      padding-left: 5px;
+    }
+  }
 }
+
 .form_input {
   border: 1px solid #ddddde;
   -webkit-border-radius: 30px;
@@ -483,25 +509,28 @@ body,
   &:hover {
     .call_btn {
       svg {
+        .circle_phone {
+          fill: #00b9e9;
+        }
         g {
           path {
-            fill: #678fbf;
+            stroke: #ffffff;
           }
         }
         path {
-          stroke: #678fbf;
+          stroke: #ffffff;
         }
       }
     }
     .call_back__data {
       visibility: visible;
       opacity: 1;
-      bottom: -102px;
+      bottom: -101px;
     }
   }
 }
 .btn_form {
-  border: 1px solid #678fbf;
+  border: 1px solid #3dbfe5;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -510,7 +539,7 @@ body,
   padding: 0 15px;
   text-align: center;
   width: 100%;
-  color: #678fbf;
+  color: #3dbfe5;
   outline: none!important;
   display: block;
   line-height: 33px;
@@ -557,6 +586,7 @@ body,
   font-size: 15px;
   color: #dfdfdf;
   display: block;
+  margin-bottom: 5px;
   &_date {
     font-size: 15px;
     color: #117289;
@@ -574,6 +604,15 @@ body,
   font-size: 16px;
   padding: 8px 20px;
   //font-size: 100%;
+  &:hover {
+    color: #3dbfe5;
+    border-color: #3dbfe5;
+  }
+  &:active,&:focus {
+    color: #ffffff;
+    background-color: #3dbfe5;
+    border-color: #3dbfe5;
+  }
 }
 .kurs_bl {
   border-bottom: 1px solid #e5e5e5;
@@ -593,6 +632,10 @@ body,
     &:after {
       background-color: transparent;
     }
+  }
+  .btn_rec_courses {
+    margin-left: -25px;
+    margin-top: 4px;
   }
   //min-width: 607px;
 }
@@ -623,6 +666,15 @@ body,
   font-weight: 300;
   color: #cfcece;
   margin: 25px 0 -5px;
+  text-decoration: none!important;
+  span {
+    font-size: 25px;
+    font-weight: 300;
+    border-bottom: 1px solid #cfcece;
+  }
+  .ico_forums {
+    border: none;
+  }
   svg {
     margin-bottom: -9px;
     margin-right: 22px;
@@ -634,6 +686,12 @@ body,
     }
     line {
       stroke: #cfcece;
+    }
+  }
+  &:hover {
+    span {
+      color: #cfcece;
+      border-color: transparent;
     }
   }
   &.blog_academ {
@@ -746,7 +804,7 @@ body,
     border-right: 1px solid #fff;
     position: relative;
     &:hover {
-      background-color: #247188;
+      background-color: #31afd4;
       .trainin_link_ico {
         -webkit-transform: scale(1.1);
         -moz-transform: scale(1.1);
@@ -778,7 +836,7 @@ body,
     float: left;
     position: relative;
     &:hover {
-      background-color: #c23517;
+      background-color: #d5481c;
       .trainin_link_ico {
         -webkit-transform: scale(1.1);
         -moz-transform: scale(1.1);
@@ -873,6 +931,7 @@ body,
   img {
     margin-right: 10px;
   }
+
 }
 .fb_btn {
   .soc_btn {
@@ -892,6 +951,10 @@ body,
   .arrow_option {
     background-color: #496194;
   }
+  .soc_message_bl {
+    width: 260px;
+    right: -112px;
+  }
 }
 .vk_btn {
   .soc_btn {
@@ -905,6 +968,10 @@ body,
   }
   .arrow_option {
     background-color: #6996c7;
+  }
+  .soc_message_bl {
+    width: 260px;
+    right: -112px;
   }
 }
 .arrow_option {
@@ -926,8 +993,14 @@ body,
   background-color: #ffffff;
   margin-left: 10px;
   position: relative;
+  cursor: pointer;
   img {
-    margin-top: -2px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 2px;
   }
   //span {
   //  position: absolute;
@@ -960,6 +1033,79 @@ body,
   //    height: 0;
   //  }
   //}
+  &:hover {
+    .soc_message_bl {
+      visibility: visible;
+      opacity: 1;
+      bottom: 60px;
+    }
+  }
+}
+.soc_message_bl {
+  position: absolute;
+  width: 320px;
+  border: 1px solid #ddddde;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  padding: 20px 0 10px 20px;
+  background-color: #ffffff;
+  z-index: 1;
+  visibility: hidden;
+  -webkit-transform: translateX(-35%);
+  -moz-transform: translateX(-35%);
+  -ms-transform: translateX(-35%);
+  -o-transform: translateX(-35%);
+  transform: translateX(-35%);
+  opacity: 0;
+  -webkit-transition: linear 0.2s;
+  -moz-transition: linear 0.2s ;
+  -ms-transition: linear 0.2s ;
+  -o-transition: linear 0.2s ;
+  transition: linear 0.2s ;
+  right: -134px;
+  bottom: 75px;
+  text-align: left;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 26px;
+    border: 17px solid transparent;
+    border-top: 17px solid #ffffff;
+    bottom: -34px;
+    height: 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    right: 26px;
+    border: 17px solid transparent;
+    border-top: 17px solid #dddddd;
+    bottom: -35px;
+    height: 0;
+  }
+  a {
+    display: block;
+    line-height: normal;
+    color: #678fbf;
+    text-decoration: underline;
+    float: left;
+    margin-bottom: 10px;
+    &:hover {
+      text-decoration: none;
+      color: #bcbcbd;
+    }
+  }
+  //&.active {
+  //  visibility: visible;
+  //  opacity: 1;
+  //  margin-top: 20px;
+  //}
+  p {
+    font-size: 15px;
+    color: #117289;
+    font-weight: 100;
+  }
 }
 .footer {
   min-height: 25px;
