@@ -335,7 +335,7 @@ body,
   -o-transition: linear 0.2s;
   transition: linear 0.2s;
   right: -103px;
-  bottom: -100px;
+  bottom: -104px;
   text-align: left;
 }
 .prof_link_name_bl .prof_link_option_bl:after {
@@ -384,7 +384,7 @@ body,
 .prof_link_name_bl:hover .prof_link_option_bl {
   visibility: visible;
   opacity: 1;
-  bottom: -115px;
+  bottom: -119px;
 }
 .prof_link {
   float: right;
@@ -570,7 +570,7 @@ body,
 .phone_bl:hover .call_back__data {
   visibility: visible;
   opacity: 1;
-  bottom: -101px;
+  bottom: -103px;
 }
 .btn_form {
   border: 1px solid #3dbfe5;
