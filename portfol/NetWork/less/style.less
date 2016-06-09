@@ -372,6 +372,87 @@ body,
   float: right;
   width: 207px;
 }
+.prof_link_name_bl {
+  .prof_link_option_bl {
+    position: absolute;
+    width: 231px;
+    border: 1px solid #ddddde;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    padding: 20px 0 10px 20px;
+    background-color: #ffffff;
+    z-index: 1;
+    visibility: hidden;
+    -webkit-transform: translateX(-35%);
+    -moz-transform: translateX(-35%);
+    -ms-transform: translateX(-35%);
+    -o-transform: translateX(-35%);
+    transform: translateX(-35%);
+    opacity: 0;
+    -webkit-transition: linear 0.2s;
+    -moz-transition: linear 0.2s;
+    -ms-transition: linear 0.2s;
+    -o-transition: linear 0.2s;
+    transition: linear 0.2s;
+    right: -103px;
+    bottom: -100px;
+    text-align: left;
+    &:after {
+      content: '';
+      position: absolute;
+      right: 83px;
+      bottom: -20px;
+      border: 17px solid transparent;
+      border-bottom: 17px solid #ffffff;
+      top: -34px;
+      height: 0;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      right: 83px;
+      bottom: -20px;
+      border: 17px solid transparent;
+      border-bottom: 17px solid #dddddd;
+      top: -35px;
+      height: 0;
+    }
+    a {
+      display: block;
+      line-height: normal;
+      color: #678fbf;
+      text-decoration: underline;
+      margin-bottom: 10px;
+      &:hover {
+        text-decoration: none;
+        color: #bcbcbd;
+      }
+    }
+    //&.active {
+    //  visibility: visible;
+    //  opacity: 1;
+    //  margin-top: 20px;
+    //}
+    p {
+      font-size: 15px;
+      color: #117289;
+      font-weight: 100;
+    }
+  }
+  &:hover {
+    color: #e7e7e7;
+    .prof_link_name {
+      color: #e7e7e7;
+      border-color: transparent;
+    }
+    .prof_link_option_bl {
+      visibility: visible;
+      opacity: 1;
+      bottom: -115px;
+    }
+  }
+}
 .prof_link {
   float: right;
   margin-top: 14px;
@@ -385,6 +466,7 @@ body,
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none!important;
+
   &:after {
     content: '';
     position: absolute;
@@ -432,13 +514,6 @@ body,
     text-overflow: ellipsis;
     width: 100%;
     border-bottom: 2px solid #e7e7e7;
-  }
-  &:hover {
-    color: #e7e7e7;
-    .prof_link_name {
-      color: #e7e7e7;
-      border-color: transparent;
-    }
   }
 }
 .call_btn {
@@ -1112,6 +1187,7 @@ body,
     }
   }
 }
+
 .soc_message_bl {
   position: absolute;
   width: 320px;
