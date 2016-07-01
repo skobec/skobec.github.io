@@ -22,6 +22,11 @@ button {
 body {
   font-family: 'Roboto', sans-serif;
   padding-top: 106px;
+  padding-bottom: 25px;
+}
+html {
+  position: relative;
+  min-height: 100%;
 }
 /* Template-specific stuff
  *
@@ -614,6 +619,15 @@ body,
   text-transform: uppercase;
   text-decoration: underline;
 }
+.title_page {
+  color: #678fbf;
+  font-size: 30px;
+  margin: 10px 0 18px;
+}
+.title_page .ico_title {
+  margin: -3px 20px 0px 0;
+  float: left;
+}
 .info_name_courses {
   color: #117289;
   font-size: 22px;
@@ -648,6 +662,27 @@ body,
 }
 .btn_rec_courses:active,
 .btn_rec_courses:focus {
+  color: #ffffff;
+  background-color: #3dbfe5;
+  border-color: #3dbfe5;
+}
+.btn_set_act {
+  background-color: transparent;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-weight: 100;
+  font-size: 16px;
+  padding: 6px 20px 5px;
+  color: #678fbf;
+  border: 1px solid #678fbf;
+}
+.btn_set_act:hover {
+  color: #3dbfe5;
+  border-color: #3dbfe5;
+}
+.btn_set_act:active,
+.btn_set_act:focus {
   color: #ffffff;
   background-color: #3dbfe5;
   border-color: #3dbfe5;
@@ -1003,6 +1038,29 @@ body,
   width: 260px;
   right: -112px;
 }
+.google_btn .soc_btn {
+  width: 180px;
+  background-color: #1fa5fb;
+  color: #ffffff;
+  border: none;
+}
+.google_btn .soc_btn:hover {
+  background-color: #4870c7;
+}
+.google_btn .soc_btn img {
+  float: left;
+  margin-top: 4px;
+}
+.google_btn .arrow_option {
+  background-color: #6996c7;
+}
+.google_btn .arrow_option:hover {
+  background-color: #4870c7;
+}
+.google_btn .soc_message_bl {
+  width: 260px;
+  right: -112px;
+}
 .arrow_option {
   border: 1px solid #678fbf;
   -webkit-border-radius: 30px;
@@ -1102,6 +1160,9 @@ body,
   font-weight: 100;
 }
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   min-height: 25px;
 }
 .footer_blue_left {
@@ -1119,4 +1180,301 @@ body,
   font-size: 10px;
   text-transform: uppercase;
   line-height: 25px;
+}
+.content_tabs_lk {
+  padding-top: 38px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 40px;
+}
+.content_tabs_lk:last-child {
+  border-bottom: 1px solid transparent;
+}
+.content_tabs_lk.inbox_tab .inbox_bl_inf {
+  margin-bottom: 20px;
+}
+.content_tabs_lk_double {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.content_tabs_lk_double .blogs_bl:first-child {
+  padding-left: 0;
+}
+.content_tabs_lk_double .blogs_bl:last-child {
+  padding-left: 70px;
+  padding-bottom: 39px;
+}
+.txt_login p,
+.txt_login span {
+  font-size: 14px;
+  color: #117289;
+}
+.title_tabs h4,
+.title_tabs h3,
+.title_tabs h2,
+.title_tabs h1,
+.title_tabs span,
+.title_tabs p {
+  color: #117289;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+.title_login_pg h4,
+.title_login_pg h3,
+.title_login_pg h2,
+.title_login_pg h1,
+.title_login_pg span,
+.title_login_pg p {
+  color: #117289;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.checkbox_login label {
+  margin-top: 24px;
+  font-weight: 300;
+}
+.link_log_reg {
+  margin-top: 40px;
+}
+.link_log_reg a {
+  color: #678fbf;
+  font-size: 15px;
+  border-bottom: 2px solid #e7e7e7;
+  margin-right: 50px;
+  text-decoration: none!important;
+}
+.link_log_reg a:hover {
+  color: #e7e7e7;
+  border-color: transparent;
+}
+.date_tabs p {
+  color: #117289;
+  font-size: 16px;
+  line-height: 25px;
+}
+.name_link_theme {
+  margin-bottom: 10px;
+}
+.name_link_theme a {
+  color: #678fbf;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.tabs_lk .tab-content {
+  position: relative;
+}
+.tabs_lk .tab-content:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  background: url(../img/shadow_bottom.png) no-repeat left;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 895px;
+  height: 11px;
+  background-size: 100% 84%;
+}
+.tabs_lk .btn_reader_tabs .btn {
+  margin-top: -10px;
+}
+.tabs_lk .btn {
+  margin-right: 23px;
+  padding: 6px 20px;
+}
+.tabs_lk .subtitle_tabs p {
+  color: #dfdfdf;
+  font-size: 16px;
+}
+.name_soc_port {
+  color: #dfdfdf;
+  font-size: 16px;
+}
+.name_soc_prof {
+  color: #678fbf;
+  font-size: 13px;
+}
+.tabs_link_bl {
+  background-color: #f7f5f4;
+  position: relative;
+  width: 100%;
+  padding-top: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.tabs_link_bl:before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  background: url(../img/shadow_bottom.png) no-repeat left;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 895px;
+  height: 11px;
+  background-size: 100% 84%;
+}
+.tabs_link_bl ul {
+  border-bottom: 0;
+}
+.tabs_link_bl ul li {
+  margin-right: 67px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.tabs_link_bl ul li.active {
+  border-bottom: 1px solid #ffffff;
+}
+.tabs_link_bl ul li.active a {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.tabs_link_bl ul li.active a .tabs_link_name {
+  border-bottom: 2px solid transparent;
+}
+.tabs_link_bl ul li a {
+  border-color: transparent!important;
+  padding: 17px 35px 9px 15px;
+  background-color: #ffffff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.tabs_link_bl ul li a:hover,
+.tabs_link_bl ul li a:focus {
+  background-color: #ffffff;
+}
+.tabs_link_bl ul li a:hover .tabs_link_name,
+.tabs_link_bl ul li a:focus .tabs_link_name {
+  color: #bcbcbd;
+  border-bottom: 2px solid transparent;
+}
+.tabs_link_bl ul li a:hover .tabs_link_ico svg path,
+.tabs_link_bl ul li a:focus .tabs_link_ico svg path,
+.tabs_link_bl ul li a:hover .tabs_link_ico svg polygon,
+.tabs_link_bl ul li a:focus .tabs_link_ico svg polygon,
+.tabs_link_bl ul li a:hover .tabs_link_ico svg rect,
+.tabs_link_bl ul li a:focus .tabs_link_ico svg rect {
+  fill: #bcbcbd;
+}
+.tabs_link_bl ul li a .tabs_link_ico {
+  display: inline-block;
+  margin: -4px 18px 0 0;
+  float: left;
+}
+.tabs_link_bl ul li a .tabs_link_name {
+  border-bottom: 2px solid #e7e7e7;
+}
+.tabs_link_name {
+  color: #678fbf;
+  font-size: 22px;
+  border-bottom: 2px solid transparent;
+}
+.table_set {
+  margin-bottom: 15px;
+}
+.table_set thead tr th {
+  color: #dfdfdf;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  padding-bottom: 15px;
+}
+.table_set thead tr th:first-child {
+  padding-left: 60px;
+  width: 35%;
+}
+.table_set tbody tr td {
+  font-size: 13px;
+  color: #117289;
+}
+.table_set tbody tr td + td {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  vertical-align: top;
+}
+.soc_prof_login {
+  margin-top: 20px;
+}
+.soc_prof_login .soc_btn {
+  margin-left: 0;
+  margin-right: 30px;
+}
+.registr_content .form_input,
+.registr_content .btn_set_act {
+  width: 85%;
+  margin-bottom: 10px;
+}
+.registr_content p,
+.registr_content span {
+  font-size: 22px;
+  color: #117289;
+}
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 60px;
+  cursor: pointer;
+  color: #678fbf;
+  font-size: 15px;
+  padding-top: 5px;
+}
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #3dbfe5;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: none;
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  font-size: 27px;
+  line-height: 0.8;
+  color: #3dbfe5;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted blue;
+}
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #4778d9!important;
 }
