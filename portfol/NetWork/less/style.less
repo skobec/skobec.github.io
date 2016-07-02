@@ -1491,13 +1491,33 @@ body,
           border-bottom-right-radius: 0;
           .tabs_link_name {
             border-bottom: 2px solid transparent;
+            color: #009ee0;
+          }
+          .tabs_link_ico {
+            svg {
+              path,polygon,rect {
+                fill: #009ee0;
+              }
+            }
+          }
+          &:hover,&:focus,&:active {
+            .tabs_link_name {
+              color: #009ee0;
+            }
+            .tabs_link_ico {
+              svg {
+                path,polygon,rect {
+                  fill: #009ee0;
+                }
+              }
+            }
           }
         }
       }
       a {
         border-color: transparent!important;
         padding: 17px 35px 9px 15px;
-        background-color: #ffffff;
+        background-color: #fbfaf9;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         &:hover,&:focus {
