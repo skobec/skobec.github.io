@@ -277,6 +277,18 @@ p,span,a,button {
   font-size: 28px;
   color: #000000;
   font-family: 'Open Sans',sans-serif;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  &:hover,&:active,&:focus {
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+  }
 }
 .block_1 {
   .left_bl {
@@ -472,6 +484,9 @@ p,span,a,button {
     .btn-request {
       margin-top: 20px;
       background: #8baed8 url(../img/phone_white.png) no-repeat 40px 50%;
+      &:hover {
+        background-color: #588bc8;
+      }
     }
   }
 }
@@ -489,7 +504,7 @@ p,span,a,button {
      font-weight: 600;
    }
   .subscrip_bl {
-    a {
+    .inf_com {
       color: #343434;
       font-size: 15px;
       margin: 11px 0 0 25px;
@@ -520,6 +535,12 @@ p,span,a,button {
       width: 370px;
       float: left;
       display: inline-block;
+      &:focus,&:active {
+        &::-webkit-input-placeholder { color:transparent; }
+        &:-moz-placeholder { color:transparent; } /* FF 4-18 */
+        &::-moz-placeholder { color:transparent; } /* FF 19+ */
+        &:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+      }
     }
     .btn {
       background-color: #eb6854;
@@ -544,7 +565,7 @@ p,span,a,button {
         padding-bottom: 3px;
       }
       &:hover {
-        background-color: #2aabd2;
+        background-color: #d7452e;
         span {
           border-color: transparent;
         }
@@ -588,7 +609,7 @@ p,span,a,button {
     padding-bottom: 3px;
   }
   &:hover {
-    background-color: #2aabd2;
+    background-color: #d7452e;
     span {
       border-color: transparent;
     }
@@ -637,7 +658,7 @@ p,span,a,button {
   -moz-border-radius: 23px;
   border-radius: 23px;
   text-decoration: none!important;
-  padding: 18px 0 18px 50px;
+  padding: 19px 0 20px 50px;
   min-width: 310px;
   display: inline-block;
   background: #8baed8 url(../img/message_ico.png) no-repeat 17px 50%;
@@ -655,7 +676,7 @@ p,span,a,button {
     padding-bottom: 3px;
   }
   &:hover {
-    background-color: #2aabd2;
+    background-color: #588bc8;
     span {
       border-color: transparent;
     }

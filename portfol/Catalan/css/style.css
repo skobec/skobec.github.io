@@ -229,6 +229,29 @@ button {
   font-size: 28px;
   color: #000000;
   font-family: 'Open Sans', sans-serif;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+p:hover,
+span:hover,
+a:hover,
+button:hover,
+p:active,
+span:active,
+a:active,
+button:active,
+p:focus,
+span:focus,
+a:focus,
+button:focus {
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
 }
 .block_1 .left_bl {
   padding-left: 50px;
@@ -426,6 +449,9 @@ button {
   margin-top: 20px;
   background: #8baed8 url(../img/phone_white.png) no-repeat 40px 50%;
 }
+.block_5 .form_request .btn-request:hover {
+  background-color: #588bc8;
+}
 .block_6 {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -443,7 +469,7 @@ button {
   font-style: italic;
   font-weight: 600;
 }
-.block_6 .subscrip_bl a {
+.block_6 .subscrip_bl .inf_com {
   color: #343434;
   font-size: 15px;
   margin: 11px 0 0 25px;
@@ -475,6 +501,28 @@ button {
   float: left;
   display: inline-block;
 }
+.block_6 .mail_form .form-control:focus,
+.block_6 .mail_form .form-control:active {
+  /* FF 4-18 */
+  /* FF 19+ */
+  /* IE 10+ */
+}
+.block_6 .mail_form .form-control:focus::-webkit-input-placeholder,
+.block_6 .mail_form .form-control:active::-webkit-input-placeholder {
+  color: transparent;
+}
+.block_6 .mail_form .form-control:focus:-moz-placeholder,
+.block_6 .mail_form .form-control:active:-moz-placeholder {
+  color: transparent;
+}
+.block_6 .mail_form .form-control:focus::-moz-placeholder,
+.block_6 .mail_form .form-control:active::-moz-placeholder {
+  color: transparent;
+}
+.block_6 .mail_form .form-control:focus:-ms-input-placeholder,
+.block_6 .mail_form .form-control:active:-ms-input-placeholder {
+  color: transparent;
+}
 .block_6 .mail_form .btn {
   background-color: #eb6854;
   border: none;
@@ -499,7 +547,7 @@ button {
   padding-bottom: 3px;
 }
 .block_6 .mail_form .btn:hover {
-  background-color: #2aabd2;
+  background-color: #d7452e;
 }
 .block_6 .mail_form .btn:hover span {
   border-color: transparent;
@@ -539,7 +587,7 @@ button {
   padding-bottom: 3px;
 }
 .download_list:hover {
-  background-color: #2aabd2;
+  background-color: #d7452e;
 }
 .download_list:hover span {
   border-color: transparent;
@@ -601,7 +649,7 @@ button {
   -moz-border-radius: 23px;
   border-radius: 23px;
   text-decoration: none!important;
-  padding: 18px 0 18px 50px;
+  padding: 19px 0 20px 50px;
   min-width: 310px;
   display: inline-block;
   background: #8baed8 url(../img/message_ico.png) no-repeat 17px 50%;
@@ -619,7 +667,7 @@ button {
   padding-bottom: 3px;
 }
 .btn-request:hover {
-  background-color: #2aabd2;
+  background-color: #588bc8;
 }
 .btn-request:hover span {
   border-color: transparent;

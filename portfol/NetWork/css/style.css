@@ -300,7 +300,7 @@ body,
   margin-left: 18px;
 }
 .logo {
-  margin-top: 10px;
+  margin-top: 20px;
   display: inline-block;
 }
 .links_header {
@@ -1559,6 +1559,9 @@ label:hover:before {
   font-size: 15px;
   line-height: 20px;
 }
+.list_sked {
+  padding-bottom: 80px;
+}
 .list_sked ul {
   list-style: none;
   padding: 0;
@@ -1700,7 +1703,7 @@ label:hover:before {
   padding: 0;
 }
 .popover.bottom {
-  margin-top: 7px;
+  margin-top: 19px;
   margin-left: -6px;
 }
 .quest_btn {
