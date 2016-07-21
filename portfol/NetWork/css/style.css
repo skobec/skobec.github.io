@@ -1523,8 +1523,8 @@ label:hover:before {
   padding: 10px 0;
 }
 .sked_info_bl .price_btn {
-  font-size: 30px;
-  color: #eeeeff;
+  font-size: 33px;
+  color: #ffffff;
   font-weight: 300;
 }
 .sked_info_bl .price_btn span {
@@ -1539,6 +1539,10 @@ label:hover:before {
   background-color: #ffffff;
   color: #3dbfe5;
   text-decoration: none!important;
+}
+.sked_info_bl .btn_set_act:hover {
+  color: #678fbf;
+  border-color: #678fbf;
 }
 .sked_info_bl .btn {
   margin-right: 6px;
@@ -1749,9 +1753,6 @@ label:hover:before {
   color: #117289;
   font-weight: 300;
   text-transform: inherit;
-}
-.sked_content .kurs_bl .title_name_courses:hover {
-  border-bottom: 1px solid;
 }
 .sked_content .kurs_bl p.title_name_courses,
 .sked_content .kurs_bl span.title_name_courses {

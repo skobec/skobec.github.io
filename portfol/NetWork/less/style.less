@@ -359,7 +359,8 @@ body,
   display: inline-block;
 }
 .links_header {
-  width: 210px;
+  width: 190px;
+  padding-left: 15px;
   li {
     margin-top: 10px;
     a {
@@ -379,13 +380,14 @@ body,
 }
 .call_and_prof_name {
   display: inline-block;
-  float: right;
-  width: 207px;
+  //float: right;
+  //width: 207px;
 }
 .prof_link_name_bl {
-  position: relative;
-  float: left;
-  width: 130px;
+  //position: relative;
+  //float: left;
+  //width: 130px;
+  display: inline-block;
   .prof_link_option_bl {
     position: absolute;
     width: 231px;
@@ -468,13 +470,13 @@ body,
   }
 }
 .prof_link {
-  float: right;
+  float: left;
   margin-top: 14px;
-  width: 100%;
+  width: 130px;
   text-align: center;
   margin-left: -1px;
   /* left: 4px; */
-  margin-right: -10px;
+  //margin-right: -10px;
   position: relative;
   white-space: nowrap;
   overflow: hidden;
@@ -645,8 +647,9 @@ body,
   padding: 0 5px;
 }
 .phone_bl {
-  float: left;
+  //float: left;
   margin-top: 16px;
+  display: inline-block;
   //margin-right: 30px;
   &:hover {
     .call_btn {
@@ -818,6 +821,11 @@ body,
 .blogs_bl {
   padding-bottom: 35px;
   padding-top: 35px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
   .title_name_courses{
     font-weight: 300;
   }
@@ -1716,8 +1724,8 @@ label:hover:before {
     padding: 10px 0;
   }
   .price_btn {
-    font-size: 30px;
-    color: #eeeeff;
+    font-size: 33px;
+    color: #ffffff;
     font-weight: 300;
     span {
       font-weight: 300;
@@ -1732,6 +1740,10 @@ label:hover:before {
     background-color: #ffffff;
     color: #3dbfe5;
     text-decoration: none!important;
+    &:hover {
+      color: #678fbf;
+      border-color: #678fbf;
+    }
   }
   .btn {
     margin-right: 6px;
@@ -1945,9 +1957,6 @@ label:hover:before {
       color: #117289;
       font-weight: 300;
       text-transform: inherit;
-      &:hover {
-        border-bottom: 1px solid;
-      }
     }
     p.title_name_courses, span.title_name_courses {
       border-bottom: none;
