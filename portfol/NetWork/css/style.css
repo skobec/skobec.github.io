@@ -325,8 +325,8 @@ body,
 }
 .prof_link_name_bl {
   position: relative;
-  float: left;
   width: 130px;
+  display: inline-block;
 }
 .prof_link_name_bl .prof_link_option_bl {
   position: absolute;
@@ -571,8 +571,8 @@ body,
   padding: 0 5px;
 }
 .phone_bl {
-  float: left;
   margin-top: 16px;
+  display: inline-block;
 }
 .phone_bl:hover .call_btn svg .circle_phone {
   fill: #00b9e9;
