@@ -305,6 +305,7 @@ body,
 }
 .links_header {
   width: 210px;
+  padding-left: 20px;
 }
 .links_header li {
   margin-top: 10px;
@@ -320,8 +321,6 @@ body,
 }
 .call_and_prof_name {
   display: inline-block;
-  float: right;
-  width: 207px;
 }
 .prof_link_name_bl {
   display: inline-block;
@@ -569,7 +568,7 @@ body,
 }
 .phone_bl {
   margin-top: 16px;
-  display: none;
+  display: inline-block;
 }
 .phone_bl:hover .call_btn svg .circle_phone {
   fill: #00b9e9;
