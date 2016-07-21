@@ -569,7 +569,7 @@ body,
 }
 .phone_bl {
   margin-top: 16px;
-  display: inline-block;
+  display: none;
 }
 .phone_bl:hover .call_btn svg .circle_phone {
   fill: #00b9e9;
