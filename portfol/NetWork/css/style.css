@@ -320,7 +320,7 @@ body,
   margin-right: 0;
 }
 .call_and_prof_name {
-  display: inline-block;
+  float: right;
 }
 .prof_link_name_bl {
   display: inline-block;
