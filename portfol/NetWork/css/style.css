@@ -730,6 +730,11 @@ body,
 .blogs_bl {
   padding-bottom: 35px;
   padding-top: 35px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 .blogs_bl .title_name_courses {
   font-weight: 300;
