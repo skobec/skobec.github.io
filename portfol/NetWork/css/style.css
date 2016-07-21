@@ -324,8 +324,6 @@ body,
   width: 207px;
 }
 .prof_link_name_bl {
-  position: relative;
-  width: 130px;
   display: inline-block;
 }
 .prof_link_name_bl .prof_link_option_bl {
@@ -403,13 +401,12 @@ body,
   bottom: -125px;
 }
 .prof_link {
-  float: right;
+  float: left;
   margin-top: 14px;
-  width: 100%;
+  width: 130px;
   text-align: center;
   margin-left: -1px;
   /* left: 4px; */
-  margin-right: -10px;
   position: relative;
   white-space: nowrap;
   overflow: hidden;
