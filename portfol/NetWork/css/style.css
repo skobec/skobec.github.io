@@ -306,6 +306,7 @@ body,
 .links_header {
   width: 210px;
   padding-left: 20px;
+  display: none;
 }
 .links_header li {
   margin-top: 10px;
