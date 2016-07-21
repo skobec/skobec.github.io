@@ -323,6 +323,11 @@ body,
   float: right;
   width: 207px;
 }
+.prof_link_name_bl {
+  position: relative;
+  float: left;
+  width: 130px;
+}
 .prof_link_name_bl .prof_link_option_bl {
   position: absolute;
   width: 231px;
@@ -345,7 +350,7 @@ body,
   -ms-transition: linear 0.2s;
   -o-transition: linear 0.2s;
   transition: linear 0.2s;
-  right: -103px;
+  right: -124px;
   bottom: -104px;
   text-align: left;
 }
@@ -395,12 +400,12 @@ body,
 .prof_link_name_bl:hover .prof_link_option_bl {
   visibility: visible;
   opacity: 1;
-  bottom: -119px;
+  bottom: -125px;
 }
 .prof_link {
   float: right;
   margin-top: 14px;
-  width: 70%;
+  width: 100%;
   text-align: center;
   margin-left: -1px;
   /* left: 4px; */
@@ -734,6 +739,9 @@ body,
   color: #117289;
   line-height: 16px;
   margin: 10px 0 15px;
+}
+.blogs_bl.affix {
+  top: 100px;
 }
 .date_blogs {
   font-size: 15px;
