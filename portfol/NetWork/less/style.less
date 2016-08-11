@@ -1728,7 +1728,11 @@ label:hover:before {
 }
 
 
-
+.quest_info_bl {
+  background: url("../img/background_quest.jpg");
+  background-size: cover;
+  .sked_info_bl
+}
 .sked_info_bl {
   background-color: #3dbfe5;
   padding: 18px 0 16px;
@@ -2048,4 +2052,59 @@ label:hover:before {
   .quest_btn {
     float: none;
   }
+}
+
+.link_quest {
+  padding-left: 60px;
+}
+.links_quest_row {
+  margin-bottom: 25px;
+  .link_name_quest {
+      a {
+        border-bottom: 2px solid #e7e7e7;
+        text-decoration: none;
+        font-size: 18px;
+        color: #678fbf;
+      }
+  }
+  .btn_set_act {
+    margin-top: -10px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #dfdfdf;
+    border-color: #dfdfdf;
+    &:hover {
+      border-color: #3dbfe5;
+      color: #3dbfe5;
+    }
+    &:active,&:focus {
+      background-color: #3dbfe5;
+      color: #ffffff;
+      border-color: #3dbfe5;
+    }
+  }
+  &:hover {
+    .link_name_quest {
+      a {
+        border-bottom-color: transparent;
+      }
+    }
+    .btn_set_act {
+      border-color: #3dbfe5;
+      color: #3dbfe5;
+    }
+  }
+  &:active,&:focus {
+    .btn_set_act {
+      background-color: #3dbfe5;
+      color: #ffffff;
+      border-color: #3dbfe5;
+    }
+  }
+}
+.content_tabs_quest {
+  padding-top: 38px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
 }
