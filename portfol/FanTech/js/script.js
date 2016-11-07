@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
     $('#contact_form').bootstrapValidator({
-        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
@@ -125,13 +124,10 @@ $(document).ready(function() {
             $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
             $('#contact_form').data('bootstrapValidator').resetForm();
 
-            // Prevent form submission
             e.preventDefault();
 
-            // Get the form instance
             var $form = $(e.target);
 
-            // Get the BootstrapValidator instance
             var bv = $form.data('bootstrapValidator');
 
         });
@@ -146,11 +142,11 @@ $(document).ready(function() {
 
 
 
-    // custom upload file
+    // кастомизация поля с загрузкой фото
+
 
     (function($) {
 
-        // Browser supports HTML5 multiple file?
         var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined',
             isIE = /msie/i.test( navigator.userAgent );
 
@@ -160,14 +156,11 @@ $(document).ready(function() {
 
                 var $file = $(this).addClass('custom-file-upload-hidden'), // the original file input
                     $wrap = $('<div class="file-upload-wrapper">'),
-                    $input = $('<input type="text" class="file-upload-input form-control" />'),
-                    // Button that will be used in non-IE browsers
+                    $input = $('<input type="text" placeholder="Прикрепите фото" class="file-upload-input form-control" />'),
                     $button = $('<button type="button" class="file-upload-button" data-toggle="popover" data-trigger="hover" title="Формат файлов:" data-content="1.JPG 2. PNG"><i class="load-ico"></i></button>'),
-                    // Hack for IE
                     $label = $('<label class="file-upload-button" for="'+ $file[0].id +'">Select a File</label>');
 
-                // Hide by shifting to the left so we
-                // can still trigger events
+
                 $file.css({
                     position: 'absolute',
                     left: '-9999px'
@@ -176,7 +169,7 @@ $(document).ready(function() {
                 $wrap.insertAfter( $file )
                     .append( $file, $input, ( isIE ? $label : $button ) );
 
-                // Prevent focus
+
                 $file.attr('tabIndex', -1);
                 $button.attr('tabIndex', -1);
 
@@ -188,8 +181,7 @@ $(document).ready(function() {
 
                     var files = [], fileArr, filename;
 
-                    // If multiple is supported then extract
-                    // all filenames from the file array
+
                     if ( multipleSupport ) {
                         fileArr = $file[0].files;
                         for ( var i = 0, len = fileArr.length; i < len; i++ ) {
@@ -197,15 +189,14 @@ $(document).ready(function() {
                         }
                         filename = files.join(', ');
 
-                        // If not supported then just take the value
-                        // and remove the path to just show the filename
+
                     } else {
                         filename = $file.val().split('\\').pop();
                     }
 
-                    $input.val( filename ) // Set the value
-                        .attr('title', filename) // Show filename in title tootlip
-                        .focus(); // Regain focus
+                    $input.val( filename )
+                        .attr('title', filename)
+                        .focus();
 
                 });
 
@@ -214,16 +205,14 @@ $(document).ready(function() {
                     keydown: function( e ) {
                         if ( e.which === 13 ) { // Enter
                             if ( !isIE ) { $file.trigger('click'); }
-                        } else if ( e.which === 8 || e.which === 46 ) { // Backspace & Del
-                            // On some browsers the value is read-only
-                            // with this trick we remove the old input and add
-                            // a clean clone with all the original events attached
+                        } else if ( e.which === 8 || e.which === 46 ) {
+
                             $file.replaceWith( $file = $file.clone( true ) );
                             $file.trigger('change');
                             $input.val('');
-                        } else if ( e.which === 9 ){ // TAB
+                        } else if ( e.which === 9 ){
                             return;
-                        } else { // All other keys
+                        } else {
                             return false;
                         }
                     }
@@ -233,37 +222,28 @@ $(document).ready(function() {
 
         };
 
-        // Old browser fallback
         if ( !multipleSupport ) {
             $( document ).on('change', 'input.customfile', function() {
 
                 var $this = $(this),
-                    // Create a unique ID so we
-                    // can attach the label to the input
+
                     uniqId = 'customfile_'+ (new Date()).getTime(),
                     $wrap = $this.parent(),
 
-                    // Filter empty input
                     $inputs = $wrap.siblings().find('.file-upload-input')
                         .filter(function(){ return !this.value }),
 
                     $file = $('<input type="file" id="'+ uniqId +'" name="'+ $this.attr('name') +'"/>');
 
-                // 1ms timeout so it runs after all other events
-                // that modify the value have triggered
                 setTimeout(function() {
-                    // Add a new input
                     if ( $this.val() ) {
-                        // Check for empty fields to prevent
-                        // creating new inputs when changing files
+
                         if ( !$inputs.length ) {
                             $wrap.after( $file );
                             $file.customFile();
                         }
-                        // Remove and reorganize inputs
                     } else {
                         $inputs.parent().remove();
-                        // Move the input so it's always last on the list
                         $wrap.appendTo( $wrap.parent() );
                         $wrap.find('input').focus();
                     }
@@ -277,5 +257,87 @@ $(document).ready(function() {
     $('input[type=file]').customFile();
 
 });
-// custom upload file
+// кастомизация поля с загрузкой фото
 
+// добавление спикеров и удаление
+var fr = new FileReader;
+var img = new Image;
+
+function addTodoItem() {
+    var todoItem1 = $("#new-todo-item1").val();
+    var todoItem2 = $("#new-todo-item2").val();
+    var todoItem3 = $("#new-todo-item3").val();
+    var todoItem4 = $("#new-todo-item4").val();
+    var todoItem5 = $("#new-todo-item5").val();
+    $("#todo-list").append("<li class='spiker_bl'>" +
+        " <div class='img_bl'>" + "<img src='" + img.src + "'>" + "</div>" +
+        " <div class='name_and_family'>" +
+        "<p>"+ todoItem1 + "</p>" +
+        "<p>"+ todoItem2 + "</p>" +
+        "</div>" +
+        "<p>"+ todoItem3 + "</p>" +
+        "<p>"+ todoItem4 + "</p>" +
+        " <div class='site_bl'>" +
+        "<p>"+ todoItem5 + "</p>" +
+        "</div>" +
+        "<button class='btn todo-item-delete'>"+
+        "Удалить</button></li>");
+
+    $("#new-todo-item1").val("");
+    $("#new-todo-item2").val("");
+    $("#new-todo-item3").val("");
+    $("#new-todo-item4").val("");
+    $("#new-todo-item5").val("");
+}
+
+function deleteTodoItem(e, item) {
+    e.preventDefault();
+    $(item).parent().fadeOut('slow', function() {
+        $(item).parent().remove();
+    });
+}
+
+
+function completeTodoItem() {
+    $(this).parent().toggleClass("strike");
+}
+
+
+$(function() {
+
+    $("#add-todo-item").on('click', function(e){
+        e.preventDefault();
+        addTodoItem()
+    });
+
+
+    $("#todo-list").on('click', '.todo-item-delete', function(e){
+        var item = this;
+        deleteTodoItem(e, item)
+    });
+
+    $(document).on('click', ".todo-item-done", completeTodoItem)
+
+});
+
+
+
+
+// добавление спикеров и удаление
+
+
+
+//Загрузка изображения
+$('#file').change(function() {
+
+
+
+    fr.onload = function() {
+        img.src = fr.result;
+    };
+
+    fr.readAsDataURL(this.files[0]);
+
+});
+
+//Загрузка изображения
