@@ -1,0 +1,19 @@
+{
+  "name": "soho",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.3",
+    "font-awesome": "^4.6.3",
+    "owl.carousel": "^2.1.4"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,36 @@
+//* ### Color Declarations */
+
+$white: white;
+$black: black;
+$gainsboro: gainsboro;
+$whitesmoke: whitesmoke;
+$dimgray: dimgray;
+$blue: steelblue;
+$deepskyblue: deepskyblue;
+$goldenrod: goldenrod;
+$crimson: crimson;
+$forestgreen: forestgreen;
+$purple: purple;
+
+//* ### Color Map */
+
+$colors: (
+        'white': $white,
+        'black': $black,
+        'gray': $gainsboro,
+        'gray-box': rgba($gainsboro, 0.4),
+        'gray-light': $whitesmoke,
+        'gray-dark' : $dimgray,
+        'blue': $blue,
+        'blue-light': $deepskyblue,
+        'yellow': $goldenrod,
+        'red': $crimson,
+        'green': $forestgreen,
+        'purple': $purple,
+);
+
+//* ### Color Function */
+
+@function soho-color($name) {
+  @return map-get($colors, $name);
+}
