@@ -1553,7 +1553,8 @@ iframe.disable {
 
 // hang-content
 .hang-section {
-  background: url("../images/background_kusr1.png")no-repeat center;
+  background: url("../images/background_kusr1.png")no-repeat center top;
+  background-size: cover;
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1609,6 +1610,8 @@ iframe.disable {
 // green-section
 .green-bl {
   background-image: linear-gradient(72deg, #71b354, #01626b), linear-gradient(#ffffff, #ffffff);
+  float: left;
+  width: 100%;
 }
 .green-section {
   padding-top: 140px;
@@ -1903,6 +1906,19 @@ input.warning {
 @import url("../node_modules/bootstrap/scss/_mixins.scss");
 // Media queries
 @include media-breakpoint-down(md) {
+  .form-send {
+    .form-send--button {
+      margin-left: 0;
+    }
+  }
+  .circle_white {
+    right: -150%;
+    z-index: 2;
+  }
+  .hang-section {
+    background-position: center top;
+    background-size: cover;
+  }
   .slide-block p {
     display: none;
   }
@@ -2150,6 +2166,19 @@ input.warning {
   }
 }
 @include media-breakpoint-down(sm) {
+  .gray-section {
+    padding-top: 15px;
+    .form-special-2 {
+      margin-top: 200px;
+    }
+  }
+
+  .circle_white {
+    right: 0;
+    bottom: -180px;
+    left:0;
+    margin: 0 auto;
+  }
   .circle-num {
     width: 150px;
     height: 150px;
@@ -2168,6 +2197,13 @@ input.warning {
   .history-curs-bl {
     //background: url(../images/background-greenman.png) no-repeat center top;
     background-size: cover;
+    padding-top: 40px;
+  }
+  .list-logo-gray {
+    padding: 40px 0;
+    float: left;
+    width: 100%;
+    text-align: center;
   }
   .number-and-soc {
     background-position: right bottom;
@@ -2177,8 +2213,9 @@ input.warning {
     background-image: none !important;
   }
   .mini-block-ico-2 {
-    margin-top: 20px;
     padding: $padding-phone;
+    width: 280px;
+    margin: 55px auto 0;
   }
   .slider {
     .comment_below {
@@ -2194,7 +2231,7 @@ input.warning {
   .parallax-2 {
     height: auto;
     .minitext--list--item {
-      margin: 0;
+      margin: 30px 0;
     }
   }
   .gray-section {
@@ -2217,7 +2254,11 @@ input.warning {
     margin-top: 30px;
   }
   .you-can-bl {
-    padding: 3rem 50px;
+    //padding: 3rem 50px;
+    padding: 0;
+    .section-title {
+      background-size: cover;
+    }
   }
   .chat_bl {
     padding: 6px 0 20px;
@@ -2243,21 +2284,32 @@ input.warning {
   .reviews_stud .btn {
     font-size: 11px;
     width: 95%;
+    white-space: initial;
   }
   .green-bl {
     float: left;
     width: 100%;
   }
-  .circle_white {
-    right: 0;
-    bottom: -180px;
-    left:0;
-    margin: 0 auto;
-  }
-  .gray-section .form-special-2 {
-    margin-top: 200px;
-  }
+  //.circle_white {
+  //  right: 0;
+  //  bottom: -180px;
+  //  left:0;
+  //  margin: 0 auto;
+  //}
+
   .you-can-bl {
-    padding: 0 50px;
+    //padding: 0;
+    float: left;
+  }
+  .hang-section {
+    background: #232234;
+  }
+  .circle-num {
+    width: 150px;
+    height: 150px;
+    right: -12px;
+    left: inherit;
+    top: -73px;
+    bottom: inherit;
   }
 }
