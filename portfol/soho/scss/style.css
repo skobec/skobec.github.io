@@ -1503,7 +1503,9 @@ iframe.disable {
     width: 80%; }
 
 .you-can-bl {
-  /* background-position: top left, bottom right; */ }
+  /* background-position: top left, bottom right; */
+  float: left;
+  width: 100%; }
   .you-can-bl .section-title {
     background: url(../images/background_kurs_2.png) no-repeat center top;
     background-size: 100%;
@@ -1634,6 +1636,9 @@ input.warning {
   line-height: 125px; }
 
 @media (max-width: 991px) {
+  .you-can-bl .section-title {
+    padding: 50px 0 40px; }
+
   .form-send .form-send--button {
     margin-left: 0; }
 
@@ -1873,7 +1878,13 @@ input.warning {
     background-size: 75%; }
 
   .form-control, .form-group, .form-group input {
-    width: 100% !important; } }
+    width: 100% !important; }
+
+  .you-can-bl {
+    float: left;
+    width: 100%; }
+    .you-can-bl .section-title {
+      padding: 46px 0 40px; } }
 @media (max-width: 767px) {
   .gray-section {
     padding-top: 15px; }
@@ -1979,9 +1990,6 @@ input.warning {
   .green-bl {
     float: left;
     width: 100%; }
-
-  .you-can-bl {
-    float: left; }
 
   .hang-section {
     background: #232234; }
