@@ -89,7 +89,10 @@ h4  {
   font-family: $fontRubikOne;
 
 }
-
+sup {
+  position: inherit;
+  vertical-align: super;
+}
 
 a, button {
   color: $steelGray;
@@ -290,14 +293,23 @@ a, button {
 }
 .slider {
   &__author {
-    .item {
-      background-position: bottom left;
-    }
-    .slide-block {
-      float: right;
-      &--body {
-        &--title {
-          margin-bottom: 20px;
+    //.slide-block {
+    //  &--body {
+    //    &--title {
+    //      margin-bottom: 20px;
+    //    }
+    //  }
+    //}
+    &_new {
+      .item {
+        background-position: bottom left;
+      }
+      .slide-block {
+        float: right;
+        &--body {
+          &--title {
+            margin-bottom: 20px;
+          }
         }
       }
     }
@@ -1070,6 +1082,27 @@ header {
       }
     }
   }
+  .price-inf {
+    font-size: 28px;
+    margin-top: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+  }
+}
+.form-send {
+  .form-send--button {
+    padding: 15px 10px;
+    border-bottom: 3px solid #a7ccad;
+    font-size: 1.2rem;
+    margin-left: 15px;
+    span {
+      font-size: 0.6rem;
+      margin-top: 2px;
+      display: block;
+    }
+  }
 }
 .form-special img {
   vertical-align: baseline;
@@ -1490,6 +1523,12 @@ iframe.disable {
     .minitext--list--item {
       margin-top: 115px;
     }
+    .form-special {
+      &-2 {
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+      }
+    }
   }
 }
 .ico_rur {
@@ -1513,27 +1552,49 @@ iframe.disable {
 }
 
 // hang-content
+.hang-section {
+  background: url("../images/background_kusr1.png")no-repeat center;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+  }
+}
 .hang-content {
-  background-color: #fafafa;
+  //background-color: #fafafa;
   padding: 50px;
-  box-shadow: 0px 12px 14px 3px rgba(8, 8, 8, 0.35);
+  //box-shadow: 0px 12px 14px 3px rgba(8, 8, 8, 0.35);
+  p {
+    color: #ffffff;
+  }
 }
 .circle-num {
   background-image: linear-gradient(72deg, #7bba52, #01626b), linear-gradient(#ffffff, #ffffff);
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  border-radius:50%;
-  width: 170px;
-  height: 170px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 145px;
+  height: 145px;
   position: absolute;
   z-index: 1;
-  right: -60px;
-  bottom: -72px;
+  left: 180px;
+  top: 40px;
   p {
     font-size: 16px;
     text-transform: uppercase;
     color: #ffffff;
-    padding: 63px 40px;
+    padding: 52px 30px;
     text-align: center;
     line-height: 18px;
     span {
@@ -1578,15 +1639,32 @@ iframe.disable {
 //gray section
 .gray-section {
   background-image: linear-gradient(72deg, #fdfdfd, #e9e9e9), linear-gradient(#ffffff, #ffffff);
-  border-top: 1px solid #4c985c;
-  padding-bottom: 20px;
+  //border-top: 1px solid #4c985c;
+  //padding-bottom: 20px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+  }
   .form-special-2 {
     padding-top: 25px!important;
-    margin-top: 260px;
+    margin-top: 205px;
     margin-bottom: -175px;
     display: inline-block;
     padding-bottom: 40px;
   }
+}
+.title-kurs {
+  font-size: 1.2em;
 }
 .green-link {
   text-transform: uppercase;
@@ -1614,8 +1692,8 @@ iframe.disable {
   height: 170px;
   position: absolute;
   z-index: 1;
-  left: -123px;
-  top: -125px;
+  right: -120px;
+  bottom: 15px;
   box-shadow: 0px 9px 19px 1px rgba(0, 0, 0, 0.35);
   p {
     font-size: 16px;
@@ -1658,10 +1736,21 @@ iframe.disable {
 //you can block
 
 .you-can-bl {
-  background-image: url("../images/background_top_logo.png"), url("../images/background_bottom_logo.png");
-  background-position: top left, bottom right;
-  background-repeat: no-repeat;
-  padding: 3rem 0;
+  //background-image: url("../images/background_top_logo.png"), url("../images/background_bottom_logo.png");
+  /* background-position: top left, bottom right; */
+  //padding: 3rem 0;
+  .section-title {
+    background: url(../images/background_kurs_2.png) no-repeat center top;
+    background-size: 100%;
+    padding: 70px 0 40px;
+    margin-bottom: 45px;
+  }
+}
+.number-and-soc {
+  background: url("../images/amerika-flags.png")no-repeat right top;
+  background-size: contain;
+  padding-bottom: 35px;
+  padding-top: 15px;
 }
 .title-can-bl {
   font-size: 50px;
@@ -1680,6 +1769,7 @@ iframe.disable {
     -moz-border-radius: 6px;
     border-radius: 6px;
     margin-bottom: 15px;
+    min-height: 120px;
     &:after {
       content: "";
       height: 10px;
@@ -1696,7 +1786,7 @@ iframe.disable {
 }
 
 .soc-btn {
-  margin-top: -7px;
+  margin-top: 20px;
   a {
     border-bottom: none;
     display: inline-block;
@@ -1728,6 +1818,7 @@ iframe.disable {
 // history kurs
 
 .history-curs-bl {
+  background: url("../images/background-greenman.png")no-repeat center;
   padding: 1rem 0;
   .rec_comment_form p {
     color: #000000;
@@ -2064,9 +2155,23 @@ input.warning {
     height: 150px;
     right: 0;
     bottom: -82px;
+    margin-left: 60px;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
     p {
       padding: 47px 40px;
     }
+  }
+  .history-curs-bl {
+    //background: url(../images/background-greenman.png) no-repeat center top;
+    background-size: cover;
+  }
+  .number-and-soc {
+    background-position: right bottom;
+    background-size: 70%;
   }
   .parallax-2 {
     background-image: none !important;
@@ -2119,7 +2224,6 @@ input.warning {
   }
 }
 
-
 @include media-breakpoint-down(xs) {
   .author--image {
     background-size: 140% !important;
@@ -2139,5 +2243,21 @@ input.warning {
   .reviews_stud .btn {
     font-size: 11px;
     width: 95%;
+  }
+  .green-bl {
+    float: left;
+    width: 100%;
+  }
+  .circle_white {
+    right: 0;
+    bottom: -180px;
+    left:0;
+    margin: 0 auto;
+  }
+  .gray-section .form-special-2 {
+    margin-top: 200px;
+  }
+  .you-can-bl {
+    padding: 0 50px;
   }
 }
