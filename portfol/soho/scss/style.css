@@ -957,10 +957,13 @@ header {
   .form-special .price-inf {
     font-size: 28px;
     margin-top: 20px;
-    text-align: left;
     text-transform: uppercase;
     letter-spacing: -1px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: center; }
+    .form-special .price-inf img {
+      display: inline-block;
+      width: 16px; }
 
 .form-send .form-send--button {
   padding: 15px 10px;
@@ -1578,6 +1581,12 @@ iframe.disable {
     color: #000000; }
   .history-curs-bl p, .history-curs-bl span {
     color: #ffffff; }
+  .history-curs-bl .block-table {
+    display: table;
+    height: 441px; }
+    .history-curs-bl .block-table .block-table__vert-center {
+      display: table-cell;
+      vertical-align: middle; }
 
 .title-history {
   font-size: 50px;
@@ -1595,7 +1604,9 @@ iframe.disable {
   filter: grayscale(1); }
 
 .require_price {
-  margin: 6rem 0; }
+  margin: 5rem 0;
+  float: left;
+  width: 100%; }
 
 .reviews_stud .btn {
   border-color: #007984;

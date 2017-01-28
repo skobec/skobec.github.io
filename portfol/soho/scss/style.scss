@@ -1085,10 +1085,14 @@ header {
   .price-inf {
     font-size: 28px;
     margin-top: 20px;
-    text-align: left;
     text-transform: uppercase;
     letter-spacing: -1px;
     margin-bottom: 0;
+    text-align: center;
+    img {
+      display: inline-block;
+      width: 16px;
+    }
   }
 }
 .form-send {
@@ -1831,6 +1835,15 @@ iframe.disable {
   p,span {
     color: #ffffff;
   }
+  .block-table {
+    display: table;
+    height: 441px;
+    .block-table__vert-center {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+  }
 }
 
 .title-history {
@@ -1853,7 +1866,9 @@ iframe.disable {
 }
 // require_price
 .require_price {
-  margin: 6rem 0;
+  margin: 5rem 0;
+  float: left;
+  width: 100%;
 }
 
 
