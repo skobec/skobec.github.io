@@ -1,0 +1,72 @@
+::selection {background: #26b0f1;color:white;}
+::-moz-selection {background: #26b0f1;color:white;}
+::-webkit-selection {background: #26b0f1;color:white;}
+
+body,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {margin:0}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+input, textarea {border-radius:0 !important; padding-left:0 !important; padding-right:0 !important;}
+
+body {
+  font-family: 'Gotham Pro', Arial, sans-serif;
+  //background-color: #242426;
+  width: 100%;
+  color: #fff;
+  height: 100%;
+  pointer-events:none;
+  font-weight:900;
+  transition:background-color .7s ease-in-out;
+  //cursor:move;
+
+  &.mobile {pointer-events:all;
+      .slide {}
+      touch-action: manipulation;
+    }
+}
+
+a {pointer-events:all}
+
+ul {
+  list-style: none;
+}
+
+a {
+  transition: all .25s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  padding: 0 130px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accent-color {
+  color: $accent-color;
+}
+
+h1 {
+  font-size: 55px;
+  line-height: 1.2em;
+  margin: 0;
+}
