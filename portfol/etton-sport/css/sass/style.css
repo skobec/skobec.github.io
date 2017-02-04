@@ -143,8 +143,7 @@ canvas {
   opacity: 1;
   animation-play-state: running;
   backface-visibility: hidden;
-  perspective: 1000;
-  text-shadow: 2px 1px 3px #2e2e2e; }
+  perspective: 1000; }
   .scroll.hidden {
     transform: translate3d(10px, 0, 0);
     opacity: 0 !important;
@@ -240,8 +239,7 @@ main {
     height: 2px;
     display: block;
     transition: all .25s ease-in-out;
-    opacity: 1;
-    box-shadow: 1px 1px 2px 1px grey; }
+    opacity: 1; }
   .burger-menu-button:before, .burger-menu-button:after {
     content: "";
     position: absolute;
@@ -250,8 +248,7 @@ main {
     height: 2px;
     background-color: white;
     transition: all .25s ease-in-out;
-    transform: translate3d(0, 0, 0) rotate(0);
-    box-shadow: 1px 1px 2px 1px grey; }
+    transform: translate3d(0, 0, 0) rotate(0); }
   .burger-menu-button:before {
     top: 0; }
   .burger-menu-button:after {
@@ -360,8 +357,7 @@ main {
   .page-menu a {
     padding: 0 8px;
     color: rgba(255, 255, 255, 0.5);
-    position: relative;
-    text-shadow: 2px 2px 0px rgba(46, 46, 46, 0.81); }
+    position: relative; }
     .page-menu a::after {
       content: '';
       display: block;
