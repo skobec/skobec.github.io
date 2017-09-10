@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="214px" viewBox="0 0 320 214" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="320" height="214"></rect>
+    </defs>
+    <g id="3-Промежуток-финал" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.75">
+        <g id="5-Номинанты---внутри" transform="translate(-113.000000, -389.000000)">
+            <g id="Group" transform="translate(113.000000, 389.000000)">
+                <g id="Rectangle-39">
+                    <use fill="#258F2F" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="319" height="213"></rect>
+                </g>
+                <path d="M319.408138,213.444637 L0.591861899,0.555363322" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                <path d="M319.408138,0.555363322 L0.591861899,213.444637" id="Line" stroke="#979797" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>
