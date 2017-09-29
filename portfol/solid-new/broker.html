@@ -90,7 +90,7 @@
     <div class="broke-firm-bl">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xl-10">
+                <div class="col-xl-12">
                     <hr>
                     <div class="row">
                         <div class="col-xl-7">
@@ -116,7 +116,7 @@
                                     <a href="#">Скачать пример договора присоединения</a>
                                 </li>
                             </ul>
-                            <a href="#" class="btn-vacancy btn-post-resum btn">ознакомьтесь с тарифами</a>
+                            <a href="#tarifs" class="btn-vacancy btn-post-resum btn animate">ознакомьтесь с тарифами</a>
                         </div>
                         <div class="col-xl-5">
                             <img src="img/broker-logo.svg" class="illustrat-who-are">
@@ -136,6 +136,11 @@
             <div class="col-xl-3 border-right">
                 <span class="dog-comis">Договор комиссии</span>
                 <span class="opis-comis">Покупка на бирже от своего имени и за счет клиента </span>
+                <select id="variant">
+                    <option value="hide">Как заключить сделку</option>
+                    <option value="2010">вариант 1</option>
+                    <option value="2011">вариант 2</option>
+                </select>
             </div>
             <div class="col-xl-9 bl-left-pad">
                 <div class="comis-list">
@@ -147,6 +152,17 @@
                         <li>
                             Консультация с профессионалами рынка прямо во время биржевых торгов
                         </li>
+                        <li>Все риски, связанные с покупкой товара, брокер берет на себя
+
+                        </li>
+                        <li>Брокер покупает самый «привлекательный» ресурс</li>
+                        <li>Брокер покупает тот объем, который продается, а не тот который остается на бирже</li>
+                        <li>Брокер никогда не ошибается</li>
+                        <li>Удобный брокерский отчёт по всем сделкам клиента</li>
+                        <li>Интерактивный личный кабинет с дислокацией вагонов и сроками простоев на ст. Назначения</li>
+                        <li>Если клиенту не хватает денежных средств на оплату сделки,
+                            то брокер предоставит услугу «товарное финансирование»</li>
+
                     </ul>
                 </div>
 
@@ -170,6 +186,11 @@
                 <span class="dog-comis">Договор
 Поручения</span>
                 <span class="opis-comis">Покупка на бирже от своего имени и за счет клиента </span>
+                <select id="variant2">
+                    <option value="hide">Как заключить сделку</option>
+                    <option value="2010">вариант 1</option>
+                    <option value="2011">вариант 2</option>
+                </select>
             </div>
             <div class="col-xl-9 bl-left-pad">
                 <div class="comis-list">
@@ -225,7 +246,7 @@
 <section class="section-tarif-brok">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-10">
+            <div class="col-xl-12">
                 <div class="row">
                     <div class="col-xl-12">
                         <span class="title">тарифы на брокерское обслуживание</span>
@@ -240,9 +261,136 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="bl-radiobox">
-                            <span>У вас есть профильные активы?</span>
+                            <span class="title">У вас есть профильные активы?</span>
+                            <form action="#" class="radiobox-bl">
+                                <p>
+                                    <input type="radio" id="test1" name="radio-group" checked>
+                                    <label for="test1">Да, у меня есть профильные активы</label>
+                                </p>
+                                <p>
+                                    <input type="radio" id="test2" name="radio-group">
+                                    <label for="test2">Нет, меня интересуют все предложения</label>
+                                </p>
+                            </form>
                         </div>
                     </div>
+                </div>
+                <div class="spec-solut-tarif">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <span class="title">Тарифы и конкретные решения для торговли</span>
+                        </div>
+                    </div>
+                    <div class="row" id="tarifs">
+                        <div class="col-xl-12">
+                            <span class="title-checkbox">Выберите интересующие Вас инструменты для торговли</span>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="radio-btn-group" data-toggle="buttons">
+                                <label class="btn btn-post-resum active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Товарное финансирование
+                                </label>
+                                <label class="btn btn-post-resum">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Для конечных потребителей
+                                </label>
+                                <label class="btn btn-post-resum">
+                                    <input type="radio" name="options" id="option3" autocomplete="off"> Аналитика
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="col-xl-12 tarif-variants">
+                            <div class="row">
+                                <div class="col-xl-4 tarif-bl text-center">
+                                    <span class="name-tar">базовый</span>
+                                    <span class="price-tar">99<span>₽/тн</span></span>
+                                    <ul class="list-tar">
+                                        <li>Биржа и клиринг</li>
+                                        <li>Товарное финансирование — 29%</li>
+                                        <li>Брокерский отчет, отчет по сделкам
+                                            и отгрузкам в личном кабинете</li>
+                                        <li>Электронный документооборот (ЭДО)
+                                            в системе Диадок</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-post-resum">Выбрать тариф</a>
+                                </div>
+                                <div class="col-xl-4 tarif-bl text-center">
+                                    <span class="name-tar">Универсальный</span>
+                                    <span class="price-tar">199<span>₽/тн</span></span>
+                                    <ul class="list-tar">
+                                        <li>Биржа и клиринг</li>
+                                        <li>Товарное финансирование — 21%</li>
+                                        <li>Брокерский отчет, отчет по сделкам
+                                            и отгрузкам, дислокация и простои
+                                            вагонов в личном кабинете</li>
+                                        <li>Аналитические материалы
+                                            от Независимого агентства «АТР» —
+                                            при объеме свыше 600 тн*</li>
+                                        <li>Аналитический терминал КОММОД —
+                                            при объеме свыше 600 тн*</li>
+                                        <li>Правовая подержка</li>
+                                        <li>ЭДО в системе Диадок</li>
+                                        <li>Обучение</li>
+                                        <li>Личный брокер</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-post-resum">Выбрать тариф</a>
+                                </div>
+                                <div class="col-xl-4 tarif-bl text-center">
+                                    <span class="name-tar">Профессиональный</span>
+                                    <span class="price-tar">299<span>₽/тн</span></span>
+                                    <ul class="list-tar">
+                                        <li>Биржа и клиринг</li>
+                                        <li>Товарное финансирование — 17,9%</li>
+                                        <li>Все возможности личного кабинета</li>
+                                        <li>Бесплатный биржевой терминал</li>
+                                        <li>Аналитические материалы
+                                            от Независимого агентства «АТР» —
+                                            при объеме свыше 600 тн*</li>
+                                        <li>Аналитический терминал КОММОД —
+                                            при объеме свыше 600 тн*</li>
+                                        <li>Правовая подержка</li>
+                                        <li>ЭДО в ситеме Диадок</li>
+                                        <li>Ускорение отгрузок</li>
+                                        <li>Личный брокер</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-post-resum">Выбрать тариф</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-right">
+                                    <span class="predpis">*при объеме менее 600 тн. брокерский тариф считается согласно тарификатору, но не менее 20 тыс.₽</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 text-center">
+                                    <a href="#" class="btn btn-post-resum">Скачать все тарифы в .pdf</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="product-broker">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="prod-brok-container">
+                   <div class="col-xl-7">
+                        <span class="title">
+                        НЕ НАШЛИ ПОДХОДЯЩИЙ
+ДЛЯ СЕБЯ ПРОДУКТ?
+                    </span>
+                       <span class="opis">Мы поможем подобрать продукт, который решит любые
+задачи инвестирования. Обратитесь к финансовому
+советнику, чтобы мы могли подобрать продукт
+под ваши цели.</span>
+                       <a href="#" class="btn btn-post-resum">Финансовый советник</a>
+                   </div>
                 </div>
             </div>
         </div>
