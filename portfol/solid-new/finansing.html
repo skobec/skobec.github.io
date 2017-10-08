@@ -164,10 +164,10 @@
             <div class="col-xl-10">
                 <ul class="nav links">
                     <li>
-                        <a href="#">Консультация</a>
+                        <a href="#" data-toggle="modal" data-target="#exampleModal">Консультация</a>
                     </li>
                     <li>
-                        <a href="#">Задать вопрос</a>
+                        <a href="#" data-toggle="modal" data-target="#exampleModal2">Задать вопрос</a>
                     </li>
                     <li>
                         <a href="#">Открыть счет</a>
@@ -355,6 +355,62 @@ E-mail: info@solid-tr.ru</span>
         </div>
     </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="row">
+            <div class="col-xl-12 text-center title-modal-bl">
+                <span class="title-modal">Свяжитесь с нашим консультантом</span>
+                <span class="opis-modal">Заполните форму и мы перезвоним вам в ближайшее время</span>
+            </div>
+            <div class="col-xl-12">
+                <input class="form-control" placeholder="Имя">
+                <input class="form-control" placeholder="Телефон">
+                <input class="form-control" placeholder="E-mail">
+            </div>
+            <div class="col-xl-12">
+                <form action="#">
+                    <p>
+                        <input type="checkbox" id="test1" checked/>
+                        <label for="test1">Согласен на обработку <a href="#">персональных данных</a> </label>
+                    </p>
+                </form>
+            </div>
+            <div class="col-xl-12 text-center">
+                <a href="#" class="btn-vacancy btn-post-resum " data-dismiss="modal">Отправить</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="row">
+            <div class="col-xl-12 text-center title-modal-bl">
+                <span class="title-modal">Задайте нам вопрос</span>
+                <span class="opis-modal">Заполните форму и мы перезвоним вам в ближайшее время</span>
+            </div>
+            <div class="col-xl-12">
+                <input class="form-control" placeholder="Имя">
+                <input class="form-control" placeholder="Телефон">
+                <input class="form-control" placeholder="E-mail">
+            </div>
+            <div class="col-xl-12">
+                <form action="#">
+                    <p>
+                        <input type="checkbox" id="test2" checked/>
+                        <label for="test2">Согласен на обработку <a href="#">персональных данных</a> </label>
+                    </p>
+                </form>
+            </div>
+            <div class="col-xl-12 text-center">
+                <a href="#" class="btn-vacancy btn-post-resum " data-dismiss="modal">Отправить</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
