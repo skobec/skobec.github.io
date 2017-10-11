@@ -360,7 +360,7 @@ $(document).ready(function () {
 
 
     // Select all links with hashes
-    $('a[href*="#"]')
+    $('a[href*="#"].anchor-link')
     // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
@@ -396,7 +396,16 @@ $(document).ready(function () {
             }
         });
     $('.button-show-link').click(function () {
-        $('.block-show').slideDown(500);
+        $(this).toggleClass('open-bl');
+        $('.block-show').slideToggle(500);
+    })
+    $('.button-show-link-brok1').click(function () {
+        $('.button-show-link-brok1').toggleClass('open-bl');
+        $('.block-show-brok1').slideToggle(500);
+    })
+    $('.button-show-link-brok2').click(function () {
+        $('.button-show-link-brok2').toggleClass('open-bl');
+        $('.block-show-brok2').slideToggle(500);
     })
 });
 
