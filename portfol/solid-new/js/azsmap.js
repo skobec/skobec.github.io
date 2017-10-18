@@ -20,10 +20,6 @@ function initMap(id) {
       uluru = {lat: 54.7818, lng:  32.0401};
     }
     map = new google.maps.Map(document.getElementById('map'), {
-<<<<<<< Updated upstream
-      zoom: 11,
-      center: uluru,
-=======
         zoom: 9,
         center: uluru,
         styles: [
@@ -319,7 +315,6 @@ function initMap(id) {
                 ]
             }
         ]
->>>>>>> Stashed changes
     });
     var icon = {
         url: "img/greymarker.svg",
@@ -396,10 +391,6 @@ function createList() {
       uluru = {lat: 54.7818, lng:  32.0401};
     }
     map = new google.maps.Map(document.getElementById('map'), {
-<<<<<<< Updated upstream
-      zoom: 11,
-      center: uluru,
-=======
       zoom: 9,
       center: uluru,
         styles: [
@@ -695,7 +686,6 @@ function createList() {
                 ]
             }
         ]
->>>>>>> Stashed changes
     });
     var icon = {
         url: "img/redmarker.svg",
