@@ -77,7 +77,7 @@ function createList() {
                     '<div data-index="' + data[i].id +'" id="collapseOne'+ i +'" class="collapse '+ show +'" role="tabpanel" aria-labelledby="headingOne'+ i +'" data-parent="#accordion">'+
                     '<div class="row card-body" data-index="' + data[i].id +'">'+
                     '<div class="col-xl-5" data-index="' + data[i].id +'">'+
-                    '<img style="width: 70%;" src="/img/azs-list-img.jpg" data-index="' + data[i].id +'">'+
+                    '<img style="width: 90%;" src="img/azs-list-img.jpg" data-index="' + data[i].id +'">'+
                     '</div><div class="col-xl-7 podinfo-azs" data-index="' + data[i].id +'">'+
                     '<p data-index="' + data[i].id +'">'+ data[i].grafik + ' ' + data[i].oil.join(', ') +'</p>'+
                     '<p data-index="' + data[i].id +'">Координаты: '+ data[i].coor[0] + ', ' + data[i].coor[1] +'</p>'+
