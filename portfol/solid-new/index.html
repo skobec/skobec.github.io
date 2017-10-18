@@ -12,16 +12,21 @@
 <section>
     <header class="header">
         <div class="container">
-            <nav class=" navbar navbar-expand-md navbar-dark ">
+            <nav class="row navbar navbar-expand-md navbar-dark ">
                 <div class="col-2">
                     <a href="#" class="logo-header">
-                        <img src="img/Logo_rus.svg">
+                        <img src="img/Logo_rus.svg" class="desktop-logo">
+                        <img src="img/Logo_rus2.svg" class="mobil-logo">
                     </a>
                 </div>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                         data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
                         aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
                 </button>
 
                 <div class="navbar-collapse collapse" id="navbarsExampleDefault" style="">
@@ -57,6 +62,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
                     </ul>
                     <ul class=" nav justify-content-end d-sm-inline-flex list-btn-header">
+                        <li><a href="#" class="lk-btn circle-btn"></a></li>
                         <li><a href="#" class="language_ico circle-btn">EN</a></li>
                         <li><a href="#" class="search-btn circle-btn"></a></li>
                     </ul>
@@ -213,19 +219,19 @@
         <div class="row justify-content-center">
             <div class="col-xl-11">
                 <div class="row justify-content-center">
-                    <div class="col-xl-3 col-sm-6 col-12 col-xl-3_2 text-md-center">
+                    <div class="col-xl-3 col-sm-6 col-12 col-xl-3_2 text-md-center merit-bl">
                         <span class="number-merit ">1-й</span>
                         <span class="descrip-number">Крупнейший независимый брокер<br> на рынке нефтепродуктов</span>
                     </div>
-                    <div class="col-xl-3 col-sm-6 col-12 col-xl-3_1">
+                    <div class="col-xl-3 col-sm-6 col-12 col-xl-3_1 merit-bl">
                         <span class="number-merit">1,8 млн тн</span>
                         <span class="descrip-number">Нефтепродуктов в год</span>
                     </div>
-                    <div class="col-xl-3 col-sm-6 col-12 ">
-                        <span class="number-merit">6 млрд ₽</span>
+                    <div class="col-xl-3 col-sm-6 col-12 merit-bl">
+                        <span class="number-merit">6 млрд<span class="ruble-ico"></span></span>
                         <span class="descrip-number">Ежемесячный оборот</span>
                     </div>
-                    <div class="col-xl-2 col-sm-6 col-12 ">
+                    <div class="col-xl-2 col-sm-6 col-12 merit-bl">
                         <span class="number-merit">600 +</span>
                         <span class="descrip-number">Клиентов</span>
                     </div>
@@ -251,28 +257,51 @@
                 </h3>
                 <div class="row partners-bl">
                     <div class="col-xl-3 col-md-3 col-sm-6 partners-logo-bl">
-                        <img src="img/partners/Taneko.svg">
+                        <div class="logo-cont-partners">
+                            <img src="img/partners/Taneko.svg">
+                        </div>
                     </div>
                     <div class="col-xl-3 col-md-3 col-sm-6 partners-logo-bl">
-                        <img src="img/partners/TTS.svg">
+                        <div class="logo-cont-partners">
+                            <img src="img/partners/TTS.svg">
+
+                        </div>
                     </div>
                     <div class="col-xl-3 col-md-3 col-sm-6 partners-logo-bl">
-                        <img src="img/partners/Tatneft.svg">
+                        <div class="logo-cont-partners">
+                            <img src="img/partners/Tatneft.svg">
+
+                        </div>
                     </div>
                     <div class="col-xl-3 col-md-3 col-sm-6 partners-logo-bl">
-                        <img src="img/partners/Lukoil.svg">
+                        <div class="logo-cont-partners">
+                            <img src="img/partners/Lukoil.svg">
+
+                        </div>
                     </div>
                     <div class="col-xl-3 col-md-3 col-sm-6 partners-logo-bl">
-                        <img src="img/partners/Magnit.svg">
+                        <div class="logo-cont-partners">
+                            <img src="img/partners/Magnit.svg">
+
+                        </div>
                     </div>
                     <div class="col-xl-3 col-md-3 col-sm-6 partners-logo-bl">
-                        <img src="img/partners/SistemServis.svg">
+                        <div class="logo-cont-partners">
+                            <img src="img/partners/SistemServis.svg">
+
+                        </div>
                     </div>
                     <div class="col-xl-3 col-md-3 col-sm-6 partners-logo-bl">
-                        <img src="img/partners/TMS.svg">
+                        <div class="logo-cont-partners">
+                            <img src="img/partners/TMS.svg">
+
+                        </div>
                     </div>
                     <div class="col-xl-3 col-md-3 col-sm-6 partners-logo-bl">
-                        <img src="img/partners/tagras.svg">
+                        <div class="logo-cont-partners">
+                            <img src="img/partners/tagras.svg">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -299,7 +328,7 @@
             </div>
             <div class="col-xl-2 col-sm-12">
                 <ul class="list-footer-link">
-                    <li><a href="#">Главная страница</a></li>
+                    <li><a href="#">Главная</a></li>
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Блог</a></li>

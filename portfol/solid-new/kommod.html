@@ -12,16 +12,21 @@
 <section>
     <header class="header">
         <div class="container">
-            <nav class=" navbar navbar-expand-md navbar-dark ">
+            <nav class="row navbar navbar-expand-md navbar-dark ">
                 <div class="col-2">
                     <a href="#" class="logo-header">
-                        <img src="img/Logo_rus.svg">
+                        <img src="img/Logo_rus.svg" class="desktop-logo">
+                        <img src="img/Logo_rus2.svg" class="mobil-logo">
                     </a>
                 </div>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                         data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
                         aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
                 </button>
 
                 <div class="navbar-collapse collapse" id="navbarsExampleDefault" style="">
@@ -57,6 +62,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
                     </ul>
                     <ul class=" nav justify-content-end d-sm-inline-flex list-btn-header">
+                        <li><a href="#" class="lk-btn circle-btn"></a></li>
                         <li><a href="#" class="language_ico circle-btn">EN</a></li>
                         <li><a href="#" class="search-btn circle-btn"></a></li>
                     </ul>
@@ -69,8 +75,8 @@
     <div class="background-header-bl background-header-bl3">
         <div class="background-header background-header3" style="background-image: url(img/background-kommod.jpg)">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-10">
+                <div class="row">
+                    <div class="col-sm-5 col-12 col-md-7 col-xl-5">
                         <img src="img/logo-kommod.png">
 
                     </div>
@@ -87,7 +93,7 @@
                 <div class="col-xl-12">
                     <hr>
                     <div class="row">
-                        <div class="col-xl-7">
+                        <div class="col-xl-7 col-sm-9 col-md-7">
                             <span class="title">Что такое аналитический терминал коммод</span>
                             <span class="podtitle">Весь рынок нефтепродуктов
 в одном приложении</span>
@@ -161,7 +167,7 @@
 <section class="tool-kommod">
     <div class="container">
         <div class="row">
-            <div class="col-xl-8 tool-kommod-left">
+            <div class="col-xl-8 col-lg-8 col-md-8 tool-kommod-left">
                 <span class="podtitle">Аналитический терминал<br>
 коммод — повседневный<br>
 инструмент в работе</span>
@@ -219,12 +225,14 @@
 
                 </div>
             </div>
-            <div class="col-xl-4 tool-kommod-right">
+            <div class="col-xl-4 col-lg-4 col-md-4 tool-kommod-right">
                 <span class="at-kommod">Приложение<br>
 АТ КОММОД</span>
                 <span class="at-kommod-opis">Легко следить за сделками
                     и пользоваться аналитикой</span>
-                <img src="img/image-kommod.png">
+                <div>
+                    <img src="img/image-kommod.png">
+                </div>
                 <a href="#" class="links-cooperat2">Зарегистрироваться</a>
             </div>
         </div>
@@ -250,7 +258,7 @@
             </div>
             <div class="col-xl-2">
                 <ul class="list-footer-link">
-                    <li><a href="#">Главная страница</a></li>
+                    <li><a href="#">Главная</a></li>
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Блог</a></li>

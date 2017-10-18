@@ -12,16 +12,21 @@
 <section>
     <header class="header">
         <div class="container">
-            <nav class=" navbar navbar-expand-md navbar-dark ">
+            <nav class="row navbar navbar-expand-md navbar-dark ">
                 <div class="col-2">
                     <a href="#" class="logo-header">
-                        <img src="img/Logo_rus.svg">
+                        <img src="img/Logo_rus.svg" class="desktop-logo">
+                        <img src="img/Logo_rus2.svg" class="mobil-logo">
                     </a>
                 </div>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                         data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
                         aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
                 </button>
 
                 <div class="navbar-collapse collapse" id="navbarsExampleDefault" style="">
@@ -57,6 +62,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
                     </ul>
                     <ul class=" nav justify-content-end d-sm-inline-flex list-btn-header">
+                        <li><a href="#" class="lk-btn circle-btn"></a></li>
                         <li><a href="#" class="language_ico circle-btn">EN</a></li>
                         <li><a href="#" class="search-btn circle-btn"></a></li>
                     </ul>
@@ -100,7 +106,7 @@
                 <div class="col-xl-12">
                     <hr>
                     <div class="row">
-                        <div class="col-xl-7">
+                        <div class="col-xl-7 col-md-7">
                             <span class="title">Об услуге</span>
                             <span class="podtitle">Брокерское обслуживание<br>
 на бирже СПБМТСБ
@@ -123,9 +129,10 @@
                                     <a href="#">Скачать пример договора присоединения</a>
                                 </li>
                             </ul>
-                            <a href="#tarifs" class="btn-vacancy btn-post-resum btn animate">ознакомьтесь с тарифами</a>
+                            <a href="#tarifs" class="btn-vacancy btn-post-resum btn animate anchor-link">ознакомьтесь с
+                                тарифами</a>
                         </div>
-                        <div class="col-xl-5">
+                        <div class="col-xl-5 col-md-5">
                             <img src="img/broker-logo.svg" class="illustrat-who-are">
                         </div>
                     </div>
@@ -137,117 +144,376 @@
     </div>
 </section>
 
-<section class="section-dogov">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-3 border-right">
-                <span class="dog-comis">Договор комиссии</span>
-                <span class="opis-comis">Покупка на бирже от своего имени и за счет клиента </span>
-                <select id="variant">
-                    <option value="hide">Как заключить сделку</option>
-                    <option value="2010">вариант 1</option>
-                    <option value="2011">вариант 2</option>
-                </select>
-            </div>
-            <div class="col-xl-9 bl-left-pad">
-                <div class="comis-list">
-                    <span class="advantag-title">Преимущества</span>
-                    <ul class="list-advantag">
-                        <li>Простота и удобство работы через брокера — все общение с поставщиками ведет Брокер. Чтобы сделать
-                            сделку клиенту нужно подать поручение на покупку и оплатить товар, все остальное сделает брокер.
-                        </li>
-                        <li>
-                            Консультация с профессионалами рынка прямо во время биржевых торгов
-                        </li>
-                        <li>Все риски, связанные с покупкой товара, брокер берет на себя
+<section class="">
+    <div class="section-dogov">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-4 border-right">
+                    <span class="dog-comis">Договор комиссии</span>
+                    <span class="opis-comis">Покупка на бирже от своего имени и за счет клиента </span>
+                    <div class="select">
+                        <button class="btn btn-post-resum btn-arrow button-show-link-brok1">Как заключить сделку
+                        </button>
+                    </div>
 
-                        </li>
-                        <li>Брокер покупает самый «привлекательный» ресурс</li>
-                        <li>Брокер покупает тот объем, который продается, а не тот который остается на бирже</li>
-                        <li>Брокер никогда не ошибается</li>
-                        <li>Удобный брокерский отчёт по всем сделкам клиента</li>
-                        <li>Интерактивный личный кабинет с дислокацией вагонов и сроками простоев на ст. Назначения</li>
-                        <li>Если клиенту не хватает денежных средств на оплату сделки,
-                            то брокер предоставит услугу «товарное финансирование»</li>
-
-                    </ul>
                 </div>
+                <div class="col-xl-9 col-md-8 bl-left-pad">
+                    <div class="comis-list">
+                        <span class="advantag-title">Преимущества</span>
+                        <ul class="list-advantag">
+                            <li>Простота и удобство работы через брокера — все общение с поставщиками ведет Брокер.
+                                Чтобы сделать
+                                сделку клиенту нужно подать поручение на покупку и оплатить товар, все остальное сделает
+                                брокер.
+                            </li>
+                            <li>
+                                Консультация с профессионалами рынка прямо во время биржевых торгов
+                            </li>
+                            <li>Все риски, связанные с покупкой товара, брокер берет на себя
 
-                <div class="comments-dog">
-                    <p>В рамках договора комиссии «Солид-товарные рынки» может
-                        установить на рабочее место клиента биржевой терминал.</p>
-                    <p>Некоторые клиенты хотят, чтобы брокер «нажимал кнопки», а контрагентом по сделке был сам клиент,
-                        поэтому единственный минус договора комиссии — это то, что контрагентом по сделке является Брокер
-                        и клиент не может напрямую общаться с поставщиком.
-                        Но и для такой ситуации у «Солид-товарные рынки» есть решение — <a href="#">«договор поручения»</a> .</p>
+                            </li>
+                            <li>Брокер покупает самый «привлекательный» ресурс</li>
+                            <li>Брокер покупает тот объем, который продается, а не тот который остается на бирже</li>
+                            <li>Брокер никогда не ошибается</li>
+                            <li>Удобный брокерский отчёт по всем сделкам клиента</li>
+                            <li>Интерактивный личный кабинет с дислокацией вагонов и сроками простоев на ст.
+                                Назначения
+                            </li>
+                            <li>Если клиенту не хватает денежных средств на оплату сделки,
+                                то брокер предоставит услугу «товарное финансирование»
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="comments-dog">
+                        <p>В рамках договора комиссии «Солид-товарные рынки» может
+                            установить на рабочее место клиента биржевой терминал.</p>
+                        <p>Некоторые клиенты хотят, чтобы брокер «нажимал кнопки», а контрагентом по сделке был сам
+                            клиент,
+                            поэтому единственный минус договора комиссии — это то, что контрагентом по сделке является
+                            Брокер
+                            и клиент не может напрямую общаться с поставщиком.
+                            Но и для такой ситуации у «Солид-товарные рынки» есть решение — <a href="#">«договор
+                                поручения»</a> .</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="slide-info-brok block-show-brok1" style="display: none">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-4 border-right">
+                    <div class="select">
+                        <button class="btn btn-post-resum btn-arrow button-show-link-brok1">Свернуть</button>
+
+                    </div>
+                </div>
+                <div class="col-xl-9 col-md-8 bl-left-pad">
+                    <div class="list-sdelka">
+                        <div class="rec-sdelka">
+                            <span class="number">01</span>
+                            <div class="pod-info">
+                                <span class="title">Клиент направляет <a href="#"> документы</a> для заключения брокерского договора</span>
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">02</span>
+                            <div class="pod-info">
+                            <span class="title">«Солид-товарные рынки», после рассмотрения документов, открывает клиенту брокерский счет
+и, в подтверждение, направляет клиенту пакет документов:</span>
+                                <span class="comments">
+                               <ul class="list-crit-contract">
+                                   <li> Подписанный договор присоединения</li>
+                                   <li>Извещение об открытие брокерского счета, где содержится информация о Логине/пароле для доступа к личному кабинету и банковские реквизиты для перечисления денежных средств</li>
+                                   <li>Анкету клиента</li>
+                               </ul>
+
+                            </span>
+                            </div>
+                        </div>
+
+                        <div class="rec-sdelka">
+                            <span class="number">03</span>
+                            <div class="pod-info">
+                            <span class="title">Клиент переводит гарантийное обеспечение на свой брокерский счет —
+5% от планируемой суммы сделки</span>
+                                <span class="comments">
+                              5%  гарантийного обеспечения — это сумма, которая регламентируется правилами  торгов биржи СПБМТСБ.
+Она используются при выставлении заявки на приобретение товара на бирже.
+В случае отсутствия 5% обеспечения на брокерском счете биржа не позволит выставить заявку на покупку.
+
+                            </span>
+                                <span class="title">В случае, если у клиента не хватает денег на брокерском счете —
+он может воспользоваться услугой «товарное финансирование»</span>
+                            </div>
+                        </div>
+
+                        <div class="rec-sdelka">
+                            <span class="number">04</span>
+                            <div class="pod-info">
+                            <span class="title">Клиент направляет брокеру поручение (приложение 11.1 к регламенту)
+на покупку биржевого ресурса</span>
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">05</span>
+                            <div class="pod-info">
+                                <span class="title">Брокер выставляет заявку на биржу согласно параметра поручения на покупку</span>
+                            </div>
+                        </div>
+
+                        <div class="rec-sdelka">
+                            <span class="number">06</span>
+                            <div class="pod-info">
+                            <span class="title">Как только происходит сделка, у клиента возникает 2 обязательства,
+которые необходимо выполнить для осуществления дальнейшей поставки:</span>
+                                <span class="comments">
+                                <ul class="list-crit-contract">
+                                    <li>в течение 2 рабочих дней прислать в адрес брокера реквизитную заявку на транспортировку (приложение 11.3)</li>
+                                    <li>в течение 4 рабочих дней произвести оплату на брокерский счет 100% суммы биржевой сделки + расчетную сумму транспортного тарифа
+</li>
+                                </ul>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">07</span>
+                            <div class="pod-info">
+                            <span class="title">После получения реквизитной заявки брокер направляет реквизитную заявку
+                                в адрес поставщика с копией на биржу, перечисляет денежные средства за товар на биржу,
+                                сумму транспортных расходов переводит напрямую на счет поставщика</span>
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">08</span>
+                            <div class="pod-info">
+                            <span class="title">После того, как поставщик получает от биржи подтверждение оплаты
+                                он размещает заявку на отгрузку продукта на завод/нефтебазу/пункт отгрузки</span>
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">09</span>
+                            <div class="pod-info">
+                            <span class="title">Поставка товара осуществляется в течение 30 календарных дней*
+                                с даты заключения биржевой сделки</span>
+                                <span class="comments">
+                                    * в рамках выбранного биржевого тарифа, Солид-товарные рынки может влиять на скорость отгрузки продукции
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">10</span>
+                            <div class="pod-info">
+                            <span class="title">Вся информация о движении денежных средств клиента, новых отгрузках, простоях,
+                                дислокации вагонов клиент может посмотреть в интерактивном личном кабинете</span>
+
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">11</span>
+                            <div class="pod-info">
+                            <span class="title">После отгрузки товара и подписании бухгалтерских документов между
+                                «Солид-товарные рынки» и поставщиком, у клиента происходит пересчет остатков
+                                на брокерском счете в рамках фактического отгруженного объема на день отгрузки товара</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-dog">
+                        <p>В рамках договора комиссии «Солид-товарные рынки» может
+                            установить на рабочее место клиента биржевой терминал.</p>
+                        <p>Некоторые клиенты хотят, чтобы брокер «нажимал кнопки», а контрагентом по сделке был сам
+                            клиент,
+                            поэтому единственный минус договора комиссии — это то, что контрагентом по сделке является
+                            Брокер
+                            и клиент не может напрямую общаться с поставщиком.
+                            Но и для такой ситуации у «Солид-товарные рынки» есть решение — <a href="#">«договор
+                                поручения»</a> .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
-<section class="section-dogov">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-3 border-right">
+
+<section class="">
+    <div class="section-dogov">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-4 border-right">
                 <span class="dog-comis">Договор
 Поручения</span>
-                <span class="opis-comis">Покупка на бирже от своего имени и за счет клиента </span>
-                <select id="variant2">
-                    <option value="hide">Как заключить сделку</option>
-                    <option value="2010">вариант 1</option>
-                    <option value="2011">вариант 2</option>
-                </select>
-            </div>
-            <div class="col-xl-9 bl-left-pad">
-                <div class="comis-list">
-                    <span class="advantag-title">Преимущества</span>
-                    <ul class="list-advantag">
-                        <li>Клиент является контрагентом по биржевой сделке
-                        </li>
-                        <li>
-                            Клиент напрямую общается с поставщиком и контролирует свои сделки самостоятельно
-                        </li>
-                        <li>
-                            Все риски, связанные с покупкой товара, брокер берет на себя
-                        </li>
-                        <li>
-                            Брокер покупает самый «привлекательный» ресурс
-                        </li>
-                        <li>
-                            Брокер покупает тот объем, который продается, а не тот который остается на бирже
-                        </li>
-                        <li>
-                            Брокер никогда не ошибается
-                        </li>
-                        <li>
-                            Удобный брокерский отчёт по всем сделкам клиента
-                        </li>
-                        <li>
-                            Интерактивный личный кабинет с дислокацией вагонов и сроками простоев на ст. Назначения
-                        </li>
-                        <li>
-                            Если клиенту не хватает денежных средств на оплату сделки,
-                            то брокер предоставит услугу «товарное финансирование»
-                        </li>
-                    </ul>
+                    <span class="opis-comis">Покупка на бирже от своего имени и за счет клиента </span>
+                    <div class="select">
+                        <button class="btn btn-post-resum btn-arrow button-show-link-brok2">Как заключить сделку
+                        </button>
+                    </div>
                 </div>
-                <div class="limitation-list">
-                    <span class="advantag-title">Недостатки</span>
-                    <ul class="list-advantag">
-                        <li>Единый брокерский тариф по договору поручения и договору комиссии
-                        </li>
-                        <li>
-                            Дополнительные трудозатраты на общение с поставщиками
-                        </li>
-                        <li>Отсутствие большинства удобных сервисов, которые предоставляет брокер в рамках договора комиссии</li>
-                        <li>Невозможность установки биржевого терминала</li>
-                    </ul>
-                </div>
+                <div class="col-xl-9 col-md-8 bl-left-pad">
+                    <div class="comis-list">
+                        <span class="advantag-title">Преимущества</span>
+                        <ul class="list-advantag">
+                            <li>Клиент является контрагентом по биржевой сделке
+                            </li>
+                            <li>
+                                Клиент напрямую общается с поставщиком и контролирует свои сделки самостоятельно
+                            </li>
+                            <li>
+                                Все риски, связанные с покупкой товара, брокер берет на себя
+                            </li>
+                            <li>
+                                Брокер покупает самый «привлекательный» ресурс
+                            </li>
+                            <li>
+                                Брокер покупает тот объем, который продается, а не тот который остается на бирже
+                            </li>
+                            <li>
+                                Брокер никогда не ошибается
+                            </li>
+                            <li>
+                                Удобный брокерский отчёт по всем сделкам клиента
+                            </li>
+                            <li>
+                                Интерактивный личный кабинет с дислокацией вагонов и сроками простоев на ст. Назначения
+                            </li>
+                            <li>
+                                Если клиенту не хватает денежных средств на оплату сделки,
+                                то брокер предоставит услугу «товарное финансирование»
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="limitation-list">
+                        <span class="advantag-title">Недостатки</span>
+                        <ul class="list-advantag">
+                            <li>Единый брокерский тариф по договору поручения и договору комиссии
+                            </li>
+                            <li>
+                                Дополнительные трудозатраты на общение с поставщиками
+                            </li>
+                            <li>Отсутствие большинства удобных сервисов, которые предоставляет брокер в рамках договора
+                                комиссии
+                            </li>
+                            <li>Невозможность установки биржевого терминала</li>
+                        </ul>
+                    </div>
 
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="slide-info-brok block-show-brok2" style="display: none">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-4 border-right">
+                    <div class="select">
+                        <button class="btn btn-post-resum btn-arrow button-show-link-brok2">Свернуть</button>
+
+                    </div>
+                </div>
+                <div class="col-xl-9 col-md-8 bl-left-pad">
+                    <div class="list-sdelka">
+                        <div class="rec-sdelka">
+                            <span class="number">01</span>
+                            <div class="pod-info">
+                                <span class="title">Клиент самостоятельно открывает счет в клиринговой организации</span>
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">02</span>
+                            <div class="pod-info">
+                            <span class="title">После открытия счета в клиринговой организации, клиент от своего имени пишет
+доверенность на брокера в клиринговую организацию о том, что он доверяет
+брокеру выставлять заявки на биржу с его клирингового счета</span>
+                            </div>
+                        </div>
+
+                        <div class="rec-sdelka">
+                            <span class="number">03</span>
+                            <div class="pod-info">
+                            <span class="title">Клиент направляет <a href="#"> документы</a> в «СОлид-товарные рынки» для заключения
+брокерского договора</span>
+                            </div>
+                        </div>
+
+                        <div class="rec-sdelka">
+                            <span class="number">04</span>
+                            <div class="pod-info">
+                            <span class="title">«Солид-тованые рынки», после рассмотрения документов, открывает клиенту
+брокерский счет и в подтверждение направляет клиенту пакет документов:</span>
+                                <span class="comments">
+                                <ul class="list-crit-contract">
+                             <li>
+                                 Подписанный договор присоединения
+                             </li>
+                                    <li>Извещение об открытии брокерского счета, где содержится информация о Логине/пароле для доступа
+к личному кабинету и банковские реквизиты для перечисления денежных средств</li>
+                                    <li>
+Анкету клиента
+</li>
+                                </ul>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">05</span>
+                            <div class="pod-info">
+                                <span class="title">Клиент переводит гарантийное обеспечение на свой клиринговый счет
+- 5% от планируемой суммы сделки</span>
+                            </div>
+                        </div>
+
+                        <div class="rec-sdelka">
+                            <span class="number">06</span>
+                            <div class="pod-info">
+                            <span class="title">Клиент направляет брокеру поручение (приложение 11.1 к регламенту)
+на покупку биржевого ресурса</span>
+
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">07</span>
+                            <div class="pod-info">
+                            <span class="title">Брокер выставляет заявку на биржу согласно параметра поручения на покупку</span>
+                            </div>
+                        </div>
+                        <div class="rec-sdelka">
+                            <span class="number">08</span>
+                            <div class="pod-info">
+                            <span class="title">Как только происходит сделка — вся дальнейшая работа по биржевой сделке
+осуществляется клиентом самостоятельно, а именно:</span>
+                                <span class="comment">
+                                    <ul>
+                                        <li>Оплата товара</li>
+                                        <li>Подача реквизитных заявок</li>
+                                        <li>Контроль отгрузок</li>
+                                        <li>Закрытие сделок бухгалтерскими документами</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-dog">
+                        <p>В рамках договора комиссии «Солид-товарные рынки» может
+                            установить на рабочее место клиента биржевой терминал.</p>
+                        <p>Некоторые клиенты хотят, чтобы брокер «нажимал кнопки», а контрагентом по сделке был сам
+                            клиент,
+                            поэтому единственный минус договора комиссии — это то, что контрагентом по сделке является
+                            Брокер
+                            и клиент не может напрямую общаться с поставщиком.
+                            Но и для такой ситуации у «Солид-товарные рынки» есть решение — <a href="#">«договор
+                                поручения»</a> .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </section>
 
 <section class="section-tarif-brok">
@@ -295,10 +561,12 @@
                         <div class="col-xl-12">
                             <div class="radio-btn-group" data-toggle="buttons">
                                 <label class="btn btn-post-resum active">
-                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Товарное финансирование
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Товарное
+                                    финансирование
                                 </label>
                                 <label class="btn btn-post-resum">
-                                    <input type="radio" name="options" id="option2" autocomplete="off"> Для конечных потребителей
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Для конечных
+                                    потребителей
                                 </label>
                                 <label class="btn btn-post-resum">
                                     <input type="radio" name="options" id="option3" autocomplete="off"> Аналитика
@@ -316,9 +584,11 @@
                                         <li>Биржа и клиринг</li>
                                         <li>Товарное финансирование — 29%</li>
                                         <li>Брокерский отчет, отчет по сделкам
-                                            и отгрузкам в личном кабинете</li>
+                                            и отгрузкам в личном кабинете
+                                        </li>
                                         <li>Электронный документооборот (ЭДО)
-                                            в системе Диадок</li>
+                                            в системе Диадок
+                                        </li>
                                     </ul>
                                     <a href="#" class="btn btn-post-resum">Выбрать тариф</a>
                                 </div>
@@ -330,12 +600,15 @@
                                         <li>Товарное финансирование — 21%</li>
                                         <li>Брокерский отчет, отчет по сделкам
                                             и отгрузкам, дислокация и простои
-                                            вагонов в личном кабинете</li>
+                                            вагонов в личном кабинете
+                                        </li>
                                         <li>Аналитические материалы
                                             от Независимого агентства «АТР» —
-                                            при объеме свыше 600 тн*</li>
+                                            при объеме свыше 600 тн*
+                                        </li>
                                         <li>Аналитический терминал КОММОД —
-                                            при объеме свыше 600 тн*</li>
+                                            при объеме свыше 600 тн*
+                                        </li>
                                         <li>Правовая подержка</li>
                                         <li>ЭДО в системе Диадок</li>
                                         <li>Обучение</li>
@@ -353,9 +626,11 @@
                                         <li>Бесплатный биржевой терминал</li>
                                         <li>Аналитические материалы
                                             от Независимого агентства «АТР» —
-                                            при объеме свыше 600 тн*</li>
+                                            при объеме свыше 600 тн*
+                                        </li>
                                         <li>Аналитический терминал КОММОД —
-                                            при объеме свыше 600 тн*</li>
+                                            при объеме свыше 600 тн*
+                                        </li>
                                         <li>Правовая подержка</li>
                                         <li>ЭДО в ситеме Диадок</li>
                                         <li>Ускорение отгрузок</li>
@@ -387,17 +662,17 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="prod-brok-container">
-                   <div class="col-xl-7">
+                    <div class="col-xl-7">
                         <span class="title">
                         НЕ НАШЛИ ПОДХОДЯЩИЙ
 ДЛЯ СЕБЯ ПРОДУКТ?
                     </span>
-                       <span class="opis">Мы поможем подобрать продукт, который решит любые
+                        <span class="opis">Мы поможем подобрать продукт, который решит любые
 задачи инвестирования. Обратитесь к финансовому
 советнику, чтобы мы могли подобрать продукт
 под ваши цели.</span>
-                       <a href="#" class="btn btn-post-resum">Финансовый советник</a>
-                   </div>
+                        <a href="#" class="btn btn-post-resum">Финансовый советник</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -423,7 +698,7 @@
             </div>
             <div class="col-xl-2">
                 <ul class="list-footer-link">
-                    <li><a href="#">Главная страница</a></li>
+                    <li><a href="#">Главная</a></li>
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Блог</a></li>

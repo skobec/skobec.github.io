@@ -12,16 +12,21 @@
 <section>
     <header class="header">
         <div class="container">
-            <nav class=" navbar navbar-expand-md navbar-dark ">
+            <nav class="row navbar navbar-expand-md navbar-dark ">
                 <div class="col-2">
                     <a href="#" class="logo-header">
-                        <img src="img/Logo_rus.svg">
+                        <img src="img/Logo_rus.svg" class="desktop-logo">
+                        <img src="img/Logo_rus2.svg" class="mobil-logo">
                     </a>
                 </div>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                         data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
                         aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
                 </button>
 
                 <div class="navbar-collapse collapse" id="navbarsExampleDefault" style="">
@@ -57,6 +62,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
                     </ul>
                     <ul class=" nav justify-content-end d-sm-inline-flex list-btn-header">
+                        <li><a href="#" class="lk-btn circle-btn"></a></li>
                         <li><a href="#" class="language_ico circle-btn">EN</a></li>
                         <li><a href="#" class="search-btn circle-btn"></a></li>
                     </ul>
@@ -69,8 +75,8 @@
     <div class="background-header-bl background-header-bl3">
         <div class="background-header background-header3" style="background-image: url(img/background-atp.jpg)" >
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-10">
+                <div class="row">
+                    <div class="col-sm-5 col-12 col-md-7 col-xl-5">
                         <img src="img/logo-header-atp.png">
                     </div>
                 </div>
@@ -103,11 +109,37 @@
             </div>
         </div>
         <div class="container container-parralax">
-            <img src="img/parralax/parralax1.jpg" class="image-parralax image-parralax1" data-speed="6"  data-type="background">
-            <img src="img/parralax/parralax2.jpg" class="image-parralax image-parralax2" data-speed="4"  data-type="background">
-            <img src="img/parralax/parralax3.jpg" class="image-parralax image-parralax3" data-speed="6"  data-type="background">
-            <img src="img/parralax/parralax4.jpg" class="image-parralax image-parralax4" data-speed="4"  data-type="background">
-            <img src="img/parralax/parralax5.jpg" class="image-parralax image-parralax5" data-speed="6"  data-type="background">
+            <div class="bl-parralax bl-parralax-1 image-parralax image-parralax1" data-speed="6"  data-type="background">
+                <img src="img/parralax/par-1.svg">
+                <p>Аналитика рынка
+                    нефтепродуктов и СУГ</p>
+            </div>
+            <div class="bl-parralax bl-parralax-2 image-parralax image-parralax2" data-speed="4"  data-type="background">
+                <img src="img/parralax/par-2.svg">
+                <p>Аналитика и статистика
+                    биржевых торгов</p>
+            </div>
+            <div class="bl-parralax bl-parralax-3 image-parralax image-parralax3" data-speed="6"  data-type="background">
+                <img src="img/parralax/par-3.svg">
+                <p>Расчеты
+                    экспортного паритета</p>
+            </div>
+            <div class="bl-parralax bl-parralax-4 image-parralax image-parralax4" data-speed="4"  data-type="background">
+                <img src="img/parralax/par-4.svg">
+                <p>Исследования
+                    региональных
+                    рынков</p>
+            </div>
+            <div class="bl-parralax bl-parralax-5 image-parralax image-parralax5" data-speed="6"  data-type="background">
+                <img src="img/parralax/par-5.svg">
+                <p>Цены
+                    на нефтебазах</p>
+            </div>
+            <!--<img src="img/parralax/parralax1.jpg" class="image-parralax image-parralax1" data-speed="6"  data-type="background">-->
+            <!--<img src="img/parralax/parralax2.jpg" class="image-parralax image-parralax2" data-speed="4"  data-type="background">-->
+            <!--<img src="img/parralax/parralax3.jpg" class="image-parralax image-parralax3" data-speed="6"  data-type="background">-->
+            <!--<img src="img/parralax/parralax4.jpg" class="image-parralax image-parralax4" data-speed="4"  data-type="background">-->
+            <!--<img src="img/parralax/parralax5.jpg" class="image-parralax image-parralax5" data-speed="6"  data-type="background">-->
         </div>
     </div>
 </section>
@@ -128,7 +160,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-6">
+                <div class="col-xl-6 col-md-6">
                     <div class="issled-bl">
                         <div class="issled-img">
                             <img src="img/image-atp3.jpg">
@@ -149,7 +181,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6">
+                <div class="col-xl-6 col-md-6">
                     <div class="issled-bl issled-bl2">
                         <div class="issled-img">
                             <img src="img/image-atp4.jpg">
@@ -180,7 +212,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-12">
                     <div class="row">
-                        <div class="col-xl-7">
+                        <div class="col-xl-7 col-md-7 col-sm-10">
                             <span class="title">Аналитика</span>
                             <span class="podtitle">ГРУЗОПЕРЕВОЗКИ НЕФТЕПРОДУКТОВ,
 СУГ, НЕФТИ И НЕФТЕХИМИИ
@@ -222,12 +254,12 @@
 <footer class="footer">
     <div class="container">
         <div class="row footer-row-level1">
-            <div class="col-xl-1">
+            <div class="col-xl-1 col-12">
                 <a href="#" class="logo-header">
                     <img src="img/Logo_rus.svg">
                 </a>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-sm-6">
                 <div class="group-phone-faks">
                     <span class="phone-faks-name">Телефон:</span>
                     <span class="number-phone">+7(495) 543-91-31</span>
@@ -237,19 +269,18 @@
                     <span class="number-phone">+7(495) 543-91-30</span>
                 </div>
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-2 col-sm-12">
                 <ul class="list-footer-link">
-                    <li><a href="#">Главная страница</a></li>
+                    <li><a href="#">Главная</a></li>
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Блог</a></li>
                 </ul>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-sm-6">
                 <ul class="list-footer-link">
                     <li><a href="#">Услуги</a></li>
-                    <li class="lite-link"><a href="#">Товарное
-                        финансирование</a></li>
+                    <li class="lite-link"><a href="#">Товарное финансирование</a></li>
                     <li class="lite-link"><a href="#"> Тарифы</a></li>
                     <li class="lite-link"><a href="#"> Внебиржевой рынок </a></li>
                     <li class="lite-link"><a href="#"> Сеть АЗС </a></li>
@@ -258,7 +289,7 @@
                     <li class="lite-link"><a href="#"> Юридическая и правовая поддержка</a></li>
                 </ul>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-sm-6">
                 <div class="mobil-app-footer">
                     <span class="mobil-title">
                         Мобильное приложение АТ КОММОД

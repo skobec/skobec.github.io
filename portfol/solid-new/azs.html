@@ -13,54 +13,64 @@
 <section>
     <header class="header">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-2">
+            <nav class="row navbar navbar-expand-md navbar-dark ">
+                <div class="col-2">
                     <a href="#" class="logo-header">
-                        <img src="img/Logo_rus.svg">
+                        <img src="img/Logo_rus.svg" class="desktop-logo">
+                        <img src="img/Logo_rus2.svg" class="mobil-logo">
                     </a>
                 </div>
-                <div class="col-xl-10 text-center">
-                    <nav class="nav-menu">
-                        <ul class="nav justify-content-end d-sm-inline-flex list-link-header drop-menu-main">
-                            <li><span class="drop-down">Услуги <span class="arrow"></span></span>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                </button>
 
-                                <div class="drop-menu-main-sub">
-                                    <span class="title"></span>
-                                    <div class="drop-down-menu">
-                                        <a href="#questionary">Товарное
-                                            финансирование</a>
-                                        <a href="#questionary">
-                                            Тарифы</a>
-                                        <a href="#messages">
-                                            Внебиржевой рынок</a>
-                                        <a href="#settings">
-                                            Сеть АЗС</a>
-                                        <a href="#signout">
-                                            Аналитика товарных
-                                            рынков</a>
-                                        <a href="#signout">
+                <div class="navbar-collapse collapse" id="navbarsExampleDefault" style="">
+                    <ul class="navbar-nav mr-auto justify-content-end d-sm-inline-flex list-link-header drop-menu-main">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Услуги</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <div class="drop-down-menu">
+                                    <a href="#questionary">Товарное
+                                        финансирование</a>
+                                    <a href="#questionary">
+                                        Тарифы</a>
+                                    <a href="#messages">
+                                        Внебиржевой рынок</a>
+                                    <a href="#settings">
+                                        Сеть АЗС</a>
+                                    <a href="#signout">
+                                        Аналитика товарных
+                                        рынков</a>
+                                    <a href="#signout">
 
-                                            АТ КОММОД</a>
-                                        <a href="#signout">
-                                            Юридическая
-                                            и правовая поддержка</a>
-                                    </div>
-
+                                        АТ КОММОД</a>
+                                    <a href="#signout">
+                                        Юридическая
+                                        и правовая поддержка</a>
                                 </div>
-                            </li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Филиалы</a></li>
-                            <li><a href="#">Блог</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-
-                    </nav>
-                    <ul class="nav justify-content-end d-sm-inline-flex list-btn-header">
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">О компании</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Филиалы</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Блог</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                    </ul>
+                    <ul class=" nav justify-content-end d-sm-inline-flex list-btn-header">
+                        <li><a href="#" class="lk-btn circle-btn"></a></li>
                         <li><a href="#" class="language_ico circle-btn">EN</a></li>
                         <li><a href="#" class="search-btn circle-btn"></a></li>
                     </ul>
                 </div>
-            </div>
+
+            </nav>
+
         </div>
     </header>
     <div class="background-header-bl background-header-bl3">
@@ -83,7 +93,7 @@
 <section class="section-class-azs">
     <div class="container">
         <div class="row">
-            <div class="col-xl-6">
+            <div class="col-xl-6 col-md-6">
                 <span class="podtitle">
                     высококачественный бензин
 и безупречное обслуживание
@@ -96,7 +106,7 @@
                         и бензины и дизель, имеет стандарт качества «ЭкоСпорт».</p>
                 </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-6 col-md-6">
                 <img src="img/image-azs5.jpg" class="illustrat-azs">
             </div>
         </div>
@@ -105,10 +115,10 @@
 <section class="section-firm-topliv">
     <div class="container">
         <div class="row">
-            <div class="col-xl-6">
+            <div class="col-xl-6 col-md-6">
                 <img src="img/image-azs1.jpg">
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-6 col-md-6">
                 <span class="podtitle">
                 Фирменное топливо,
 улучшенное до эталоных
@@ -139,7 +149,7 @@
                         уменьшая расход топлива, продлевая срок службы двигателя
                     </p>
                 </div>
-                <a href="#edge-plus" class="btn btn-post-resum red-btn btn-arrow button-show-link">Преимущества</a>
+                <button class="btn btn-post-resum red-btn btn-arrow button-show-link">Преимущества</button>
 
             </div>
         </div>
@@ -221,6 +231,162 @@
 </div>
 </section>
 
+
+
+<section class="broke-firm-bl maps-filters">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <span class="title">Удобное расположение</span>
+                <h3 class="podtitle">Подберите для себя АЗС</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="check-btn" data-toggle="buttons">
+                    <label class="btn btn-secondary azsButtonAll active">
+                        <input type="checkbox" checked autocomplete="off">Все
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="92">
+                        <input type="checkbox" autocomplete="off"> 92
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="95">
+                        <input type="checkbox" autocomplete="off"> 95
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="ДТ">
+                        <input type="checkbox" autocomplete="off"> ДТ
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="98">
+                        <input type="checkbox" autocomplete="off"> 98
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="92е">
+                        <input type="checkbox" autocomplete="off"> 92е
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="95е">
+                        <input type="checkbox" autocomplete="off"> 95е
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="sug">
+                        <input type="checkbox" autocomplete="off"> суг
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="shop">
+                        <input type="checkbox" autocomplete="off"> магазин
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="cafe">
+                        <input type="checkbox" autocomplete="off"> кафе
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="washcar">
+                        <input type="checkbox" autocomplete="off"> мойка
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="wifi">
+                        <input type="checkbox" autocomplete="off"> wi-fi
+                    </label>
+                    <label class="btn btn-secondary azsButton" data-type="tualet">
+                        <input type="checkbox" autocomplete="off"> туалет
+                    </label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="maps-azs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 left-tabs-bl">
+                <h3 class="podtitle">АЗС в Нижегородской
+                    и Смоленской областях</h3>
+                <div class="btn-group check-btn" data-toggle="buttons">
+                    <label class="btn btn-secondary active labelClick" data-reg="Нижегородская">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Нижегородская обл.
+                    </label>
+                    <label class="btn btn-secondary labelClick" data-reg="Смоленск">
+                        <input type="radio" name="options" id="option2" autocomplete="off" autocomplete="off"> смоленская обл.
+                    </label>
+                </div>
+                <div class="list-azs">
+                    <div id="accordion" role="tablist" class="according" style="max-height: 225px;overflow-x: hidden; overflow-y: auto;">
+
+                        <!-- <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a class="links-row" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <span class="row">
+                                        <span class="col-xl-5 name">АЗС BelOil №134</span>
+                                    <span class="col-xl-7 adress">Смоленская область,Демидовский район,
+49 км трассы Р133 (слева)</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="row card-body">
+                                    <div class="col-xl-5">
+                                        <img src="/img/azs-list-img.jpg">
+                                    </div>
+                                    <div class="col-xl-7 podinfo-azs">
+                                        <p>24/7 ДТ, ДТ+, 92, 95</p>
+                                        <p>Координаты: 55.224851, 31.483526</p>
+                                        <p>+7 (481) 472-41-37</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingtwo">
+                                <a class="links-row" data-toggle="collapse" href="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+                                    <span class="row">
+                                        <span class="col-xl-5 name">АЗС BelOil №134</span>
+                                    <span class="col-xl-7 adress">Смоленская область,Демидовский район,
+49 км трассы Р133 (слева)</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div id="collapsetwo" class="collapse" role="tabpanel" aria-labelledby="headingtwo" data-parent="#accordion">
+                                <div class="row card-body">
+                                    <div class="col-xl-5">
+                                        <img src="/img/azs-list-img.jpg">
+                                    </div>
+                                    <div class="col-xl-7 podinfo-azs">
+                                        <p>24/7 ДТ, ДТ+, 92, 95</p>
+                                        <p>Координаты: 55.224851, 31.483526</p>
+                                        <p>+7 (481) 472-41-37</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="heading3">
+                                <a class="links-row" data-toggle="collapse" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                    <span class="row">
+                                        <span class="col-xl-5 name">АЗС BelOil №134</span>
+                                    <span class="col-xl-7 adress">Смоленская область,Демидовский район,
+49 км трассы Р133 (слева)</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="heading3" data-parent="#accordion">
+                                <div class="row card-body">
+                                    <div class="col-xl-5">
+                                        <img src="/img/azs-list-img.jpg">
+                                    </div>
+                                    <div class="col-xl-7 podinfo-azs">
+                                        <p>24/7 ДТ, ДТ+, 92, 95</p>
+                                        <p>Координаты: 55.224851, 31.483526</p>
+                                        <p>+7 (481) 472-41-37</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7">
+              <div id="map" style="width: 100%; height: 100%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="section-card">
     <div class="container">
         <div class="row justify-content-center text-center">
@@ -239,16 +405,16 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="row card-bl">
-                    <div class="col-xl-4 align-self-center">
+                    <div class="col-xl-4  col-md-4 align-self-center">
                         <span class="title">Топливные карты</span>
                         <span class="type-card">для частных лиц</span>
                         <span class="name-card">E100 и Инфорком</span>
                         <a href="#" class="btn btn-post-resum">Закажите карту</a>
                     </div>
-                    <div class="col-xl-4 align-self-center">
+                    <div class="col-xl-4 col-md-4 align-self-center">
                         <img src="img/image-azs3.png">
                     </div>
-                    <div class="col-xl-4 align-self-center">
+                    <div class="col-xl-4 col-md-4 align-self-center">
                         <img src="img/image-azs4.png">
                     </div>
                 </div>
@@ -257,16 +423,16 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="row card-bl">
-                    <div class="col-xl-4 align-self-center">
+                    <div class="col-xl-4 col-md-4 align-self-center">
                         <span class="title">Бонусные накопительные карты</span>
                         <span class="type-card">для юридичеких лиц со специальными ценами</span>
                         <span class="name-card">BelOil для компаний</span>
                         <a href="#" class="btn btn-post-resum">Закажите карту</a>
                     </div>
-                    <div class="col-xl-4 align-self-center">
+                    <div class="col-xl-4 col-md-4 align-self-center">
                         <img src="img/image-azs2.png">
                     </div>
-                    <div class="col-xl-4 align-self-center">
+                    <div class="col-xl-4 col-md-4 align-self-center">
                         <img src="img/image-azs6.png">
                     </div>
                 </div>
@@ -277,12 +443,12 @@
 <footer class="footer">
     <div class="container">
         <div class="row footer-row-level1">
-            <div class="col-xl-1">
+            <div class="col-xl-1 col-12">
                 <a href="#" class="logo-header">
                     <img src="img/Logo_rus.svg">
                 </a>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-sm-6">
                 <div class="group-phone-faks">
                     <span class="phone-faks-name">Телефон:</span>
                     <span class="number-phone">+7(495) 543-91-31</span>
@@ -292,19 +458,18 @@
                     <span class="number-phone">+7(495) 543-91-30</span>
                 </div>
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-2 col-sm-12">
                 <ul class="list-footer-link">
-                    <li><a href="#">Главная страница</a></li>
+                    <li><a href="#">Главная</a></li>
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Блог</a></li>
                 </ul>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-sm-6">
                 <ul class="list-footer-link">
                     <li><a href="#">Услуги</a></li>
-                    <li class="lite-link"><a href="#">Товарное
-                        финансирование</a></li>
+                    <li class="lite-link"><a href="#">Товарное финансирование</a></li>
                     <li class="lite-link"><a href="#"> Тарифы</a></li>
                     <li class="lite-link"><a href="#"> Внебиржевой рынок </a></li>
                     <li class="lite-link"><a href="#"> Сеть АЗС </a></li>
@@ -313,7 +478,7 @@
                     <li class="lite-link"><a href="#"> Юридическая и правовая поддержка</a></li>
                 </ul>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-sm-6">
                 <div class="mobil-app-footer">
                     <span class="mobil-title">
                         Мобильное приложение АТ КОММОД
@@ -356,6 +521,10 @@ E-mail: info@solid-tr.ru</span>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="js/azsmap.js"></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVj9idDcFINe73DWslxwyTHy7dZsAHs_A&callback=initMap">
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
         integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
         crossorigin="anonymous"></script>
