@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
 // dropdown выпадающее меню start
 
@@ -22,7 +19,7 @@ $(document).ready(function () {
         el_li.find('.drop-menu-main-sub').show();
     }
 
-    $(".drop-down").click(function(){
+    $(".drop-down").click(function () {
         showDropdown(this);
     });
     // $( ".drop-down" ).toggle(
@@ -39,11 +36,8 @@ $(document).ready(function () {
     // dropdown выпадающее меню end
 
 
-
-
-
     // custom select
-    $('select').each(function(){
+    $('select').each(function () {
         var $this = $(this), numberOfOptions = $(this).children('option').length;
 
         $this.addClass('select-hidden');
@@ -66,15 +60,15 @@ $(document).ready(function () {
 
         var $listItems = $list.children('li');
 
-        $styledSelect.click(function(e) {
+        $styledSelect.click(function (e) {
             e.stopPropagation();
-            $('div.select-styled.active').not(this).each(function(){
+            $('div.select-styled.active').not(this).each(function () {
                 $(this).removeClass('active').next('ul.select-options').hide();
             });
             $(this).toggleClass('active').next('ul.select-options').toggle();
         });
 
-        $listItems.click(function(e) {
+        $listItems.click(function (e) {
             e.stopPropagation();
             $styledSelect.text($(this).text()).removeClass('active');
             $this.val($(this).attr('rel'));
@@ -82,7 +76,7 @@ $(document).ready(function () {
             //console.log($this.val());
         });
 
-        $(document).click(function() {
+        $(document).click(function () {
             $styledSelect.removeClass('active');
             $list.hide();
         });
@@ -225,8 +219,6 @@ $(document).ready(function () {
     // })(window, document);
 
 
-
-
     // !!!!!!!!!!
     // redrawDotNav();
     //
@@ -317,7 +309,7 @@ $(document).ready(function () {
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         // on window scroll event
-        $fwindow.on('scroll resize', function() {
+        $fwindow.on('scroll resize', function () {
             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         });
 
@@ -328,7 +320,7 @@ $(document).ready(function () {
             var yPos;
             var speed = ($contentObj.data('speed') || 1 );
 
-            $fwindow.on('scroll resize', function (){
+            $fwindow.on('scroll resize', function () {
                 yPos = fgOffset - scrollTop / speed;
 
                 $contentObj.css('top', yPos);
@@ -336,18 +328,18 @@ $(document).ready(function () {
         });
 
         // for each of background parallax element
-        $('[data-type="background"]').each(function(){
+        $('[data-type="background"]').each(function () {
             var $backgroundObj = $(this);
             var bgOffset = parseInt($backgroundObj.offset().top);
             var yPos;
             var coords;
             var speed = ($backgroundObj.data('speed') || 0 );
 
-            $fwindow.on('scroll resize', function() {
-                yPos = - ((scrollTop - bgOffset) / speed);
-                coords = + yPos + 'px';
+            $fwindow.on('scroll resize', function () {
+                yPos = -((scrollTop - bgOffset) / speed);
+                coords = +yPos + 'px';
 
-                $backgroundObj.css({ top: coords });
+                $backgroundObj.css({top: coords});
             });
         });
 
@@ -364,7 +356,7 @@ $(document).ready(function () {
     // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
-        .click(function(event) {
+        .click(function (event) {
             // On-page links
             if (
                 location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
@@ -380,7 +372,7 @@ $(document).ready(function () {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1000, function() {
+                    }, 1000, function () {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);
@@ -388,9 +380,10 @@ $(document).ready(function () {
                         if ($target.is(":focus")) { // Checking if the target was focused
                             return false;
                         } else {
-                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
                             $target.focus(); // Set focus again
-                        };
+                        }
+                        ;
                     });
                 }
             }
@@ -407,5 +400,37 @@ $(document).ready(function () {
         $('.button-show-link-brok2').toggleClass('open-bl');
         $('.block-show-brok2').slideToggle(500);
     })
+
+
+    var partnersLogos =
+        [
+            'img/partners/Taneko.svg',
+            'img/partners/TTS.svg',
+            'img/partners/Tatneft.svg',
+            'img/partners/Lukoil.svg',
+            'img/partners/Magnit.svg',
+            'img/partners/SistemServis.svg',
+            'img/partners/TMS.svg',
+            'img/partners/tagras.svg',
+        ];
+
+    setInterval(function () {
+        var partnersBlocks = document.getElementsByClassName('logo-cont-partners');
+        for (var i = 0; i < partnersBlocks.length; i += 1) {
+            partnersBlocks[i].classList.add('no-image');
+        }
+        partnersLogos.sort(function () {
+            return 0.5 - Math.random()
+        });
+        setTimeout(function () {
+            for (var i = 0; i < partnersBlocks.length; i += 1) {
+                partnersBlocks[i].getElementsByTagName('img')[0].src = partnersLogos[i];
+                partnersBlocks[i].getElementsByTagName('img')[0].alt = partnersLogos[i];
+            }
+            for (var i = 0; i < partnersBlocks.length; i += 1) {
+                partnersBlocks[i].classList.remove('no-image');
+            }
+        }, 500);
+    }, 3500)
 });
 
