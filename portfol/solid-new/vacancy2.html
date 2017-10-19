@@ -213,7 +213,7 @@
                         </span>
                         </div>
                         <div class="list-vacancy-bl list-vacancy-btn-bl">
-                            <a href="#" class="btn-vacancy btn-post-resum">Отправить резюме</a>
+                            <a href="#" class="btn-vacancy btn-post-resum" data-toggle="modal" data-target="#modal-vac">Отправить резюме</a>
                             <a href="#" class="btn-vacancy btn-hh">наши вакансии на hh.ru</a>
                         </div>
                     </div>
@@ -222,7 +222,6 @@
         </div>
     </div>
 </section>
-
 <footer class="footer">
     <div class="container">
         <div class="row footer-row-level1">
@@ -234,11 +233,11 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="group-phone-faks">
                     <span class="phone-faks-name">Телефон:</span>
-                    <span class="number-phone">+7(495) 543-91-31</span>
+                    <a href="tel:+74955439131" class="number-phone">+7(495) 543-91-31</a>
                 </div>
                 <div class="group-phone-faks">
                     <span class="phone-faks-name">Факс:</span>
-                    <span class="number-phone">+7(495) 543-91-30</span>
+                    <a href="tel:+74955439131" class="number-phone">+7(495) 543-91-30</a>
                 </div>
             </div>
             <div class="col-xl-2 col-sm-12">
@@ -291,8 +290,8 @@
             </div>
             <div class="col-xl-3">
                 <span class="adress-footer">ОАО «Солид-товарные рынки»<br>
-Адрес: 123007, Москва, Хорошевское шоссе, д. 32А
-E-mail: info@solid-tr.ru</span>
+Адрес: 123007, Москва, Хорошевское шоссе, д. 32А</span>
+                <span class="adress-footer">E-mail: <a href="mailto:info@solid-tr.ru">info@solid-tr.ru</a> </span>
             </div>
             <div class="col-xl-2"></div>
             <div class="col-xl-5">
@@ -302,6 +301,48 @@ E-mail: info@solid-tr.ru</span>
         </div>
     </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade"  id="modal-vac" tabindex="-1" role="dialog" aria-labelledby="modal-vac" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="row">
+            <div class="col-xl-12 text-center title-modal-bl">
+                <span class="title-modal">Свяжитесь с нашим консультантом</span>
+                <span class="opis-modal">Заполните форму и мы перезвоним вам в ближайшее время</span>
+            </div>
+            <div class="col-xl-12">
+                <input class="form-control" placeholder="Имя">
+                <input class="form-control" placeholder="Телефон">
+                <input class="form-control" placeholder="E-mail">
+                <input class="form-control" placeholder="Интересующая должность">
+            </div>
+            <div class="col-xl-12">
+                <div class="upload-bl">
+                    <form id="my-form" action="">
+                        <input type="file" name="all" id="drag-drop" multiple/>
+                        <div id="uploads"></div>
+                        <div class="dropzone" id="dropzone">
+                            <span class="opis">Прикрепить резюме</span>
+                            <span class="opis2">Перетащите файл или нажмите сюда</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <form action="#">
+                    <p>
+                        <input type="checkbox" id="test1" checked/>
+                        <label for="test1">Согласен на обработку <a href="#">персональных данных</a> </label>
+                    </p>
+                </form>
+            </div>
+            <div class="col-xl-12 text-center">
+                <a href="#" class="btn-vacancy btn-post-resum " data-dismiss="modal">Отправить</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
