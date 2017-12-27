@@ -32,7 +32,7 @@
                     <h1 class="title-zenit-header">Зенит-Казань</h1>
                 </div>
                 <div class="col-12">
-                    <span class="text-zenit-header">лучший волейбольный клуб европы</span>
+                    <span class="text-zenit-header">лучший волейбольный клуб мира</span>
                 </div>
             </div>
         </div>
@@ -133,12 +133,13 @@
       <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(img/player/anders.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(img/player/guaz.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(img/player/leon.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(img/player/max.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/player/leon.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/player/anders.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/player/butyko.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(img/player/verbov.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(img/player/volv.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/player/guaz.jpg)"></div>
 
         </div>
         <!-- Add Arrows -->
@@ -147,7 +148,7 @@
             <div class="swiper-button-prev swiper-button-white"></div>
         </div>
     </div>
-    <a href="#" class="price-bil">Купить билет</a>
+    <a href="http://go.zenit-kazan.com/rus " class="price-bil">Купить билет</a>
 </section>
 <section class=" slider-voleibol">
     <div class="container bl-title-slider">
@@ -167,9 +168,14 @@
             <div class="swiper-slide" style="background-image:url(img/stad/5.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(img/stad/6.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(img/stad/7.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(img/stad/8.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/stad/9.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/stad/10.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/stad/11.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/stad/12.jpg)"></div>
 
         </div>
+
+
         <!-- Add Arrows -->
         <div class="pagin-bl">
             <div class="swiper-button-next swiper-button-white"></div>
@@ -178,17 +184,35 @@
     </div>
 </section>
 <section class="street-bl" id="adres">
-    <div class="container">
+    <div class="container container-tab">
         <div class="row">
             <div class="col-12 text-center">
                 <h2 class="title-adres">Как добраться</h2>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <ul id="tabs-nav" class="list-ico">
+                    <li><a href="#tab1">
+                        <img src="img/car1.png">
+                    </a></li>
+                    <li><a href="#tab2">
+                        <img src="img/car2.png" style="    top: 12px;    position: relative;">
+                    </a></li>
+                </ul> <!-- END tabs-nav -->
+            </div>
+        </div>
     </div>
 
+    <div id="tabs-content" class="content-adres">
+        <div id="tab1" class="tab-content adres-bl" style="background: #d1e3f2 url(../img/mapcar2.jpg)no-repeat">
+        </div>
+        <div id="tab2" class="tab-content adres-bl" style="display: none; background: #d1e3f2 url(../img/mapcar1.jpg)no-repeat">
+        </div>
+    </div>
 </section>
 <section class="section-price-bil" id="price">
-    <a href="#" class="btn-big-price">Купить билет</a>
+    <a href="http://go.zenit-kazan.com/rus " class="btn-big-price">Купить билет</a>
 </section>
 <footer class="footer">
     <div class="container">
@@ -196,11 +220,11 @@
             <div class="col-6">
                 <a href="#" class="mail-nik">volleyzenit</a>
                 <div class="soc-ico">
-                    <a href="#"><img src="img/ico_vk.png"></a>
-                    <a href="#"><img src="img/ico_youtub.png"></a>
-                    <a href="#"><img src="img/ico_inst.png"></a>
-                    <a href="#"><img src="img/ico_twit.png"></a>
-                    <a href="#"><img src="img/ico_fb.png"></a>
+                    <a target="_blank" href="http://vk.com/volleyzenit"><img src="img/ico_vk.png"></a>
+                    <a target="_blank" href="http://www.youtube.com/volleyzenit"><img src="img/ico_youtub.png"></a>
+                    <a target="_blank" href="https://www.instagram.com/volleyzenit/"><img src="img/ico_inst.png"></a>
+                    <a target="_blank" href="https://twitter.com/volleyzenit "><img src="img/ico_twit.png"></a>
+                    <a target="_blank" href="http://www.facebook.com/volleyzenit "><img src="img/ico_fb.png"></a>
                 </div>
             </div>
             <div class="col-6 text-right partners-link">
@@ -214,6 +238,8 @@
         </div>
     </div>
 </footer>
+
+
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
 <script src="js/script.js"></script>
