@@ -11,6 +11,7 @@
 </head>
 <body>
 <section class="header" id="header">
+  <div class="fix-menu">
     <div class="container text-center">
         <div class="row">
             <div class="col-12 text-center">
@@ -25,6 +26,7 @@
             </div>
         </div>
     </div>
+  </div>
     <div class="title-header">
         <div class="container">
             <div class="row text-center">
@@ -37,12 +39,15 @@
             </div>
         </div>
     </div>
+
+    <a href="#" class="play-video video-btn" data-toggle="modal" data-target="#youtubeVideo">Смотреть видео</a>
+
 </section>
-<section class="titul-bl" id="titul">
+<section class="titul-bl">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="title-titul">Титулы</h2>
+                <h2 class="title-titul"  id="titul">Титулы</h2>
             </div>
         </div>
         <div class="row row-titul-list">
@@ -122,11 +127,11 @@
         </div>
     </div>
 </section>
-<section class="slider-stars" id="stars">
+<section class="slider-stars">
     <div class="container bl-title-slider">
         <div class="row">
             <div class="col-12">
-                <!--<h2 class="title-slider">Звезды</h2>-->
+                <h2 class="title-slider" id="stars" style="opacity:0">Звезды</h2>
             </div>
         </div>
     </div>
@@ -172,7 +177,8 @@
             <div class="swiper-slide" style="background-image:url(img/stad/10.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(img/stad/11.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(img/stad/12.jpg)"></div>
-
+            <div class="swiper-slide" style="background-image:url(img/stad/14.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/stad/16.jpg)"></div>
         </div>
 
 
@@ -183,11 +189,11 @@
         </div>
     </div>
 </section>
-<section class="street-bl" id="adres">
+<section class="street-bl">
     <div class="container container-tab">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="title-adres">Как добраться</h2>
+                <h2 class="title-adres" id="adres">Как добраться</h2>
             </div>
         </div>
         <div class="row">
@@ -197,7 +203,7 @@
                         <img src="img/car1.png">
                     </a></li>
                     <li><a href="#tab2">
-                        <img src="img/car2.png" style="    top: 12px;    position: relative;">
+                        <img src="img/car2.png" style="    top: 3px;    position: relative;">
                     </a></li>
                 </ul> <!-- END tabs-nav -->
             </div>
@@ -240,7 +246,24 @@
 </footer>
 
 
+<!-- Modal -->
+<div class="modal fade" id="youtubeVideo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/FCqN9Of4V44" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
 <script src="js/script.js"></script>
 </body>

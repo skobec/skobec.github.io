@@ -1,6 +1,13 @@
 
 
 $(document).ready(function () {
+
+  $('#youtubeVideo').on('hidden.bs.modal', function() {
+  var $this = $(this).find('iframe'),
+    tempSrc = $this.attr('src');
+  $this.attr('src', "");
+  $this.attr('src', tempSrc);
+});
     // Select all links with hashes
     $('a[href*="#"].anchor-link')
     // Remove links that don't actually link to anything
@@ -21,7 +28,7 @@ $(document).ready(function () {
                     // Only prevent default if animation is actually gonna happen
                     event.preventDefault();
                     $('html, body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top - "120"
                     }, 1000, function () {
                         // Callback after animation
                         // Must change focus!
@@ -70,4 +77,5 @@ $(document).ready(function () {
         $(activeTab).show();
         return false;
     });
+
 })
