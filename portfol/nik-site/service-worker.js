@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.c00ab225a54a3659cc1b25fb124c8338.js"
+  "/nik-site/precache-manifest.ab110c1b1cc3788e462dd03ebcc23a53.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "nik-site"});
